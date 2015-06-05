@@ -1,0 +1,24 @@
+pub fn nat(type) -> nat;
+
+z: nat;
+s(X: nat): nat;
+
+pub fn add(nat, nat) -> nat;
+[:] (z, X) -> X;
+[:] (s(X), Y) -> s(add(X, Y));
+
+pub fn is_zero(nat) -> bool;
+[:] (z) -> true;
+[:] (_) -> false;
+
+pub fn add [is_zero] (bool, bool) -> bool;
+[:] (true, true) -> true;
+[:] (_, _) -> false;
+
+pub fn mul(nat, nat) -> nat;
+[:] (z, _) -> z;
+[:] (s(X), Y) -> add(Y, mul(X, Y));
+
+pub fn mul [is_zero] (bool, bool) -> bool;
+[:] (false, false) -> false;
+[:] (_, _) -> true;

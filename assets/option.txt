@@ -1,0 +1,22 @@
+use bool::*;
+
+pub fn option(X: type)(type) -> option(X);
+
+none: option(_);
+some(X: Y): option(Y);
+
+pub fn is_none(option(_)) -> bool;
+[:] (none) -> true;
+[:] (_) -> false;
+
+pub fn is_some(option(_)) -> bool;
+[:] (some(_)) -> true;
+[:] (_) -> false;
+
+pub fn map(option(X), fn(X) -> option(Y)) -> option(Y);
+([:] none, _) -> none;
+([:] some(X), [\] F) -> some(F(X));
+
+pub fn unwrap_or(option(X), X) -> X;
+[:] (none, X) -> X;
+[:] (some(X), _) -> X;
