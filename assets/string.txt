@@ -1,0 +1,12 @@
+pub fn string(type) -> string;
+
+// Looks up a method in module.
+pub fn to_string(type)(X: type) -> string;
+[:] (X)(Y) -> X::to_string(Y);
+
+pub fn append(string, string) -> string;
+
+pub fn len(string) -> usize;
+
+pub fn append [len] (usize, usize) -> usize;
+[:] (X, Y) -> usize::add(X, Y);

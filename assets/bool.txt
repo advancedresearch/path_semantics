@@ -1,0 +1,23 @@
+use string;
+
+pub fn bool(type) -> bool;
+
+// `true` and `false` are members of `bool`.
+true: bool;
+false: bool;
+
+pub fn and(bool, bool) -> bool;
+[:] (true, true) -> true;
+[:] (_, _) -> false;
+
+pub fn or(bool, bool) -> bool;
+[:] (false, false) -> false;
+[:] (_, _) -> true;
+
+pub fn not(bool) -> bool;
+[:] (true) -> false;
+[:] (false) -> true;
+
+pub fn to_string(bool) -> string;
+[:] (true) -> "true";
+[:] (false) -> "false";
