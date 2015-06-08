@@ -38,9 +38,7 @@ Node { debug_id: 5000, name: "repeated_arguments",
 };
 
 Node { debug_id: 6000, name: "comment",
-    rule: [w?, "//",
-        UntilAny { any_characters: "\n", optional: true, property: None }
-    ]
+    rule: [w?, "//", ..."\n"]
 };
 
 Node { debug_id: 7000, name: "lambda",
