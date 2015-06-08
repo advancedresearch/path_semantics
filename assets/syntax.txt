@@ -7,21 +7,19 @@ Node {
         optional: true,
         allow_trail: false,
         rule: Optional {
-            rule: Sequence {
-                args: [
-                    "[",
-                    Select {
-                        args: [
-                            ":",
-                            UntilAnyOrWhitespace {
-                                any_characters: separators,
-                                property: None,
-                            },
-                        ]
-                    },
-                    "]",
-                ],
-            }
+            rule: [
+                "[",
+                Select {
+                    args: [
+                        ":",
+                        UntilAnyOrWhitespace {
+                            any_characters: separators,
+                            property: None,
+                        },
+                    ]
+                },
+                "]",
+            ]
         },
         by: Whitespace {
             optional: false,
@@ -32,85 +30,77 @@ Node {
 Node {
     debug_id: 2000,
     name: "path",
-    rule: Sequence {
-        args: [
-            Optional {
-                rule: Token {
-                    text: "::",
-                    property: Some("root"),
-                },
+    rule: [
+        Optional {
+            rule: Token {
+                text: "::",
+                property: Some("root"),
             },
-            SeparatedBy {
-                optional: false,
-                allow_trail: true,
-                rule: UntilAnyOrWhitespace {
-                    any_characters: separators,
-                    property: Some("name"),
-                },
-                by: "::"
+        },
+        SeparatedBy {
+            optional: false,
+            allow_trail: true,
+            rule: UntilAnyOrWhitespace {
+                any_characters: separators,
+                property: Some("name"),
             },
-        ]
-    }),
+            by: "::"
+        },
+    ]
 };
 
 Node {
     debug_id: 3000,
     name: "arg",
-    rule: Sequence {
-        args: [
-            NodeRef::Name("brackets", 0),
-            NodeRef::Name("path", 0),
-            NodeRef::Name("brackets", 0),
-            Optional {
-                rule: NodeRef::Name("repeated_arguments", 0),
-            }
-        ]
-    }
+    rule: [
+        NodeRef::Name("brackets", 0),
+        NodeRef::Name("path", 0),
+        NodeRef::Name("brackets", 0),
+        Optional {
+            rule: NodeRef::Name("repeated_arguments", 0),
+        }
+    ]
 };
 
 Node {
     debug_id: 4000,
     name: "arguments",
-    rule: Sequence {
-        args: [
-            "(",
-            Whitespace {
-                optional: true,
+    rule: [
+        "(",
+        Whitespace {
+            optional: true,
+        },
+        SeparatedBy {
+            optional: true,
+            allow_trail: true,
+            rule: Select {
+                args: [
+                    Number {
+                        property: None,
+                        allow_underscore: true,
+                    },
+                    Text {
+                        allow_empty: true,
+                        property: None,
+                    },
+                    NodeRef::Name("arguments", 0),
+                    NodeRef::Name("member_lambda", 0),
+                    NodeRef::Name("lambda", 0),
+                    NodeRef::Name("arg", 0)),
+                ]
             },
-            SeparatedBy {
-                optional: true,
-                allow_trail: true,
-                rule: Select {
-                    args: [
-                        Number {
-                            property: None,
-                            allow_underscore: true,
-                        },
-                        Text {
-                            allow_empty: true,
-                            property: None,
-                        },
-                        NodeRef::Name("arguments", 0),
-                        NodeRef::Name("member_lambda", 0),
-                        NodeRef::Name("lambda", 0),
-                        NodeRef::Name("arg", 0)),
-                    ]
+            by: [
+                ",",
+                Whitespace {
+                    optional: false,
                 },
-                by: Sequence {
-                    args: [
-                        ",",
-                        Whitespace {
-                            optional: false,
-                        },
-                    ],
-                },
-            },
-            Whitespace {
-                optional: true,
-            },
-            ")",
-        ]
-    },
+            ]
+        },
+        Whitespace {
+            optional: true,
+        },
+        ")",
+    ]
 };
 
 Node {
@@ -125,182 +115,160 @@ Node {
 Node {
     debug_id: 6000,
     name: "comment",
-    rule: Sequence {
-        args: [
-            Whitespace {
-                optional: true,
-            },
-            "//",
-            UntilAny {
-                any_characters: "\n",
-                optional: true,
-                property: None,
-            },
-        ],
-    }
+    rule: [
+        Whitespace {
+            optional: true,
+        },
+        "//",
+        UntilAny {
+            any_characters: "\n",
+            optional: true,
+            property: None,
+        },
+    ]
 };
 
 Node {
     debug_id: 7000,
     name: "lambda",
-    rule: Sequence {
-        args: [
-            Whitespace {
-                optional: true,
-            },
-            Optional {
-                rule: Sequence {
-                    args: [
-                        "fn",
-                        Whitespace {
-                            optional: true,
-                        },
-                    ]
+    rule: [
+        Whitespace {
+            optional: true,
+        },
+        Optional {
+            rule: [
+                "fn",
+                Whitespace {
+                    optional: true,
                 },
-            },
-            UntilAnyOrWhitespace {
-                any_characters: separators,
-                optional: true,
-                property: Some("name"),
-            },
-            Whitespace {
-                optional: true,
-            },
-            NodeRef::Name("brackets", 0),
-            NodeRef::Name("repeated_arguments", 0),
-            Whitespace {
-                optional: false,
-            },
-            "->",
-            Whitespace {
-                optional: false,
-            },
-            NodeRef::Name("arg", 0),
-            Whitespace {
-                optional: true,
-            },
-        ]
-    }
+            ]
+        },
+        UntilAnyOrWhitespace {
+            any_characters: separators,
+            optional: true,
+            property: Some("name"),
+        },
+        Whitespace {
+            optional: true,
+        },
+        NodeRef::Name("brackets", 0),
+        NodeRef::Name("repeated_arguments", 0),
+        Whitespace {
+            optional: false,
+        },
+        "->",
+        Whitespace {
+            optional: false,
+        },
+        NodeRef::Name("arg", 0),
+        Whitespace {
+            optional: true,
+        },
+    ]
 };
 
 Node {
     debug_id: 8000,
     name: "fn",
-    rule: Sequence {
-        args: [
-            Optional {
-                rule: Sequence {
-                    args: [
-                        "pub",
-                        Whitespace {
-                            optional: true,
-                        },
-                    ]
+    rule: [
+        Optional {
+            rule: [
+                "pub",
+                Whitespace {
+                    optional: true,
                 },
-            },
-            NodeRef::Name("lambda", 0),
-            ";",
-            Whitespace {
-                optional: true,
-            },
-            Optional {
-                rule: NodeRef::Name("comment", 0)
-            },
-        ]
-    }
+            ]
+        },
+        NodeRef::Name("lambda", 0),
+        ";",
+        Whitespace {
+            optional: true,
+        },
+        Optional {
+            rule: NodeRef::Name("comment", 0)
+        },
+    ]
 };
 
 
 Node {
     debug_id: 9000,
     name: "use",
-    rule: Sequence {
-        args: [
-            Whitespace {
-                optional: true,
-            },
-            Optional {
-                rule: Sequence {
-                    args: [
-                        "pub",
-                        Whitespace {
-                            optional: true,
-                        },
-                    ]
+    rule: [
+        Whitespace {
+            optional: true,
+        },
+        Optional {
+            rule: [
+                "pub",
+                Whitespace {
+                    optional: true,
                 },
-            },
-            "use",
-            Whitespace {
-                optional: false,
-            },
-            NodeRef::Name("path", 0),
-            Optional {
-                rule: "*"
-            },
-            ";",
-        ]
-    })
+            ]
+        },
+        "use",
+        Whitespace {
+            optional: false,
+        },
+        NodeRef::Name("path", 0),
+        Optional {
+            rule: "*"
+        },
+        ";",
+    ]
 };
 
 Node {
     debug_id: 10000,
     name: "module",
-    rule: Sequence {
-        args: [
-            Whitespace {
-                optional: true,
-            },
-            Optional {
-                rule: Sequence {
-                    args: [
-                        "pub",
-                        Whitespace {
-                            optional: true,
-                        },
-                    ]
+    rule: [
+        Whitespace {
+            optional: true,
+        },
+        Optional {
+            rule: [
+                "pub",
+                Whitespace {
+                    optional: true,
                 },
-            },
-            "mod",
-            Whitespace {
-                optional: false,
-            },
-            UntilAnyOrWhitespace {
-                any_characters: separators,
-                optional: true,
-                property: "name",
-            },
-            ";",
-        ]
-    }
+            ]
+        },
+        "mod",
+        Whitespace {
+            optional: false,
+        },
+        UntilAnyOrWhitespace {
+            any_characters: separators,
+            optional: true,
+            property: "name",
+        },
+        ";",
+    ]
 };
 
 Node {
     debug_id: 11000,
     name: "member_lambda",
-    rule: Sequence {
-        args: [
-            NodeRef::Name("arg", 0),
-            Whitespace {
-                optional: true,
-            },
-            ":",
-            Whitespace {
-                optional: false,
-            },
-            NodeRef::Name("arg", 0),
-        ]
-    },
+    rule: [
+        NodeRef::Name("arg", 0),
+        Whitespace {
+            optional: true,
+        },
+        ":",
+        Whitespace {
+            optional: false,
+        },
+        NodeRef::Name("arg", 0),
+    ]
 };
 
 Node {
     debug_id: 12000,
     name: "member",
-    rule: Sequence {
-        args: [
-            NodeRef::Name("member_lambda", 0),
-            ";",
-        ]
-    },
+    rule: [
+        NodeRef::Name("member_lambda", 0),
+        ";",
+    ]
 };
 
 Node {
