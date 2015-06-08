@@ -18,4 +18,4 @@ seps: "()[]{},;:/*+-";
 12."member" { [11 ";"] };
 13."line_rule" { {6 9 10 12 8} };
 
-Lines { debug_id: 14000, rule: line_rule }
+Lines { debug_id: 14000, rule: 13 }
