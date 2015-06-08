@@ -171,6 +171,7 @@ impl Syntax {
                             args: vec![
                                 Rule::Number(Number {
                                     debug_id: 2700,
+                                    allow_underscore: true,
                                     property: None,
                                 }),
                                 Rule::Text(Text {
