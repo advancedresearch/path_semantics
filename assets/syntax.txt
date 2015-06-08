@@ -5,7 +5,7 @@ seps: "()[]{},;:/*+-";
 3."arg" { [1 2 1 ?(5)] };
 4."arguments" { ["(" w? s?.(["," w!]) {
     {$_ -> "number" t? -> "text" 4 11 7 3} }, w? ")"] };
-5."repeated_arguments" { Repeat { optional: false, rule: 4 } };
+5."repeated_arguments" { r!(4) };
 6."comment" { [w? "//" ..."\n"] };
 7."lambda" { [w? ?(["fn" w?]) ..seps? -> "name" w? 1 5 w! "->" w! 3 w?] };
 8."fn" { [?(["pub" w?]) 7 ";" w? ?(6)] };
