@@ -9,23 +9,17 @@ Node {
         rule: Optional {
             rule: Sequence {
                 args: [
-                    Token {
-                        text: "[",
-                    },
+                    "[",
                     Select {
                         args: [
-                            Token {
-                                text: ":",
-                            },
+                            ":",
                             UntilAnyOrWhitespace {
                                 any_characters: separators,
                                 property: None,
                             },
                         ]
                     },
-                    Token {
-                        text: "]",
-                    },
+                    "]",
                 ],
             }
         },
@@ -53,9 +47,7 @@ Node {
                     any_characters: separators,
                     property: Some("name"),
                 },
-                by: Token {
-                    text: "::",
-                },
+                by: "::"
             },
         ]
     }),
@@ -81,9 +73,7 @@ Node {
     name: "arguments",
     rule: Sequence {
         args: [
-            Token {
-                text: "(",
-            },
+            "(",
             Whitespace {
                 optional: true,
             },
@@ -108,9 +98,7 @@ Node {
                 },
                 by: Sequence {
                     args: [
-                        Token {
-                            text: ",",
-                        },
+                        ",",
                         Whitespace {
                             optional: false,
                         },
@@ -120,9 +108,7 @@ Node {
             Whitespace {
                 optional: true,
             },
-            Token {
-                text: ")",
-            },
+            ")",
         ]
     },
 };
@@ -144,9 +130,7 @@ Node {
             Whitespace {
                 optional: true,
             },
-            Token {
-                text: "//",
-            },
+            "//",
             UntilAny {
                 any_characters: "\n",
                 optional: true,
@@ -167,9 +151,7 @@ Node {
             Optional {
                 rule: Sequence {
                     args: [
-                        Token {
-                            text: "fn",
-                        },
+                        "fn",
                         Whitespace {
                             optional: true,
                         },
@@ -189,9 +171,7 @@ Node {
             Whitespace {
                 optional: false,
             },
-            Token {
-                text: "->",
-            },
+            "->",
             Whitespace {
                 optional: false,
             },
@@ -211,9 +191,7 @@ Node {
             Optional {
                 rule: Sequence {
                     args: [
-                        Token {
-                            text: "pub",
-                        },
+                        "pub",
                         Whitespace {
                             optional: true,
                         },
@@ -221,9 +199,7 @@ Node {
                 },
             },
             NodeRef::Name("lambda", 0),
-            Token {
-                text: ";",
-            },
+            ";",
             Whitespace {
                 optional: true,
             },
@@ -246,30 +222,22 @@ Node {
             Optional {
                 rule: Sequence {
                     args: [
-                        Token {
-                            text: "pub",
-                        },
+                        "pub",
                         Whitespace {
                             optional: true,
                         },
                     ]
                 },
             },
-            Token {
-                text: "use",
-            },
+            "use",
             Whitespace {
                 optional: false,
             },
             NodeRef::Name("path", 0),
             Optional {
-                rule: Token {
-                    text: "*",
-                },
+                rule: "*"
             },
-            Token {
-                text: ";",
-            },
+            ";",
         ]
     })
 };
@@ -285,18 +253,14 @@ Node {
             Optional {
                 rule: Sequence {
                     args: [
-                        Token {
-                            text: "pub",
-                        },
+                        "pub",
                         Whitespace {
                             optional: true,
                         },
                     ]
                 },
             },
-            Token {
-                text: "mod",
-            },
+            "mod",
             Whitespace {
                 optional: false,
             },
@@ -305,9 +269,7 @@ Node {
                 optional: true,
                 property: "name",
             },
-            Token {
-                text: ";",
-            },
+            ";",
         ]
     }
 };
@@ -321,9 +283,7 @@ Node {
             Whitespace {
                 optional: true,
             },
-            Token {
-                text: ":",
-            },
+            ":",
             Whitespace {
                 optional: false,
             },
@@ -338,9 +298,7 @@ Node {
     rule: Sequence {
         args: [
             NodeRef::Name("member_lambda", 0),
-            Token {
-                text: ";",
-            },
+            ";",
         ]
     },
 };
