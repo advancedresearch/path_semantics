@@ -1,9 +1,9 @@
 seps: "()[]{},;:/*+-";
 
-1."brackets" { .?(w!) { ?(["[" {":", ..seps} "]"]) } };
-2."path" { [?("::" -> "root") .!.("::") { ..seps -> "name" }] };
+1."brackets" { s?(w!) { ?(["[" {":", ..seps} "]"]) } };
+2."path" { [?("::" -> "root") s!.("::") { ..seps -> "name" }] };
 3."arg" { [1 2 1 ?(5)] };
-4."arguments" { ["(" w? .?.(["," w!]) {
+4."arguments" { ["(" w? s?.(["," w!]) {
     {$_ -> "number" t? -> "text" 4 11 7 3} }, w? ")"] };
 5."repeated_arguments" { Repeat { optional: false, rule: 4 } };
 6."comment" { [w? "//" ..."\n"] };
