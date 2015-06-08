@@ -6,19 +6,17 @@ Node {
     rule: SeparatedBy {
         optional: true,
         allow_trail: false,
-        rule: Optional {
-            rule: [
-                "[",
-                {
-                    ":",
-                    UntilAnyOrWhitespace {
-                        any_characters: separators,
-                        property: None,
-                    },
+        rule: ? [
+            "[",
+            {
+                ":",
+                UntilAnyOrWhitespace {
+                    any_characters: separators,
+                    property: None,
                 },
-                "]",
-            ]
-        },
+            },
+            "]",
+        ],
         by: Whitespace {
             optional: false,
         }
@@ -29,11 +27,9 @@ Node {
     debug_id: 2000,
     name: "path",
     rule: [
-        Optional {
-            rule: Token {
-                text: "::",
-                property: Some("root"),
-            },
+        ? Token {
+            text: "::",
+            property: Some("root"),
         },
         SeparatedBy {
             optional: false,
@@ -54,9 +50,7 @@ Node {
         NodeRef::Name("brackets", 0),
         NodeRef::Name("path", 0),
         NodeRef::Name("brackets", 0),
-        Optional {
-            rule: NodeRef::Name("repeated_arguments", 0),
-        }
+        ? NodeRef::Name("repeated_arguments", 0),
     ]
 };
 
@@ -131,14 +125,12 @@ Node {
         Whitespace {
             optional: true,
         },
-        Optional {
-            rule: [
-                "fn",
-                Whitespace {
-                    optional: true,
-                },
-            ]
-        },
+        ? [
+            "fn",
+            Whitespace {
+                optional: true,
+            },
+        ],
         UntilAnyOrWhitespace {
             any_characters: separators,
             optional: true,
@@ -167,22 +159,18 @@ Node {
     debug_id: 8000,
     name: "fn",
     rule: [
-        Optional {
-            rule: [
-                "pub",
-                Whitespace {
-                    optional: true,
-                },
-            ]
-        },
+        ? [
+            "pub",
+            Whitespace {
+                optional: true,
+            },
+        ],
         NodeRef::Name("lambda", 0),
         ";",
         Whitespace {
             optional: true,
         },
-        Optional {
-            rule: NodeRef::Name("comment", 0)
-        },
+        ? NodeRef::Name("comment", 0),
     ]
 };
 
@@ -194,22 +182,18 @@ Node {
         Whitespace {
             optional: true,
         },
-        Optional {
-            rule: [
-                "pub",
-                Whitespace {
-                    optional: true,
-                },
-            ]
-        },
+        ? [
+            "pub",
+            Whitespace {
+                optional: true,
+            },
+        ],
         "use",
         Whitespace {
             optional: false,
         },
         NodeRef::Name("path", 0),
-        Optional {
-            rule: "*"
-        },
+        ? "*",
         ";",
     ]
 };
@@ -221,14 +205,12 @@ Node {
         Whitespace {
             optional: true,
         },
-        Optional {
-            rule: [
-                "pub",
-                Whitespace {
-                    optional: true,
-                },
-            ]
-        },
+        ? [
+            "pub",
+            Whitespace {
+                optional: true,
+            },
+        ],
         "mod",
         Whitespace {
             optional: false,
