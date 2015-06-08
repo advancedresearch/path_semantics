@@ -14,5 +14,4 @@ seps: "()[]{},;:/*+-";
 11."member_lambda" { [3 w? ":" w! 3] };
 12."member" { [11 ";"] };
 13."line_rule" { {6 9 10 12 8} };
-
-Lines { debug_id: 14000, rule: 13 }
+14."lines" { l(13) };
