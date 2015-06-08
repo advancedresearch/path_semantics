@@ -9,14 +9,12 @@ Node {
         rule: Optional {
             rule: [
                 "[",
-                Select {
-                    args: [
-                        ":",
-                        UntilAnyOrWhitespace {
-                            any_characters: separators,
-                            property: None,
-                        },
-                    ]
+                {
+                    ":",
+                    UntilAnyOrWhitespace {
+                        any_characters: separators,
+                        property: None,
+                    },
                 },
                 "]",
             ]
@@ -73,21 +71,19 @@ Node {
         SeparatedBy {
             optional: true,
             allow_trail: true,
-            rule: Select {
-                args: [
-                    Number {
-                        property: None,
-                        allow_underscore: true,
-                    },
-                    Text {
-                        allow_empty: true,
-                        property: None,
-                    },
-                    NodeRef::Name("arguments", 0),
-                    NodeRef::Name("member_lambda", 0),
-                    NodeRef::Name("lambda", 0),
-                    NodeRef::Name("arg", 0)),
-                ]
+            rule: {
+                Number {
+                    property: None,
+                    allow_underscore: true,
+                },
+                Text {
+                    allow_empty: true,
+                    property: None,
+                },
+                NodeRef::Name("arguments", 0),
+                NodeRef::Name("member_lambda", 0),
+                NodeRef::Name("lambda", 0),
+                NodeRef::Name("arg", 0)),
             },
             by: [
                 ",",
@@ -274,14 +270,12 @@ Node {
 Node {
     debug_id: 13000,
     name: "line_rule",
-    rule: Select {
-        args: [
-            NodeRef::Name("comment", 0),
-            NodeRef::Name("use", 0),
-            NodeRef::Name("module", 0),
-            NodeRef::Name("member", 0),
-            NodeRef::Name("fn", 0),
-        ]
+    rule: {
+        NodeRef::Name("comment", 0),
+        NodeRef::Name("use", 0),
+        NodeRef::Name("module", 0),
+        NodeRef::Name("member", 0),
+        NodeRef::Name("fn", 0),
     }
 };
 
