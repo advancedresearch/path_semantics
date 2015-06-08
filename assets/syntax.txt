@@ -4,10 +4,7 @@ seps: "()[]{},;:/*+-";
 2."path" { [?("::" -> "root") .!.("::") { ..seps -> "name" }] };
 3."arg" { [1 2 1 ?(5)] };
 4."arguments" { ["(" w? .?.(["," w!]) {
-    {$_ -> "number"
-    Text { allow_empty: true, property: None }
-    4 11 7 3} }, w? ")"]
-};
+    {$_ -> "number" t? -> "text" 4 11 7 3} }, w? ")"] };
 5."repeated_arguments" { Repeat { optional: false, rule: 4 } };
 6."comment" { [w? "//" ..."\n"] };
 7."lambda" { [w? ?(["fn" w?]) ..seps? -> "name" w? 1 5 w! "->" w! 3 w?] };
