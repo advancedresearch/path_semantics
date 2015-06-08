@@ -1,76 +1,59 @@
 separators: "()[]{},;:/*+-";
 
-Optional {
-    debug_id: 100,
-    rule: Sequence {
-        debug_id: 200,
-        args: [
-            Token {
-                debug_id: 300,
-                text: "[",
-            },
-            Select {
-                debug_id: 400,
-                args: [
-                    Token {
-                        debug_id: 500,
-                        text: ":",
-                    },
-                    UntilAnyOrWhitespace {
-                        debug_id: 600,
-                        any_characters: separators,
-                        property: None,
-                    },
-                ]
-            },
-            Token {
-                debug_id: 700,
-                text: "]",
-            },
-        ],
-    }
-};
-
 Node {
-    debug_id: 800,
+    debug_id: 1000,
     name: "brackets",
     rule: SeparatedBy {
-        debug_id: 900,
         optional: true,
         allow_trail: false,
-        rule: member_bracket,
+        rule: Optional {
+            rule: Sequence {
+                args: [
+                    Token {
+                        text: "[",
+                    },
+                    Select {
+                        args: [
+                            Token {
+                                text: ":",
+                            },
+                            UntilAnyOrWhitespace {
+                                any_characters: separators,
+                                property: None,
+                            },
+                        ]
+                    },
+                    Token {
+                        text: "]",
+                    },
+                ],
+            }
+        },
         by: Whitespace {
-            debug_id: 1000,
             optional: false,
         }
     }
 };
 
 Node {
-    debug_id: 1100,
+    debug_id: 2000,
     name: "path",
     rule: Sequence {
-        debug_id: 1200,
         args: [
             Optional {
-                debug_id: 1300,
                 rule: Token {
-                    debug_id: 1400,
                     text: "::",
                     property: Some("root"),
                 },
             },
             SeparatedBy {
-                debug_id: 1500,
                 optional: false,
                 allow_trail: true,
                 rule: UntilAnyOrWhitespace {
-                    debug_id: 1600,
                     any_characters: separators,
                     property: Some("name"),
                 },
                 by: Token {
-                    debug_id: 1700,
                     text: "::",
                 },
             },
@@ -79,16 +62,14 @@ Node {
 };
 
 Node {
-    debug_id: 1800,
+    debug_id: 3000,
     name: "arg",
     rule: Sequence {
-        debug_id: 1900,
         args: [
             NodeRef::Name("brackets", 0),
             NodeRef::Name("path", 0),
             NodeRef::Name("brackets", 0),
             Optional {
-                debug_id: 2000,
                 rule: NodeRef::Name("repeated_arguments", 0),
             }
         ]
@@ -96,33 +77,26 @@ Node {
 };
 
 Node {
-    debug_id: 2100,
+    debug_id: 4000,
     name: "arguments",
     rule: Sequence {
-        debug_id: 2200,
         args: [
             Token {
-                debug_id: 2300,
                 text: "(",
             },
             Whitespace {
-                debug_id: 2400,
                 optional: true,
             },
             SeparatedBy {
-                debug_id: 2500,
                 optional: true,
                 allow_trail: true,
                 rule: Select {
-                    debug_id: 2600,
                     args: [
                         Number {
-                            debug_id: 2700,
                             property: None,
                             allow_underscore: true,
                         },
                         Text {
-                            debug_id: 2800,
                             allow_empty: true,
                             property: None,
                         },
@@ -133,25 +107,20 @@ Node {
                     ]
                 },
                 by: Sequence {
-                    debug_id: 2900,
                     args: [
                         Token {
-                            debug_id: 3000,
                             text: ",",
                         },
                         Whitespace {
-                            debug_id: 3100,
                             optional: false,
                         },
                     ],
                 },
             },
             Whitespace {
-                debug_id: 3200,
                 optional: true,
             },
             Token {
-                debug_id: 3300,
                 text: ")",
             },
         ]
@@ -159,31 +128,26 @@ Node {
 };
 
 Node {
-    debug_id: 3400,
+    debug_id: 5000,
     name: "repeated_arguments",
     rule: Repeat {
-        debug_id: 3500,
         optional: false,
         rule: NodeRef::Name("arguments", 0),
     }
 };
 
 Node {
-    debug_id: 3600,
+    debug_id: 6000,
     name: "comment",
     rule: Sequence {
-        debug_id: 3700,
         args: [
             Whitespace {
-                debug_id: 22,
                 optional: true,
             },
             Token {
-                debug_id: 3800,
                 text: "//",
             },
             UntilAny {
-                debug_id: 3900,
                 any_characters: "\n",
                 optional: true,
                 property: None,
@@ -193,58 +157,46 @@ Node {
 };
 
 Node {
-    debug_id: 4000,
+    debug_id: 7000,
     name: "lambda",
     rule: Sequence {
-        debug_id: 4100,
         args: [
             Whitespace {
-                debug_id: 4200,
                 optional: true,
             },
             Optional {
-                debug_id: 4300,
                 rule: Sequence {
-                    debug_id: 4400,
                     args: [
                         Token {
-                            debug_id: 4500,
                             text: "fn",
                         },
                         Whitespace {
-                            debug_id: 4600,
                             optional: true,
                         },
                     ]
                 },
             },
             UntilAnyOrWhitespace {
-                debug_id: 4700,
                 any_characters: separators,
                 optional: true,
                 property: Some("name"),
             },
             Whitespace {
-                debug_id: 4800,
                 optional: true,
             },
             NodeRef::Name("brackets", 0),
             NodeRef::Name("repeated_arguments", 0),
             Whitespace {
-                debug_id: 4900,
                 optional: false,
             },
             Token {
-                debug_id: 5000,
                 text: "->",
             },
             Whitespace {
-                debug_id: 5100,
                 optional: false,
             },
             NodeRef::Name("arg", 0),
             Whitespace {
-                debug_id: 5200,
                 optional: true,
             },
         ]
@@ -252,22 +204,17 @@ Node {
 };
 
 Node {
-    debug_id: 5300,
+    debug_id: 8000,
     name: "fn",
     rule: Sequence {
-        debug_id: 5400,
         args: [
             Optional {
-                debug_id: 5500,
                 rule: Sequence {
-                    debug_id: 5600,
                     args: [
                         Token {
-                            debug_id: 5700,
                             text: "pub",
                         },
                         Whitespace {
-                            debug_id: 5800,
                             optional: true,
                         },
                     ]
@@ -275,15 +222,12 @@ Node {
             },
             NodeRef::Name("lambda", 0),
             Token {
-                debug_id: 5900,
                 text: ";",
             },
             Whitespace {
-                debug_id: 6000,
                 optional: true,
             },
             Optional {
-                debug_id: 6100,
                 rule: NodeRef::Name("comment", 0)
             },
         ]
@@ -292,49 +236,38 @@ Node {
 
 
 Node {
-    debug_id: 6200,
+    debug_id: 9000,
     name: "use",
     rule: Sequence {
-        debug_id: 6300,
         args: [
             Whitespace {
-                debug_id: 6400,
                 optional: true,
             },
             Optional {
-                debug_id: 6500,
                 rule: Sequence {
-                    debug_id: 6600,
                     args: [
                         Token {
-                            debug_id: 6700,
                             text: "pub",
                         },
                         Whitespace {
-                            debug_id: 6800,
                             optional: true,
                         },
                     ]
                 },
             },
             Token {
-                debug_id: 6900,
                 text: "use",
             },
             Whitespace {
-                debug_id: 7000,
                 optional: false,
             },
             NodeRef::Name("path", 0),
             Optional {
-                debug_id: 7100,
                 rule: Token {
-                    debug_id: 7200,
                     text: "*",
                 },
             },
             Token {
-                debug_id: 7300,
                 text: ";",
             },
         ]
@@ -342,47 +275,37 @@ Node {
 };
 
 Node {
-    debug_id: 7400,
+    debug_id: 10000,
     name: "module",
     rule: Sequence {
-        debug_id: 7500,
         args: [
             Whitespace {
-                debug_id: 7600,
                 optional: true,
             },
             Optional {
-                debug_id: 7700,
                 rule: Sequence {
-                    debug_id: 7800,
                     args: [
                         Token {
-                            debug_id: 7900,
                             text: "pub",
                         },
                         Whitespace {
-                            debug_id: 8000,
                             optional: true,
                         },
                     ]
                 },
             },
             Token {
-                debug_id: 8100,
                 text: "mod",
             },
             Whitespace {
-                debug_id: 8200,
                 optional: false,
             },
             UntilAnyOrWhitespace {
-                debug_id: 8300,
                 any_characters: separators,
                 optional: true,
                 property: "name",
             },
             Token {
-                debug_id: 8400,
                 text: ";",
             },
         ]
@@ -390,22 +313,18 @@ Node {
 };
 
 Node {
-    debug_id: 8500,
+    debug_id: 11000,
     name: "member_lambda",
     rule: Sequence {
-        debug_id: 8600,
         args: [
             NodeRef::Name("arg", 0),
             Whitespace {
-                debug_id: 8700,
                 optional: true,
             },
             Token {
-                debug_id: 8800,
                 text: ":",
             },
             Whitespace {
-                debug_id: 8900,
                 optional: false,
             },
             NodeRef::Name("arg", 0),
@@ -414,14 +333,12 @@ Node {
 };
 
 Node {
-    debug_id: 9000,
+    debug_id: 12000,
     name: "member",
     rule: Sequence {
-        debug_id: 9100,
         args: [
             NodeRef::Name("member_lambda", 0),
             Token {
-                debug_id: 9200,
                 text: ";",
             },
         ]
@@ -429,10 +346,9 @@ Node {
 };
 
 Node {
-    debug_id: 10000,
+    debug_id: 13000,
     name: "line_rule",
     rule: Select {
-        debug_id: 10100,
         args: [
             NodeRef::Name("comment", 0),
             NodeRef::Name("use", 0),
@@ -444,6 +360,6 @@ Node {
 };
 
 Lines {
-    debug_id: 9400,
+    debug_id: 14000,
     rule: line_rule,
 };
