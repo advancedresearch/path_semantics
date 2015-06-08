@@ -1,8 +1,8 @@
 separators: "()[]{},;:/*+-";
 
-1."brackets" { .?(w!) { ? ["[", {":", ..separators}, "]", ] } };
-2."path" { [? "::" -> "root", .!.("::") { ..separators -> "name" } ] };
-3."arg" { [1, 2, 1, ? 5] };
+1."brackets" { .?(w!) { ?(["[", {":", ..separators}, "]", ]) } };
+2."path" { [?("::" -> "root"), .!.("::") { ..separators -> "name" } ] };
+3."arg" { [1, 2, 1, ?(5)] };
 4."arguments" { ["(", w?, .?.([",", w!]) {
         { $_ -> "number",
         Text { allow_empty: true, property: None },
@@ -12,12 +12,12 @@ separators: "()[]{},;:/*+-";
 };
 5."repeated_arguments" { Repeat { optional: false, rule: 4 } };
 6."comment" { [w?, "//", ..."\n"] };
-7."lambda" { [ w?, ? ["fn", w?], ..separators? -> "name",
+7."lambda" { [ w?, ?(["fn", w?]), ..separators? -> "name",
     w?, 1, 5, w!, "->", w!, 3, w?
 ] };
-8."fn" { [? ["pub", w?], 7, ";", w?, ? 6] };
-9."use" { [w?, ? ["pub", w?], "use", w!, 2, ? "*", ";"] };
-10."module" { [w?, ? ["pub", w?], "mod", w!, ..separators -> "name", ";"] };
+8."fn" { [?(["pub", w?]), 7, ";", w?, ?(6)] };
+9."use" { [w?, ?(["pub", w?]), "use", w!, 2, ?("*"), ";"] };
+10."module" { [w?, ?(["pub", w?]), "mod", w!, ..separators -> "name", ";"] };
 11."member_lambda" { [3, w?, ":", w!, 3] };
 12."member" { [11, ";"] };
 13."line_rule" { {6, 9, 10, 12, 8} };
