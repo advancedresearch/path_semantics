@@ -1,20 +1,13 @@
 separators: "()[]{},;:/*+-";
 
-1000."brackets" {
-    SeparatedBy { optional: true, allow_trail: false,
-        rule: ? ["[", {":", ..separators}, "]", ], by: w! }
-};
-2000."path" { [? "::" -> "root",
-    SeparatedBy { optional: false, allow_trail: true,
-        rule: ..separators -> "name", by: "::" }
-] };
+1000."brackets" { .?(w!) { ? ["[", {":", ..separators}, "]", ] } };
+2000."path" { [? "::" -> "root", .!.("::") { ..separators -> "name" } ] };
 3000."args" { [@"brackets", @"path", @"brackets", ? @"repeated_arguments"] };
 4000."arguments" { ["(", w?,
-    SeparatedBy { optional: true, allow_trail: true,
-        rule: { $_ -> "number",
-            Text { allow_empty: true, property: None },
-            @"arguments", @"member_lambda", @"lambda", @"arg" },
-        by: [",", w!] },
+    .?.([",", w!]) { { $_ -> "number",
+        Text { allow_empty: true, property: None },
+        @"arguments", @"member_lambda", @"lambda", @"arg" },
+        },
     w?, ")"]
 };
 5000."repeated_arguments" { Repeat { optional: false, rule: @"arguments" } };
