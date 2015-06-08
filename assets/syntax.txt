@@ -1,8 +1,6 @@
 separators: "()[]{},;:/*+-";
 
-Node {
-    debug_id: 1000,
-    name: "brackets",
+Node { debug_id: 1000, name: "brackets",
     rule: SeparatedBy {
         optional: true,
         allow_trail: false,
@@ -17,14 +15,9 @@ Node {
     }
 };
 
-Node {
-    debug_id: 2000,
-    name: "path",
+Node { debug_id: 2000, name: "path",
     rule: [
-        ? Token {
-            text: "::",
-            property: Some("root"),
-        },
+        ? Token { text: "::", property: Some("root") },
         SeparatedBy {
             optional: false,
             allow_trail: true,
@@ -37,146 +30,73 @@ Node {
     ]
 };
 
-Node {
-    debug_id: 3000,
-    name: "arg",
-    rule: [
-        NodeRef::Name("brackets", 0),
-        NodeRef::Name("path", 0),
-        NodeRef::Name("brackets", 0),
-        ? NodeRef::Name("repeated_arguments", 0),
-    ]
+Node { debug_id: 3000, name: "arg",
+    rule: [@"brackets", @"path", @"brackets", ? @"repeated_arguments"]
 };
 
-Node {
-    debug_id: 4000,
-    name: "arguments",
+Node { debug_id: 4000, name: "arguments",
     rule: ["(", w?,
         SeparatedBy {
             optional: true,
             allow_trail: true,
             rule: {
-                Number {
-                    property: None,
-                    allow_underscore: true,
-                },
-                Text {
-                    allow_empty: true,
-                    property: None,
-                },
-                NodeRef::Name("arguments", 0),
-                NodeRef::Name("member_lambda", 0),
-                NodeRef::Name("lambda", 0),
-                NodeRef::Name("arg", 0)),
+                Number { property: None, allow_underscore: true },
+                Text { allow_empty: true, property: None },
+                @"arguments", @"member_lambda", @"lambda", @"arg"
             },
             by: [",", w!]
         },
         w?, ")"]
 };
 
-Node {
-    debug_id: 5000,
-    name: "repeated_arguments",
-    rule: Repeat {
-        optional: false,
-        rule: NodeRef::Name("arguments", 0),
-    }
+Node { debug_id: 5000, name: "repeated_arguments",
+    rule: Repeat { optional: false, rule: @"arguments" }
 };
 
-Node {
-    debug_id: 6000,
-    name: "comment",
+Node { debug_id: 6000, name: "comment",
     rule: [w?, "//",
-        UntilAny {
-            any_characters: "\n",
-            optional: true,
-            property: None,
-        },
+        UntilAny { any_characters: "\n", optional: true, property: None }
     ]
 };
 
-Node {
-    debug_id: 7000,
-    name: "lambda",
+Node { debug_id: 7000, name: "lambda",
     rule: [ w?, ? ["fn", w?],
         UntilAnyOrWhitespace {
             any_characters: separators,
             optional: true,
             property: Some("name"),
         },
-        w?,
-        NodeRef::Name("brackets", 0),
-        NodeRef::Name("repeated_arguments", 0),
-        w!, "->", w!,
-        NodeRef::Name("arg", 0),
-        w?,
+        w?, @"brackets", @"repeated_arguments", w!, "->", w!, @"arg", w?
     ]
 };
 
-Node {
-    debug_id: 8000,
-    name: "fn",
-    rule: [? ["pub", w?],
-        NodeRef::Name("lambda", 0),
-        ";", w?,
-        ? NodeRef::Name("comment", 0),
-    ]
+Node { debug_id: 8000, name: "fn",
+    rule: [? ["pub", w?], @"lambda", ";", w?, ? @"comment"]
 };
 
-Node {
-    debug_id: 9000,
-    name: "use",
-    rule: [w?, ? ["pub", w?], "use", w!,
-        NodeRef::Name("path", 0),
-        ? "*", ";",
-    ]
+Node { debug_id: 9000, name: "use",
+    rule: [w?, ? ["pub", w?], "use", w!, @"path", ? "*", ";"]
 };
 
-Node {
-    debug_id: 10000,
-    name: "module",
+Node { debug_id: 10000, name: "module",
     rule: [w?, ? ["pub", w?], "mod", w!,
         UntilAnyOrWhitespace {
             any_characters: separators,
             optional: true,
             property: "name",
-        },
-        ";",
-    ]
+        }, ";"]
 };
 
-Node {
-    debug_id: 11000,
-    name: "member_lambda",
-    rule: [
-        NodeRef::Name("arg", 0),
-        w?, ":", w!,
-        NodeRef::Name("arg", 0),
-    ]
+Node { debug_id: 11000, name: "member_lambda",
+    rule: [@"arg", w?, ":", w!, @"arg"]
 };
 
-Node {
-    debug_id: 12000,
-    name: "member",
-    rule: [
-        NodeRef::Name("member_lambda", 0),
-        ";",
-    ]
+Node { debug_id: 12000, name: "member",
+    rule: [@"member_lambda", ";"]
 };
 
-Node {
-    debug_id: 13000,
-    name: "line_rule",
-    rule: {
-        NodeRef::Name("comment", 0),
-        NodeRef::Name("use", 0),
-        NodeRef::Name("module", 0),
-        NodeRef::Name("member", 0),
-        NodeRef::Name("fn", 0),
-    }
+Node { debug_id: 13000, name: "line_rule",
+    rule: {@"comment", @"use", @"module", @"member", @"fn"}
 };
 
-Lines {
-    debug_id: 14000,
-    rule: line_rule,
-};
+Lines { debug_id: 14000, rule: line_rule }
