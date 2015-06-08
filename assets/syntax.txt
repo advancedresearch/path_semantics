@@ -19,7 +19,6 @@ Optional {
                     UntilAnyOrWhitespace {
                         debug_id: 600,
                         any_characters: separators,
-                        optional: false,
                         property: None,
                     },
                 ]
@@ -68,7 +67,6 @@ Node {
                 rule: UntilAnyOrWhitespace {
                     debug_id: 1600,
                     any_characters: separators,
-                    optional: false,
                     property: Some("name"),
                 },
                 by: Token {
