@@ -1,9 +1,7 @@
 separators: "()[]{},;:/*+-";
 
 Node { debug_id: 1000, name: "brackets",
-    rule: SeparatedBy {
-        optional: true,
-        allow_trail: false,
+    rule: SeparatedBy { optional: true, allow_trail: false,
         rule: ? ["[", {":", ..separators}, "]", ],
         by: w!
     }
@@ -11,9 +9,7 @@ Node { debug_id: 1000, name: "brackets",
 
 Node { debug_id: 2000, name: "path",
     rule: [? "::" -> "root",
-        SeparatedBy {
-            optional: false,
-            allow_trail: true,
+        SeparatedBy { optional: false, allow_trail: true,
             rule: ..separators -> "name",
             by: "::"
         },
@@ -26,11 +22,9 @@ Node { debug_id: 3000, name: "arg",
 
 Node { debug_id: 4000, name: "arguments",
     rule: ["(", w?,
-        SeparatedBy {
-            optional: true,
-            allow_trail: true,
+        SeparatedBy { optional: true, allow_trail: true,
             rule: {
-                Number { property: None, allow_underscore: true },
+                $_ -> "number",
                 Text { allow_empty: true, property: None },
                 @"arguments", @"member_lambda", @"lambda", @"arg"
             },
