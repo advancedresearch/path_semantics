@@ -6,20 +6,14 @@ Node {
     rule: SeparatedBy {
         optional: true,
         allow_trail: false,
-        rule: ? [
-            "[",
-            {
-                ":",
+        rule: ? ["[",
+            {":",
                 UntilAnyOrWhitespace {
                     any_characters: separators,
                     property: None,
                 },
-            },
-            "]",
-        ],
-        by: Whitespace {
-            optional: false,
-        }
+            }, "]", ],
+        by: w!
     }
 };
 
@@ -57,11 +51,7 @@ Node {
 Node {
     debug_id: 4000,
     name: "arguments",
-    rule: [
-        "(",
-        Whitespace {
-            optional: true,
-        },
+    rule: ["(", w?,
         SeparatedBy {
             optional: true,
             allow_trail: true,
@@ -79,18 +69,9 @@ Node {
                 NodeRef::Name("lambda", 0),
                 NodeRef::Name("arg", 0)),
             },
-            by: [
-                ",",
-                Whitespace {
-                    optional: false,
-                },
-            ]
+            by: [",", w!]
         },
-        Whitespace {
-            optional: true,
-        },
-        ")",
-    ]
+        w?, ")"]
 };
 
 Node {
@@ -105,11 +86,7 @@ Node {
 Node {
     debug_id: 6000,
     name: "comment",
-    rule: [
-        Whitespace {
-            optional: true,
-        },
-        "//",
+    rule: [w?, "//",
         UntilAny {
             any_characters: "\n",
             optional: true,
@@ -121,100 +98,44 @@ Node {
 Node {
     debug_id: 7000,
     name: "lambda",
-    rule: [
-        Whitespace {
-            optional: true,
-        },
-        ? [
-            "fn",
-            Whitespace {
-                optional: true,
-            },
-        ],
+    rule: [ w?, ? ["fn", w?],
         UntilAnyOrWhitespace {
             any_characters: separators,
             optional: true,
             property: Some("name"),
         },
-        Whitespace {
-            optional: true,
-        },
+        w?,
         NodeRef::Name("brackets", 0),
         NodeRef::Name("repeated_arguments", 0),
-        Whitespace {
-            optional: false,
-        },
-        "->",
-        Whitespace {
-            optional: false,
-        },
+        w!, "->", w!,
         NodeRef::Name("arg", 0),
-        Whitespace {
-            optional: true,
-        },
+        w?,
     ]
 };
 
 Node {
     debug_id: 8000,
     name: "fn",
-    rule: [
-        ? [
-            "pub",
-            Whitespace {
-                optional: true,
-            },
-        ],
+    rule: [? ["pub", w?],
         NodeRef::Name("lambda", 0),
-        ";",
-        Whitespace {
-            optional: true,
-        },
+        ";", w?,
         ? NodeRef::Name("comment", 0),
     ]
 };
 
-
 Node {
     debug_id: 9000,
     name: "use",
-    rule: [
-        Whitespace {
-            optional: true,
-        },
-        ? [
-            "pub",
-            Whitespace {
-                optional: true,
-            },
-        ],
-        "use",
-        Whitespace {
-            optional: false,
-        },
+    rule: [w?, ? ["pub", w?], "use", w!,
         NodeRef::Name("path", 0),
-        ? "*",
-        ";",
+        ? "*", ";",
     ]
 };
 
 Node {
     debug_id: 10000,
     name: "module",
-    rule: [
-        Whitespace {
-            optional: true,
-        },
-        ? [
-            "pub",
-            Whitespace {
-                optional: true,
-            },
-        ],
-        "mod",
-        Whitespace {
-            optional: false,
-        },
+    rule: [w?, ? ["pub", w?], "mod", w!,
         UntilAnyOrWhitespace {
             any_characters: separators,
             optional: true,
@@ -229,13 +150,7 @@ Node {
     name: "member_lambda",
     rule: [
         NodeRef::Name("arg", 0),
-        Whitespace {
-            optional: true,
-        },
-        ":",
-        Whitespace {
-            optional: false,
-        },
+        w?, ":", w!,
         NodeRef::Name("arg", 0),
     ]
 };
