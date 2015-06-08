@@ -4,13 +4,7 @@ Node { debug_id: 1000, name: "brackets",
     rule: SeparatedBy {
         optional: true,
         allow_trail: false,
-        rule: ? ["[",
-            {":",
-                UntilAnyOrWhitespace {
-                    any_characters: separators,
-                    property: None,
-                },
-            }, "]", ],
+        rule: ? ["[", {":", ..separators}, "]", ],
         by: w!
     }
 };
@@ -20,10 +14,7 @@ Node { debug_id: 2000, name: "path",
         SeparatedBy {
             optional: false,
             allow_trail: true,
-            rule: UntilAnyOrWhitespace {
-                any_characters: separators,
-                property: Some("name"),
-            },
+            rule: ..separators -> "name",
             by: "::"
         },
     ]
@@ -60,11 +51,7 @@ Node { debug_id: 6000, name: "comment",
 
 Node { debug_id: 7000, name: "lambda",
     rule: [ w?, ? ["fn", w?],
-        UntilAnyOrWhitespace {
-            any_characters: separators,
-            optional: true,
-            property: Some("name"),
-        },
+        ..separators? -> "name",
         w?, @"brackets", @"repeated_arguments", w!, "->", w!, @"arg", w?
     ]
 };
@@ -78,12 +65,7 @@ Node { debug_id: 9000, name: "use",
 };
 
 Node { debug_id: 10000, name: "module",
-    rule: [w?, ? ["pub", w?], "mod", w!,
-        UntilAnyOrWhitespace {
-            any_characters: separators,
-            optional: true,
-            property: "name",
-        }, ";"]
+    rule: [w?, ? ["pub", w?], "mod", w!, ..separators -> "name", ";"]
 };
 
 Node { debug_id: 11000, name: "member_lambda",
