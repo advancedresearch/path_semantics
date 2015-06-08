@@ -8,7 +8,6 @@ Optional {
             Token {
                 debug_id: 300,
                 text: "[",
-                inverted: false,
                 property: None,
             },
             Select {
@@ -17,7 +16,6 @@ Optional {
                     Token {
                         debug_id: 500,
                         text: ":",
-                        inverted: false,
                         property: None,
                     },
                     UntilAnyOrWhitespace {
@@ -31,7 +29,6 @@ Optional {
             Token {
                 debug_id: 700,
                 text: "]",
-                inverted: false,
                 property: None,
             },
         ],
@@ -64,7 +61,6 @@ Node {
                 rule: Token {
                     debug_id: 1400,
                     text: "::",
-                    inverted: false,
                     property: Some("root"),
                 },
             },
@@ -81,7 +77,6 @@ Node {
                 by: Token {
                     debug_id: 1700,
                     text: "::",
-                    inverted: false,
                     property: None,
                 },
             },
@@ -115,7 +110,6 @@ Node {
             Token {
                 debug_id: 2300,
                 text: "(",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -151,7 +145,6 @@ Node {
                         Token {
                             debug_id: 3000,
                             text: ",",
-                            inverted: false,
                             property: None,
                         },
                         Whitespace {
@@ -168,7 +161,6 @@ Node {
             Token {
                 debug_id: 3300,
                 text: ")",
-                inverted: false,
                 property: None,
             },
         ]
@@ -198,7 +190,6 @@ Node {
             Token {
                 debug_id: 3800,
                 text: "//",
-                inverted: false,
                 property: None,
             },
             UntilAny {
@@ -229,7 +220,6 @@ Node {
                         Token {
                             debug_id: 4500,
                             text: "fn",
-                            inverted: false,
                             property: None,
                         },
                         Whitespace {
@@ -258,7 +248,6 @@ Node {
             Token {
                 debug_id: 5000,
                 text: "->",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -288,7 +277,6 @@ Node {
                         Token {
                             debug_id: 5700,
                             text: "pub",
-                            inverted: false,
                             property: None,
                         },
                         Whitespace {
@@ -302,7 +290,6 @@ Node {
             Token {
                 debug_id: 5900,
                 text: ";",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -336,7 +323,6 @@ Node {
                         Token {
                             debug_id: 6700,
                             text: "pub",
-                            inverted: false,
                             property: None,
                         },
                         Whitespace {
@@ -349,7 +335,6 @@ Node {
             Token {
                 debug_id: 6900,
                 text: "use",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -362,14 +347,12 @@ Node {
                 rule: Token {
                     debug_id: 7200,
                     text: "*",
-                    inverted: false,
                     property: None,
                 },
             },
             Token {
                 debug_id: 7300,
                 text: ";",
-                inverted: false,
                 property: None,
             },
         ]
@@ -394,7 +377,6 @@ Node {
                         Token {
                             debug_id: 7900,
                             text: "pub",
-                            inverted: false,
                             property: None,
                         },
                         Whitespace {
@@ -407,7 +389,6 @@ Node {
             Token {
                 debug_id: 8100,
                 text: "mod",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -423,7 +404,6 @@ Node {
             Token {
                 debug_id: 8400,
                 text: ";",
-                inverted: false,
                 property: None,
             },
         ]
@@ -444,7 +424,6 @@ Node {
             Token {
                 debug_id: 8800,
                 text: ":",
-                inverted: false,
                 property: None,
             },
             Whitespace {
@@ -466,7 +445,6 @@ Node {
             Token {
                 debug_id: 9200,
                 text: ";",
-                inverted: false,
                 property: None,
             },
         ]
