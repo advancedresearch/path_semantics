@@ -1,25 +1,25 @@
 separators: "()[]{},;:/*+-";
 
-1000."brackets" { .?(w!) { ? ["[", {":", ..separators}, "]", ] } };
-2000."path" { [? "::" -> "root", .!.("::") { ..separators -> "name" } ] };
-3000."args" { [@"brackets", @"path", @"brackets", ? @"repeated_arguments"] };
-4000."arguments" { ["(", w?,
+1."brackets" { .?(w!) { ? ["[", {":", ..separators}, "]", ] } };
+2."path" { [? "::" -> "root", .!.("::") { ..separators -> "name" } ] };
+3."args" { [@"brackets", @"path", @"brackets", ? @"repeated_arguments"] };
+4."arguments" { ["(", w?,
     .?.([",", w!]) { { $_ -> "number",
         Text { allow_empty: true, property: None },
         @"arguments", @"member_lambda", @"lambda", @"arg" },
         },
     w?, ")"]
 };
-5000."repeated_arguments" { Repeat { optional: false, rule: @"arguments" } };
-6000."comment" { [w?, "//", ..."\n"] };
-7000."lambda" { [ w?, ? ["fn", w?], ..separators? -> "name",
+5."repeated_arguments" { Repeat { optional: false, rule: @"arguments" } };
+6."comment" { [w?, "//", ..."\n"] };
+7."lambda" { [ w?, ? ["fn", w?], ..separators? -> "name",
     w?, @"brackets", @"repeated_arguments", w!, "->", w!, @"arg", w?
 ] };
-8000."fn" { [? ["pub", w?], @"lambda", ";", w?, ? @"comment"] };
-9000."use" { [w?, ? ["pub", w?], "use", w!, @"path", ? "*", ";"] };
-10000."module" { [w?, ? ["pub", w?], "mod", w!, ..separators -> "name", ";"] };
-11000."member_lambda" { [@"arg", w?, ":", w!, @"arg"] };
-12000."member" { [@"member_lambda", ";"] };
-13000."line_rule" { {@"comment", @"use", @"module", @"member", @"fn"} };
+8."fn" { [? ["pub", w?], @"lambda", ";", w?, ? @"comment"] };
+9."use" { [w?, ? ["pub", w?], "use", w!, @"path", ? "*", ";"] };
+10."module" { [w?, ? ["pub", w?], "mod", w!, ..separators -> "name", ";"] };
+11."member_lambda" { [@"arg", w?, ":", w!, @"arg"] };
+12."member" { [@"member_lambda", ";"] };
+13."line_rule" { {@"comment", @"use", @"module", @"member", @"fn"} };
 
 Lines { debug_id: 14000, rule: line_rule }
