@@ -16,8 +16,7 @@ Node { debug_id: 1000, name: "brackets",
 };
 
 Node { debug_id: 2000, name: "path",
-    rule: [
-        ? Token { text: "::", property: Some("root") },
+    rule: [? "::" -> "root",
         SeparatedBy {
             optional: false,
             allow_trail: true,
