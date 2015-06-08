@@ -8,7 +8,6 @@ Optional {
             Token {
                 debug_id: 300,
                 text: "[",
-                property: None,
             },
             Select {
                 debug_id: 400,
@@ -16,7 +15,6 @@ Optional {
                     Token {
                         debug_id: 500,
                         text: ":",
-                        property: None,
                     },
                     UntilAnyOrWhitespace {
                         debug_id: 600,
@@ -29,7 +27,6 @@ Optional {
             Token {
                 debug_id: 700,
                 text: "]",
-                property: None,
             },
         ],
     }
@@ -77,7 +74,6 @@ Node {
                 by: Token {
                     debug_id: 1700,
                     text: "::",
-                    property: None,
                 },
             },
         ]
@@ -110,7 +106,6 @@ Node {
             Token {
                 debug_id: 2300,
                 text: "(",
-                property: None,
             },
             Whitespace {
                 debug_id: 2400,
@@ -145,7 +140,6 @@ Node {
                         Token {
                             debug_id: 3000,
                             text: ",",
-                            property: None,
                         },
                         Whitespace {
                             debug_id: 3100,
@@ -161,7 +155,6 @@ Node {
             Token {
                 debug_id: 3300,
                 text: ")",
-                property: None,
             },
         ]
     },
@@ -190,7 +183,6 @@ Node {
             Token {
                 debug_id: 3800,
                 text: "//",
-                property: None,
             },
             UntilAny {
                 debug_id: 3900,
@@ -220,7 +212,6 @@ Node {
                         Token {
                             debug_id: 4500,
                             text: "fn",
-                            property: None,
                         },
                         Whitespace {
                             debug_id: 4600,
@@ -248,7 +239,6 @@ Node {
             Token {
                 debug_id: 5000,
                 text: "->",
-                property: None,
             },
             Whitespace {
                 debug_id: 5100,
@@ -277,7 +267,6 @@ Node {
                         Token {
                             debug_id: 5700,
                             text: "pub",
-                            property: None,
                         },
                         Whitespace {
                             debug_id: 5800,
@@ -290,7 +279,6 @@ Node {
             Token {
                 debug_id: 5900,
                 text: ";",
-                property: None,
             },
             Whitespace {
                 debug_id: 6000,
@@ -323,7 +311,6 @@ Node {
                         Token {
                             debug_id: 6700,
                             text: "pub",
-                            property: None,
                         },
                         Whitespace {
                             debug_id: 6800,
@@ -335,7 +322,6 @@ Node {
             Token {
                 debug_id: 6900,
                 text: "use",
-                property: None,
             },
             Whitespace {
                 debug_id: 7000,
@@ -347,13 +333,11 @@ Node {
                 rule: Token {
                     debug_id: 7200,
                     text: "*",
-                    property: None,
                 },
             },
             Token {
                 debug_id: 7300,
                 text: ";",
-                property: None,
             },
         ]
     })
@@ -377,7 +361,6 @@ Node {
                         Token {
                             debug_id: 7900,
                             text: "pub",
-                            property: None,
                         },
                         Whitespace {
                             debug_id: 8000,
@@ -389,7 +372,6 @@ Node {
             Token {
                 debug_id: 8100,
                 text: "mod",
-                property: None,
             },
             Whitespace {
                 debug_id: 8200,
@@ -404,7 +386,6 @@ Node {
             Token {
                 debug_id: 8400,
                 text: ";",
-                property: None,
             },
         ]
     }
@@ -424,7 +405,6 @@ Node {
             Token {
                 debug_id: 8800,
                 text: ":",
-                property: None,
             },
             Whitespace {
                 debug_id: 8900,
@@ -445,7 +425,6 @@ Node {
             Token {
                 debug_id: 9200,
                 text: ";",
-                property: None,
             },
         ]
     },
