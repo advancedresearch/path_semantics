@@ -1,14 +1,14 @@
 seps: "()[]{},;:/*+-"
-1."brackets" s?(w!) { ?(["[" {":", ..seps} "]"]) }
-2."path" [?("::" -> "root";) s!.("::") { ..seps -> "name"; }]
+1."brackets" s?(w!) { ?(["[" {":", ..seps!} "]"]) }
+2."path" [?("::"("root")) s!.("::") { ..seps!("name") }]
 3."arg" [1 2 1 ?(5)]
-4."arguments" ["(" w? s?.(["," w!]) { {$_ -> "number"; t? -> "text"; 4 11 7 3} }, w? ")"]
+4."arguments" ["(" w? s?.(["," w!]) { {$_("number") t?("text") 4 11 7 3} }, w? ")"]
 5."repeated_arguments" r!(4)
 6."comment" [w? "//" ..."\n"]
-7."lambda" [w? ?(["fn" w?]) ..seps? -> "name"; w? 1 5 w! "->" w! 3 w?]
+7."lambda" [w? ?(["fn" w?]) ..seps?("name") w? 1 5 w! "->" w! 3 w?]
 8."fn" [?(["pub" w?]) 7 ";" w? ?(6)]
 9."use" [w? ?(["pub" w?]) "use" w! 2 ?("*") ";"]
-10."module" [w? ?(["pub" w?]) "mod" w! ..seps -> "name"; ";"]
+10."module" [w? ?(["pub" w?]) "mod" w! ..seps!("name") ";"]
 11."member_lambda" [3 w? ":" w! 3]
 12."member" [11 ";"]
 13."line_rule" {6 9 10 12 8}

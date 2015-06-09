@@ -1,26 +1,24 @@
 opt: "optional"
 inv: "inverted"
+prop: "property"
+any: "any_characters"
 seps: "[]{}():"
-1."string" [..seps -> "name"; w? t? -> "text";]
-2."node" [$ -> "id"; "." t! -> "name"; w! @"rule"]
-3."number" ["$" ?("_" -> "underscore";) ?(w! "->" w! @"set" -> "name"; ";")]
-4."text" ["t" {"?" -> opt; "!" -> !opt;} ?(w! "->" w! @"set" ";")]
-5."reference" [{["@" t! -> "name";] $ -> "id";} ?(w! "->" w! @"set" ";")]
-6."set" {t! -> "value"; ..seps -> "ref";}
-6."sequence" ["[" w? s!.(w!) {@"rule"} "]"]
-7."select" ["{" w? s!.(w!) {@"rule"} "}"]
-8."separated_by" ["s" {"?" -> opt; "!" -> !opt;}
-  ?("." -> "allow_trailing";) "(" w? @"rule" w? ")" w? "{" w? @"rule" w? "}"]
-9."token" [@"set" -> "text" ?(w! "->" w! {"!" -> inv; "?" -> !inv;}
-  @"set" -> "property"; ";")]
-10."optional" ["?(" w? @"rule" w? ")"]
-11."whitespace" ["w" {"?" -> opt; "!" -> !opt;}]
-12."until_any_or_whitespace" [".." @"set" -> "any";
-  ?("?" -> opt;) ?(w! "->" w! @"set" -> "property"; ";") ]
-13."until_any" ["..." @"set" -> "any"; ?("?" -> opt;)
-  ?(w! "->" w! @"set" -> "property" ";") ]
-14."repeat" ["r" {"?" -> opt; "!" -> !opt;} "(" @"rule" ")"]
-15."rule" {@"number" @"text" @"token" @"reference" @"sequence" @"select"
-  @"separated_by" @"token" @"optional" @"whitespace" @"until_any_or_whitespace"
-  @"until_any" @"repeat"}
+1."string" [..seps("name") ":" w? t?("text")]
+2."node" [$("id") "." t!("name") w! @"rule"]
+3."set" ["(" w? {t!("value") ..seps("ref")} w? ")"]
+4."opt" {"?"(opt) "!"(!opt)}
+5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
+6."text" ["t" @"opt" ?(@"set")]
+7."reference" [{["@" t!("name")] $("id")} ?(@"set")]
+8."sequence" ["[" w? s!.(w!) {@"rule"} "]"]
+9."select" ["{" w? s!.(w!) {@"rule"} "}"]
+10."separated_by" ["s" @"opt" ?("."("allow_trailing"))
+  "(" w? @"rule"("by") w? ")" w? "{" w? @"rule"("rule") w? "}"]
+11."token" [@"set"("text") ?(["(" w? {"!"(inv) "?"(!inv)} @"set"(prop) w? ")"])]
+12."optional" ["?(" w? @"rule" w? ")"]
+13."whitespace" ["w" @"opt"]
+14."until_any_or_whitespace" [".." @"set"(any) @"opt" ?(@"set"(prop)) ]
+15."until_any" ["..." @"set"(any) @"opt" ?(@"set"(prop)) ]
+16."repeat" ["r" @"opt" "(" @"rule" ")"]
+17."rule" {5 6 7 8 9 10 11 12 13 14 15 16}
 [l(@"string") l(@"node") @"rule"]
