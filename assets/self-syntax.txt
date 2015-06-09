@@ -5,7 +5,7 @@ any: "any_characters"
 seps: "[]{}():"
 1."string" [..seps("name") ":" w? t?("text")]
 2."node" [$("id") "." t!("name") w! @"rule"]
-3."set" ["(" w? {t!("value") ..seps("ref")} w? ")"]
+3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
 4."opt" {"?"(opt) "!"(!opt)}
 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
 6."text" ["t" @"opt" ?(@"set")]
