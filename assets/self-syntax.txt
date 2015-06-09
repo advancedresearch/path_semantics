@@ -1,29 +1,24 @@
-prop: "property"
-prop_ref: "property_reference"
-any: "any_characters"
-any_ref: "any_characters_reference"
 opt: "optional"
 inv: "inverted"
 seps: "[]{}():"
 1."string" [..seps -> "name"; w? t? -> "text";]
 2."node" [$ -> "id"; "." t! -> "name"; w! @"rule"]
-3."number" ["$" ?("_" -> "underscore";) ?(w! "->" w!
-  {t! -> "name"; ..seps -> "name_ref";} ";")]
-4."text" ["t" {"?" -> opt; "!" -> !opt;} ?(w! "->" w!
-  {t! -> prop; ..seps -> prop_ref;} ";")]
-5."reference" {["@" t! -> "name";] $ -> "id";}
+3."number" ["$" ?("_" -> "underscore";) ?(w! "->" w! @"set" -> "name"; ";")]
+4."text" ["t" {"?" -> opt; "!" -> !opt;} ?(w! "->" w! @"set" ";")]
+5."reference" [{["@" t! -> "name";] $ -> "id";} ?(w! "->" w! @"set" ";")]
+6."set" {t! -> "value"; ..seps -> "ref";}
 6."sequence" ["[" w? s!.(w!) {@"rule"} "]"]
 7."select" ["{" w? s!.(w!) {@"rule"} "}"]
 8."separated_by" ["s" {"?" -> opt; "!" -> !opt;}
   ?("." -> "allow_trailing";) "(" w? @"rule" w? ")" w? "{" w? @"rule" w? "}"]
-9."token" [{t! -> "text"; .."" -> "text_ref";}
-  ?(w! "->" w! {"!" -> inv; "?" -> !inv;} {t! -> prop; ..seps -> prop_ref;} ";")]
+9."token" [@"set" -> "text" ?(w! "->" w! {"!" -> inv; "?" -> !inv;}
+  @"set" -> "property"; ";")]
 10."optional" ["?(" w? @"rule" w? ")"]
 11."whitespace" ["w" {"?" -> opt; "!" -> !opt;}]
-12."until_any_or_whitespace" [".." ..{t? -> any; ..seps -> any_ref;}
-  ?("?" -> opt;) ?(w! "->" w! {t! -> prop; ..seps -> prop_ref;} ";") ]
-13."until_any" ["..." ..{t? -> any; ..seps -> any_ref;}
-  ?("?" -> opt;) ?(w! "->" w! {t! -> prop; ..seps -> prop_ref;} ";") ]
+12."until_any_or_whitespace" [".." @"set" -> "any";
+  ?("?" -> opt;) ?(w! "->" w! @"set" -> "property"; ";") ]
+13."until_any" ["..." @"set" -> "any"; ?("?" -> opt;)
+  ?(w! "->" w! @"set" -> "property" ";") ]
 14."repeat" ["r" {"?" -> opt; "!" -> !opt;} "(" @"rule" ")"]
 15."rule" {@"number" @"text" @"token" @"reference" @"sequence" @"select"
   @"separated_by" @"token" @"optional" @"whitespace" @"until_any_or_whitespace"
