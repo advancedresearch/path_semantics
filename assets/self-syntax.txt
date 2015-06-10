@@ -3,12 +3,12 @@ inv: "inverted"
 prop: "property"
 any: "any_characters"
 seps: "[]{}():"
-1."string" [..seps("name") ":" w? t?("text")]
+1."string" [..seps!("name") ":" w? t?("text")]
 2."node" [$("id") "." t!("name") w! @"rule"]
 3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
 4."opt" {"?"(opt) "!"(!opt)}
 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
-6."text" ["t" @"opt" ?(@"set")]
+6."text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set")]
 7."reference" [{["@" t!("name")] $("id")} ?(@"set")]
 8."sequence" ["[" w? s!.(w!) {@"rule"} "]"]
 9."select" ["{" w? s!.(w!) {@"rule"} "}"]

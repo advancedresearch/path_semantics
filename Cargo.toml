@@ -11,5 +11,5 @@ repository = "https://github.com/pistondevelopers/math_notation.git"
 homepage = "https://github.com/pistondevelopers/math_notation"
 
 [dependencies]
-piston_meta = "0.3.0"
+piston_meta = "0.4.0"
 range = "0.1.1"

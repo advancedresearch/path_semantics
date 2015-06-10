@@ -6,12 +6,13 @@ extern crate range;
 extern crate piston_meta;
 
 use std::path::PathBuf;
+use std::rc::Rc;
+use std::cell::Cell;
 use range::Range;
+use piston_meta::Rule;
 
-/// Gets rules for parsing mathematical notation.
-pub fn rules() -> piston_meta::Rule {
-    use std::rc::Rc;
-    use std::cell::RefCell;
+/// Returns rules for parsing mathematical notation.
+pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
     use piston_meta::*;
 
     let separators: Rc<String> = Rc::new("()[]{},;:/*+-".into());
@@ -54,478 +55,744 @@ pub fn rules() -> piston_meta::Rule {
         })
     }));
 
-    let brackets_rule = Node {
-        debug_id: 800,
-        name: Rc::new("brackets".into()),
-        rule: Rule::SeparatedBy(Box::new(SeparatedBy {
-            debug_id: 900,
-            optional: true,
-            allow_trail: false,
-            rule: member_bracket,
-            by: Rule::Whitespace(Whitespace {
-                debug_id: 1000,
-                optional: false,
-            })
-        }))
-    };
-
-    let path_rule = Node {
-        debug_id: 1100,
-        name: Rc::new("path".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 1200,
-            args: vec![
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 1300,
-                    rule: Rule::Token(Token {
-                        debug_id: 1400,
-                        text: Rc::new("::".into()),
-                        inverted: false,
-                        property: Some(Rc::new("root".into())),
-                    }),
-                })),
-                Rule::SeparatedBy(Box::new(SeparatedBy {
-                    debug_id: 1500,
-                    optional: false,
-                    allow_trail: true,
-                    rule: Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                        debug_id: 1600,
-                        any_characters: separators.clone(),
-                        optional: false,
-                        property: Some(Rc::new("name".into())),
-                    }),
-                    by: Rule::Token(Token {
-                        debug_id: 1700,
-                        text: Rc::new("::".into()),
-                        inverted: false,
-                        property: None,
-                    }),
-                })),
-            ]
-        }),
-    };
-
-    let arg_rule = Node {
-        debug_id: 1800,
-        name: Rc::new("arg".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 1900,
-            args: vec![
-                Rule::Node(NodeRef::Name(Rc::new("brackets".into()), 0)),
-                Rule::Node(NodeRef::Name(Rc::new("path".into()), 0)),
-                Rule::Node(NodeRef::Name(Rc::new("brackets".into()), 0)),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 2000,
-                    rule: Rule::Node(NodeRef::Name(
-                        Rc::new("repeated_arguments".into()), 0)),
-                }))
-            ]
-        })
-    };
-
-    let arguments = Node {
-        debug_id: 2100,
-        name: Rc::new("arguments".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 2200,
-            args: vec![
-                Rule::Token(Token {
-                    debug_id: 2300,
-                    text: Rc::new("(".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 2400,
-                    optional: true,
-                }),
-                Rule::SeparatedBy(Box::new(SeparatedBy {
-                    debug_id: 2500,
-                    optional: true,
-                    allow_trail: true,
-                    rule: Rule::Select(Select {
-                        debug_id: 2600,
-                        args: vec![
-                            Rule::Number(Number {
-                                debug_id: 2700,
-                                allow_underscore: true,
-                                property: None,
-                            }),
-                            Rule::Text(Text {
-                                debug_id: 2800,
-                                allow_empty: true,
-                                property: None,
-                            }),
-                            Rule::Node(NodeRef::Name(Rc::new("arguments".into()), 0)),
-                            Rule::Node(NodeRef::Name(Rc::new("member_lambda".into()), 0)),
-                            Rule::Node(NodeRef::Name(Rc::new("lambda".into()), 0)),
-                            Rule::Node(NodeRef::Name(Rc::new("arg".into()), 0)),
-                        ]
-                    }),
-                    by: Rule::Sequence(Sequence {
-                        debug_id: 2900,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 3000,
-                                text: Rc::new(",".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Whitespace(Whitespace {
-                                debug_id: 3100,
-                                optional: false,
-                            }),
-                        ],
-                    }),
-                })),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 3200,
-                    optional: true,
-                }),
-                Rule::Token(Token {
-                    debug_id: 3300,
-                    text: Rc::new(")".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            ]
-        }),
-    };
-
-    let repeated_arguments = Node {
-        debug_id: 3400,
-        name: Rc::new("repeated_arguments".into()),
-        rule: Rule::Repeat(Box::new(Repeat {
-            debug_id: 3500,
+    let brackets_rule = Rule::SeparatedBy(Box::new(SeparatedBy {
+        debug_id: 900,
+        optional: true,
+        allow_trail: false,
+        rule: member_bracket,
+        by: Rule::Whitespace(Whitespace {
+            debug_id: 1000,
             optional: false,
-            rule: Rule::Node(NodeRef::Name(Rc::new("arguments".into()), 0)),
-        }))
-    };
-
-    let comment_rule = Node {
-        debug_id: 3600,
-        name: Rc::new("comment".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 3700,
-            args: vec![
-                Rule::Whitespace(Whitespace {
-                    debug_id: 22,
-                    optional: true,
-                }),
-                Rule::Token(Token {
-                    debug_id: 3800,
-                    text: Rc::new("//".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::UntilAny(UntilAny {
-                    debug_id: 3900,
-                    any_characters: Rc::new("\n".into()),
-                    optional: true,
-                    property: None,
-                }),
-            ],
         })
-    };
+    }));
 
-    let lambda = Node {
-        debug_id: 4000,
-        name: Rc::new("lambda".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 4100,
-            args: vec![
-                Rule::Whitespace(Whitespace {
-                    debug_id: 4200,
-                    optional: true,
+    let path_rule = Rule::Sequence(Sequence {
+        debug_id: 1200,
+        args: vec![
+            Rule::Optional(Box::new(Optional {
+                debug_id: 1300,
+                rule: Rule::Token(Token {
+                    debug_id: 1400,
+                    text: Rc::new("::".into()),
+                    inverted: false,
+                    property: Some(Rc::new("root".into())),
                 }),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 4300,
-                    rule: Rule::Sequence(Sequence {
-                        debug_id: 4400,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 4500,
-                                text: Rc::new("fn".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Whitespace(Whitespace {
-                                debug_id: 4600,
-                                optional: true,
-                            }),
-                        ]
-                    }),
-                })),
-                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                    debug_id: 4700,
+            })),
+            Rule::SeparatedBy(Box::new(SeparatedBy {
+                debug_id: 1500,
+                optional: false,
+                allow_trail: true,
+                rule: Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                    debug_id: 1600,
                     any_characters: separators.clone(),
-                    optional: true,
+                    optional: false,
                     property: Some(Rc::new("name".into())),
                 }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 4800,
-                    optional: true,
-                }),
-                Rule::Node(NodeRef::Name(Rc::new("brackets".into()), 0)),
-                Rule::Node(NodeRef::Name(Rc::new("repeated_arguments".into()), 0)),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 4900,
-                    optional: false,
-                }),
-                Rule::Token(Token {
-                    debug_id: 5000,
-                    text: Rc::new("->".into()),
+                by: Rule::Token(Token {
+                    debug_id: 1700,
+                    text: Rc::new("::".into()),
                     inverted: false,
                     property: None,
                 }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 5100,
-                    optional: false,
-                }),
-                Rule::Node(NodeRef::Name(Rc::new("arg".into()), 0)),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 5200,
-                    optional: true,
-                }),
-            ]
-        })
-    };
+            })),
+        ]
+    });
 
-    let fn_rule = Node {
-        debug_id: 5300,
-        name: Rc::new("fn".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 5400,
-            args: vec![
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 5500,
-                    rule: Rule::Sequence(Sequence {
-                        debug_id: 5600,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 5700,
-                                text: Rc::new("pub".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Whitespace(Whitespace {
-                                debug_id: 5800,
-                                optional: true,
-                            }),
-                        ]
-                    }),
-                })),
-                Rule::Node(NodeRef::Name(Rc::new("lambda".into()), 0)),
-                Rule::Token(Token {
-                    debug_id: 5900,
-                    text: Rc::new(";".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 6000,
-                    optional: true,
-                }),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 6100,
-                    rule: Rule::Node(NodeRef::Name(Rc::new("comment".into()), 0))
-                })),
-            ]
-        })
-    };
+    let arg_rule = Rule::Sequence(Sequence {
+        debug_id: 1900,
+        args: vec![
+            Rule::Node(Node {
+                name: Rc::new("brackets".into()),
+                property: Some(Rc::new("brackets".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("path".into()),
+                property: Some(Rc::new("path".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("brackets".into()),
+                property: Some(Rc::new("brackets".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 2000,
+                rule: Rule::Node(Node {
+                    name: Rc::new("repeated_arguments".into()),
+                    property: Some(Rc::new("repeated_arguments".into())),
+                    debug_id: 0,
+                    index: Cell::new(None),
+                    node_visit: Cell::new(NodeVisit::Unvisited),
+                })
+            }))
+        ]
+    });
 
+    let arguments = Rule::Sequence(Sequence {
+        debug_id: 2200,
+        args: vec![
+            Rule::Token(Token {
+                debug_id: 2300,
+                text: Rc::new("(".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 2400,
+                optional: true,
+            }),
+            Rule::SeparatedBy(Box::new(SeparatedBy {
+                debug_id: 2500,
+                optional: true,
+                allow_trail: true,
+                rule: Rule::Select(Select {
+                    debug_id: 2600,
+                    args: vec![
+                        Rule::Number(Number {
+                            debug_id: 2700,
+                            allow_underscore: true,
+                            property: None,
+                        }),
+                        Rule::Text(Text {
+                            debug_id: 2800,
+                            allow_empty: true,
+                            property: None,
+                        }),
+                        Rule::Node(Node {
+                            name: Rc::new("arguments".into()),
+                            property: Some(Rc::new("arguments".into())),
+                            debug_id: 0,
+                            index: Cell::new(None),
+                            node_visit: Cell::new(NodeVisit::Unvisited),
+                        }),
+                        Rule::Node(Node {
+                            name: Rc::new("member_lambda".into()),
+                            property: Some(Rc::new("member_lambda".into())),
+                            debug_id: 0,
+                            index: Cell::new(None),
+                            node_visit: Cell::new(NodeVisit::Unvisited),
+                        }),
+                        Rule::Node(Node {
+                            name: Rc::new("lambda".into()),
+                            property: Some(Rc::new("lambda".into())),
+                            debug_id: 0,
+                            index: Cell::new(None),
+                            node_visit: Cell::new(NodeVisit::Unvisited),
+                        }),
+                        Rule::Node(Node {
+                            name: Rc::new("arg".into()),
+                            property: Some(Rc::new("arg".into())),
+                            debug_id: 0,
+                            index: Cell::new(None),
+                            node_visit: Cell::new(NodeVisit::Unvisited),
+                        }),
+                    ]
+                }),
+                by: Rule::Sequence(Sequence {
+                    debug_id: 2900,
+                    args: vec![
+                        Rule::Token(Token {
+                            debug_id: 3000,
+                            text: Rc::new(",".into()),
+                            inverted: false,
+                            property: None,
+                        }),
+                        Rule::Whitespace(Whitespace {
+                            debug_id: 3100,
+                            optional: false,
+                        }),
+                    ],
+                }),
+            })),
+            Rule::Whitespace(Whitespace {
+                debug_id: 3200,
+                optional: true,
+            }),
+            Rule::Token(Token {
+                debug_id: 3300,
+                text: Rc::new(")".into()),
+                inverted: false,
+                property: None,
+            }),
+        ]
+    });
 
-    let use_rule = Node {
-        debug_id: 6200,
-        name: Rc::new("use".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 6300,
-            args: vec![
-                Rule::Whitespace(Whitespace {
-                    debug_id: 6400,
-                    optional: true,
-                }),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 6500,
-                    rule: Rule::Sequence(Sequence {
-                        debug_id: 6600,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 6700,
-                                text: Rc::new("pub".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Whitespace(Whitespace {
-                                debug_id: 6800,
-                                optional: true,
-                            }),
-                        ]
-                    }),
-                })),
-                Rule::Token(Token {
-                    debug_id: 6900,
-                    text: Rc::new("use".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 7000,
-                    optional: false,
-                }),
-                Rule::Node(NodeRef::Name(Rc::new("path".into()), 0)),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 7100,
-                    rule: Rule::Token(Token {
-                        debug_id: 7200,
-                        text: Rc::new("*".into()),
-                        inverted: false,
-                        property: None,
-                    }),
-                })),
-                Rule::Token(Token {
-                    debug_id: 7300,
-                    text: Rc::new(";".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            ]
-        })
-    };
-
-    let module = Node {
-        debug_id: 7400,
-        name: Rc::new("module".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 7500,
-            args: vec![
-                Rule::Whitespace(Whitespace {
-                    debug_id: 7600,
-                    optional: true,
-                }),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 7700,
-                    rule: Rule::Sequence(Sequence {
-                        debug_id: 7800,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 7900,
-                                text: Rc::new("pub".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Whitespace(Whitespace {
-                                debug_id: 8000,
-                                optional: true,
-                            }),
-                        ]
-                    }),
-                })),
-                Rule::Token(Token {
-                    debug_id: 8100,
-                    text: Rc::new("mod".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 8200,
-                    optional: false,
-                }),
-                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                    debug_id: 8300,
-                    any_characters: separators.clone(),
-                    optional: true,
-                    property: Some(Rc::new("name".into())),
-                }),
-                Rule::Token(Token {
-                    debug_id: 8400,
-                    text: Rc::new(";".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            ]
-        })
-    };
-
-    let member_lambda = Node {
-        debug_id: 8500,
-        name: Rc::new("member_lambda".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 8600,
-            args: vec![
-                Rule::Node(NodeRef::Name(Rc::new("arg".into()), 0)),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 8700,
-                    optional: true,
-                }),
-                Rule::Token(Token {
-                    debug_id: 8800,
-                    text: Rc::new(":".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 8900,
-                    optional: false,
-                }),
-                Rule::Node(NodeRef::Name(Rc::new("arg".into()), 0)),
-            ]
+    let repeated_arguments = Rule::Repeat(Box::new(Repeat {
+        debug_id: 3500,
+        optional: false,
+        rule: Rule::Node(Node {
+            name: Rc::new("arguments".into()),
+            property: Some(Rc::new("arguments".into())),
+            debug_id: 0,
+            index: Cell::new(None),
+            node_visit: Cell::new(NodeVisit::Unvisited),
         }),
-    };
+    }));
 
-    let member_rule = Node {
-        debug_id: 9000,
-        name: Rc::new("member".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 9100,
-            args: vec![
-                Rule::Node(NodeRef::Name(Rc::new("member_lambda".into()), 0)),
-                Rule::Token(Token {
-                    debug_id: 9200,
-                    text: Rc::new(";".into()),
+    let comment_rule = Rule::Sequence(Sequence {
+        debug_id: 3700,
+        args: vec![
+            Rule::Whitespace(Whitespace {
+                debug_id: 22,
+                optional: true,
+            }),
+            Rule::Token(Token {
+                debug_id: 3800,
+                text: Rc::new("//".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::UntilAny(UntilAny {
+                debug_id: 3900,
+                any_characters: Rc::new("\n".into()),
+                optional: true,
+                property: None,
+            }),
+        ],
+    });
+
+    let lambda = Rule::Sequence(Sequence {
+        debug_id: 4100,
+        args: vec![
+            Rule::Whitespace(Whitespace {
+                debug_id: 4200,
+                optional: true,
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 4300,
+                rule: Rule::Sequence(Sequence {
+                    debug_id: 4400,
+                    args: vec![
+                        Rule::Token(Token {
+                            debug_id: 4500,
+                            text: Rc::new("fn".into()),
+                            inverted: false,
+                            property: None,
+                        }),
+                        Rule::Whitespace(Whitespace {
+                            debug_id: 4600,
+                            optional: true,
+                        }),
+                    ]
+                }),
+            })),
+            Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                debug_id: 4700,
+                any_characters: separators.clone(),
+                optional: true,
+                property: Some(Rc::new("name".into())),
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 4800,
+                optional: true,
+            }),
+            Rule::Node(Node {
+                name: Rc::new("brackets".into()),
+                property: Some(Rc::new("brackets".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("repeated_arguments".into()),
+                property: Some(Rc::new("repeated_arguments".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 4900,
+                optional: false,
+            }),
+            Rule::Token(Token {
+                debug_id: 5000,
+                text: Rc::new("->".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 5100,
+                optional: false,
+            }),
+            Rule::Node(Node {
+                name: Rc::new("arg".into()),
+                property: Some(Rc::new("arg".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 5200,
+                optional: true,
+            }),
+        ]
+    });
+
+    let fn_rule = Rule::Sequence(Sequence {
+        debug_id: 5400,
+        args: vec![
+            Rule::Optional(Box::new(Optional {
+                debug_id: 5500,
+                rule: Rule::Sequence(Sequence {
+                    debug_id: 5600,
+                    args: vec![
+                        Rule::Token(Token {
+                            debug_id: 5700,
+                            text: Rc::new("pub".into()),
+                            inverted: false,
+                            property: None,
+                        }),
+                        Rule::Whitespace(Whitespace {
+                            debug_id: 5800,
+                            optional: true,
+                        }),
+                    ]
+                }),
+            })),
+            Rule::Node(Node {
+                name: Rc::new("lambda".into()),
+                property: Some(Rc::new("lambda".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Token(Token {
+                debug_id: 5900,
+                text: Rc::new(";".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 6000,
+                optional: true,
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 6100,
+                rule: Rule::Node(Node {
+                    name: Rc::new("comment".into()),
+                    property: Some(Rc::new("comment".into())),
+                    debug_id: 0,
+                    index: Cell::new(None),
+                    node_visit: Cell::new(NodeVisit::Unvisited),
+                })
+            })),
+        ]
+    });
+
+
+    let use_rule = Rule::Sequence(Sequence {
+        debug_id: 6300,
+        args: vec![
+            Rule::Whitespace(Whitespace {
+                debug_id: 6400,
+                optional: true,
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 6500,
+                rule: Rule::Sequence(Sequence {
+                    debug_id: 6600,
+                    args: vec![
+                        Rule::Token(Token {
+                            debug_id: 6700,
+                            text: Rc::new("pub".into()),
+                            inverted: false,
+                            property: None,
+                        }),
+                        Rule::Whitespace(Whitespace {
+                            debug_id: 6800,
+                            optional: true,
+                        }),
+                    ]
+                }),
+            })),
+            Rule::Token(Token {
+                debug_id: 6900,
+                text: Rc::new("use".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 7000,
+                optional: false,
+            }),
+            Rule::Node(Node {
+                name: Rc::new("path".into()),
+                property: Some(Rc::new("path".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 7100,
+                rule: Rule::Token(Token {
+                    debug_id: 7200,
+                    text: Rc::new("*".into()),
                     inverted: false,
                     property: None,
                 }),
-            ]
-        }),
-    };
+            })),
+            Rule::Token(Token {
+                debug_id: 7300,
+                text: Rc::new(";".into()),
+                inverted: false,
+                property: None,
+            }),
+        ]
+    });
+
+    let module = Rule::Sequence(Sequence {
+        debug_id: 7500,
+        args: vec![
+            Rule::Whitespace(Whitespace {
+                debug_id: 7600,
+                optional: true,
+            }),
+            Rule::Optional(Box::new(Optional {
+                debug_id: 7700,
+                rule: Rule::Sequence(Sequence {
+                    debug_id: 7800,
+                    args: vec![
+                        Rule::Token(Token {
+                            debug_id: 7900,
+                            text: Rc::new("pub".into()),
+                            inverted: false,
+                            property: None,
+                        }),
+                        Rule::Whitespace(Whitespace {
+                            debug_id: 8000,
+                            optional: true,
+                        }),
+                    ]
+                }),
+            })),
+            Rule::Token(Token {
+                debug_id: 8100,
+                text: Rc::new("mod".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 8200,
+                optional: false,
+            }),
+            Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                debug_id: 8300,
+                any_characters: separators.clone(),
+                optional: true,
+                property: Some(Rc::new("name".into())),
+            }),
+            Rule::Token(Token {
+                debug_id: 8400,
+                text: Rc::new(";".into()),
+                inverted: false,
+                property: None,
+            }),
+        ]
+    });
+
+    let member_lambda = Rule::Sequence(Sequence {
+        debug_id: 8600,
+        args: vec![
+            Rule::Node(Node {
+                name: Rc::new("arg".into()),
+                property: Some(Rc::new("arg".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 8700,
+                optional: true,
+            }),
+            Rule::Token(Token {
+                debug_id: 8800,
+                text: Rc::new(":".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 8900,
+                optional: false,
+            }),
+            Rule::Node(Node {
+                name: Rc::new("arg".into()),
+                property: Some(Rc::new("arg".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+        ]
+    });
+
+    let member_rule = Rule::Sequence(Sequence {
+        debug_id: 9100,
+        args: vec![
+            Rule::Node(Node {
+                name: Rc::new("member_lambda".into()),
+                property: Some(Rc::new("member_lambda".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Token(Token {
+                debug_id: 9200,
+                text: Rc::new(";".into()),
+                inverted: false,
+                property: None,
+            }),
+        ]
+    });
 
     let line_rule = Rule::Select(Select {
         debug_id: 9300,
         args: vec![
-        Rule::Node(NodeRef::Name(Rc::new("comment".into()), 0)),
-            Rule::Node(NodeRef::Name(Rc::new("use".into()), 0)),
-            Rule::Node(NodeRef::Name(Rc::new("module".into()), 0)),
-            Rule::Node(NodeRef::Name(Rc::new("member".into()), 0)),
-            Rule::Node(NodeRef::Name(Rc::new("fn".into()), 0)),
+            Rule::Node(Node {
+                name: Rc::new("comment".into()),
+                property: Some(Rc::new("comment".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("use".into()),
+                property: Some(Rc::new("use".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("module".into()),
+                property: Some(Rc::new("module".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("member".into()),
+                property: Some(Rc::new("member".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
+            Rule::Node(Node {
+                name: Rc::new("fn".into()),
+                property: Some(Rc::new("fn".into())),
+                debug_id: 0,
+                index: Cell::new(None),
+                node_visit: Cell::new(NodeVisit::Unvisited),
+            }),
         ]
     });
 
-    let mut lines_rule = Rule::Lines(Box::new(Lines {
+    let lines_rule = Rule::Lines(Box::new(Lines {
         debug_id: 9400,
         rule: line_rule,
     }));
 
     let refs: Vec<(Rc<String>, _)> = vec![
-        (Rc::new("comment".into()), Rc::new(RefCell::new(comment_rule))),
-        (Rc::new("use".into()), Rc::new(RefCell::new(use_rule))),
-        (Rc::new("module".into()), Rc::new(RefCell::new(module))),
-        (Rc::new("fn".into()), Rc::new(RefCell::new(fn_rule))),
-        (Rc::new("lambda".into()), Rc::new(RefCell::new(lambda))),
-        (Rc::new("arg".into()), Rc::new(RefCell::new(arg_rule))),
-        (Rc::new("member".into()), Rc::new(RefCell::new(member_rule))),
-        (Rc::new("member_lambda".into()), Rc::new(RefCell::new(member_lambda))),
-        (Rc::new("brackets".into()), Rc::new(RefCell::new(brackets_rule))),
-        (Rc::new("arguments".into()), Rc::new(RefCell::new(arguments))),
-        (Rc::new("path".into()), Rc::new(RefCell::new(path_rule))),
-        (Rc::new("repeated_arguments".into()),
-            Rc::new(RefCell::new(repeated_arguments))),
+        (Rc::new("comment".into()), comment_rule),
+        (Rc::new("use".into()), use_rule),
+        (Rc::new("module".into()), module),
+        (Rc::new("fn".into()), fn_rule),
+        (Rc::new("lambda".into()), lambda),
+        (Rc::new("arg".into()), arg_rule),
+        (Rc::new("member".into()), member_rule),
+        (Rc::new("member_lambda".into()), member_lambda),
+        (Rc::new("brackets".into()), brackets_rule),
+        (Rc::new("arguments".into()), arguments),
+        (Rc::new("path".into()), path_rule),
+        (Rc::new("repeated_arguments".into()), repeated_arguments),
     ];
 
     lines_rule.update_refs(&refs[..]);
 
-    lines_rule
+    (lines_rule, refs)
 }
+
+/*
+/// Returns rules for parsing meta rules.
+pub fn meta_rules() -> piston_meta::Rule {
+    use std::rc::Rc;
+    use piston_meta::*;
+
+    let opt: Rc<String> = Rc::new("optional".into());
+    let inv: Rc<String> = Rc::new("inverted".into());
+    let prop: Rc<String> = Rc::new("property".into());
+    let any: Rc<String> = Rc::new("any_characters".into());
+    let seps: Rc<String> = Rc::new("[]{}():".into());
+
+    // 1."string" [..seps!("name") ":" w? t?("text")]
+    let string_node = Node {
+        debug_id: 1000,
+        name: Rc::new("string".into()),
+        rule: Rule::Sequence(Sequence {
+            debug_id: 1001,
+            args: vec![
+                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                    debug_id: 1002,
+                    any_characters: seps.clone(),
+                    optional: false,
+                    property: Some(Rc::new("name".into())),
+                }),
+                Rule::Token(Token {
+                    debug_id: 1003,
+                    text: Rc::new(":".into()),
+                    inverted: false,
+                    property: None,
+                }),
+                Rule::Whitespace(Whitespace {
+                    debug_id: 1004,
+                    optional: true,
+                }),
+                Rule::Text(Text {
+                    debug_id: 1005,
+                    allow_empty: true,
+                    property: Some(Rc::new("text".into()))
+                })
+            ]
+        })
+    };
+
+    // 2."node" [$("id") "." t!("name") w! @"rule"]
+    let node_node = Node {
+        debug_id: 2000,
+        name: Rc::new("node".into()),
+        rule: Rule::Sequence(Sequence {
+            debug_id: 2001,
+            args: vec![
+                Rule::Number(Number {
+                    debug_id: 2002,
+                    allow_underscore: false,
+                    property: Some(Rc::new("id".into())),
+                }),
+                Rule::Token(Token {
+                    debug_id: 2003,
+                    text: Rc::new(".".into()),
+                    inverted: false,
+                    property: None,
+                }),
+                Rule::Text(Text {
+                    debug_id: 2004,
+                    allow_empty: false,
+                    property: Some(Rc::new("name".into())),
+                }),
+                Rule::Whitespace(Whitespace {
+                    debug_id: 2005,
+                    optional: false,
+                }),
+                Rule::Node(NodeRef::Name(Rc::new("rule".into()), 2006)),
+            ]
+        })
+    };
+
+    // 3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
+    let set_node = Node {
+        debug_id: 3000,
+        name: Rc::new("set".into()),
+        rule: Rule::Sequence(Sequence {
+            debug_id: 3001,
+            args: vec![
+                Rule::Token(Token {
+                    debug_id: 3002,
+                    text: Rc::new("(".into()),
+                    inverted: false,
+                    property: None,
+                }),
+                Rule::Whitespace(Whitespace {
+                    debug_id: 3003,
+                    optional: true,
+                }),
+                Rule::Select(Select {
+                    debug_id: 3004,
+                    args: vec![
+                        Rule::Text(Text {
+                            debug_id: 3005,
+                            allow_empty: false,
+                            property: Some(Rc::new("value".into())),
+                        }),
+                        Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                            debug_id: 3006,
+                            any_characters: seps.clone(),
+                            optional: false,
+                            property: Some(Rc::new("ref".into())),
+                        })
+                    ]
+                }),
+                Rule::Whitespace(Whitespace {
+                    debug_id: 3007,
+                    optional: true,
+                }),
+                Rule::Token(Token {
+                    debug_id: 3008,
+                    text: Rc::new(")".into()),
+                    inverted: false,
+                    property: None,
+                })
+            ]
+        })
+    };
+
+    // 4."opt" {"?"(opt) "!"(!opt)}
+    let opt_node = Node {
+        debug_id: 4000,
+        name: Rc::new("opt".into()),
+        rule: Rule::Select(Select {
+            debug_id: 4001,
+            args: vec![
+                Rule::Token(Token {
+                    debug_id: 4002,
+                    text: Rc::new("?".into()),
+                    inverted: false,
+                    property: Some(opt.clone())
+                }),
+                Rule::Token(Token {
+                    debug_id: 4003,
+                    text: Rc::new("!".into()),
+                    inverted: true,
+                    property: Some(opt.clone())
+                })
+            ]
+        })
+    };
+
+    // 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
+    let number_node = Node {
+        debug_id: 5000,
+        name: Rc::new("number".into()),
+        rule: Rule::Sequence(Sequence {
+            debug_id: 5001,
+            args: vec![
+                Rule::Token(Token {
+                    debug_id: 5002,
+                    text: Rc::new("$".into()),
+                    inverted: false,
+                    property: None
+                }),
+                Rule::Optional(Box::new(Optional {
+                    debug_id: 5003,
+                    rule: Rule::Token(Token {
+                        debug_id: 5004,
+                        text: Rc::new("_".into()),
+                        inverted: false,
+                        property: Some(Rc::new("underscore".into()))
+                    })
+                })),
+                Rule::Optional(Box::new(Optional {
+                    debug_id: 5005,
+                    rule: Rule::Node(NodeRef::Name())
+                }))
+            ]
+        })
+    }
+}
+*/
 
 /// Stores information about error occursing when parsing syntax.
 pub enum SyntaxError {
@@ -554,7 +821,7 @@ impl Syntax {
         use std::io::Read;
         use piston_meta::*;
 
-        let lines_rule = rules();
+        let (lines_rule, refs) = rules();
 
         for file in &files {
             let mut file_h = try!(File::open(file));
@@ -566,7 +833,7 @@ impl Syntax {
             let chars: &[char] = &chars;
             let mut tokenizer = Tokenizer::new();
             let s = TokenizerState::new();
-            let res = lines_rule.parse(&mut tokenizer, &s, &chars, offset);
+            let res = lines_rule.parse(&mut tokenizer, &s, &chars, offset, &refs);
             match res {
                 Ok((ok_range, _s, opt_error)) => {
                     /*
