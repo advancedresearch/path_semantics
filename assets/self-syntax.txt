@@ -18,7 +18,7 @@ seps: "[]{}():.!?"
 12::"optional" ["?(" w? @"rule""rule" w? ")"]
 13::"whitespace" ["w" @"opt"]
 14::"until_any_or_whitespace" [".." @"set"any @"opt" ?(@"set"prop)]
-15::"until_any" ["..." @"set"any @"opt" ?(@"set"prop) ]
+15::"until_any" ["..." @"set"any @"opt" ?(@"set"prop)]
 16::"repeat" ["r" @"opt" "(" @"rule""rule" ")"]
 17::"lines" ["l(" w? @"rule""rule" w? ")"]
 18::"rule" {5"number" 6"text" 7"reference" 8"sequence"
