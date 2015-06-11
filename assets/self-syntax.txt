@@ -25,4 +25,4 @@ seps: "[]{}():.!?"
   9"select" 10"separated_by" 11"token" 12"optional"
   13"whitespace" 14"until_any_or_whitespace" 15"until_any"
   16"repeat" 17"lines"}
-[l(@"string""string") l(@"node""node") @"rule""rule" w?]
+19::"document" [l(@"string""string") l(@"node""node") w?]
