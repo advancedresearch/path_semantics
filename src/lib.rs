@@ -1308,7 +1308,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // [l(@"string"("string")) l(@"node"("node")) @"rule"("rule") w?]
+    // 19::"document" [l(@"string""string") l(@"node""node") w?]
     let document_rule = Rule::Sequence(Sequence {
         debug_id: 19000,
         args: vec![
@@ -1330,14 +1330,8 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                     index: Cell::new(None),
                 })
             })),
-            Rule::Node(Node {
-                debug_id: 19004,
-                name: Rc::new("rule".into()),
-                property: Some(Rc::new("rule".into())),
-                index: Cell::new(None),
-            }),
             Rule::Whitespace(Whitespace {
-                debug_id: 19005,
+                debug_id: 19004,
                 optional: true,
             })
         ]
@@ -1389,6 +1383,157 @@ pub fn print_meta_data(data: &[(Range, MetaData)]) {
             }
         }
     }
+}
+
+/// Converts meta data to rules.
+pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
+-> Result<Vec<(Rc<String>, Rule)>, ()> {
+    fn update(range: Range, data: &mut &[(Range, MetaData)], offset: &mut usize) {
+        let next_offset = range.next_offset();
+        *data = &data[next_offset - *offset..];
+        *offset = next_offset;
+    }
+
+    fn start_node(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<Range, ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::StartNode(ref n) if &**n == name => {
+                Ok(Range::new(offset, 1))
+            }
+            _ => Err(())
+        }
+    }
+
+    fn end_node(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<Range, ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::EndNode(ref n) if &**n == name => {
+                Ok(Range::new(offset, 1))
+            }
+            _ => Err(())
+        }
+    }
+
+    fn meta_string(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<(Range, Rc<String>), ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::String(ref n, ref val) if &**n == name => {
+                Ok((Range::new(offset, 1), val.clone()))
+            }
+            _ => Err(())
+        }
+    }
+
+    fn meta_f64(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<(Range, f64), ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::F64(ref n, ref val) if &**n == name => {
+                Ok((Range::new(offset, 1), *val))
+            }
+            _ => Err(())
+        }
+    }
+
+    fn read_string(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, (Rc<String>, Rc<String>)), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("string", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut name = None;
+        let mut text = None;
+        loop {
+            if let Ok((range, val)) = meta_string("name", data, offset) {
+                name = Some(val);
+                update(range, &mut data, &mut offset);
+            } else if let Ok((range, val)) = meta_string("text", data, offset) {
+                text = Some(val);
+                update(range, &mut data, &mut offset);
+            } else if let Ok(range) = end_node("string", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else {
+                return Err(())
+            }
+        }
+        let name = match name {
+            None => { return Err(()); }
+            Some(x) => x
+        };
+        let text = match text {
+            None => { return Err(()); }
+            Some(x) => x
+        };
+        Ok((Range::new(start_offset, offset - start_offset), (name, text)))
+    }
+
+    fn read_sequence(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("sequence", data, offset));
+        update(range, &mut data, &mut offset);
+        println!("TEST {:?}", &data[0]);
+        Err(())
+    }
+
+    fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("rule", data, offset));
+        update(range, &mut data, &mut offset);
+        println!("TEST {:?}", &data[0]);
+        Err(())
+    }
+
+    fn read_node(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, (Rc<String>, Rule)), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("node", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut id = None;
+        let mut name = None;
+        let mut rule = None;
+        loop {
+            if let Ok((range, val)) = meta_f64("id", data, offset) {
+                id = Some(val);
+                update(range, &mut data, &mut offset);
+            } else if let Ok((range, val)) = meta_string("name", data, offset) {
+                name = Some(val);
+                update(range, &mut data, &mut offset);
+            } else if let Ok((range, val)) = read_rule(data, offset) {
+                rule = Some(val);
+                update(range, &mut data, &mut offset);
+            } else {
+                println!("TEST {:?}", &data[0]);
+                return Err(())
+            }
+        }
+        Err(())
+    }
+
+    let mut strings: Vec<(Rc<String>, Rc<String>)> = vec![];
+    let mut offset: usize = 0;
+    loop {
+        if let Ok((range, val)) = read_string(data, offset) {
+            strings.push(val);
+            update(range, &mut data, &mut offset);
+        } else {
+            break;
+        }
+    }
+    let mut res = vec![];
+    loop {
+        if let Ok((range, val)) = read_node(data, offset) {
+            res.push(val);
+            update(range, &mut data, &mut offset);
+        } else {
+            return Err(());
+        }
+    }
+    Ok(res)
 }
 
 /// Stores information about error occursing when parsing syntax.
