@@ -9,7 +9,7 @@ use std::path::PathBuf;
 use std::rc::Rc;
 use std::cell::Cell;
 use range::Range;
-use piston_meta::Rule;
+use piston_meta::{ MetaData, Rule };
 
 /// Returns rules for parsing mathematical notation.
 pub fn rules() -> Vec<(Rc<String>, Rule)> {
@@ -1366,6 +1366,29 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
     ];
     update_refs(&rules);
     rules
+}
+
+/// Prints read meta data.
+pub fn print_meta_data(data: &[(Range, MetaData)]) {
+    for d in data {
+        match &d.1 {
+            &MetaData::StartNode(ref name) => {
+                println!("start `{}`", name);
+            }
+            &MetaData::EndNode(ref name) => {
+                println!("end `{}`", name);
+            }
+            &MetaData::F64(ref name, val) => {
+                println!("{}: {}", name, val);
+            }
+            &MetaData::Bool(ref name, val) => {
+                println!("{}: {}", name, val);
+            }
+            &MetaData::String(ref name, ref val) => {
+                println!("{}: {}", name, val);
+            }
+        }
+    }
 }
 
 /// Stores information about error occursing when parsing syntax.

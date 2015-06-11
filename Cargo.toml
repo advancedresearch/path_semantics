@@ -10,6 +10,9 @@ readme = "README.md"
 repository = "https://github.com/pistondevelopers/math_notation.git"
 homepage = "https://github.com/pistondevelopers/math_notation"
 
+[lib]
+name = "math_notation"
+
 [dependencies]
 piston_meta = "0.6.0"
 range = "0.1.1"
