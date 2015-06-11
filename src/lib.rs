@@ -642,30 +642,15 @@ impl Syntax {
             let mut source = String::new();
             try!(file_h.read_to_string(&mut source));
 
-            let chars: Vec<char> = source.chars().collect();
-            let offset: usize = 0;
-            let chars: &[char] = &chars;
-            let mut tokenizer = Tokenizer::new();
-            let s = TokenizerState::new();
-            let res = lines_rule.parse(&mut tokenizer, &s, &chars, offset, &refs);
+            let res = parse(&lines_rule, &refs, &source);
             match res {
-                Ok((ok_range, _s, opt_error)) => {
+                Ok(_) => {
                     /*
                     println!("TEST tokens");
                     for token in &tokenizer.tokens[s.0..] {
                         println!("{:?}", token.0);
                     }
                     */
-                    if let Some((range, err)) = opt_error {
-                        if ok_range.next_offset() < chars.len() {
-                            return Err(SyntaxError::MetaError(
-                                file.into(),
-                                source,
-                                range,
-                                err
-                            ));
-                        }
-                    }
                 }
                 Err((range, err)) => {
                     return Err(SyntaxError::MetaError(
