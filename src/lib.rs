@@ -1419,19 +1419,21 @@ pub struct Syntax {
 
 impl Syntax {
     /// Parses syntax.
-    pub fn new(files: Vec<PathBuf>) -> Result<Syntax, SyntaxError> {
+    pub fn new(
+        rules: &Rule,
+        refs: &[(Rc<String>, Rule)],
+        files: Vec<PathBuf>
+    ) -> Result<Syntax, SyntaxError> {
         use std::fs::File;
         use std::io::Read;
         use piston_meta::*;
-
-        let (lines_rule, refs) = rules();
 
         for file in &files {
             let mut file_h = try!(File::open(file));
             let mut source = String::new();
             try!(file_h.read_to_string(&mut source));
 
-            let res = parse(&lines_rule, &refs, &source);
+            let res = parse(&rules, &refs, &source);
             match res {
                 Ok(_) => {
                     /*
@@ -1464,8 +1466,9 @@ mod tests {
 
     #[test]
     fn syntax() {
+        let (rules, refs) = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))
-            = Syntax::new(vec![
+            = Syntax::new(&rules, &refs, vec![
                 "assets/bool.txt".into(),
                 "assets/nat.txt".into(),
                 "assets/option.txt".into(),
