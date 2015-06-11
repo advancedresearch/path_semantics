@@ -3,23 +3,26 @@ inv: "inverted"
 prop: "property"
 any: "any_characters"
 seps: "[]{}():"
-1."string" [..seps("name") ":" w? t?("text")]
-2."node" [$("id") "." t!("name") w! @"rule"]
+1."string" [..seps!("name") ":" w? t?("text")]
+2."node" [$("id") "." t!("name") w! @"rule"("rule")]
 3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
 4."opt" {"?"(opt) "!"(!opt)}
 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
-6."text" ["t" @"opt" ?(@"set")]
-7."reference" [{["@" t!("name")] $("id")} ?(@"set")]
-8."sequence" ["[" w? s!.(w!) {@"rule"} "]"]
-9."select" ["{" w? s!.(w!) {@"rule"} "}"]
-10."separated_by" ["s" @"opt" ?("."("allow_trailing"))
+6."text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set"(prop))]
+7."reference" [{["@" t!("name")] $("id")} ?(@"set"(prop))]
+8."sequence" ["[" w? s!.(w!) {@"rule"("rule")} "]"]
+9."select" ["{" w? s!.(w!) {@"rule"("rule")} "}"]
+10."separated_by" ["s" @"opt" ?("."("allow_trail"))
   "(" w? @"rule"("by") w? ")" w? "{" w? @"rule"("rule") w? "}"]
 11."token" [@"set"("text") ?(["(" w? {"!"(inv) "?"(!inv)} @"set"(prop) w? ")"])]
-12."optional" ["?(" w? @"rule" w? ")"]
+12."optional" ["?(" w? @"rule"("rule") w? ")"]
 13."whitespace" ["w" @"opt"]
-14."until_any_or_whitespace" [".." @"set"(any) @"opt" ?(@"set"(prop)) ]
+14."until_any_or_whitespace" [".." @"set"(any) @"opt" ?(@"set"(prop))]
 15."until_any" ["..." @"set"(any) @"opt" ?(@"set"(prop)) ]
-16."repeat" ["r" @"opt" "(" @"rule" ")"]
-17."lines" ["l(" w? @"rule" w? ")"]
-18."rule" {5 6 7 8 9 10 11 12 13 14 15 16 17}
-[l(@"string") l(@"node") @"rule"]
+16."repeat" ["r" @"opt" "(" @"rule"("rule") ")"]
+17."lines" ["l(" w? @"rule"("rule") w? ")"]
+18."rule" {5("number") 6("text") 7("reference") 8("sequence")
+  9("select") 10("separated_by") 11("token") 12("optional")
+  13("whitespace") 14("until_any_or_whitespace") 15("until_any")
+  16("repeat") 17("lines")}
+[l(@"string"("string")) l(@"node"("node")) @"rule"("rule")]
