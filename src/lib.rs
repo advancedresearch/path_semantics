@@ -602,7 +602,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
     let inv: Rc<String> = Rc::new("inverted".into());
     let prop: Rc<String> = Rc::new("property".into());
     let any: Rc<String> = Rc::new("any_characters".into());
-    let seps: Rc<String> = Rc::new("[]{}():".into());
+    let seps: Rc<String> = Rc::new("[]{}():.!?".into());
 
     // 1."string" [..seps!("name") ":" w? t?("text")]
     let string_rule = Rule::Sequence(Sequence {
@@ -643,7 +643,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
             }),
             Rule::Token(Token {
                 debug_id: 2002,
-                text: Rc::new(".".into()),
+                text: Rc::new("::".into()),
                 inverted: false,
                 property: None,
             }),
@@ -665,45 +665,20 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         ]
     });
 
-    // 3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
-    let set_rule = Rule::Sequence(Sequence {
-        debug_id: 3000,
+    // rule 3:"set" {t!("value") ..seps!("ref")}
+    let set_rule = Rule::Select(Select {
+        debug_id: 3003,
         args: vec![
-            Rule::Token(Token {
-                debug_id: 3001,
-                text: Rc::new("(".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 3002,
-                optional: true,
-            }),
-            Rule::Select(Select {
-                debug_id: 3003,
-                args: vec![
-                    Rule::Text(Text {
-                        debug_id: 3004,
-                        allow_empty: false,
-                        property: Some(Rc::new("value".into())),
-                    }),
-                    Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                        debug_id: 3005,
-                        any_characters: seps.clone(),
-                        optional: false,
-                        property: Some(Rc::new("ref".into())),
-                    })
-                ]
-            }),
-            Rule::Whitespace(Whitespace {
+            Rule::Text(Text {
                 debug_id: 3004,
-                optional: true,
+                allow_empty: false,
+                property: Some(Rc::new("value".into())),
             }),
-            Rule::Token(Token {
+            Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
                 debug_id: 3005,
-                text: Rc::new(")".into()),
-                inverted: false,
-                property: None,
+                any_characters: seps.clone(),
+                optional: false,
+                property: Some(Rc::new("ref".into())),
             })
         ]
     });
@@ -723,7 +698,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 text: Rc::new("!".into()),
                 inverted: true,
                 property: Some(opt.clone())
-            })
+            }),
         ]
     });
 
@@ -1000,8 +975,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         ]
     });
 
-    // 11."token" [@"set"("text") ?(["(" w?
-    //   {"!"(inv) "?"(!inv)} @"set"(prop) w? ")"])]
+    // rule 11:"token" [@"set"("text") ?(["(" w? ?("!"(inv)) @"set"(prop) w? ")"])]
     let token_rule = Rule::Sequence(Sequence {
         debug_id: 11000,
         args: vec![
@@ -1026,23 +1000,15 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                             debug_id: 11005,
                             optional: true,
                         }),
-                        Rule::Select(Select {
+                        Rule::Optional(Box::new(Optional {
                             debug_id: 11006,
-                            args: vec![
-                                Rule::Token(Token {
-                                    debug_id: 11007,
-                                    text: Rc::new("!".into()),
-                                    inverted: false,
-                                    property: Some(inv.clone()),
-                                }),
-                                Rule::Token(Token {
-                                    debug_id: 11008,
-                                    text: Rc::new("?".into()),
-                                    inverted: true,
-                                    property: Some(inv.clone()),
-                                })
-                            ]
-                        }),
+                            rule: Rule::Token(Token {
+                                debug_id: 11007,
+                                text: Rc::new("!".into()),
+                                inverted: false,
+                                property: Some(inv.clone()),
+                            })
+                        })),
                         Rule::Node(Node {
                             debug_id: 11009,
                             name: Rc::new("set".into()),
@@ -1263,6 +1229,36 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         debug_id: 18000,
         args: vec![
             Rule::Node(Node {
+                debug_id: 18009,
+                name: Rc::new("whitespace".into()),
+                property: Some(Rc::new("whitespace".into())),
+                index: Cell::new(None),
+            }),
+            Rule::Node(Node {
+                debug_id: 18009,
+                name: Rc::new("until_any_or_whitespace".into()),
+                property: Some(Rc::new("until_any_or_whitespace".into())),
+                index: Cell::new(None),
+            }),
+            Rule::Node(Node {
+                debug_id: 18010,
+                name: Rc::new("until_any".into()),
+                property: Some(Rc::new("until_any".into())),
+                index: Cell::new(None),
+            }),
+            Rule::Node(Node {
+                debug_id: 18012,
+                name: Rc::new("lines".into()),
+                property: Some(Rc::new("lines".into())),
+                index: Cell::new(None),
+            }),
+            Rule::Node(Node {
+                debug_id: 18011,
+                name: Rc::new("repeat".into()),
+                property: Some(Rc::new("repeat".into())),
+                index: Cell::new(None),
+            }),
+            Rule::Node(Node {
                 debug_id: 18001,
                 name: Rc::new("number".into()),
                 property: Some(Rc::new("number".into())),
@@ -1310,40 +1306,10 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("optional".into())),
                 index: Cell::new(None),
             }),
-            Rule::Node(Node {
-                debug_id: 18009,
-                name: Rc::new("whitespace".into()),
-                property: Some(Rc::new("whitespace".into())),
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                debug_id: 18009,
-                name: Rc::new("until_any_or_whitespace".into()),
-                property: Some(Rc::new("until_any_or_whitespace".into())),
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                debug_id: 18010,
-                name: Rc::new("until_any".into()),
-                property: Some(Rc::new("until_any".into())),
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                debug_id: 18011,
-                name: Rc::new("repeat".into()),
-                property: Some(Rc::new("repeat".into())),
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                debug_id: 18012,
-                name: Rc::new("lines".into()),
-                property: Some(Rc::new("lines".into())),
-                index: Cell::new(None),
-            }),
         ]
     });
 
-    // [l(@"string"("string")) l(@"node"("node")) @"rule"("rule")]
+    // [l(@"string"("string")) l(@"node"("node")) @"rule"("rule") w?]
     let document_rule = Rule::Sequence(Sequence {
         debug_id: 19000,
         args: vec![
@@ -1370,6 +1336,10 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 name: Rc::new("rule".into()),
                 property: Some(Rc::new("rule".into())),
                 index: Cell::new(None),
+            }),
+            Rule::Whitespace(Whitespace {
+                debug_id: 19005,
+                optional: true,
             })
         ]
     });
@@ -1394,6 +1364,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         (Rc::new("lines".into()), lines_rule),
         (Rc::new("rule".into()), rule_rule),
     ];
+    update_refs(&document_rule, &refs);
     (document_rule, refs)
 }
 
@@ -1473,6 +1444,24 @@ mod tests {
                 "assets/nat.txt".into(),
                 "assets/option.txt".into(),
                 "assets/string.rs".into(),
+            ]) {
+            use piston_meta::*;
+
+            let mut std_err = ParseStdErr::new(&source);
+            println!("file: {:?}", file);
+            // println!("source {}", source);
+            std_err.error(range, err);
+            assert!(false);
+        }
+    }
+
+    #[test]
+    fn meta_syntax() {
+        let (rules, refs) = meta_rules();
+        if let Err(SyntaxError::MetaError(file, source, range, err))
+            = Syntax::new(&rules, &refs, vec![
+                "assets/self-syntax.txt".into(),
+                "assets/syntax.txt".into(),
             ]) {
             use piston_meta::*;
 
