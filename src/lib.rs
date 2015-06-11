@@ -106,21 +106,18 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("brackets".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("path".into()),
                 property: Some(Rc::new("path".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("brackets".into()),
                 property: Some(Rc::new("brackets".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Optional(Box::new(Optional {
                 debug_id: 2000,
@@ -129,7 +126,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                     property: Some(Rc::new("repeated_arguments".into())),
                     debug_id: 0,
                     index: Cell::new(None),
-                    node_visit: Cell::new(NodeVisit::Unvisited),
                 })
             }))
         ]
@@ -170,28 +166,24 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                             property: Some(Rc::new("arguments".into())),
                             debug_id: 0,
                             index: Cell::new(None),
-                            node_visit: Cell::new(NodeVisit::Unvisited),
                         }),
                         Rule::Node(Node {
                             name: Rc::new("member_lambda".into()),
                             property: Some(Rc::new("member_lambda".into())),
                             debug_id: 0,
                             index: Cell::new(None),
-                            node_visit: Cell::new(NodeVisit::Unvisited),
                         }),
                         Rule::Node(Node {
                             name: Rc::new("lambda".into()),
                             property: Some(Rc::new("lambda".into())),
                             debug_id: 0,
                             index: Cell::new(None),
-                            node_visit: Cell::new(NodeVisit::Unvisited),
                         }),
                         Rule::Node(Node {
                             name: Rc::new("arg".into()),
                             property: Some(Rc::new("arg".into())),
                             debug_id: 0,
                             index: Cell::new(None),
-                            node_visit: Cell::new(NodeVisit::Unvisited),
                         }),
                     ]
                 }),
@@ -232,7 +224,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
             property: Some(Rc::new("arguments".into())),
             debug_id: 0,
             index: Cell::new(None),
-            node_visit: Cell::new(NodeVisit::Unvisited),
         }),
     }));
 
@@ -298,14 +289,12 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("brackets".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("repeated_arguments".into()),
                 property: Some(Rc::new("repeated_arguments".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Whitespace(Whitespace {
                 debug_id: 4900,
@@ -326,7 +315,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("arg".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Whitespace(Whitespace {
                 debug_id: 5200,
@@ -361,7 +349,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("lambda".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Token(Token {
                 debug_id: 5900,
@@ -380,7 +367,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                     property: Some(Rc::new("comment".into())),
                     debug_id: 0,
                     index: Cell::new(None),
-                    node_visit: Cell::new(NodeVisit::Unvisited),
                 })
             })),
         ]
@@ -427,7 +413,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("path".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Optional(Box::new(Optional {
                 debug_id: 7100,
@@ -505,7 +490,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("arg".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Whitespace(Whitespace {
                 debug_id: 8700,
@@ -526,7 +510,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("arg".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
         ]
     });
@@ -539,7 +522,6 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("member_lambda".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Token(Token {
                 debug_id: 9200,
@@ -558,35 +540,30 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
                 property: Some(Rc::new("comment".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("use".into()),
                 property: Some(Rc::new("use".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("module".into()),
                 property: Some(Rc::new("module".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("member".into()),
                 property: Some(Rc::new("member".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
             Rule::Node(Node {
                 name: Rc::new("fn".into()),
                 property: Some(Rc::new("fn".into())),
                 debug_id: 0,
                 index: Cell::new(None),
-                node_visit: Cell::new(NodeVisit::Unvisited),
             }),
         ]
     });
