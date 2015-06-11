@@ -12,7 +12,7 @@ use range::Range;
 use piston_meta::Rule;
 
 /// Returns rules for parsing mathematical notation.
-pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
+pub fn rules() -> Vec<(Rc<String>, Rule)> {
     use piston_meta::*;
 
     let separators: Rc<String> = Rc::new("()[]{},;:/*+-".into());
@@ -568,12 +568,12 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         ]
     });
 
-    let lines_rule = Rule::Lines(Box::new(Lines {
+    let document_rule = Rule::Lines(Box::new(Lines {
         debug_id: 9400,
         rule: line_rule,
     }));
 
-    let refs: Vec<(Rc<String>, _)> = vec![
+    let rules: Vec<(Rc<String>, _)> = vec![
         (Rc::new("comment".into()), comment_rule),
         (Rc::new("use".into()), use_rule),
         (Rc::new("module".into()), module),
@@ -586,15 +586,14 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         (Rc::new("arguments".into()), arguments),
         (Rc::new("path".into()), path_rule),
         (Rc::new("repeated_arguments".into()), repeated_arguments),
+        (Rc::new("document".into()), document_rule),
     ];
-
-    update_refs(&lines_rule, &refs[..]);
-
-    (lines_rule, refs)
+    update_refs(&rules);
+    rules
 }
 
 /// Returns rules for parsing meta rules.
-pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
+pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
     use std::rc::Rc;
     use piston_meta::*;
 
@@ -1344,7 +1343,7 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         ]
     });
 
-    let refs = vec![
+    let rules = vec![
         (Rc::new("string".into()), string_rule),
         (Rc::new("node".into()), node_rule),
         (Rc::new("set".into()), set_rule),
@@ -1363,9 +1362,10 @@ pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         (Rc::new("repeat".into()), repeat_rule),
         (Rc::new("lines".into()), lines_rule),
         (Rc::new("rule".into()), rule_rule),
+        (Rc::new("document".into()), document_rule),
     ];
-    update_refs(&document_rule, &refs);
-    (document_rule, refs)
+    update_refs(&rules);
+    rules
 }
 
 /// Stores information about error occursing when parsing syntax.
@@ -1390,11 +1390,8 @@ pub struct Syntax {
 
 impl Syntax {
     /// Parses syntax.
-    pub fn new(
-        rules: &Rule,
-        refs: &[(Rc<String>, Rule)],
-        files: Vec<PathBuf>
-    ) -> Result<Syntax, SyntaxError> {
+    pub fn new(rules: &[(Rc<String>, Rule)], files: Vec<PathBuf>)
+    -> Result<Syntax, SyntaxError> {
         use std::fs::File;
         use std::io::Read;
         use piston_meta::*;
@@ -1404,7 +1401,7 @@ impl Syntax {
             let mut source = String::new();
             try!(file_h.read_to_string(&mut source));
 
-            let res = parse(&rules, &refs, &source);
+            let res = parse(&rules, &source);
             match res {
                 Ok(_) => {
                     /*
@@ -1437,9 +1434,9 @@ mod tests {
 
     #[test]
     fn syntax() {
-        let (rules, refs) = rules();
+        let rules = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))
-            = Syntax::new(&rules, &refs, vec![
+            = Syntax::new(&rules, vec![
                 "assets/bool.txt".into(),
                 "assets/nat.txt".into(),
                 "assets/option.txt".into(),
@@ -1457,9 +1454,9 @@ mod tests {
 
     #[test]
     fn meta_syntax() {
-        let (rules, refs) = meta_rules();
+        let rules = meta_rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))
-            = Syntax::new(&rules, &refs, vec![
+            = Syntax::new(&rules, vec![
                 "assets/self-syntax.txt".into(),
                 "assets/syntax.txt".into(),
             ]) {
