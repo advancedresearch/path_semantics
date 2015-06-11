@@ -588,14 +588,14 @@ pub fn rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
         (Rc::new("repeated_arguments".into()), repeated_arguments),
     ];
 
-    lines_rule.update_refs(&refs[..]);
+    update_refs(&lines_rule, &refs[..]);
 
     (lines_rule, refs)
 }
 
 /*
 /// Returns rules for parsing meta rules.
-pub fn meta_rules() -> piston_meta::Rule {
+pub fn meta_rules() -> (Rule, Vec<(Rc<String>, Rule)>) {
     use std::rc::Rc;
     use piston_meta::*;
 
@@ -605,169 +605,6 @@ pub fn meta_rules() -> piston_meta::Rule {
     let any: Rc<String> = Rc::new("any_characters".into());
     let seps: Rc<String> = Rc::new("[]{}():".into());
 
-    // 1."string" [..seps!("name") ":" w? t?("text")]
-    let string_node = Node {
-        debug_id: 1000,
-        name: Rc::new("string".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 1001,
-            args: vec![
-                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                    debug_id: 1002,
-                    any_characters: seps.clone(),
-                    optional: false,
-                    property: Some(Rc::new("name".into())),
-                }),
-                Rule::Token(Token {
-                    debug_id: 1003,
-                    text: Rc::new(":".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 1004,
-                    optional: true,
-                }),
-                Rule::Text(Text {
-                    debug_id: 1005,
-                    allow_empty: true,
-                    property: Some(Rc::new("text".into()))
-                })
-            ]
-        })
-    };
-
-    // 2."node" [$("id") "." t!("name") w! @"rule"]
-    let node_node = Node {
-        debug_id: 2000,
-        name: Rc::new("node".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 2001,
-            args: vec![
-                Rule::Number(Number {
-                    debug_id: 2002,
-                    allow_underscore: false,
-                    property: Some(Rc::new("id".into())),
-                }),
-                Rule::Token(Token {
-                    debug_id: 2003,
-                    text: Rc::new(".".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Text(Text {
-                    debug_id: 2004,
-                    allow_empty: false,
-                    property: Some(Rc::new("name".into())),
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 2005,
-                    optional: false,
-                }),
-                Rule::Node(NodeRef::Name(Rc::new("rule".into()), 2006)),
-            ]
-        })
-    };
-
-    // 3."set" ["(" w? {t!("value") ..seps!("ref")} w? ")"]
-    let set_node = Node {
-        debug_id: 3000,
-        name: Rc::new("set".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 3001,
-            args: vec![
-                Rule::Token(Token {
-                    debug_id: 3002,
-                    text: Rc::new("(".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 3003,
-                    optional: true,
-                }),
-                Rule::Select(Select {
-                    debug_id: 3004,
-                    args: vec![
-                        Rule::Text(Text {
-                            debug_id: 3005,
-                            allow_empty: false,
-                            property: Some(Rc::new("value".into())),
-                        }),
-                        Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                            debug_id: 3006,
-                            any_characters: seps.clone(),
-                            optional: false,
-                            property: Some(Rc::new("ref".into())),
-                        })
-                    ]
-                }),
-                Rule::Whitespace(Whitespace {
-                    debug_id: 3007,
-                    optional: true,
-                }),
-                Rule::Token(Token {
-                    debug_id: 3008,
-                    text: Rc::new(")".into()),
-                    inverted: false,
-                    property: None,
-                })
-            ]
-        })
-    };
-
-    // 4."opt" {"?"(opt) "!"(!opt)}
-    let opt_node = Node {
-        debug_id: 4000,
-        name: Rc::new("opt".into()),
-        rule: Rule::Select(Select {
-            debug_id: 4001,
-            args: vec![
-                Rule::Token(Token {
-                    debug_id: 4002,
-                    text: Rc::new("?".into()),
-                    inverted: false,
-                    property: Some(opt.clone())
-                }),
-                Rule::Token(Token {
-                    debug_id: 4003,
-                    text: Rc::new("!".into()),
-                    inverted: true,
-                    property: Some(opt.clone())
-                })
-            ]
-        })
-    };
-
-    // 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
-    let number_node = Node {
-        debug_id: 5000,
-        name: Rc::new("number".into()),
-        rule: Rule::Sequence(Sequence {
-            debug_id: 5001,
-            args: vec![
-                Rule::Token(Token {
-                    debug_id: 5002,
-                    text: Rc::new("$".into()),
-                    inverted: false,
-                    property: None
-                }),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 5003,
-                    rule: Rule::Token(Token {
-                        debug_id: 5004,
-                        text: Rc::new("_".into()),
-                        inverted: false,
-                        property: Some(Rc::new("underscore".into()))
-                    })
-                })),
-                Rule::Optional(Box::new(Optional {
-                    debug_id: 5005,
-                    rule: Rule::Node(NodeRef::Name())
-                }))
-            ]
-        })
-    }
 }
 */
 
