@@ -1631,6 +1631,38 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         })))
     }
 
+    fn read_text(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("text", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut allow_empty = None;
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("text", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } if let Ok((range, val)) = meta_bool("allow_empty", data, offset) {
+                update(range, &mut data, &mut offset);
+                allow_empty = Some(val);
+            } if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} text {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        let allow_empty = allow_empty.unwrap_or(true);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Text(Text {
+            debug_id: 0,
+            allow_empty: allow_empty,
+            property: property,
+        })))
+    }
+
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1649,6 +1681,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_whitespace(data, offset) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_text(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
