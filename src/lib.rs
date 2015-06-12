@@ -1388,6 +1388,8 @@ pub fn print_meta_data(data: &[(Range, MetaData)]) {
 /// Converts meta data to rules.
 pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
 -> Result<Vec<(Rc<String>, Rule)>, ()> {
+    use piston_meta::*;
+
     fn update(range: Range, data: &mut &[(Range, MetaData)], offset: &mut usize) {
         let next_offset = range.next_offset();
         *data = &data[next_offset - *offset..];
@@ -1470,25 +1472,103 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         Ok((Range::new(start_offset, offset - start_offset), (name, text)))
     }
 
-    fn read_sequence(mut data: &[(Range, MetaData)], mut offset: usize)
+    fn read_sequence(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("sequence", data, offset));
         update(range, &mut data, &mut offset);
-        println!("TEST {:?}", &data[0]);
+        let mut args: Vec<Rule> = vec![];
+        loop {
+            if let Ok(range) = end_node("sequence", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_rule(data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                args.push(val);
+            } else {
+                println!("TEST sequence {:?}", &data[0]);
+                return Err(());
+            }
+        }
+        Ok((Range::new(start_offset, offset - start_offset), Rule::Sequence(Sequence {
+            debug_id: 0,
+            args: args
+        })))
+    }
+
+    fn find_string(val: &str, strings: &[(Rc<String>, Rc<String>)]) -> Option<Rc<String>> {
+        strings.iter().find(|&&(ref s, _)| &**s == val).map(|&(_, ref s)| s.clone())
+    }
+
+    fn read_set(property: &str, mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rc<String>), ()> {
+        let start_offset = offset;
+        let range = try!(start_node(property, data, offset));
+        update(range, &mut data, &mut offset);
+        let mut text = None;
+        loop {
+            if let Ok(range) = end_node(property, data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_string("ref", data, offset) {
+                update(range, &mut data, &mut offset);
+                text = find_string(&val, strings);
+                break;
+            } else {
+                println!("TEST set {:?}", &data[0]);
+                return Err(())
+            }
+        }
+        match text {
+            None => Err(()),
+            Some(text) => Ok((Range::new(start_offset, offset - start_offset), text))
+        }
+    }
+
+    fn read_until_any_or_whitespace(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("until_any_or_whitespace", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut any_characters = None;
+        loop {
+            if let Ok(range) = end_node("until_any_or_whitespace", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                any_characters = Some(val);
+            } else {
+                println!("TEST until_any_or_whitespace {:?}", &data[0]);
+                return Err(());
+            }
+        }
         Err(())
     }
 
-    fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize)
+    fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("rule", data, offset));
         update(range, &mut data, &mut offset);
-        println!("TEST {:?}", &data[0]);
-        Err(())
+        if let Ok((range, val)) = read_sequence(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            return Ok((Range::new(start_offset, offset - start_offset), val));
+        } else if let Ok((range, val)) = read_until_any_or_whitespace(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            return Ok((Range::new(start_offset, offset - start_offset), val));
+        } else {
+            println!("TEST rule {:?}", &data[0]);
+            Err(())
+        }
     }
 
-    fn read_node(mut data: &[(Range, MetaData)], mut offset: usize)
+    fn read_node(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, (Rc<String>, Rule)), ()> {
         let start_offset = offset;
         let range = try!(start_node("node", data, offset));
@@ -1503,11 +1583,11 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = meta_string("name", data, offset) {
                 name = Some(val);
                 update(range, &mut data, &mut offset);
-            } else if let Ok((range, val)) = read_rule(data, offset) {
+            } else if let Ok((range, val)) = read_rule(data, offset, strings) {
                 rule = Some(val);
                 update(range, &mut data, &mut offset);
             } else {
-                println!("TEST {:?}", &data[0]);
+                // println!("TEST {:?}", &data[0]);
                 return Err(())
             }
         }
@@ -1526,7 +1606,7 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
     }
     let mut res = vec![];
     loop {
-        if let Ok((range, val)) = read_node(data, offset) {
+        if let Ok((range, val)) = read_node(data, offset, &strings) {
             res.push(val);
             update(range, &mut data, &mut offset);
         } else {
