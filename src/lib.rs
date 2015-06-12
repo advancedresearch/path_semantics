@@ -1955,6 +1955,7 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             break;
         }
     }
+    update_refs(&res);
     Ok(res)
 }
 
