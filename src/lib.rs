@@ -1947,10 +1947,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
     let mut res = vec![];
     loop {
         if let Ok((range, val)) = read_node(data, offset, &strings) {
-            res.push(val);
             update(range, &mut data, &mut offset);
-        } else {
+            res.push(val);
+        } else if offset < data.len() {
             return Err(());
+        } else {
+            break;
         }
     }
     Ok(res)

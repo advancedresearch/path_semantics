@@ -14,6 +14,11 @@ fn main() {
     let mut source = String::new();
     file_h.read_to_string(&mut source).unwrap();
     let res = parse(&rules, &source).unwrap();
-    print_meta_data(&res[170..190]);
-    let rules = convert_meta_data_to_rules(&res);
+    // print_meta_data(&res[170..190]);
+    let rules1 = convert_meta_data_to_rules(&res).unwrap();
+    let res = parse(&rules1, &source).unwrap();
+    println!("TEST so far so good");
+    let rules2 = convert_meta_data_to_rules(&res).unwrap();
+    let res = parse(&rules2, &source).unwrap();
+    // assert_eq!(rules1, rules2);
 }
