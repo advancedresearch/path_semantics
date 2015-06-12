@@ -1440,6 +1440,17 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn meta_bool(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<(Range, bool), ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::Bool(ref n, ref val) if &**n == name => {
+                Ok((Range::new(offset, 1), *val))
+            }
+            _ => Err(())
+        }
+    }
+
     fn read_string(mut data: &[(Range, MetaData)], mut offset: usize)
     -> Result<(Range, (Rc<String>, Rc<String>)), ()> {
         let start_offset = offset;
@@ -1515,9 +1526,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = meta_string("ref", data, offset) {
                 update(range, &mut data, &mut offset);
                 text = find_string(&val, strings);
-                break;
+            } else if let Ok((range, val)) = meta_string("value", data, offset) {
+                update(range, &mut data, &mut offset);
+                text = Some(val);
             } else {
-                println!("TEST set {:?}", &data[0]);
                 return Err(())
             }
         }
@@ -1534,6 +1546,8 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let range = try!(start_node("until_any_or_whitespace", data, offset));
         update(range, &mut data, &mut offset);
         let mut any_characters = None;
+        let mut optional = None;
+        let mut property = None;
         loop {
             if let Ok(range) = end_node("until_any_or_whitespace", data, offset) {
                 update(range, &mut data, &mut offset);
@@ -1541,12 +1555,30 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
                 update(range, &mut data, &mut offset);
                 any_characters = Some(val);
+            } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
             } else {
-                println!("TEST until_any_or_whitespace {:?}", &data[0]);
+                println!("TEST {} until_any_or_whitespace {:?}", offset, &data[0]);
                 return Err(());
             }
         }
-        Err(())
+        let optional = optional.unwrap_or(false);
+        match any_characters {
+            Some(any) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                    debug_id: 0,
+                    any_characters: any,
+                    optional: optional,
+                    property: property
+                })))
+            }
+            None => Err(())
+        }
     }
 
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
@@ -1555,12 +1587,20 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let start_offset = offset;
         let range = try!(start_node("rule", data, offset));
         update(range, &mut data, &mut offset);
+
+        let mut rule = None;
         if let Ok((range, val)) = read_sequence(data, offset, strings) {
             update(range, &mut data, &mut offset);
-            return Ok((Range::new(start_offset, offset - start_offset), val));
+            rule = Some(val);
         } else if let Ok((range, val)) = read_until_any_or_whitespace(data, offset, strings) {
             update(range, &mut data, &mut offset);
-            return Ok((Range::new(start_offset, offset - start_offset), val));
+            rule = Some(val);
+        }
+
+        if let Some(rule) = rule {
+            let range = try!(end_node("rule", data, offset));
+            update(range, &mut data, &mut offset);
+            Ok((Range::new(start_offset, offset - start_offset), rule))
         } else {
             println!("TEST rule {:?}", &data[0]);
             Err(())
