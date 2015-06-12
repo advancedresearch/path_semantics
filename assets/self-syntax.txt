@@ -7,7 +7,7 @@ seps: "[]{}():.!?"
 2::"node" [$"id" "." t!"name" w! @"rule""rule"]
 3::"set" {t!"value" ..seps!"ref"}
 4::"opt" {"?"(opt) "!"(!opt)}
-5::"number" ["$" ?("_"("underscore")) ?(@"set""name")]
+5::"number" ["$" ?("_"("underscore")) ?(@"set"prop)]
 6::"text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set"prop)]
 7::"reference" [{["@" t!"name"] $"id"} ?(@"set"prop)]
 8::"sequence" ["[" w? s!.(w!) {@"rule""rule"} "]"]
@@ -21,8 +21,9 @@ seps: "[]{}():.!?"
 15::"until_any" ["..." @"set"any @"opt" ?(@"set"prop)]
 16::"repeat" ["r" @"opt" "(" @"rule""rule" ")"]
 17::"lines" ["l(" w? @"rule""rule" w? ")"]
-18::"rule" {5"number" 6"text" 7"reference" 8"sequence"
-  9"select" 10"separated_by" 11"token" 12"optional"
-  13"whitespace" 14"until_any_or_whitespace" 15"until_any"
-  16"repeat" 17"lines"}
+18::"rule" {@"number""number" @"text""text" @"reference""reference"
+  @"sequence""sequence" @"select""select" @"separated_by""separated_by"
+  @"token""token" @"optional""optional" @"whitespace""whitespace"
+  @"until_any_or_whitespace""until_any_or_whitespace" @"until_any""until_any"
+  @"repeat""repeat" @"lines""lines"}
 19::"document" [l(@"string""string") l(@"node""node") w?]

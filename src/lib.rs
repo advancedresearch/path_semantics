@@ -725,7 +725,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                 rule: Rule::Node(Node {
                     debug_id: 5005,
                     name: Rc::new("set".into()),
-                    property: Some(Rc::new("name".into())),
+                    property: Some(Rc::new("property".into())),
                     index: Cell::new(None),
                 })
             }))
@@ -1440,6 +1440,17 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn meta_bool(name: &str, data: &[(Range, MetaData)], offset: usize)
+    -> Result<(Range, bool), ()> {
+        if data.len() == 0 { return Err(()); }
+        match &data[0].1 {
+            &MetaData::Bool(ref n, ref val) if &**n == name => {
+                Ok((Range::new(offset, 1), *val))
+            }
+            _ => Err(())
+        }
+    }
+
     fn read_string(mut data: &[(Range, MetaData)], mut offset: usize)
     -> Result<(Range, (Rc<String>, Rc<String>)), ()> {
         let start_offset = offset;
@@ -1483,11 +1494,11 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             if let Ok(range) = end_node("sequence", data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
-            } else if let Ok((range, val)) = read_rule(data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
                 update(range, &mut data, &mut offset);
                 args.push(val);
             } else {
-                println!("TEST sequence {:?}", &data[0]);
+                println!("TEST {} sequence {:?}", offset, &data[0].1);
                 return Err(());
             }
         }
@@ -1515,9 +1526,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = meta_string("ref", data, offset) {
                 update(range, &mut data, &mut offset);
                 text = find_string(&val, strings);
-                break;
+            } else if let Ok((range, val)) = meta_string("value", data, offset) {
+                update(range, &mut data, &mut offset);
+                text = Some(val);
             } else {
-                println!("TEST set {:?}", &data[0]);
                 return Err(())
             }
         }
@@ -1534,6 +1546,8 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let range = try!(start_node("until_any_or_whitespace", data, offset));
         update(range, &mut data, &mut offset);
         let mut any_characters = None;
+        let mut optional = None;
+        let mut property = None;
         loop {
             if let Ok(range) = end_node("until_any_or_whitespace", data, offset) {
                 update(range, &mut data, &mut offset);
@@ -1541,28 +1555,346 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
                 update(range, &mut data, &mut offset);
                 any_characters = Some(val);
+            } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
             } else {
-                println!("TEST until_any_or_whitespace {:?}", &data[0]);
+                println!("TEST {} until_any_or_whitespace {:?}", offset, &data[0]);
                 return Err(());
             }
         }
-        Err(())
+        let optional = optional.unwrap_or(false);
+        match any_characters {
+            Some(any) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
+                    debug_id: 0,
+                    any_characters: any,
+                    optional: optional,
+                    property: property
+                })))
+            }
+            None => Err(())
+        }
     }
 
-    fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
+    fn read_token(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("rule", data, offset));
+        let range = try!(start_node("token", data, offset));
         update(range, &mut data, &mut offset);
+
+        let mut text = None;
+        let mut property = None;
+        let mut inverted = None;
+        loop {
+            if let Ok(range) = end_node("token", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("text", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                text = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else if let Ok((range, val)) = meta_bool("inverted", data, offset) {
+                update(range, &mut data, &mut offset);
+                inverted = Some(val);
+            } else {
+                println!("TEST {} token {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        let inverted = inverted.unwrap_or(false);
+        match text {
+            Some(text) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::Token(Token {
+                    debug_id: 0,
+                    text: text,
+                    inverted: inverted,
+                    property: property,
+                })))
+            }
+            None => Err(())
+        }
+    }
+
+    fn read_whitespace(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("whitespace", data, offset));
+        update(range, &mut data, &mut offset);
+        let (range, optional) = try!(meta_bool("optional", data, offset));
+        update(range, &mut data, &mut offset);
+        let range = try!(end_node("whitespace", data, offset));
+        update(range, &mut data, &mut offset);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Whitespace(Whitespace {
+            debug_id: 0,
+            optional: optional,
+        })))
+    }
+
+    fn read_text(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("text", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut allow_empty = None;
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("text", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } if let Ok((range, val)) = meta_bool("allow_empty", data, offset) {
+                update(range, &mut data, &mut offset);
+                allow_empty = Some(val);
+            } if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} text {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        let allow_empty = allow_empty.unwrap_or(true);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Text(Text {
+            debug_id: 0,
+            allow_empty: allow_empty,
+            property: property,
+        })))
+    }
+
+    fn read_number(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("number", data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("number", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} number {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Number(Number {
+            debug_id: 0,
+            property: property,
+            allow_underscore: false,
+        })))
+    }
+
+    fn read_reference(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("reference", data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut name = None;
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("reference", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_string("name", data, offset) {
+                update(range, &mut data, &mut offset);
+                name = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} reference {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        match name {
+            Some(name) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::Node(Node {
+                    debug_id: 0,
+                    name: name,
+                    property: property,
+                    index: Cell::new(None),
+                })))
+            }
+            None => Err(())
+        }
+    }
+
+    fn read_select(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("select", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut args: Vec<Rule> = vec![];
+        loop {
+            if let Ok(range) = end_node("select", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                args.push(val);
+            } else {
+                println!("TEST {} select {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Select(Select {
+            debug_id: 0,
+            args: args
+        })))
+    }
+
+    fn read_optional(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("optional", data, offset));
+        update(range, &mut data, &mut offset);
+        let (range, rule) = try!(read_rule("rule", data, offset, strings));
+        update(range, &mut data, &mut offset);
+        let range = try!(end_node("optional", data, offset));
+        update(range, &mut data, &mut offset);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Optional(Box::new(Optional {
+            debug_id: 0,
+            rule: rule,
+        }))))
+    }
+
+    fn read_separated_by(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("separated_by", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut optional = None;
+        let mut allow_trail = None;
+        let mut by = None;
+        let mut rule = None;
+        loop {
+            if let Ok(range) = end_node("separated_by", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else if let Ok((range, val)) = meta_bool("allow_trail", data, offset) {
+                update(range, &mut data, &mut offset);
+                allow_trail = Some(val);
+            } else if let Ok((range, val)) = read_rule("by", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                by = Some(val);
+            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                rule = Some(val);
+            } else {
+                println!("TEST {} separated_by {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        let optional = optional.unwrap_or(true);
+        let allow_trail = allow_trail.unwrap_or(true);
+        match (by, rule) {
+            (Some(by), Some(rule)) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::SeparatedBy(Box::new(SeparatedBy {
+                    debug_id: 0,
+                    optional: optional,
+                    allow_trail: allow_trail,
+                    by: by,
+                    rule: rule,
+                }))))
+            }
+            _ => Err(())
+        }
+    }
+
+    fn read_lines(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("lines", data, offset));
+        update(range, &mut data, &mut offset);
+        let (range, rule) = try!(read_rule("rule", data, offset, strings));
+        update(range, &mut data, &mut offset);
+        let range = try!(end_node("lines", data, offset));
+        update(range, &mut data, &mut offset);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Lines(Box::new(Lines {
+            debug_id: 0,
+            rule: rule,
+        }))))
+    }
+
+    fn read_rule(property: &str, mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node(property, data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut rule = None;
         if let Ok((range, val)) = read_sequence(data, offset, strings) {
             update(range, &mut data, &mut offset);
-            return Ok((Range::new(start_offset, offset - start_offset), val));
+            rule = Some(val);
         } else if let Ok((range, val)) = read_until_any_or_whitespace(data, offset, strings) {
             update(range, &mut data, &mut offset);
-            return Ok((Range::new(start_offset, offset - start_offset), val));
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_token(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_whitespace(data, offset) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_text(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_number(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_reference(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_select(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_optional(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_separated_by(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_lines(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        }
+
+        if let Some(rule) = rule {
+            let range = try!(end_node(property, data, offset));
+            update(range, &mut data, &mut offset);
+            Ok((Range::new(start_offset, offset - start_offset), rule))
         } else {
-            println!("TEST rule {:?}", &data[0]);
+            println!("TEST {} rule {:?}", offset, &data[0].1);
             Err(())
         }
     }
@@ -1577,21 +1909,29 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let mut name = None;
         let mut rule = None;
         loop {
-            if let Ok((range, val)) = meta_f64("id", data, offset) {
+            if let Ok(range) = end_node("node", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_f64("id", data, offset) {
                 id = Some(val);
                 update(range, &mut data, &mut offset);
             } else if let Ok((range, val)) = meta_string("name", data, offset) {
                 name = Some(val);
                 update(range, &mut data, &mut offset);
-            } else if let Ok((range, val)) = read_rule(data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
                 rule = Some(val);
                 update(range, &mut data, &mut offset);
             } else {
-                // println!("TEST {:?}", &data[0]);
+                println!("TEST node {:?}", &data[0]);
                 return Err(())
             }
         }
-        Err(())
+        match (name, rule) {
+            (Some(name), Some(rule)) => {
+                Ok((Range::new(start_offset, offset - start_offset), (name, rule)))
+            }
+            _ => Err(())
+        }
     }
 
     let mut strings: Vec<(Rc<String>, Rc<String>)> = vec![];
@@ -1607,10 +1947,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
     let mut res = vec![];
     loop {
         if let Ok((range, val)) = read_node(data, offset, &strings) {
-            res.push(val);
             update(range, &mut data, &mut offset);
-        } else {
+            res.push(val);
+        } else if offset < data.len() {
             return Err(());
+        } else {
+            break;
         }
     }
     Ok(res)
