@@ -1615,6 +1615,22 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn read_whitespace(mut data: &[(Range, MetaData)], mut offset: usize)
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("whitespace", data, offset));
+        update(range, &mut data, &mut offset);
+        let (range, optional) = try!(meta_bool("optional", data, offset));
+        update(range, &mut data, &mut offset);
+        let range = try!(end_node("whitespace", data, offset));
+        update(range, &mut data, &mut offset);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Whitespace(Whitespace {
+            debug_id: 0,
+            optional: optional,
+        })))
+    }
+
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1630,6 +1646,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_token(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_whitespace(data, offset) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
