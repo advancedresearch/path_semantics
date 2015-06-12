@@ -1829,6 +1829,23 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn read_lines(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("lines", data, offset));
+        update(range, &mut data, &mut offset);
+        let (range, rule) = try!(read_rule("rule", data, offset, strings));
+        update(range, &mut data, &mut offset);
+        let range = try!(end_node("lines", data, offset));
+        update(range, &mut data, &mut offset);
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Lines(Box::new(Lines {
+            debug_id: 0,
+            rule: rule,
+        }))))
+    }
+
     fn read_rule(property: &str, mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1865,6 +1882,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_separated_by(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_lines(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
