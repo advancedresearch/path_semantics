@@ -14,6 +14,6 @@ fn main() {
     let mut source = String::new();
     file_h.read_to_string(&mut source).unwrap();
     let res = parse(&rules, &source).unwrap();
-    print_meta_data(&res[140..160]);
+    print_meta_data(&res[170..190]);
     let rules = convert_meta_data_to_rules(&res);
 }
