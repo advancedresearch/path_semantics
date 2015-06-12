@@ -1581,6 +1581,40 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn read_token(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("token", data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut text = None;
+        loop {
+            if let Ok(range) = end_node("token", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("text", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                text = Some(val);
+            } else {
+                println!("TEST {} token {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        match text {
+            Some(text) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::Token(Token {
+                    debug_id: 0,
+                    text: text,
+                    inverted: false,
+                    property: None,
+                })))
+            }
+            None => Err(())
+        }
+    }
+
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1593,6 +1627,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_until_any_or_whitespace(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_token(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
