@@ -1589,6 +1589,8 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         update(range, &mut data, &mut offset);
 
         let mut text = None;
+        let mut property = None;
+        let mut inverted = None;
         loop {
             if let Ok(range) = end_node("token", data, offset) {
                 update(range, &mut data, &mut offset);
@@ -1596,19 +1598,26 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = read_set("text", data, offset, strings) {
                 update(range, &mut data, &mut offset);
                 text = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else if let Ok((range, val)) = meta_bool("inverted", data, offset) {
+                update(range, &mut data, &mut offset);
+                inverted = Some(val);
             } else {
                 println!("TEST {} token {:?}", offset, &data[0].1);
                 return Err(());
             }
         }
+        let inverted = inverted.unwrap_or(false);
         match text {
             Some(text) => {
                 Ok((Range::new(start_offset, offset - start_offset),
                 Rule::Token(Token {
                     debug_id: 0,
                     text: text,
-                    inverted: false,
-                    property: None,
+                    inverted: inverted,
+                    property: property,
                 })))
             }
             None => Err(())
