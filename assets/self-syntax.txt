@@ -7,7 +7,7 @@ seps: "[]{}():.!?"
 2::"node" [$"id" "." t!"name" w! @"rule""rule"]
 3::"set" {t!"value" ..seps!"ref"}
 4::"opt" {"?"(opt) "!"(!opt)}
-5::"number" ["$" ?("_"("underscore")) ?(@"set""name")]
+5::"number" ["$" ?("_"("underscore")) ?(@"set"prop)]
 6::"text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set"prop)]
 7::"reference" [{["@" t!"name"] $"id"} ?(@"set"prop)]
 8::"sequence" ["[" w? s!.(w!) {@"rule""rule"} "]"]

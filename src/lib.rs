@@ -725,7 +725,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                 rule: Rule::Node(Node {
                     debug_id: 5005,
                     name: Rc::new("set".into()),
-                    property: Some(Rc::new("name".into())),
+                    property: Some(Rc::new("property".into())),
                     index: Cell::new(None),
                 })
             }))
@@ -1663,6 +1663,34 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         })))
     }
 
+    fn read_number(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("number", data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("number", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} number {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        Ok((Range::new(start_offset, offset - start_offset),
+        Rule::Number(Number {
+            debug_id: 0,
+            property: property,
+            allow_underscore: false,
+        })))
+    }
+
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1684,6 +1712,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_text(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_number(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
