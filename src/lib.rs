@@ -1781,6 +1781,54 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }))))
     }
 
+    fn read_separated_by(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("separated_by", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut optional = None;
+        let mut allow_trail = None;
+        let mut by = None;
+        let mut rule = None;
+        loop {
+            if let Ok(range) = end_node("separated_by", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else if let Ok((range, val)) = meta_bool("allow_trail", data, offset) {
+                update(range, &mut data, &mut offset);
+                allow_trail = Some(val);
+            } else if let Ok((range, val)) = read_rule("by", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                by = Some(val);
+            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                rule = Some(val);
+            } else {
+                println!("TEST {} separated_by {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        let optional = optional.unwrap_or(true);
+        let allow_trail = allow_trail.unwrap_or(true);
+        match (by, rule) {
+            (Some(by), Some(rule)) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::SeparatedBy(Box::new(SeparatedBy {
+                    debug_id: 0,
+                    optional: optional,
+                    allow_trail: allow_trail,
+                    by: by,
+                    rule: rule,
+                }))))
+            }
+            _ => Err(())
+        }
+    }
+
     fn read_rule(property: &str, mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1814,6 +1862,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_optional(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_separated_by(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
