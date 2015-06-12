@@ -1708,7 +1708,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let mut name = None;
         let mut rule = None;
         loop {
-            if let Ok((range, val)) = meta_f64("id", data, offset) {
+            if let Ok(range) = end_node("node", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_f64("id", data, offset) {
                 id = Some(val);
                 update(range, &mut data, &mut offset);
             } else if let Ok((range, val)) = meta_string("name", data, offset) {
@@ -1718,11 +1721,16 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 rule = Some(val);
                 update(range, &mut data, &mut offset);
             } else {
-                // println!("TEST {:?}", &data[0]);
+                println!("TEST node {:?}", &data[0]);
                 return Err(())
             }
         }
-        Err(())
+        match (name, rule) {
+            (Some(name), Some(rule)) => {
+                Ok((Range::new(start_offset, offset - start_offset), (name, rule)))
+            }
+            _ => Err(())
+        }
     }
 
     let mut strings: Vec<(Rc<String>, Rc<String>)> = vec![];
