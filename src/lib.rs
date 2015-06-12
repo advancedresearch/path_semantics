@@ -1691,6 +1691,44 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         })))
     }
 
+    fn read_reference(mut data: &[(Range, MetaData)], mut offset: usize,
+    strings: &[(Rc<String>, Rc<String>)])
+    -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("reference", data, offset));
+        update(range, &mut data, &mut offset);
+
+        let mut name = None;
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("reference", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_string("name", data, offset) {
+                update(range, &mut data, &mut offset);
+                name = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} reference {:?}", offset, &data[0].1);
+                return Err(());
+            }
+        }
+        match name {
+            Some(name) => {
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::Node(Node {
+                    debug_id: 0,
+                    name: name,
+                    property: property,
+                    index: Cell::new(None),
+                })))
+            }
+            None => Err(())
+        }
+    }
+
     fn read_rule(mut data: &[(Range, MetaData)], mut offset: usize,
     strings: &[(Rc<String>, Rc<String>)])
     -> Result<(Range, Rule), ()> {
@@ -1715,6 +1753,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_number(data, offset, strings) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_reference(data, offset, strings) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
