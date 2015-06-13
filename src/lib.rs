@@ -1483,9 +1483,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         Ok((Range::new(start_offset, offset - start_offset), (name, text)))
     }
 
-    fn read_sequence(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_sequence(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("sequence", data, offset));
         update(range, &mut data, &mut offset);
@@ -1494,7 +1497,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             if let Ok(range) = end_node("sequence", data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
-            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule(
+                debug_id, "rule", data, offset, strings
+            ) {
                 update(range, &mut data, &mut offset);
                 args.push(val);
             } else {
@@ -1502,8 +1507,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 return Err(());
             }
         }
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset), Rule::Sequence(Sequence {
-            debug_id: 0,
+            debug_id: *debug_id,
             args: args
         })))
     }
@@ -1539,9 +1545,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_until_any_or_whitespace(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_until_any_or_whitespace(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("until_any_or_whitespace", data, offset));
         update(range, &mut data, &mut offset);
@@ -1569,9 +1578,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let optional = optional.unwrap_or(false);
         match any_characters {
             Some(any) => {
+                *debug_id += 1;
                 Ok((Range::new(start_offset, offset - start_offset),
                 Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                    debug_id: 0,
+                    debug_id: *debug_id,
                     any_characters: any,
                     optional: optional,
                     property: property
@@ -1581,9 +1591,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_token(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_token(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("token", data, offset));
         update(range, &mut data, &mut offset);
@@ -1612,9 +1625,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let inverted = inverted.unwrap_or(false);
         match text {
             Some(text) => {
+                *debug_id += 1;
                 Ok((Range::new(start_offset, offset - start_offset),
                 Rule::Token(Token {
-                    debug_id: 0,
+                    debug_id: *debug_id,
                     text: text,
                     inverted: inverted,
                     property: property,
@@ -1624,8 +1638,11 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_whitespace(mut data: &[(Range, MetaData)], mut offset: usize)
-    -> Result<(Range, Rule), ()> {
+    fn read_whitespace(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("whitespace", data, offset));
         update(range, &mut data, &mut offset);
@@ -1633,16 +1650,20 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         update(range, &mut data, &mut offset);
         let range = try!(end_node("whitespace", data, offset));
         update(range, &mut data, &mut offset);
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Whitespace(Whitespace {
-            debug_id: 0,
+            debug_id: *debug_id,
             optional: optional,
         })))
     }
 
-    fn read_text(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_text(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("text", data, offset));
         update(range, &mut data, &mut offset);
@@ -1664,17 +1685,21 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             }
         }
         let allow_empty = allow_empty.unwrap_or(true);
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Text(Text {
-            debug_id: 0,
+            debug_id: *debug_id,
             allow_empty: allow_empty,
             property: property,
         })))
     }
 
-    fn read_number(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_number(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("number", data, offset));
         update(range, &mut data, &mut offset);
@@ -1692,17 +1717,21 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 return Err(());
             }
         }
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Number(Number {
-            debug_id: 0,
+            debug_id: *debug_id,
             property: property,
             allow_underscore: false,
         })))
     }
 
-    fn read_reference(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_reference(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("reference", data, offset));
         update(range, &mut data, &mut offset);
@@ -1726,9 +1755,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
         match name {
             Some(name) => {
+                *debug_id += 1;
                 Ok((Range::new(start_offset, offset - start_offset),
                 Rule::Node(Node {
-                    debug_id: 0,
+                    debug_id: *debug_id,
                     name: name,
                     property: property,
                     index: Cell::new(None),
@@ -1738,9 +1768,12 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_select(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_select(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("select", data, offset));
         update(range, &mut data, &mut offset);
@@ -1749,7 +1782,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             if let Ok(range) = end_node("select", data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
-            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule(
+                debug_id, "rule", data, offset, strings
+            ) {
                 update(range, &mut data, &mut offset);
                 args.push(val);
             } else {
@@ -1757,33 +1792,43 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 return Err(());
             }
         }
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Select(Select {
-            debug_id: 0,
+            debug_id: *debug_id,
             args: args
         })))
     }
 
-    fn read_optional(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_optional(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("optional", data, offset));
         update(range, &mut data, &mut offset);
-        let (range, rule) = try!(read_rule("rule", data, offset, strings));
+        let (range, rule) = try!(read_rule(
+            debug_id, "rule", data, offset, strings
+        ));
         update(range, &mut data, &mut offset);
         let range = try!(end_node("optional", data, offset));
         update(range, &mut data, &mut offset);
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Optional(Box::new(Optional {
-            debug_id: 0,
+            debug_id: *debug_id,
             rule: rule,
         }))))
     }
 
-    fn read_separated_by(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_separated_by(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("separated_by", data, offset));
         update(range, &mut data, &mut offset);
@@ -1801,10 +1846,14 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = meta_bool("allow_trail", data, offset) {
                 update(range, &mut data, &mut offset);
                 allow_trail = Some(val);
-            } else if let Ok((range, val)) = read_rule("by", data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule(
+                debug_id, "by", data, offset, strings
+            ) {
                 update(range, &mut data, &mut offset);
                 by = Some(val);
-            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule(
+                debug_id, "rule", data, offset, strings
+            ) {
                 update(range, &mut data, &mut offset);
                 rule = Some(val);
             } else {
@@ -1816,9 +1865,10 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         let allow_trail = allow_trail.unwrap_or(true);
         match (by, rule) {
             (Some(by), Some(rule)) => {
+                *debug_id += 1;
                 Ok((Range::new(start_offset, offset - start_offset),
                 Rule::SeparatedBy(Box::new(SeparatedBy {
-                    debug_id: 0,
+                    debug_id: *debug_id,
                     optional: optional,
                     allow_trail: allow_trail,
                     by: by,
@@ -1829,62 +1879,94 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_lines(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_lines(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("lines", data, offset));
         update(range, &mut data, &mut offset);
-        let (range, rule) = try!(read_rule("rule", data, offset, strings));
+        let (range, rule) = try!(read_rule(
+            debug_id, "rule", data, offset, strings
+        ));
         update(range, &mut data, &mut offset);
         let range = try!(end_node("lines", data, offset));
         update(range, &mut data, &mut offset);
+        *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Lines(Box::new(Lines {
-            debug_id: 0,
+            debug_id: *debug_id,
             rule: rule,
         }))))
     }
 
-    fn read_rule(property: &str, mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, Rule), ()> {
+    fn read_rule(
+        debug_id: &mut usize,
+        property: &str,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node(property, data, offset));
         update(range, &mut data, &mut offset);
 
         let mut rule = None;
-        if let Ok((range, val)) = read_sequence(data, offset, strings) {
+        if let Ok((range, val)) = read_sequence(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_until_any_or_whitespace(data, offset, strings) {
+        } else if let Ok((range, val)) = read_until_any_or_whitespace(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_token(data, offset, strings) {
+        } else if let Ok((range, val)) = read_token(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_whitespace(data, offset) {
+        } else if let Ok((range, val)) = read_whitespace(
+            debug_id, data, offset
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_text(data, offset, strings) {
+        } else if let Ok((range, val)) = read_text(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_number(data, offset, strings) {
+        } else if let Ok((range, val)) = read_number(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_reference(data, offset, strings) {
+        } else if let Ok((range, val)) = read_reference(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_select(data, offset, strings) {
+        } else if let Ok((range, val)) = read_select(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_optional(data, offset, strings) {
+        } else if let Ok((range, val)) = read_optional(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_separated_by(data, offset, strings) {
+        } else if let Ok((range, val)) = read_separated_by(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
-        } else if let Ok((range, val)) = read_lines(data, offset, strings) {
+        } else if let Ok((range, val)) = read_lines(
+            debug_id, data, offset, strings
+        ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         }
@@ -1913,12 +1995,15 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = meta_f64("id", data, offset) {
-                id = Some(val);
+                id = Some(val as usize);
                 update(range, &mut data, &mut offset);
             } else if let Ok((range, val)) = meta_string("name", data, offset) {
                 name = Some(val);
                 update(range, &mut data, &mut offset);
-            } else if let Ok((range, val)) = read_rule("rule", data, offset, strings) {
+            } else if let Ok((range, val)) = read_rule(
+                    &mut (id.unwrap_or(0) * 1000), "rule",
+                    data, offset, strings
+            ) {
                 rule = Some(val);
                 update(range, &mut data, &mut offset);
             } else {
