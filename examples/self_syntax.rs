@@ -18,8 +18,8 @@ fn main() {
     let rules1 = convert_meta_data_to_rules(&res).unwrap();
     println!("{:?}", rules1);
     let res = parse(&rules1, &source).unwrap();
-    println!("TEST so far so good");
     let rules2 = convert_meta_data_to_rules(&res).unwrap();
-    let res = parse(&rules2, &source).unwrap();
+    let _ = parse(&rules2, &source).unwrap();
     assert_eq!(rules1, rules2);
+    println!("TEST bootstrapping succeeded!");
 }
