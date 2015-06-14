@@ -1,6 +1,6 @@
 seps: "()[]{},;:/*+-"
 1 "brackets" s?(w!) { ?(["[" {":" ..seps!} "]"]) }
-2 "path" [?("::"("root")) s!.("::") { ..seps!"name" }]
+2 "path" [?("::""root") s!.("::") { ..seps!"name" }]
 3 "arg" [1"brackets" 2"path" 1"brackets" ?(5"repeated_arguments")]
 4 "arguments" ["(" w? s?.(["," w!]) { {$_"number" t?"text"
   4"arguments" 11"member_lambda" 7"lambda" 3"arg"} } w? ")"]
