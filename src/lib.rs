@@ -11,587 +11,6 @@ use std::cell::Cell;
 use range::Range;
 use piston_meta::{ MetaData, Rule };
 
-/// Returns rules for parsing mathematical notation.
-pub fn rules() -> Vec<(Rc<String>, Rule)> {
-    use piston_meta::*;
-
-    let separators: Rc<String> = Rc::new("()[]{},;:/*+-".into());
-
-    let member_bracket = Rule::Optional(Box::new(Optional {
-        debug_id: 100,
-        rule: Rule::Sequence(Sequence {
-            debug_id: 200,
-            args: vec![
-                Rule::Token(Token {
-                    debug_id: 300,
-                    text: Rc::new("[".into()),
-                    inverted: false,
-                    property: None,
-                }),
-                Rule::Select(Select {
-                    debug_id: 400,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 500,
-                            text: Rc::new(":".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                            debug_id: 600,
-                            any_characters: separators.clone(),
-                            optional: false,
-                            property: None,
-                        }),
-                    ]
-                }),
-                Rule::Token(Token {
-                    debug_id: 700,
-                    text: Rc::new("]".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            ],
-        })
-    }));
-
-    let brackets_rule = Rule::SeparatedBy(Box::new(SeparatedBy {
-        debug_id: 900,
-        optional: true,
-        allow_trail: false,
-        rule: member_bracket,
-        by: Rule::Whitespace(Whitespace {
-            debug_id: 1000,
-            optional: false,
-        })
-    }));
-
-    let path_rule = Rule::Sequence(Sequence {
-        debug_id: 1200,
-        args: vec![
-            Rule::Optional(Box::new(Optional {
-                debug_id: 1300,
-                rule: Rule::Token(Token {
-                    debug_id: 1400,
-                    text: Rc::new("::".into()),
-                    inverted: false,
-                    property: Some(Rc::new("root".into())),
-                }),
-            })),
-            Rule::SeparatedBy(Box::new(SeparatedBy {
-                debug_id: 1500,
-                optional: false,
-                allow_trail: true,
-                rule: Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                    debug_id: 1600,
-                    any_characters: separators.clone(),
-                    optional: false,
-                    property: Some(Rc::new("name".into())),
-                }),
-                by: Rule::Token(Token {
-                    debug_id: 1700,
-                    text: Rc::new("::".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            })),
-        ]
-    });
-
-    let arg_rule = Rule::Sequence(Sequence {
-        debug_id: 1900,
-        args: vec![
-            Rule::Node(Node {
-                name: Rc::new("brackets".into()),
-                property: Some(Rc::new("brackets".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("path".into()),
-                property: Some(Rc::new("path".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("brackets".into()),
-                property: Some(Rc::new("brackets".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 2000,
-                rule: Rule::Node(Node {
-                    name: Rc::new("repeated_arguments".into()),
-                    property: Some(Rc::new("repeated_arguments".into())),
-                    debug_id: 0,
-                    index: Cell::new(None),
-                })
-            }))
-        ]
-    });
-
-    let arguments = Rule::Sequence(Sequence {
-        debug_id: 2200,
-        args: vec![
-            Rule::Token(Token {
-                debug_id: 2300,
-                text: Rc::new("(".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 2400,
-                optional: true,
-            }),
-            Rule::SeparatedBy(Box::new(SeparatedBy {
-                debug_id: 2500,
-                optional: true,
-                allow_trail: true,
-                rule: Rule::Select(Select {
-                    debug_id: 2600,
-                    args: vec![
-                        Rule::Number(Number {
-                            debug_id: 2700,
-                            allow_underscore: true,
-                            property: None,
-                        }),
-                        Rule::Text(Text {
-                            debug_id: 2800,
-                            allow_empty: true,
-                            property: None,
-                        }),
-                        Rule::Node(Node {
-                            name: Rc::new("arguments".into()),
-                            property: Some(Rc::new("arguments".into())),
-                            debug_id: 0,
-                            index: Cell::new(None),
-                        }),
-                        Rule::Node(Node {
-                            name: Rc::new("member_lambda".into()),
-                            property: Some(Rc::new("member_lambda".into())),
-                            debug_id: 0,
-                            index: Cell::new(None),
-                        }),
-                        Rule::Node(Node {
-                            name: Rc::new("lambda".into()),
-                            property: Some(Rc::new("lambda".into())),
-                            debug_id: 0,
-                            index: Cell::new(None),
-                        }),
-                        Rule::Node(Node {
-                            name: Rc::new("arg".into()),
-                            property: Some(Rc::new("arg".into())),
-                            debug_id: 0,
-                            index: Cell::new(None),
-                        }),
-                    ]
-                }),
-                by: Rule::Sequence(Sequence {
-                    debug_id: 2900,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 3000,
-                            text: Rc::new(",".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 3100,
-                            optional: false,
-                        }),
-                    ],
-                }),
-            })),
-            Rule::Whitespace(Whitespace {
-                debug_id: 3200,
-                optional: true,
-            }),
-            Rule::Token(Token {
-                debug_id: 3300,
-                text: Rc::new(")".into()),
-                inverted: false,
-                property: None,
-            }),
-        ]
-    });
-
-    let repeated_arguments = Rule::Repeat(Box::new(Repeat {
-        debug_id: 3500,
-        optional: false,
-        rule: Rule::Node(Node {
-            name: Rc::new("arguments".into()),
-            property: Some(Rc::new("arguments".into())),
-            debug_id: 0,
-            index: Cell::new(None),
-        }),
-    }));
-
-    let comment_rule = Rule::Sequence(Sequence {
-        debug_id: 3700,
-        args: vec![
-            Rule::Whitespace(Whitespace {
-                debug_id: 22,
-                optional: true,
-            }),
-            Rule::Token(Token {
-                debug_id: 3800,
-                text: Rc::new("//".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::UntilAny(UntilAny {
-                debug_id: 3900,
-                any_characters: Rc::new("\n".into()),
-                optional: true,
-                property: None,
-            }),
-        ],
-    });
-
-    let lambda = Rule::Sequence(Sequence {
-        debug_id: 4100,
-        args: vec![
-            Rule::Whitespace(Whitespace {
-                debug_id: 4200,
-                optional: true,
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 4300,
-                rule: Rule::Sequence(Sequence {
-                    debug_id: 4400,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 4500,
-                            text: Rc::new("fn".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 4600,
-                            optional: true,
-                        }),
-                    ]
-                }),
-            })),
-            Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                debug_id: 4700,
-                any_characters: separators.clone(),
-                optional: true,
-                property: Some(Rc::new("name".into())),
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 4800,
-                optional: true,
-            }),
-            Rule::Node(Node {
-                name: Rc::new("brackets".into()),
-                property: Some(Rc::new("brackets".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("repeated_arguments".into()),
-                property: Some(Rc::new("repeated_arguments".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 4900,
-                optional: false,
-            }),
-            Rule::Token(Token {
-                debug_id: 5000,
-                text: Rc::new("->".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 5100,
-                optional: false,
-            }),
-            Rule::Node(Node {
-                name: Rc::new("arg".into()),
-                property: Some(Rc::new("arg".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 5200,
-                optional: true,
-            }),
-        ]
-    });
-
-    let fn_rule = Rule::Sequence(Sequence {
-        debug_id: 5400,
-        args: vec![
-            Rule::Optional(Box::new(Optional {
-                debug_id: 5500,
-                rule: Rule::Sequence(Sequence {
-                    debug_id: 5600,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 5700,
-                            text: Rc::new("pub".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 5800,
-                            optional: true,
-                        }),
-                    ]
-                }),
-            })),
-            Rule::Node(Node {
-                name: Rc::new("lambda".into()),
-                property: Some(Rc::new("lambda".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Token(Token {
-                debug_id: 5900,
-                text: Rc::new(";".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 6000,
-                optional: true,
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 6100,
-                rule: Rule::Node(Node {
-                    name: Rc::new("comment".into()),
-                    property: Some(Rc::new("comment".into())),
-                    debug_id: 0,
-                    index: Cell::new(None),
-                })
-            })),
-        ]
-    });
-
-
-    let use_rule = Rule::Sequence(Sequence {
-        debug_id: 6300,
-        args: vec![
-            Rule::Whitespace(Whitespace {
-                debug_id: 6400,
-                optional: true,
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 6500,
-                rule: Rule::Sequence(Sequence {
-                    debug_id: 6600,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 6700,
-                            text: Rc::new("pub".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 6800,
-                            optional: true,
-                        }),
-                    ]
-                }),
-            })),
-            Rule::Token(Token {
-                debug_id: 6900,
-                text: Rc::new("use".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 7000,
-                optional: false,
-            }),
-            Rule::Node(Node {
-                name: Rc::new("path".into()),
-                property: Some(Rc::new("path".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 7100,
-                rule: Rule::Token(Token {
-                    debug_id: 7200,
-                    text: Rc::new("*".into()),
-                    inverted: false,
-                    property: None,
-                }),
-            })),
-            Rule::Token(Token {
-                debug_id: 7300,
-                text: Rc::new(";".into()),
-                inverted: false,
-                property: None,
-            }),
-        ]
-    });
-
-    let module = Rule::Sequence(Sequence {
-        debug_id: 7500,
-        args: vec![
-            Rule::Whitespace(Whitespace {
-                debug_id: 7600,
-                optional: true,
-            }),
-            Rule::Optional(Box::new(Optional {
-                debug_id: 7700,
-                rule: Rule::Sequence(Sequence {
-                    debug_id: 7800,
-                    args: vec![
-                        Rule::Token(Token {
-                            debug_id: 7900,
-                            text: Rc::new("pub".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 8000,
-                            optional: true,
-                        }),
-                    ]
-                }),
-            })),
-            Rule::Token(Token {
-                debug_id: 8100,
-                text: Rc::new("mod".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 8200,
-                optional: false,
-            }),
-            Rule::UntilAnyOrWhitespace(UntilAnyOrWhitespace {
-                debug_id: 8300,
-                any_characters: separators.clone(),
-                optional: true,
-                property: Some(Rc::new("name".into())),
-            }),
-            Rule::Token(Token {
-                debug_id: 8400,
-                text: Rc::new(";".into()),
-                inverted: false,
-                property: None,
-            }),
-        ]
-    });
-
-    let member_lambda = Rule::Sequence(Sequence {
-        debug_id: 8600,
-        args: vec![
-            Rule::Node(Node {
-                name: Rc::new("arg".into()),
-                property: Some(Rc::new("arg".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 8700,
-                optional: true,
-            }),
-            Rule::Token(Token {
-                debug_id: 8800,
-                text: Rc::new(":".into()),
-                inverted: false,
-                property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 8900,
-                optional: false,
-            }),
-            Rule::Node(Node {
-                name: Rc::new("arg".into()),
-                property: Some(Rc::new("arg".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-        ]
-    });
-
-    let member_rule = Rule::Sequence(Sequence {
-        debug_id: 9100,
-        args: vec![
-            Rule::Node(Node {
-                name: Rc::new("member_lambda".into()),
-                property: Some(Rc::new("member_lambda".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Token(Token {
-                debug_id: 9200,
-                text: Rc::new(";".into()),
-                inverted: false,
-                property: None,
-            }),
-        ]
-    });
-
-    let line_rule = Rule::Select(Select {
-        debug_id: 9300,
-        args: vec![
-            Rule::Node(Node {
-                name: Rc::new("comment".into()),
-                property: Some(Rc::new("comment".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("use".into()),
-                property: Some(Rc::new("use".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("module".into()),
-                property: Some(Rc::new("module".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("member".into()),
-                property: Some(Rc::new("member".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-            Rule::Node(Node {
-                name: Rc::new("fn".into()),
-                property: Some(Rc::new("fn".into())),
-                debug_id: 0,
-                index: Cell::new(None),
-            }),
-        ]
-    });
-
-    let document_rule = Rule::Lines(Box::new(Lines {
-        debug_id: 9400,
-        rule: line_rule,
-    }));
-
-    let rules: Vec<(Rc<String>, _)> = vec![
-        (Rc::new("comment".into()), comment_rule),
-        (Rc::new("use".into()), use_rule),
-        (Rc::new("module".into()), module),
-        (Rc::new("fn".into()), fn_rule),
-        (Rc::new("lambda".into()), lambda),
-        (Rc::new("arg".into()), arg_rule),
-        (Rc::new("member".into()), member_rule),
-        (Rc::new("member_lambda".into()), member_lambda),
-        (Rc::new("brackets".into()), brackets_rule),
-        (Rc::new("arguments".into()), arguments),
-        (Rc::new("path".into()), path_rule),
-        (Rc::new("repeated_arguments".into()), repeated_arguments),
-        (Rc::new("document".into()), document_rule),
-    ];
-    update_refs(&rules);
-    rules
-}
-
 /// Returns rules for parsing meta rules.
 pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
     use std::rc::Rc;
@@ -601,7 +20,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
     let inv: Rc<String> = Rc::new("inverted".into());
     let prop: Rc<String> = Rc::new("property".into());
     let any: Rc<String> = Rc::new("any_characters".into());
-    let seps: Rc<String> = Rc::new("[]{}():.!?".into());
+    let seps: Rc<String> = Rc::new("[]{}():.!?\"".into());
 
     // 1."string" [..seps!("name") ":" w? t?("text")]
     let string_rule = Rule::Sequence(Sequence {
@@ -1540,6 +959,52 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
+    fn read_until_any(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("until_any", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut any_characters = None;
+        let mut optional = None;
+        let mut property = None;
+        loop {
+            if let Ok(range) = end_node("until_any", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                any_characters = Some(val);
+            } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
+                update(range, &mut data, &mut offset);
+                property = Some(val);
+            } else {
+                println!("TEST {} until_any {:?}", offset, &data[0]);
+                return Err(());
+            }
+        }
+        let optional = optional.unwrap_or(false);
+        match any_characters {
+            Some(any) => {
+                *debug_id += 1;
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::UntilAny(UntilAny {
+                    debug_id: *debug_id,
+                    any_characters: any,
+                    optional: optional,
+                    property: property
+                })))
+            }
+            None => Err(())
+        }
+    }
+
     fn read_token(
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
@@ -1654,6 +1119,7 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         update(range, &mut data, &mut offset);
 
         let mut property = None;
+        let mut underscore = None;
         loop {
             if let Ok(range) = end_node("number", data, offset) {
                 update(range, &mut data, &mut offset);
@@ -1661,17 +1127,21 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
                 update(range, &mut data, &mut offset);
                 property = Some(val);
+            } else if let Ok((range, val)) = meta_bool("underscore", data, offset) {
+                update(range, &mut data, &mut offset);
+                underscore = Some(val);
             } else {
                 println!("TEST {} number {:?}", offset, &data[0].1);
                 return Err(());
             }
         }
+        let underscore = underscore.unwrap_or(false);
         *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
         Rule::Number(Number {
             debug_id: *debug_id,
             property: property,
-            allow_underscore: false,
+            allow_underscore: underscore,
         })))
     }
 
@@ -1851,6 +1321,50 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }))))
     }
 
+    fn read_repeat(
+        debug_id: &mut usize,
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)]
+    ) -> Result<(Range, Rule), ()> {
+        let start_offset = offset;
+        let range = try!(start_node("repeat", data, offset));
+        update(range, &mut data, &mut offset);
+        let mut rule = None;
+        let mut optional = None;
+        loop {
+            if let Ok(range) = end_node("repeat", data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = read_rule(
+                debug_id, "rule", data, offset, strings
+            ) {
+                update(range, &mut data, &mut offset);
+                rule = Some(val);
+            } else if let Ok((range, val)) = meta_bool(
+                "optional", data, offset
+            ) {
+                update(range, &mut data, &mut offset);
+                optional = Some(val);
+            } else {
+                println!("TEST {} repeat {:?}", offset, &data[0]);
+                return Err(());
+            }
+        }
+        match (rule, optional) {
+            (Some(rule), Some(optional)) => {
+                *debug_id += 1;
+                Ok((Range::new(start_offset, offset - start_offset),
+                Rule::Repeat(Box::new(Repeat {
+                    debug_id: *debug_id,
+                    rule: rule,
+                    optional: optional,
+                }))))
+            }
+            _ => Err(())
+        }
+    }
+
     fn read_rule(
         debug_id: &mut usize,
         property: &str,
@@ -1869,6 +1383,11 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_until_any_or_whitespace(
+            debug_id, data, offset, strings
+        ) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_until_any(
             debug_id, data, offset, strings
         ) {
             update(range, &mut data, &mut offset);
@@ -1914,6 +1433,11 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_lines(
+            debug_id, data, offset, strings
+        ) {
+            update(range, &mut data, &mut offset);
+            rule = Some(val);
+        } else if let Ok((range, val)) = read_repeat(
             debug_id, data, offset, strings
         ) {
             update(range, &mut data, &mut offset);
@@ -2059,7 +1583,22 @@ mod tests {
 
     #[test]
     fn syntax() {
-        let rules = rules();
+        use piston_meta::parse;
+        use std::fs::File;
+        use std::io::Read;
+        use std::path::PathBuf;
+
+        let meta_rules = meta_rules();
+        let syntax: PathBuf = "assets/syntax.txt".into();
+        let mut file_h = File::open(syntax).unwrap();
+        let mut source = String::new();
+        file_h.read_to_string(&mut source).unwrap();
+        let res = parse(&meta_rules, &source).unwrap();
+        // print_meta_data(&res[410..430]);
+        let rules = convert_meta_data_to_rules(&res).unwrap();
+        println!("{:?}", rules);
+
+        // let rules = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))
             = Syntax::new(&rules, vec![
                 "assets/bool.txt".into(),
