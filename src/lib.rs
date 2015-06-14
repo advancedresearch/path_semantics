@@ -631,7 +631,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 2."node" [$("id") "." t!("name") w! @"rule"("rule")]
+    // 2 "node" [$"id" w! t!"name" w! @"rule""rule"]
     let node_rule = Rule::Sequence(Sequence {
         debug_id: 2000,
         args: vec![
@@ -640,11 +640,9 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                 allow_underscore: false,
                 property: Some(Rc::new("id".into())),
             }),
-            Rule::Token(Token {
+            Rule::Whitespace(Whitespace {
                 debug_id: 2002,
-                text: Rc::new("::".into()),
-                inverted: false,
-                property: None,
+                optional: false,
             }),
             Rule::Text(Text {
                 debug_id: 2003,
