@@ -993,35 +993,21 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 12."optional" ["?(" w? @"rule"("rule") w? ")"]
+    // 12 "optional" ["?" @"rule""rule"]
     let optional_rule = Rule::Sequence(Sequence {
         debug_id: 12001,
         args: vec![
             Rule::Token(Token {
                 debug_id: 12002,
-                text: Rc::new("?(".into()),
+                text: Rc::new("?".into()),
                 inverted: false,
                 property: None,
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 12003,
-                optional: true,
             }),
             Rule::Node(Node {
                 debug_id: 12004,
                 name: Rc::new("rule".into()),
                 property: Some(Rc::new("rule".into())),
                 index: Cell::new(None),
-            }),
-            Rule::Whitespace(Whitespace {
-                debug_id: 12005,
-                optional: true,
-            }),
-            Rule::Token(Token {
-                debug_id: 12006,
-                text: Rc::new(")".into()),
-                inverted: false,
-                property: None,
             })
         ]
     });
