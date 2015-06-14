@@ -2,7 +2,7 @@ opt: "optional"
 inv: "inverted"
 prop: "property"
 any: "any_characters"
-seps: "[]{}():.!?"
+seps: "[]{}():.!?\""
 1 "string" [..seps!"name" ":" w? t?"text"]
 2 "node" [$"id" w! t!"name" w! @"rule""rule"]
 3 "set" {t!"value" ..seps!"ref"}
