@@ -957,7 +957,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // rule 11:"token" [@"set"("text") ?(["(" w? ?("!"(inv)) @"set"(prop) w? ")"])]
+    // 11 "token" [@"set""text" ?([?("!"(inv)) @"set"prop])]
     let token_rule = Rule::Sequence(Sequence {
         debug_id: 11000,
         args: vec![
@@ -972,16 +972,6 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                 rule: Rule::Sequence(Sequence {
                     debug_id: 11003,
                     args: vec![
-                        Rule::Token(Token {
-                            debug_id: 11004,
-                            text: Rc::new("(".into()),
-                            inverted: false,
-                            property: None,
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 11005,
-                            optional: true,
-                        }),
                         Rule::Optional(Box::new(Optional {
                             debug_id: 11006,
                             rule: Rule::Token(Token {
@@ -996,16 +986,6 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
                             name: Rc::new("set".into()),
                             property: Some(prop.clone()),
                             index: Cell::new(None),
-                        }),
-                        Rule::Whitespace(Whitespace {
-                            debug_id: 11010,
-                            optional: true,
-                        }),
-                        Rule::Token(Token {
-                            debug_id: 11011,
-                            text: Rc::new(")".into()),
-                            inverted: false,
-                            property: None,
                         })
                     ]
                 })
