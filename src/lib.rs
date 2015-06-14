@@ -771,40 +771,25 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 7."reference" [{["@" t!("name")] $("id")} ?(@"set"(prop))]
+    // 7::"reference" ["@" t!"name" ?(@"set"prop)]
     let reference_rule = Rule::Sequence(Sequence {
         debug_id: 7000,
         args: vec![
-            Rule::Select(Select {
+            Rule::Token(Token {
                 debug_id: 7001,
-                args: vec![
-                    Rule::Sequence(Sequence {
-                        debug_id: 7002,
-                        args: vec![
-                            Rule::Token(Token {
-                                debug_id: 7003,
-                                text: Rc::new("@".into()),
-                                inverted: false,
-                                property: None,
-                            }),
-                            Rule::Text(Text {
-                                debug_id: 7004,
-                                allow_empty: false,
-                                property: Some(Rc::new("name".into())),
-                            }),
-                        ]
-                    }),
-                    Rule::Number(Number {
-                        debug_id: 7005,
-                        allow_underscore: false,
-                        property: Some(Rc::new("id".into()))
-                    })
-                ]
+                text: Rc::new("@".into()),
+                inverted: false,
+                property: None,
+            }),
+            Rule::Text(Text {
+                debug_id: 7002,
+                allow_empty: false,
+                property: Some(Rc::new("name".into())),
             }),
             Rule::Optional(Box::new(Optional {
-                debug_id: 7006,
+                debug_id: 7003,
                 rule: Rule::Node(Node {
-                    debug_id: 7007,
+                    debug_id: 7004,
                     name: Rc::new("set".into()),
                     property: Some(prop.clone()),
                     index: Cell::new(None)

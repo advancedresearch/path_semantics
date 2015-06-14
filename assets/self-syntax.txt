@@ -9,7 +9,7 @@ seps: "[]{}():.!?"
 4::"opt" {"?"(opt) "!"(!opt)}
 5::"number" ["$" ?("_"("underscore")) ?(@"set"prop)]
 6::"text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set"prop)]
-7::"reference" [{["@" t!"name"] $"id"} ?(@"set"prop)]
+7::"reference" ["@" t!"name" ?(@"set"prop)]
 8::"sequence" ["[" w? s!.(w!) {@"rule""rule"} "]"]
 9::"select" ["{" w? s!.(w!) {@"rule""rule"} "}"]
 10::"separated_by" ["s" @"opt" ?("."("allow_trail"))
