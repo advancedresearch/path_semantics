@@ -754,8 +754,10 @@ pub fn print_meta_data(data: &[(Range, MetaData)]) {
 }
 
 /// Converts meta data to rules.
-pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
--> Result<Vec<(Rc<String>, Rule)>, ()> {
+pub fn convert_meta_data_to_rules(
+    mut data: &[(Range, MetaData)],
+    ignored: &mut Vec<Range>
+) -> Result<Vec<(Rc<String>, Rule)>, ()> {
     use piston_meta::*;
 
     fn update(range: Range, data: &mut &[(Range, MetaData)], offset: &mut usize) {
@@ -784,6 +786,22 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             }
             _ => Err(())
         }
+    }
+
+    fn ignore(data: &[(Range, MetaData)], offset: usize)
+    -> Range {
+        let mut acc: usize = 0;
+        let mut len = 0;
+        for item in data.iter() {
+            match &item.1 {
+                &MetaData::StartNode(_) => acc += 1,
+                &MetaData::EndNode(_) => acc -= 1,
+                _ => {}
+            }
+            len += 1;
+            if acc == 0 { break; }
+        }
+        Range::new(offset, len)
     }
 
     fn meta_string(name: &str, data: &[(Range, MetaData)], offset: usize)
@@ -855,24 +873,27 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("sequence", data, offset));
+        let node = "sequence";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut args: Vec<Rule> = vec![];
         loop {
-            if let Ok(range) = end_node("sequence", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_rule(
-                debug_id, "rule", data, offset, strings
+                debug_id, "rule", data, offset, strings, ignored
             ) {
                 update(range, &mut data, &mut offset);
                 args.push(val);
             } else {
-                println!("TEST {} sequence {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         *debug_id += 1;
@@ -917,16 +938,18 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("until_any_or_whitespace", data, offset));
+        let node = "until_any_or_whitespace";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut any_characters = None;
         let mut optional = None;
         let mut property = None;
         loop {
-            if let Ok(range) = end_node("until_any_or_whitespace", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
@@ -939,8 +962,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 property = Some(val);
             } else {
-                println!("TEST {} until_any_or_whitespace {:?}", offset, &data[0]);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let optional = optional.unwrap_or(false);
@@ -963,16 +987,18 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("until_any", data, offset));
+        let node = "until_any";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut any_characters = None;
         let mut optional = None;
         let mut property = None;
         loop {
-            if let Ok(range) = end_node("until_any", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_set("any_characters", data, offset, strings) {
@@ -985,8 +1011,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 property = Some(val);
             } else {
-                println!("TEST {} until_any {:?}", offset, &data[0]);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let optional = optional.unwrap_or(false);
@@ -1009,17 +1036,19 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("token", data, offset));
+        let node = "token";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
 
         let mut text = None;
         let mut property = None;
         let mut inverted = None;
         loop {
-            if let Ok(range) = end_node("token", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_set("text", data, offset, strings) {
@@ -1032,8 +1061,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 inverted = Some(val);
             } else {
-                println!("TEST {} token {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let inverted = inverted.unwrap_or(false);
@@ -1076,15 +1106,17 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("text", data, offset));
+        let node = "text";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut allow_empty = None;
         let mut property = None;
         loop {
-            if let Ok(range) = end_node("text", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } if let Ok((range, val)) = meta_bool("allow_empty", data, offset) {
@@ -1094,8 +1126,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 property = Some(val);
             } else {
-                println!("TEST {} text {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let allow_empty = allow_empty.unwrap_or(true);
@@ -1112,16 +1145,18 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("number", data, offset));
+        let node = "number";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
 
         let mut property = None;
         let mut underscore = None;
         loop {
-            if let Ok(range) = end_node("number", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_set("property", data, offset, strings) {
@@ -1131,8 +1166,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 underscore = Some(val);
             } else {
-                println!("TEST {} number {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let underscore = underscore.unwrap_or(false);
@@ -1149,16 +1185,18 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("reference", data, offset));
+        let node = "reference";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
 
         let mut name = None;
         let mut property = None;
         loop {
-            if let Ok(range) = end_node("reference", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = meta_string("name", data, offset) {
@@ -1168,8 +1206,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 property = Some(val);
             } else {
-                println!("TEST {} reference {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         match name {
@@ -1191,24 +1230,27 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("select", data, offset));
+        let node = "select";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut args: Vec<Rule> = vec![];
         loop {
-            if let Ok(range) = end_node("select", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_rule(
-                debug_id, "rule", data, offset, strings
+                debug_id, "rule", data, offset, strings, ignored
             ) {
                 update(range, &mut data, &mut offset);
                 args.push(val);
             } else {
-                println!("TEST {} select {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         *debug_id += 1;
@@ -1223,16 +1265,18 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("optional", data, offset));
+        let node = "optional";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let (range, rule) = try!(read_rule(
-            debug_id, "rule", data, offset, strings
+            debug_id, "rule", data, offset, strings, ignored
         ));
         update(range, &mut data, &mut offset);
-        let range = try!(end_node("optional", data, offset));
+        let range = try!(end_node(node, data, offset));
         update(range, &mut data, &mut offset);
         *debug_id += 1;
         Ok((Range::new(start_offset, offset - start_offset),
@@ -1246,17 +1290,19 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("separated_by", data, offset));
+        let node = "separated_by";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut optional = None;
         let mut allow_trail = None;
         let mut by = None;
         let mut rule = None;
         loop {
-            if let Ok(range) = end_node("separated_by", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = meta_bool("optional", data, offset) {
@@ -1266,18 +1312,19 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 allow_trail = Some(val);
             } else if let Ok((range, val)) = read_rule(
-                debug_id, "by", data, offset, strings
+                debug_id, "by", data, offset, strings, ignored
             ) {
                 update(range, &mut data, &mut offset);
                 by = Some(val);
             } else if let Ok((range, val)) = read_rule(
-                debug_id, "rule", data, offset, strings
+                debug_id, "rule", data, offset, strings, ignored
             ) {
                 update(range, &mut data, &mut offset);
                 rule = Some(val);
             } else {
-                println!("TEST {} separated_by {:?}", offset, &data[0].1);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         let optional = optional.unwrap_or(true);
@@ -1302,13 +1349,14 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node("lines", data, offset));
         update(range, &mut data, &mut offset);
         let (range, rule) = try!(read_rule(
-            debug_id, "rule", data, offset, strings
+            debug_id, "rule", data, offset, strings, ignored
         ));
         update(range, &mut data, &mut offset);
         let range = try!(end_node("lines", data, offset));
@@ -1325,19 +1373,21 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         debug_id: &mut usize,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
-        let range = try!(start_node("repeat", data, offset));
+        let node = "repeat";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut rule = None;
         let mut optional = None;
         loop {
-            if let Ok(range) = end_node("repeat", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = read_rule(
-                debug_id, "rule", data, offset, strings
+                debug_id, "rule", data, offset, strings, ignored
             ) {
                 update(range, &mut data, &mut offset);
                 rule = Some(val);
@@ -1347,8 +1397,9 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 update(range, &mut data, &mut offset);
                 optional = Some(val);
             } else {
-                println!("TEST {} repeat {:?}", offset, &data[0]);
-                return Err(());
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         match (rule, optional) {
@@ -1370,7 +1421,8 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         property: &str,
         mut data: &[(Range, MetaData)],
         mut offset: usize,
-        strings: &[(Rc<String>, Rc<String>)]
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
     ) -> Result<(Range, Rule), ()> {
         let start_offset = offset;
         let range = try!(start_node(property, data, offset));
@@ -1378,22 +1430,22 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
 
         let mut rule = None;
         if let Ok((range, val)) = read_sequence(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_until_any_or_whitespace(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_until_any(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_token(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
@@ -1403,42 +1455,42 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_text(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_number(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_reference(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_select(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_optional(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_separated_by(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_lines(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
         } else if let Ok((range, val)) = read_repeat(
-            debug_id, data, offset, strings
+            debug_id, data, offset, strings, ignored
         ) {
             update(range, &mut data, &mut offset);
             rule = Some(val);
@@ -1454,17 +1506,21 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
         }
     }
 
-    fn read_node(mut data: &[(Range, MetaData)], mut offset: usize,
-    strings: &[(Rc<String>, Rc<String>)])
-    -> Result<(Range, (Rc<String>, Rule)), ()> {
+    fn read_node(
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        strings: &[(Rc<String>, Rc<String>)],
+        ignored: &mut Vec<Range>
+    ) -> Result<(Range, (Rc<String>, Rule)), ()> {
         let start_offset = offset;
-        let range = try!(start_node("node", data, offset));
+        let node = "node";
+        let range = try!(start_node(node, data, offset));
         update(range, &mut data, &mut offset);
         let mut id = None;
         let mut name = None;
         let mut rule = None;
         loop {
-            if let Ok(range) = end_node("node", data, offset) {
+            if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
             } else if let Ok((range, val)) = meta_f64("id", data, offset) {
@@ -1474,14 +1530,15 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
                 name = Some(val);
                 update(range, &mut data, &mut offset);
             } else if let Ok((range, val)) = read_rule(
-                    &mut (id.unwrap_or(0) * 1000), "rule",
-                    data, offset, strings
+                &mut (id.unwrap_or(0) * 1000), "rule",
+                data, offset, strings, ignored
             ) {
                 rule = Some(val);
                 update(range, &mut data, &mut offset);
             } else {
-                println!("TEST node {:?}", &data[0]);
-                return Err(())
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
             }
         }
         match (name, rule) {
@@ -1504,7 +1561,7 @@ pub fn convert_meta_data_to_rules(mut data: &[(Range, MetaData)])
     }
     let mut res = vec![];
     loop {
-        if let Ok((range, val)) = read_node(data, offset, &strings) {
+        if let Ok((range, val)) = read_node(data, offset, &strings, ignored) {
             update(range, &mut data, &mut offset);
             res.push(val);
         } else if offset < data.len() {

@@ -15,11 +15,15 @@ fn main() {
     file_h.read_to_string(&mut source).unwrap();
     let res = parse(&rules, &source).unwrap();
     // print_meta_data(&res[170..190]);
-    let rules1 = convert_meta_data_to_rules(&res).unwrap();
-    println!("{:?}", rules1);
+    let mut ignored1 = vec![];
+    let rules1 = convert_meta_data_to_rules(&res, &mut ignored1).unwrap();
+    println!("ignored1 {:?}", ignored1.len());
+    // println!("{:?}", rules1);
     let res = parse(&rules1, &source).unwrap();
-    let rules2 = convert_meta_data_to_rules(&res).unwrap();
+    let mut ignored2 = vec![];
+    let rules2 = convert_meta_data_to_rules(&res, &mut ignored2).unwrap();
+    println!("ignored2 {:?}", ignored2.len());
     let _ = parse(&rules2, &source).unwrap();
     assert_eq!(rules1, rules2);
-    println!("TEST bootstrapping succeeded!");
+    println!("Bootstrapping succeeded!");
 }
