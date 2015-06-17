@@ -22,7 +22,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
     let any: Rc<String> = Rc::new("any_characters".into());
     let seps: Rc<String> = Rc::new("[]{}():.!?\"".into());
 
-    // 1."string" [..seps!("name") ":" w? t?("text")]
+    // 1 "string" [..seps!"name" ":" w? t?"text"]
     let string_rule = Rule::Sequence(Sequence {
         debug_id: 1000,
         args: vec![
@@ -81,7 +81,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // rule 3:"set" {t!("value") ..seps!("ref")}
+    // 3 "set" {t!"value" ..seps!"ref"}
     let set_rule = Rule::Select(Select {
         debug_id: 3003,
         args: vec![
@@ -99,7 +99,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 4."opt" {"?"(opt) "!"(!opt)}
+    // 4 "opt" {"?"opt "!"!opt}
     let opt_rule = Rule::Select(Select {
         debug_id: 4000,
         args: vec![
@@ -118,7 +118,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 5."number" ["$" ?("_"("underscore")) ?(@"set"("name"))]
+    // 5 "number" ["$" ?"_""underscore" ?@"set"prop]
     let number_rule = Rule::Sequence(Sequence {
         debug_id: 5000,
         args: vec![
@@ -149,7 +149,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 6."text" ["t" {"?"("allow_empty") "!"(!"allow_empty")} ?(@"set"(prop))]
+    // 6 "text" ["t" {"?""allow_empty" "!"!"allow_empty"} ?@"set"prop]
     let text_rule = Rule::Sequence(Sequence {
         debug_id: 6000,
         args: vec![
@@ -188,7 +188,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 7::"reference" ["@" t!"name" ?(@"set"prop)]
+    // 7 "reference" ["@" t!"name" ?@"set"prop]
     let reference_rule = Rule::Sequence(Sequence {
         debug_id: 7000,
         args: vec![
@@ -215,7 +215,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 8."sequence" ["[" w? s!.(w!) {@"rule"("rule")} "]"]
+    // 8 "sequence" ["[" w? s!.(w!) {@"rule""rule"} "]"]
     let sequence_rule = Rule::Sequence(Sequence {
         debug_id: 8000,
         args: vec![
@@ -253,7 +253,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 9."select" ["{" w? s!.(w!) {@"rule"("rule")} "}"]
+    // 9 "select" ["{" w? s!.(w!) {@"rule""rule"} "}"]
     let select_rule = Rule::Sequence(Sequence {
         debug_id: 9000,
         args: vec![
@@ -291,8 +291,8 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 10."separated_by" ["s" @"opt" ?("."("allow_trail"))
-    //   "(" w? @"rule"("by") w? ")" w? "{" w? @"rule"("rule") w? "}"]
+    // 10 "separated_by" ["s" @"opt" ?".""allow_trail"
+    //  "(" w? @"rule""by" w? ")" w? "{" w? @"rule""rule" w? "}"]
     let separated_by_rule = Rule::Sequence(Sequence {
         debug_id: 10000,
         args: vec![
@@ -376,7 +376,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 11 "token" [@"set""text" ?([?("!"(inv)) @"set"prop])]
+    // 11 "token" [@"set""text" ?[?"!"inv @"set"prop]]
     let token_rule = Rule::Sequence(Sequence {
         debug_id: 11000,
         args: vec![
@@ -431,7 +431,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 13."whitespace" ["w" @"opt"]
+    // 13 "whitespace" ["w" @"opt"]
     let whitespace_rule = Rule::Sequence(Sequence {
         debug_id: 13000,
         args: vec![
@@ -450,7 +450,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 14."until_any_or_whitespace" [".." @"set"(any) @"opt" ?(@"set"(prop))]
+    // 14 "until_any_or_whitespace" [".." @"set"any @"opt" ?@"set"prop]
     let until_any_or_whitespace_rule = Rule::Sequence(Sequence {
         debug_id: 14001,
         args: vec![
@@ -484,7 +484,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 15."until_any" ["..." @"set"(any) @"opt" ?(@"set"(prop)) ]
+    // 15 "until_any" ["..." @"set"any @"opt" ?@"set"prop]
     let until_any_rule = Rule::Sequence(Sequence {
         debug_id: 15000,
         args: vec![
@@ -518,7 +518,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 16."repeat" ["r" @"opt" "(" @"rule"("rule") ")"]
+    // 16 "repeat" ["r" @"opt" "(" @"rule""rule" ")"]
     let repeat_rule = Rule::Sequence(Sequence {
         debug_id: 16000,
         args: vec![
@@ -555,7 +555,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 17."lines" ["l(" w? @"rule"("rule") w? ")"]
+    // 17 "lines" ["l(" w? @"rule""rule" w? ")"]
     let lines_rule = Rule::Sequence(Sequence {
         debug_id: 17000,
         args: vec![
@@ -588,10 +588,23 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 18."rule" {5("number") 6("text") 7("reference") 8("sequence")
-    //   9("select") 10("separated_by") 11("token") 12("optional")
-    //   13("whitespace") 14("until_any_or_whitespace") 15("until_any")
-    //   16("repeat") 17("lines")}
+    /*
+    18 "rule" {
+      @"whitespace""whitespace"
+      @"until_any_or_whitespace""until_any_or_whitespace"
+      @"until_any""until_any"
+      @"lines""lines"
+      @"repeat""repeat"
+      @"number""number"
+      @"text""text"
+      @"reference""reference"
+      @"sequence""sequence"
+      @"select""select"
+      @"separated_by""separated_by"
+      @"token""token"
+      @"optional""optional"
+    }
+    */
     let rule_rule = Rule::Select(Select {
         debug_id: 18000,
         args: vec![
@@ -676,7 +689,7 @@ pub fn meta_rules() -> Vec<(Rc<String>, Rule)> {
         ]
     });
 
-    // 19::"document" [l(@"string""string") l(@"node""node") w?]
+    // 19 "document" [l(@"string""string") l(@"node""node") w?]
     let document_rule = Rule::Sequence(Sequence {
         debug_id: 19000,
         args: vec![
