@@ -1501,7 +1501,6 @@ pub fn convert_meta_data_to_rules(
             update(range, &mut data, &mut offset);
             Ok((Range::new(start_offset, offset - start_offset), rule))
         } else {
-            println!("TEST {} rule {:?}", offset, &data[0].1);
             Err(())
         }
     }
