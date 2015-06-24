@@ -18,7 +18,7 @@ pub fn mother(character) -> character;
 
 // Those who have same father or same mother are siblings.
 pub fn siblings(character, character) -> bool;
-([father] [:] X, [father] [:] X) -> [:] true;
-([mother] [:] X, [mother] [:] X) -> [:] true;
-([father] [:] _, [father] [:] _) -> [:] false;
-([mother] [:] _, [mother] [:] _) -> [:] false;
+[:] ([father] X, [father] X) -> true;
+[:] ([mother] X, [mother] X) -> true;
+[:] ([father] _, [father] _) -> false;
+[:] ([mother] _, [mother] _) -> false;
