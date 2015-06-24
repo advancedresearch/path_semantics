@@ -113,7 +113,7 @@ mod tests {
         let res = parse(&meta_rules, &source).unwrap();
         // print_meta_data(&res[410..430]);
         let rules = bootstrap::convert(&res, &mut vec![]).unwrap();
-        println!("{:?}", rules);
+        // println!("{:?}", rules);
 
         // let rules = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))
@@ -121,7 +121,8 @@ mod tests {
                 "assets/bool.txt".into(),
                 "assets/nat.txt".into(),
                 "assets/option.txt".into(),
-                "assets/string.rs".into(),
+                "assets/string.txt".into(),
+                "assets/the-simpsons.txt".into(),
             ]) {
             use piston_meta::*;
 

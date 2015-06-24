@@ -1,0 +1,24 @@
+character: type;
+
+homer: character;
+marge: character;
+bart: character;
+lisa: character;
+maggie: character;
+
+pub fn father(character) -> character;
+[:] (bart) -> homer;
+[:] (lisa) -> homer;
+[:] (maggie) -> homer;
+
+pub fn mother(character) -> character;
+[:] (bart) -> marge;
+[:] (lisa) -> marge;
+[:] (maggie) -> marge;
+
+// Those who have same father or same mother are siblings.
+pub fn siblings(character, character) -> bool;
+([father] [:] X, [father] [:] X) -> [:] true;
+([mother] [:] X, [mother] [:] X) -> [:] true;
+([father] [:] _, [father] [:] _) -> [:] false;
+([mother] [:] _, [mother] [:] _) -> [:] false;
