@@ -89,7 +89,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>, calls: &mut Vec<usize>) {
                                 _ => {}
                             }
                         }
-                        
+
                         panic!("Expected `End` or `OpRef` after function signature");
                     }
                 }
@@ -218,6 +218,73 @@ mod tests {
         assert_eq!(&stack, &[
             FnRef(4),   // true
             FnRef(4),
+            Path
+        ]);
+    }
+
+    #[test]
+    fn not_not_false() {
+        let fns = vec![
+            // bool,
+            FnRef(0),                   // 0: bool
+            End,
+            // false,
+            FnRef(2),                   // 2: false
+            End,
+            // true,
+            FnRef(4),                   // 4: true
+            End,
+            // not(bool) -> bool
+            FnRef(6),                   // 6: not
+            FnRef(0),                   // 7: bool,
+            OpRef(1),                   // 8: -> bool
+            // not([true] true) -> [false] false
+            FnRef(6),                   // 9: not
+            Path,
+            FnRef(4),                   // 11: true
+            FnRef(4),                   // 12: true
+            OpRef(5),                   // 13: -> [false] false,
+            // not([false] false) -> [true] true
+            FnRef(6),                   // 14: not
+            Path,
+            FnRef(2),                   // 16: false
+            FnRef(2),                   // 17: false
+            OpRef(9),                   // 18: -> [true] true
+        ];
+
+        let ops = vec![
+            // bool
+            End,
+            FnRef(0),                   // 1: bool
+            // [false] false
+            End,
+            Path,
+            FnRef(2),                   // 4: false
+            FnRef(2),                   // 5: false
+            // [true] true
+            End,
+            Path,
+            FnRef(4),                   // 8: false
+            FnRef(4),                   // 9: false
+            // call not([true] true)
+            End,
+            Call,
+            FnRef(6),                   // 8: not
+            Call,
+            FnRef(6),                   // 10: not
+            Path,
+            FnRef(2),                   // 12: false
+            FnRef(2),                   // 13: false
+        ];
+
+        let mut stack = vec![];
+        let mut calls = vec![];
+
+        eval(&fns, &ops, &mut stack, &mut calls);
+
+        assert_eq!(&stack, &[
+            FnRef(2),   // false
+            FnRef(2),
             Path
         ]);
     }
