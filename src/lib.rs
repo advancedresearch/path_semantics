@@ -10,6 +10,8 @@ use std::rc::Rc;
 use range::Range;
 use piston_meta::{ MetaData, Rule };
 
+pub mod interpreter;
+
 /// Prints read meta data.
 pub fn print_meta_data(data: &[(Range, MetaData)]) {
     for d in data {
