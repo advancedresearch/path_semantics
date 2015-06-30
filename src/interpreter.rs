@@ -89,6 +89,8 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>, calls: &mut Vec<usize>) {
                                 _ => {}
                             }
                         }
+                        
+                        panic!("Expected `End` or `OpRef` after function signature");
                     }
                 }
             }
