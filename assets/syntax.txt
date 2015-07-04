@@ -1,7 +1,8 @@
 seps: "()[]{},;:/*+-\""
-1 "brackets" s?(w!) { ?["[" {":" ..seps!} "]"] }
-2 "path" [?"::""root" s!.("::") { ..seps!"name" }]
-3 "arg" [
+1 "w" {[w? "//" ..."\n"?] [w? "/*" ..."*"? r?([!"*/" "*" ..."*"?]) "*/"] w!}
+2 "brackets" s?(@"w") { ?["[" {":" ..seps!} "]"] }
+3 "path" [?"::""root" s!.("::") { ..seps!"name" }]
+4 "arg" [
   @"brackets""brackets"
   {
     t?"text"
@@ -11,28 +12,27 @@ seps: "()[]{},;:/*+-\""
   @"brackets""brackets"
   ?@"repeated_arguments""repeated_arguments"
 ]
-4 "arguments" ["(" w? s?.(["," w!]) { {
+5 "arguments" ["(" ?@"w" s?.(["," @"w"]) { {
     @"arguments""arguments"
     @"member_lambda""member_lambda"
     @"lambda""lambda"
     @"arg""arg"
-  } } w? ")"]
-5 "repeated_arguments" r!(@"arguments""arguments")
-6 "comment" [w? "//" ..."\n"?]
-7 "lambda" [w? ?["fn" w?] ..seps?"name" w?
+  } } ?@"w" ")"]
+6 "repeated_arguments" r!(@"arguments""arguments")
+7 "lambda" [?@"w" ?["fn" ?@"w"] ..seps?"name" ?@"w"
   @"brackets""brackets"
   @"repeated_arguments""repeated_arguments"
-  w! "->" w! @"arg""arg" w?]
-8 "fn" [?["pub" w?] @"lambda""lambda" ";" w? ?@"comment""comment"]
-9 "use" [w? ?["pub" w?] "use" w! @"path""path" ?"*" ";"]
-10 "module" [w? ?["pub" w?] "mod" w! ..seps!"name" ";"]
-11 "member_lambda" [@"arg""arg" w? ":" w! @"arg""arg"]
+  @"w" "->" @"w" @"arg""arg" ?@"w"]
+8 "fn" [?["pub" ?@"w"] @"lambda""lambda" ";" ?@"w"]
+9 "use" [?@"w" ?["pub" ?@"w"] "use" @"w" @"path""path" ?"*" ";"]
+10 "module" [?@"w" ?["pub" ?@"w"] "mod" @"w" ..seps!"name" ";"]
+11 "member_lambda" [@"arg""arg" ?@"w" ":" @"w" @"arg""arg"]
 12 "member" [@"member_lambda""member_lambda" ";"]
 13 "line_rule" {
-  @"comment""comment"
-  @"use""use"
-  @"module""module"
-  @"member""member"
-  @"fn""fn"
+  @"w"
+  [@"use""use" ?@"w"]
+  [@"module""module" ?@"w"]
+  [@"member""member" ?@"w"]
+  [@"fn""fn" ?@"w"]
 }
 14 "document" l(@"line_rule""line_rule")
