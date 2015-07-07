@@ -18,7 +18,8 @@ pub enum Op {
 }
 
 /// Evaluates a program.
-pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>, calls: &mut Vec<usize>) {
+pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
+    let mut calls: Vec<usize> = Vec::new();
     let mut call = ops.len();
     'e: loop {
         let mut f = None;
@@ -146,9 +147,8 @@ mod tests {
         ];
 
         let mut stack = vec![];
-        let mut calls = vec![];
 
-        eval(&fns, &ops, &mut stack, &mut calls);
+        eval(&fns, &ops, &mut stack);
 
         assert_eq!(&stack, &[
             FnRef(2),   // false
@@ -211,9 +211,8 @@ mod tests {
         ];
 
         let mut stack = vec![];
-        let mut calls = vec![];
 
-        eval(&fns, &ops, &mut stack, &mut calls);
+        eval(&fns, &ops, &mut stack);
 
         assert_eq!(&stack, &[
             FnRef(4),   // true
@@ -278,9 +277,8 @@ mod tests {
         ];
 
         let mut stack = vec![];
-        let mut calls = vec![];
 
-        eval(&fns, &ops, &mut stack, &mut calls);
+        eval(&fns, &ops, &mut stack);
 
         assert_eq!(&stack, &[
             FnRef(2),   // false
@@ -330,9 +328,8 @@ mod tests {
         ];
 
         let mut stack = vec![];
-        let mut calls = vec![];
 
-        eval(&fns, &ops, &mut stack, &mut calls);
+        eval(&fns, &ops, &mut stack);
 
         assert_eq!(&stack, &[
             FnRef(0),   // bool
