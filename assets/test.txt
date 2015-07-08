@@ -1,0 +1,4 @@
+fn bool() -> bool;
+
+fn true(bool) -> true;
+fn false(bool) -> true;

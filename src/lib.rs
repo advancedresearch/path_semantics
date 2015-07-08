@@ -12,27 +12,117 @@ use piston_meta::{ MetaData, Rule };
 
 pub mod interpreter;
 
-/// Prints read meta data.
-pub fn print_meta_data(data: &[(Range, MetaData)]) {
-    for d in data {
-        match &d.1 {
-            &MetaData::StartNode(ref name) => {
-                println!("start `{}`", name);
+/// Gets the syntax rules.
+pub fn syntax_rules() -> Vec<(Rc<String>, Rule)> {
+    use piston_meta::*;
+
+    let meta_rules = bootstrap::rules();
+    let source = include_str!("../assets/syntax.txt");
+    let res = parse(&meta_rules, source).unwrap();
+    bootstrap::convert(&res, &mut vec![]).unwrap()
+}
+
+/// Reads a file to a string.
+pub fn file_to_string<P>(file: P) -> Result<String, std::io::Error>
+    where P: AsRef<std::path::Path>
+{
+    use std::fs::File;
+    use std::io::Read;
+
+    let mut file_h = try!(File::open(file));
+    let mut source = String::new();
+    try!(file_h.read_to_string(&mut source));
+    Ok(source)
+}
+
+/// Writes meta data as JSON.
+pub fn json<W>(w: &mut W, data: &[(Range, MetaData)]) -> Result<(), std::io::Error>
+    where W: std::io::Write
+{
+    use std::cmp::{ min, max };
+
+    let indent_offset = 0;
+
+    // Start indention such that it balances off to zero.
+    let starts = data.iter()
+        .filter(|x| if let &(_, MetaData::StartNode(_)) = *x { true } else { false })
+        .count() as u32;
+    let ends = data.iter()
+        .filter(|x| if let &(_, MetaData::EndNode(_)) = *x { true } else { false })
+        .count() as u32;
+    let mut indent: u32 = max(starts, ends) - min(starts, ends);
+    let mut first = true;
+    for (i, d) in data.iter().enumerate() {
+        let is_end = if let &(_, MetaData::EndNode(_)) = d {
+            indent -= 1;
+            true
+        } else { false };
+        let is_next_end = if i < data.len() - 1 {
+            match &data[i + 1] {
+                &(_, MetaData::EndNode(_)) => false,
+                _ => true
             }
-            &MetaData::EndNode(ref name) => {
-                println!("end `{}`", name);
+        } else { true };
+        let print_comma = !first && !is_end && is_next_end;
+        if print_comma {
+            try!(writeln!(w, ","));
+        } else if i != 0 {
+            try!(writeln!(w, ""));
+        }
+        first = false;
+        for _ in (0 .. indent_offset + indent) {
+            try!(write!(w, " "));
+        }
+        match d {
+            &(_, MetaData::StartNode(ref name)) => {
+                first = true;
+                try!(write_json_string(w, name));
+                try!(write!(w, ":{}", "{"));
+                indent += 1;
             }
-            &MetaData::F64(ref name, val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::EndNode(_)) => {
+                try!(write!(w, "{}", "}"));
             }
-            &MetaData::Bool(ref name, val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::Bool(ref name, val)) => {
+                try!(write_json_string(w, name));
+                try!(write!(w, ":{}", val));
             }
-            &MetaData::String(ref name, ref val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::F64(ref name, val)) => {
+                try!(write_json_string(w, name));
+                try!(write!(w, ":{}", val));
+            }
+            &(_, MetaData::String(ref name, ref val)) => {
+                try!(write_json_string(w, name));
+                try!(write!(w, ":"));
+                try!(write_json_string(w, val));
             }
         }
     }
+    try!(writeln!(w, ""));
+    Ok(())
+}
+
+/// Prints a JSON string.
+pub fn write_json_string<W>(w: &mut W, val: &str) -> Result<(), std::io::Error>
+    where W: std::io::Write
+{
+    try!(write!(w, "\""));
+    for c in val.chars() {
+        if c == '\\' {
+            try!(write!(w, "\\\\"));
+        } else if c == '\"' {
+            try!(write!(w, "\\\""));
+        } else {
+            try!(write!(w, "{}", c));
+        }
+    }
+    try!(write!(w, "\""));
+    Ok(())
+}
+
+/// Prints read meta data.
+pub fn print_meta_data(data: &[(Range, MetaData)]) {
+    json(&mut std::io::stdout(), data).unwrap();
 }
 
 /// Stores information about error occursing when parsing syntax.
@@ -59,15 +149,10 @@ impl Syntax {
     /// Parses syntax.
     pub fn new(rules: &[(Rc<String>, Rule)], files: Vec<PathBuf>)
     -> Result<Syntax, SyntaxError> {
-        use std::fs::File;
-        use std::io::Read;
         use piston_meta::*;
 
         for file in &files {
-            let mut file_h = try!(File::open(file));
-            let mut source = String::new();
-            try!(file_h.read_to_string(&mut source));
-
+            let source = try!(file_to_string(file));
             let res = parse(&rules, &source);
             match res {
                 Ok(_) => {
@@ -101,21 +186,7 @@ mod tests {
 
     #[test]
     fn syntax() {
-        use piston_meta::parse;
-        use piston_meta::bootstrap;
-        use std::fs::File;
-        use std::io::Read;
-        use std::path::PathBuf;
-
-        let meta_rules = bootstrap::rules();
-        let syntax: PathBuf = "assets/syntax.txt".into();
-        let mut file_h = File::open(syntax).unwrap();
-        let mut source = String::new();
-        file_h.read_to_string(&mut source).unwrap();
-        let res = parse(&meta_rules, &source).unwrap();
-        // print_meta_data(&res[410..430]);
-        let rules = bootstrap::convert(&res, &mut vec![]).unwrap();
-        // println!("{:?}", rules);
+        let rules = syntax_rules();
 
         // let rules = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))

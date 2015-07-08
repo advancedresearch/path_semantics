@@ -1,5 +1,8 @@
 //! An interpreter implementation.
 
+use piston_meta::*;
+use range::Range;
+
 /// Instructions.
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub enum Op {
@@ -39,7 +42,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
                         }
                     }
                     let start = 1 + v_index.expect("Count not find variable index");
-                    let mut end = start + vars[start..].iter()
+                    let end = start + vars[start..].iter()
                         .take_while(|&v| v != &Op::End).count();
                     // Push variable instructions.
                     for v in vars[start .. end].iter().rev() {
@@ -109,7 +112,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
                             }
                         }
 
-                        if let Some(mut k) = existing_var {
+                        if let Some(k) = existing_var {
                             // Check for equality with existing variable.
                             let mut equal = true;
                             for v in &vars[k + 1..] {
@@ -185,6 +188,14 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
             }
         }
     }
+}
+
+/// Converts from meta data to function and instruction stack.
+pub fn convert(_data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
+    let fns = vec![];
+    let ops = vec![];
+    // ::print_meta_data(&data);
+    (fns, ops)
 }
 
 #[cfg(test)]
@@ -559,5 +570,17 @@ mod tests {
             FnRef(2),   // [false]
             Path,
         ]);
+    }
+
+    #[test]
+    fn test_convert() {
+        use piston_meta::parse;
+
+        println!("TEST");
+        let rules = ::syntax_rules();
+        let source = ::file_to_string("assets/test.txt").unwrap();
+        let data = parse(&rules, &source).unwrap();
+        let (_fns, _ops) = convert(&data);
+
     }
 }

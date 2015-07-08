@@ -1,30 +1,30 @@
 seps: "()[]{},;:/*+-\""
 1 "w" {[w? "//" ..."\n"?] [w? "/*" ..."*"? r?([!"*/" "*" ..."*"?]) "*/"] w!}
 2 "brackets" s?(@"w") { ?["[" {":" ..seps!} "]"] }
-3 "path" [?"::""root" s!.("::") { ..seps!"name" }]
+3 "ns_path" [?"::""root" s!.("::") { ..seps!"ns_name" }]
 4 "arg" [
-  @"brackets""brackets"
+  @"brackets"
   {
     t?"text"
     $_"number"
-    @"path""path"
+    @"ns_path"
   }
-  @"brackets""brackets"
+  @"brackets"
   ?@"repeated_arguments""repeated_arguments"
 ]
 5 "arguments" ["(" ?@"w" s?.(["," @"w"]) { {
-    @"arguments""arguments"
+    @"arguments"
     @"member_lambda""member_lambda"
     @"lambda""lambda"
     @"arg""arg"
   } } ?@"w" ")"]
-6 "repeated_arguments" r!(@"arguments""arguments")
+6 "repeated_arguments" r!(@"arguments")
 7 "lambda" [?@"w" ?["fn" ?@"w"] ..seps?"name" ?@"w"
-  @"brackets""brackets"
-  @"repeated_arguments""repeated_arguments"
-  @"w" "->" @"w" @"arg""arg" ?@"w"]
-8 "fn" [?["pub" ?@"w"] @"lambda""lambda" ";" ?@"w"]
-9 "use" [?@"w" ?["pub" ?@"w"] "use" @"w" @"path""path" ?"*" ";"]
+  @"brackets"
+  @"repeated_arguments"
+  @"w" "->" @"w" @"arg""ret" ?@"w"]
+8 "fn" [?["pub" ?@"w"] @"lambda" ";" ?@"w"]
+9 "use" [?@"w" ?["pub" ?@"w"] "use" @"w" @"ns_path" ?"*" ";"]
 10 "module" [?@"w" ?["pub" ?@"w"] "mod" @"w" ..seps!"name" ";"]
 11 "member_lambda" [@"arg""arg" ?@"w" ":" @"w" @"arg""arg"]
 12 "member" [@"member_lambda""member_lambda" ";"]
@@ -35,4 +35,4 @@ seps: "()[]{},;:/*+-\""
   [@"member""member" ?@"w"]
   [@"fn""fn" ?@"w"]
 }
-14 "document" l(@"line_rule""line_rule")
+14 "document" l(@"line_rule")
