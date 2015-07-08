@@ -1,5 +1,8 @@
 //! An interpreter implementation.
 
+use piston_meta::*;
+use range::Range;
+
 /// Instructions.
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub enum Op {
@@ -109,7 +112,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
                             }
                         }
 
-                        if let Some(mut k) = existing_var {
+                        if let Some(k) = existing_var {
                             // Check for equality with existing variable.
                             let mut equal = true;
                             for v in &vars[k + 1..] {
@@ -185,6 +188,13 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
             }
         }
     }
+}
+
+/// Converts from meta data to function and instruction stack.
+pub fn convert(data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
+    let mut fns = vec![];
+    let mut ops = vec![];
+    (fns, ops)
 }
 
 #[cfg(test)]
@@ -559,5 +569,17 @@ mod tests {
             FnRef(2),   // [false]
             Path,
         ]);
+    }
+
+    #[test]
+    fn test_convert() {
+        use piston_meta::*;
+        use std::fs::File;
+        use std::io::Read;
+        use std::path::PathBuf;
+
+        // Bootstrap the syntax rules.
+        let rules = ::syntax_rules();
+
     }
 }

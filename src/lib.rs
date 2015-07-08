@@ -12,6 +12,22 @@ use piston_meta::{ MetaData, Rule };
 
 pub mod interpreter;
 
+/// Gets the syntax rules.
+pub fn syntax_rules() -> Vec<(Rc<String>, Rule)> {
+    use piston_meta::*;
+    use std::fs::File;
+    use std::io::Read;
+    use std::path::PathBuf;
+
+    let meta_rules = bootstrap::rules();
+    let syntax: PathBuf = "assets/syntax.txt".into();
+    let mut file_h = File::open(syntax).unwrap();
+    let mut source = String::new();
+    file_h.read_to_string(&mut source).unwrap();
+    let res = parse(&meta_rules, &source).unwrap();
+    bootstrap::convert(&res, &mut vec![]).unwrap()
+}
+
 /// Prints read meta data.
 pub fn print_meta_data(data: &[(Range, MetaData)]) {
     for d in data {
@@ -101,21 +117,7 @@ mod tests {
 
     #[test]
     fn syntax() {
-        use piston_meta::parse;
-        use piston_meta::bootstrap;
-        use std::fs::File;
-        use std::io::Read;
-        use std::path::PathBuf;
-
-        let meta_rules = bootstrap::rules();
-        let syntax: PathBuf = "assets/syntax.txt".into();
-        let mut file_h = File::open(syntax).unwrap();
-        let mut source = String::new();
-        file_h.read_to_string(&mut source).unwrap();
-        let res = parse(&meta_rules, &source).unwrap();
-        // print_meta_data(&res[410..430]);
-        let rules = bootstrap::convert(&res, &mut vec![]).unwrap();
-        // println!("{:?}", rules);
+        let rules = syntax_rules();
 
         // let rules = rules();
         if let Err(SyntaxError::MetaError(file, source, range, err))

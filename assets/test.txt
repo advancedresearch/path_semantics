@@ -1,0 +1,4 @@
+bool() -> bool;
+
+true(bool) -> true;
+false(bool) -> true;
