@@ -1,4 +1,4 @@
-bool() -> bool;
+fn bool() -> bool;
 
-true(bool) -> true;
-false(bool) -> true;
+fn true(bool) -> true;
+fn false(bool) -> true;

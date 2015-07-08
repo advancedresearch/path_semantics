@@ -194,6 +194,8 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
 pub fn convert(data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
     let mut fns = vec![];
     let mut ops = vec![];
+    ::print_meta_data(&data[0..]);
+    panic!("TEST");
     (fns, ops)
 }
 
@@ -573,8 +575,12 @@ mod tests {
 
     #[test]
     fn test_convert() {
+        use piston_meta::parse;
+
         let rules = ::syntax_rules();
-        let source = ::file_to_string("assets/test.txt");
+        let source = ::file_to_string("assets/test.txt").unwrap();
+        let data = parse(&rules, &source).unwrap();
+        let (fns, ops) = convert(&data);
 
     }
 }
