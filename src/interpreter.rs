@@ -574,9 +574,6 @@ mod tests {
     #[test]
     fn test_convert() {
         use piston_meta::*;
-        use std::fs::File;
-        use std::io::Read;
-        use std::path::PathBuf;
 
         // Bootstrap the syntax rules.
         let rules = ::syntax_rules();

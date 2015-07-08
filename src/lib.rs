@@ -15,16 +15,10 @@ pub mod interpreter;
 /// Gets the syntax rules.
 pub fn syntax_rules() -> Vec<(Rc<String>, Rule)> {
     use piston_meta::*;
-    use std::fs::File;
-    use std::io::Read;
-    use std::path::PathBuf;
 
     let meta_rules = bootstrap::rules();
-    let syntax: PathBuf = "assets/syntax.txt".into();
-    let mut file_h = File::open(syntax).unwrap();
-    let mut source = String::new();
-    file_h.read_to_string(&mut source).unwrap();
-    let res = parse(&meta_rules, &source).unwrap();
+    let source = include_str!("../assets/syntax.txt");
+    let res = parse(&meta_rules, source).unwrap();
     bootstrap::convert(&res, &mut vec![]).unwrap()
 }
 
