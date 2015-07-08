@@ -191,11 +191,10 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
 }
 
 /// Converts from meta data to function and instruction stack.
-pub fn convert(data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
-    let mut fns = vec![];
-    let mut ops = vec![];
-    ::print_meta_data(&data);
-    panic!("TEST");
+pub fn convert(_data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
+    let fns = vec![];
+    let ops = vec![];
+    // ::print_meta_data(&data);
     (fns, ops)
 }
 
@@ -581,7 +580,7 @@ mod tests {
         let rules = ::syntax_rules();
         let source = ::file_to_string("assets/test.txt").unwrap();
         let data = parse(&rules, &source).unwrap();
-        let (fns, ops) = convert(&data);
+        let (_fns, _ops) = convert(&data);
 
     }
 }
