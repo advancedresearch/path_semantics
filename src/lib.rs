@@ -22,6 +22,19 @@ pub fn syntax_rules() -> Vec<(Rc<String>, Rule)> {
     bootstrap::convert(&res, &mut vec![]).unwrap()
 }
 
+/// Reads a file to a string.
+pub fn file_to_string<P>(file: P) -> Result<String, std::io::Error>
+    where P: AsRef<std::path::Path>
+{
+    use std::fs::File;
+    use std::io::Read;
+
+    let mut file_h = try!(File::open(file));
+    let mut source = String::new();
+    try!(file_h.read_to_string(&mut source));
+    Ok(source)
+}
+
 /// Prints read meta data.
 pub fn print_meta_data(data: &[(Range, MetaData)]) {
     for d in data {
@@ -69,15 +82,10 @@ impl Syntax {
     /// Parses syntax.
     pub fn new(rules: &[(Rc<String>, Rule)], files: Vec<PathBuf>)
     -> Result<Syntax, SyntaxError> {
-        use std::fs::File;
-        use std::io::Read;
         use piston_meta::*;
 
         for file in &files {
-            let mut file_h = try!(File::open(file));
-            let mut source = String::new();
-            try!(file_h.read_to_string(&mut source));
-
+            let source = try!(file_to_string(file));
             let res = parse(&rules, &source);
             match res {
                 Ok(_) => {

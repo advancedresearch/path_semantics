@@ -42,7 +42,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
                         }
                     }
                     let start = 1 + v_index.expect("Count not find variable index");
-                    let mut end = start + vars[start..].iter()
+                    let end = start + vars[start..].iter()
                         .take_while(|&v| v != &Op::End).count();
                     // Push variable instructions.
                     for v in vars[start .. end].iter().rev() {
@@ -573,10 +573,8 @@ mod tests {
 
     #[test]
     fn test_convert() {
-        use piston_meta::*;
-
-        // Bootstrap the syntax rules.
         let rules = ::syntax_rules();
+        let source = ::file_to_string("assets/test.txt");
 
     }
 }
