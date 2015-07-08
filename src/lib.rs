@@ -35,27 +35,86 @@ pub fn file_to_string<P>(file: P) -> Result<String, std::io::Error>
     Ok(source)
 }
 
-/// Prints read meta data.
-pub fn print_meta_data(data: &[(Range, MetaData)]) {
-    for d in data {
-        match &d.1 {
-            &MetaData::StartNode(ref name) => {
-                println!("start `{}`", name);
+/// Writes meta data as JSON.
+pub fn json<W>(w: &mut W, data: &[(Range, MetaData)])
+    where W: std::io::Write
+{
+    use std::cmp::{ min, max };
+
+    let indent_offset = 0;
+
+    // Start indention such that it balances off to zero.
+    let starts = data.iter()
+        .filter(|x| if let &(_, MetaData::StartNode(_)) = *x { true } else { false })
+        .count() as u32;
+    let ends = data.iter()
+        .filter(|x| if let &(_, MetaData::EndNode(_)) = *x { true } else { false })
+        .count() as u32;
+    let mut indent: u32 = max(starts, ends) - min(starts, ends);
+    let mut first = true;
+    for (i, d) in data.iter().enumerate() {
+        let is_end = if let &(_, MetaData::EndNode(_)) = d {
+            indent -= 1;
+            true
+        } else { false };
+        let is_next_end = if i < data.len() - 1 {
+            match &data[i + 1] {
+                &(_, MetaData::EndNode(_)) => false,
+                _ => true
             }
-            &MetaData::EndNode(ref name) => {
-                println!("end `{}`", name);
+        } else { true };
+        let print_comma = !first && !is_end && is_next_end;
+        if print_comma { writeln!(w, ","); } else if i != 0 { writeln!(w, ""); }
+        first = false;
+        for _ in (0 .. indent_offset + indent) {
+            write!(w, " ");
+        }
+        match d {
+            &(_, MetaData::StartNode(ref name)) => {
+                first = true;
+                write_json_string(w, name);
+                write!(w, ":{}", "{");
+                indent += 1;
             }
-            &MetaData::F64(ref name, val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::EndNode(_)) => {
+                write!(w, "{}", "}");
             }
-            &MetaData::Bool(ref name, val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::Bool(ref name, val)) => {
+                write_json_string(w, name);
+                write!(w, ":{}", val);
             }
-            &MetaData::String(ref name, ref val) => {
-                println!("{}: {}", name, val);
+            &(_, MetaData::F64(ref name, val)) => {
+                write_json_string(w, name);
+                write!(w, ":{}", val);
+            }
+            &(_, MetaData::String(ref name, ref val)) => {
+                write_json_string(w, name);
+                write!(w, ":");
+                write_json_string(w, val);
             }
         }
     }
+    writeln!(w, "");
+}
+
+/// Prints a JSON string.
+pub fn write_json_string<W>(w: &mut W, val: &str) where W: std::io::Write {
+    write!(w, "\"");
+    for c in val.chars() {
+        if c == '\\' {
+            write!(w, "\\\\");
+        } else if c == '\"' {
+            write!(w, "\\\"");
+        } else {
+            write!(w, "{}", c);
+        }
+    }
+    write!(w, "\"");
+}
+
+/// Prints read meta data.
+pub fn print_meta_data(data: &[(Range, MetaData)]) {
+    json(&mut std::io::stdout(), data);
 }
 
 /// Stores information about error occursing when parsing syntax.
