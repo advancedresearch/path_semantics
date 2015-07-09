@@ -2,6 +2,7 @@
 
 use piston_meta::*;
 use range::Range;
+use std::rc::Rc;
 
 /// Instructions.
 #[derive(PartialEq, Debug, Copy, Clone)]
@@ -191,11 +192,175 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
 }
 
 /// Converts from meta data to function and instruction stack.
-pub fn convert(_data: &[(Range, MetaData)]) -> (Vec<Op>, Vec<Op>) {
-    let fns = vec![];
-    let ops = vec![];
-    // ::print_meta_data(&data);
-    (fns, ops)
+pub fn convert(
+    mut data: &[(Range, MetaData)],
+    ignored: &mut Vec<Range>
+) -> Result<(Vec<Op>, Vec<Op>), ()> {
+    use piston_meta::bootstrap::{ end_node, ignore, start_node, update,
+        meta_string };
+
+    // Stores the state of function and instruction state.
+    #[derive(Copy, Clone)]
+    struct ConvertState(usize, usize);
+
+    fn push_fn(c: &ConvertState, fns: &mut Vec<Op>, op: Op) -> ConvertState {
+        if c.0 < fns.len() {
+            fns.truncate(c.0);
+        }
+        fns.push(op);
+        ConvertState(c.0 + 1, c.1)
+    }
+
+    fn push_op(c: &ConvertState, ops: &mut Vec<Op>, op: Op) -> ConvertState {
+        if c.1 < ops.len() {
+            ops.truncate(c.1);
+        }
+        ops.push(op);
+        ConvertState(c.0, c.1 + 1)
+    }
+
+    fn find_name(
+        name: Rc<String>,
+        names: &[(Rc<String>, usize)]
+    ) -> Option<usize> {
+        names.iter().find(|e| e.0 == name).map(|e| e.1)
+    }
+
+    fn read_ret(
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        _fns: &mut Vec<Op>,
+        ops: &mut Vec<Op>,
+        state: &ConvertState,
+        names: &mut Vec<(Rc<String>, usize)>,
+        ignored: &mut Vec<Range>
+    ) -> Result<(Range, ConvertState), ()> {
+        let mut new_state = state.clone();
+        let start_offset = offset;
+        let node = "ret";
+        let range = try!(start_node(node, data, offset));
+        update(range, &mut data, &mut offset);
+        loop {
+            if let Ok(range) = end_node(node, data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_string("ns_name", data, offset) {
+                update(range, &mut data, &mut offset);
+                let index = match find_name(val, names) {
+                    None => { return Err(()); }
+                    Some(index) => index,
+                };
+                new_state = push_op(&new_state, ops, Op::End);
+                new_state = push_op(&new_state, ops, Op::FnRef(index));
+            } else {
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
+            }
+        }
+
+        Ok((Range::new(start_offset, offset - start_offset), new_state))
+    }
+
+    fn read_arg(
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        fns: &mut Vec<Op>,
+        _ops: &mut Vec<Op>,
+        state: &ConvertState,
+        names: &mut Vec<(Rc<String>, usize)>,
+        ignored: &mut Vec<Range>
+    ) -> Result<(Range, ConvertState), ()> {
+        let mut new_state = state.clone();
+        let start_offset = offset;
+        let node = "arg";
+        let range = try!(start_node(node, data, offset));
+        update(range, &mut data, &mut offset);
+        loop {
+            if let Ok(range) = end_node(node, data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, val)) = meta_string("ns_name", data, offset) {
+                update(range, &mut data, &mut offset);
+                let index = match find_name(val, names) {
+                    None => { return Err(()); }
+                    Some(index) => index,
+                };
+                new_state = push_fn(&new_state, fns, Op::FnRef(index));
+            } else {
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
+            }
+        }
+
+        Ok((Range::new(start_offset, offset - start_offset), new_state))
+    }
+
+    fn read_fn(
+        mut data: &[(Range, MetaData)],
+        mut offset: usize,
+        fns: &mut Vec<Op>,
+        ops: &mut Vec<Op>,
+        state: &ConvertState,
+        names: &mut Vec<(Rc<String>, usize)>,
+        ignored: &mut Vec<Range>
+    ) -> Result<(Range, ConvertState), ()> {
+        let mut new_state = state.clone();
+        let start_offset = offset;
+        let node = "fn";
+        let range = try!(start_node(node, data, offset));
+        update(range, &mut data, &mut offset);
+        loop {
+            if let Ok(range) = end_node(node, data, offset) {
+                update(range, &mut data, &mut offset);
+                break;
+            } else if let Ok((range, name)) = meta_string("name", data, offset) {
+                update(range, &mut data, &mut offset);
+                let index = fns.len();
+                names.push((name, index));
+                new_state = push_fn(&new_state, fns, Op::FnRef(index));
+            } else if let Ok((range, state)) = read_arg(
+                    data, offset, fns, ops, &new_state, names, ignored
+                ) {
+                update(range, &mut data, &mut offset);
+                new_state = state;
+            } else if let Ok((range, state)) = read_ret(
+                    data, offset, fns, ops, &new_state, names, ignored
+                ) {
+                update(range, &mut data, &mut offset);
+                new_state = push_fn(&state, fns, Op::OpRef(ops.len() - 1));
+            } else {
+                let range = ignore(data, offset);
+                update(range, &mut data, &mut offset);
+                ignored.push(range);
+            }
+        }
+
+        new_state = push_fn(&new_state, fns, Op::End);
+        Ok((Range::new(start_offset, offset - start_offset), new_state))
+    }
+
+    let mut fns = vec![];
+    let mut ops = vec![];
+    let mut names = vec![];
+    let mut offset = 0;
+    let mut state = ConvertState(0, 0);
+
+    loop {
+        if let Ok((range, new_state)) = read_fn(data, offset, &mut fns,
+            &mut ops, &state, &mut names, ignored)
+        {
+            update(range, &mut data, &mut offset);
+            state = new_state;
+        } else if offset < data.len() {
+            return Err(());
+        } else {
+            break;
+        }
+    }
+
+    Ok((fns, ops))
 }
 
 #[cfg(test)]
@@ -573,14 +738,40 @@ mod tests {
     }
 
     #[test]
-    fn test_convert() {
+    fn convert_bool() {
         use piston_meta::parse;
 
-        println!("TEST");
         let rules = ::syntax_rules();
-        let source = ::file_to_string("assets/test.txt").unwrap();
+        let source = "
+fn bool() -> bool;
+fn true(bool) -> true;
+fn false(bool) -> false;
+        ";
         let data = parse(&rules, &source).unwrap();
-        let (_fns, _ops) = convert(&data);
-
+        let (fns, ops) = convert(&data, &mut vec![]).unwrap();
+        assert_eq!(&fns, &[
+            // bool() -> bool
+            FnRef(0),           // bool
+            OpRef(1),           // -> bool
+            End,
+            // true(bool) -> true
+            FnRef(3),           // true
+            FnRef(0),           // bool
+            OpRef(3),           // -> true
+            End,
+            // false(bool) -> false
+            FnRef(7),           // false
+            FnRef(0),           // bool
+            OpRef(5),           // -> false
+            End
+        ]);
+        assert_eq!(&ops, &[
+            End,
+            FnRef(0),           // bool
+            End,
+            FnRef(3),           // true
+            End,
+            FnRef(7)            // false
+        ]);
     }
 }
