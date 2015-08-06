@@ -239,19 +239,27 @@ pub fn convert(
         let start_offset = offset;
         let node = "ret";
         let range = try!(start_node(node, data, offset));
+        let mut new_ops = vec![];
         update(range, &mut data, &mut offset);
         loop {
             if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
+            } else if let Ok((range, val)) = meta_string("path", data, offset) {
+                update(range, &mut data, &mut offset);
+                let index = match find_name(val, names) {
+                    None => { return Err(()); }
+                    Some(index) => index,
+                };
+                new_ops.push(Op::Path);
+                new_ops.push(Op::FnRef(index));
             } else if let Ok((range, val)) = meta_string("ns_name", data, offset) {
                 update(range, &mut data, &mut offset);
                 let index = match find_name(val, names) {
                     None => { return Err(()); }
                     Some(index) => index,
                 };
-                new_state = push_op(&new_state, ops, Op::End);
-                new_state = push_op(&new_state, ops, Op::FnRef(index));
+                new_ops.push(Op::FnRef(index));
             } else {
                 let range = ignore(data, offset);
                 update(range, &mut data, &mut offset);
@@ -259,6 +267,12 @@ pub fn convert(
             }
         }
 
+        new_ops.push(Op::End);
+
+        // Reverse instructions.
+        for op in new_ops.into_iter().rev() {
+            new_state = push_op(&new_state, ops, op);
+        }
         Ok((Range::new(start_offset, offset - start_offset), new_state))
     }
 
@@ -280,6 +294,14 @@ pub fn convert(
             if let Ok(range) = end_node(node, data, offset) {
                 update(range, &mut data, &mut offset);
                 break;
+            } else if let Ok((range, val)) = meta_string("path", data, offset) {
+                update(range, &mut data, &mut offset);
+                let index = match find_name(val, names) {
+                    None => { return Err(()); }
+                    Some(index) => index,
+                };
+                new_state = push_fn(&new_state, fns, Op::Path);
+                new_state = push_fn(&new_state, fns, Op::FnRef(index));
             } else if let Ok((range, val)) = meta_string("ns_name", data, offset) {
                 update(range, &mut data, &mut offset);
                 let index = match find_name(val, names) {
@@ -317,7 +339,10 @@ pub fn convert(
                 break;
             } else if let Ok((range, name)) = meta_string("name", data, offset) {
                 update(range, &mut data, &mut offset);
-                let index = fns.len();
+                let index = match find_name(name.clone(), names) {
+                    None => { fns.len() }
+                    Some(index) => index,
+                };
                 names.push((name, index));
                 new_state = push_fn(&new_state, fns, Op::FnRef(index));
             } else if let Ok((range, state)) = read_arg(
@@ -772,6 +797,73 @@ fn false(bool) -> false;
             FnRef(3),           // true
             End,
             FnRef(7)            // false
+        ]);
+    }
+
+    #[test]
+    fn convert_path() {
+        use piston_meta::*;
+
+        let rules = ::syntax_rules();
+        let source = "
+fn bool() -> bool;
+fn true(bool) -> true;
+fn false(bool) -> false;
+fn or(bool, bool) -> bool;
+fn or([false] false, [false] false) -> [false] false;
+        ";
+        let data = parse(&rules, &source).unwrap();
+        // json::print(&data);
+        let (fns, ops) = convert(&data, &mut vec![]).unwrap();
+        assert_eq!(&fns, &vec![
+            // bool() -> bool
+            FnRef(0),
+            OpRef(1),
+            End,
+            // true(bool) -> true
+            FnRef(3),
+            FnRef(0),
+            OpRef(3),
+            End,
+            // false(bool) -> false
+            FnRef(7),
+            FnRef(0),
+            OpRef(5),
+            End,
+            // or(bool, bool) -> bool
+            FnRef(11),
+            FnRef(0),
+            FnRef(0),
+            OpRef(7),
+            End,
+            // or([false] false, [false] false) -> [false] false
+            FnRef(11),
+            Path,
+            FnRef(7),
+            FnRef(7),
+            Path,
+            FnRef(7),
+            FnRef(7),
+            OpRef(11),
+            End]);
+        assert_eq!(&ops, &[
+            // -> bool
+            End,
+            FnRef(0),
+            // -> true
+            End,
+            FnRef(3),
+            // -> false
+            End,
+            FnRef(7),
+            // -> bool
+            End,
+            FnRef(0),
+            // -> [false] false
+            End,
+            FnRef(7),
+            FnRef(7),
+            Path
         ]);
     }
 }
