@@ -2,7 +2,7 @@
 
 use piston_meta::*;
 use range::Range;
-use std::rc::Rc;
+use std::sync::Arc;
 
 /// Instructions.
 #[derive(PartialEq, Debug, Copy, Clone)]
@@ -193,7 +193,7 @@ pub fn eval(fns: &[Op], ops: &[Op], st: &mut Vec<Op>) {
 
 /// Converts from meta data to function and instruction stack.
 pub fn convert(
-    mut data: &[(Range, MetaData)],
+    mut data: &[Range<MetaData>],
     ignored: &mut Vec<Range>
 ) -> Result<(Vec<Op>, Vec<Op>), ()> {
     use piston_meta::bootstrap::{ end_node, ignore, start_node, update,
@@ -220,19 +220,19 @@ pub fn convert(
     }
 
     fn find_name(
-        name: Rc<String>,
-        names: &[(Rc<String>, usize)]
+        name: Arc<String>,
+        names: &[(Arc<String>, usize)]
     ) -> Option<usize> {
         names.iter().find(|e| e.0 == name).map(|e| e.1)
     }
 
     fn read_ret(
-        mut data: &[(Range, MetaData)],
+        mut data: &[Range<MetaData>],
         mut offset: usize,
         _fns: &mut Vec<Op>,
         ops: &mut Vec<Op>,
         state: &ConvertState,
-        names: &mut Vec<(Rc<String>, usize)>,
+        names: &mut Vec<(Arc<String>, usize)>,
         ignored: &mut Vec<Range>
     ) -> Result<(Range, ConvertState), ()> {
         let mut new_state = state.clone();
@@ -277,12 +277,12 @@ pub fn convert(
     }
 
     fn read_arg(
-        mut data: &[(Range, MetaData)],
+        mut data: &[Range<MetaData>],
         mut offset: usize,
         fns: &mut Vec<Op>,
         _ops: &mut Vec<Op>,
         state: &ConvertState,
-        names: &mut Vec<(Rc<String>, usize)>,
+        names: &mut Vec<(Arc<String>, usize)>,
         ignored: &mut Vec<Range>
     ) -> Result<(Range, ConvertState), ()> {
         let mut new_state = state.clone();
@@ -320,12 +320,12 @@ pub fn convert(
     }
 
     fn read_fn(
-        mut data: &[(Range, MetaData)],
+        mut data: &[Range<MetaData>],
         mut offset: usize,
         fns: &mut Vec<Op>,
         ops: &mut Vec<Op>,
         state: &ConvertState,
-        names: &mut Vec<(Rc<String>, usize)>,
+        names: &mut Vec<(Arc<String>, usize)>,
         ignored: &mut Vec<Range>
     ) -> Result<(Range, ConvertState), ()> {
         let mut new_state = state.clone();
@@ -772,7 +772,8 @@ fn bool() -> bool;
 fn true(bool) -> true;
 fn false(bool) -> false;
         ";
-        let data = parse(&rules, &source).unwrap();
+        let mut data = vec![];
+        parse(&rules, &source, &mut data).unwrap();
         let (fns, ops) = convert(&data, &mut vec![]).unwrap();
         assert_eq!(&fns, &[
             // bool() -> bool
@@ -812,7 +813,8 @@ fn false(bool) -> false;
 fn or(bool, bool) -> bool;
 fn or([false] false, [false] false) -> [false] false;
         ";
-        let data = parse(&rules, &source).unwrap();
+        let mut data = vec![];
+        parse(&rules, &source, &mut data).unwrap();
         // json::print(&data);
         let (fns, ops) = convert(&data, &mut vec![]).unwrap();
         assert_eq!(&fns, &vec![
