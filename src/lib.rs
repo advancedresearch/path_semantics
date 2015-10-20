@@ -27,10 +27,10 @@ mod tests {
     #[test]
     fn test_syntax() {
         let syntax = "assets/syntax.txt";
-        let _ = load_syntax_data(syntax, "assets/bool.txt");
-        let _ = load_syntax_data(syntax, "assets/nat.txt");
-        let _ = load_syntax_data(syntax, "assets/option.txt");
-        let _ = load_syntax_data(syntax, "assets/string.txt");
-        let _ = load_syntax_data(syntax, "assets/the-simpsons.txt");
+        let _ = load_syntax_data2(syntax, "assets/bool.txt");
+        let _ = load_syntax_data2(syntax, "assets/nat.txt");
+        let _ = load_syntax_data2(syntax, "assets/option.txt");
+        let _ = load_syntax_data2(syntax, "assets/string.txt");
+        let _ = load_syntax_data2(syntax, "assets/the-simpsons.txt");
     }
 }
