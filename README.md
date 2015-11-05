@@ -1,2 +1,2 @@
 # math_notation
-Bootstrapped meta rules for mathematical notation
+A research project in path semantics, a re-interpretation of functions for better mathematical expression
