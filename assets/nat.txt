@@ -22,3 +22,11 @@ pub fn mul(nat, nat) -> nat;
 pub fn mul [is_zero] (bool, bool) -> bool;
 [:] (false, false) -> false;
 [:] (_, _) -> true;
+
+pub fn is_one(nat) -> bool;
+[:] (s(z)) -> true;
+[:] (_) -> false;
+
+pub fn mul [is_one] (bool, bool) -> bool;
+[:] (true, true) -> true;
+[:] (_, _) -> false;
