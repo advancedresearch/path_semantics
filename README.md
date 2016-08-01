@@ -1,5 +1,5 @@
 # path_semantics
-A research project in path semantics, a re-interpretation of functions for better mathematical expression
+A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
 ### What is path semantics?
 
