@@ -1,0 +1,173 @@
+fn main() {
+    fs := {
+        // Arithmetic.
+        add: \(args) = args[0] + args[1],
+        sub: \(args) = args[0] - args[1],
+        mul: \(args) = args[0] * args[1],
+        div: \(args) = args[0] / args[1],
+        neg: \(args) = -args[0],
+        inv: \(args) = 1/args[0],
+
+        // Odd and even.
+        even: \(args) = (args[0]%2)==0,
+        odd: \(args) = (args[0]%2)==1,
+        abs_odd: \(args) = (abs(args[0])%2)==1,
+
+        // Boolean algebra.
+        not: \(args) = !args[0],
+        and: \(args) = args[0] && args[1],
+        or: \(args) = args[0] || args[1],
+        eq: \(args) = args[0] == args[1],
+        xor: \(args) = args[0] ^ args[1],
+        exc: \(args) = args[0] - args[1],
+        rexc: \(args) = args[1] - args[0],
+        nand: \(args) = !(args[0] && args[1]),
+        nor: \(args) = !(args[0] || args[1]),
+        nxor: \(args) = !(args[0] ^ args[1]),
+        neq: \(args) = args[0] != args[1],
+
+        // Trigonometry.
+        cos: \(args) = cos(args[0]),
+        sin: \(args) = sin(args[0]),
+        tan: \(args) = tan(args[0]),
+        atan: \(args) = atan(args[0]),
+        atan2: \(args) = atan2(args[0], args[1]),
+
+        // List operations.
+        concat: \(args) = {
+            r := clone(args[0])
+            for i {
+                push(mut r, args[1][i])
+            }
+            clone(r)
+        },
+        len: \(args) = len(args[0]),
+
+        max: \(args) = max(args[0]),
+        min: \(args) = min(args[0]),
+    }
+
+    /*
+    // bool binary.
+    data := [
+        [false, false],
+        [false, true],
+        [true, false],
+        [true, true],
+    ]
+    */
+
+
+    // f64 binary integers.
+    data := [
+        [2, 3],
+        [2, 2],
+        [2, 4],
+        [3, 2],
+        [4, 2],
+        [3, 3],
+        [6, 3],
+        [7, 2],
+        [8, 3],
+        [3, 8],
+        [2, 7],
+        [-2, 3],
+        [-2, 2],
+        [-3, 2],
+        [-5, 3],
+    ]
+
+
+    /*
+    data := [
+        [[], []],
+        [[1], []],
+        [[], [1]],
+        [[1], [1]],
+        [[1, 2], []],
+        [[1, 2], [1, 2]],
+        [[1, 2, 3], [1, 3]]
+    ]
+    */
+
+    // Find symmetric path candidates.
+    fs_keys := keys(fs)
+    n := len(fs_keys)
+    sym_candidates := []
+    for i, j {
+        a := fs_keys[i]
+        b := fs_keys[j]
+        if !all h {sym(fs[a], fs[b], data[h])} {continue}
+        push(mut sym_candidates, [a, b])
+    }
+    println(len(sym_candidates))
+    // println(sym_candidates)
+
+    sym_paths := []
+    for i {
+        a := sym_candidates[i][0]
+        b := sym_candidates[i][1]
+        fa := fs[a]
+        fb := fs[b]
+        for j {
+            c := fs_keys[j]
+            fc := fs[c]
+            if all h {
+                ls := try \fb([\fa(data[h])])
+                rs := try \fc(sift k {\fb([data[h][k]])})
+                if is_err(ls) || is_err(rs) {false}
+                else {
+                    cmp := try unwrap(ls) == unwrap(rs)
+                    if is_err(cmp) {false}
+                    else {unwrap(cmp)}
+                }
+            } {
+                push(mut sym_paths, [a, b, c])
+            }
+        }
+    }
+
+    filter := [
+        ["add", "not", "and"],
+        ["add", "not", "mul"],
+        ["and", "not", "add"],
+        ["and", "not", "mul"],
+        ["exc", "even", "eq"],
+        ["exc", "odd", "exc"],
+        ["exc", "odd", "sub"],
+        ["exc", "abs_odd", "neq"],
+        ["exc", "neg", "sub"],
+        ["exc", "neg", "exc"],
+        ["max", "even", "mul"],
+        ["mul", "not", "add"],
+        ["mul", "abs_odd", "mul"],
+        ["mul", "not", "or"],
+        ["mul", "odd", "mul"],
+        ["mul", "even", "add"],
+        ["or", "not", "mul"],
+        ["rexc", "even", "eq"],
+        ["rexc", "odd", "rexc"],
+        ["rexc", "neg", "rexc"],
+        ["sub", "odd", "sub"],
+        ["sub", "neg", "exc"],
+    ]
+    new_sym_paths := sift i {
+        // if sym_paths[i][1] == "min" {continue}
+        // if sym_paths[i][1] == "max" {continue}
+        if any j {
+            filter[j] == sym_paths[i]
+        } {continue}
+        sym_paths[i]
+    }
+
+    println(new_sym_paths)
+    n := len(new_sym_paths)
+    println(n)
+    if n > 0 {println(new_sym_paths[n*random()])}
+}
+
+/// Infers whether a path can be used for a function
+/// in a symmetric way for both arguments and result.
+sym(f: \([]) -> any, p: \([]) -> any, args: []) =
+    all i {is_ok(try \p([args[i]]))} &&
+    is_ok(try \p([\f(args)]))

@@ -1,0 +1,10 @@
+[package]
+name = "sym_extract"
+version = "0.1.0"
+
+[dependencies]
+dyon = "0.13.0"
+
+[[bin]]
+name = "sym_extract"
+path = "src/main.rs"
