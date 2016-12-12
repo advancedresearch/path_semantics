@@ -7,11 +7,13 @@ fn main() {
         div: \(args) = args[0] / args[1],
         neg: \(args) = -args[0],
         inv: \(args) = 1/args[0],
+        abs: \(args) = abs(args[0]),
 
         // Odd and even.
         even: \(args) = (args[0]%2)==0,
         odd: \(args) = (args[0]%2)==1,
-        abs_odd: \(args) = (abs(args[0])%2)==1,
+        abs_odd: \(args) = abs(args[0]%2)==1,
+        neg_odd: \(args) = (args[0]%2)==-1,
 
         // Boolean algebra.
         not: \(args) = !args[0],
@@ -75,6 +77,14 @@ fn main() {
         [-2, 2],
         [-3, 2],
         [-5, 3],
+        [2, -3],
+        [2, -2],
+        [3, -2],
+        [5, -3],
+        [-2, -3],
+        [-2, -2],
+        [-3, -2],
+        [-5, -3],
     ]
 
 
@@ -154,9 +164,8 @@ fn main() {
     new_sym_paths := sift i {
         // if sym_paths[i][1] == "min" {continue}
         // if sym_paths[i][1] == "max" {continue}
-        if any j {
-            filter[j] == sym_paths[i]
-        } {continue}
+        if any j {filter[j] == sym_paths[i]} {continue}
+        if all j {sym_paths[i][j] == sym_paths[i][0]} {continue}
         sym_paths[i]
     }
 
