@@ -5,9 +5,9 @@ fn main() {
         sub: \(args) = args[0] - args[1],
         mul: \(args) = args[0] * args[1],
         div: \(args) = args[0] / args[1],
-        neg: \(args) = -args[0],
-        inv: \(args) = 1/args[0],
-        abs: \(args) = abs(args[0]),
+        // neg: \(args) = -args[0],
+        // inv: \(args) = 1/args[0],
+        // abs: \(args) = abs(args[0]),
 
         // Odd and even.
         even: \(args) = (args[0]%2)==0,
@@ -29,11 +29,12 @@ fn main() {
         neq: \(args) = args[0] != args[1],
 
         // Trigonometry.
-        cos: \(args) = cos(args[0]),
-        sin: \(args) = sin(args[0]),
-        tan: \(args) = tan(args[0]),
-        atan: \(args) = atan(args[0]),
-        atan2: \(args) = atan2(args[0], args[1]),
+        // cos: \(args) = cos(args[0]),
+        // sin: \(args) = sin(args[0]),
+        // tan: \(args) = tan(args[0]),
+        // atan: \(args) = atan(args[0]),
+        // atan2: \(args) = atan2(args[0], args[1]),
+        sqrt: \(args) = sqrt(args[0]),
 
         // List operations.
         concat: \(args) = {
@@ -47,6 +48,8 @@ fn main() {
 
         max: \(args) = max(args[0]),
         min: \(args) = min(args[0]),
+
+        id: \(args) = clone(args[0]),
     }
 
     /*
@@ -59,7 +62,7 @@ fn main() {
     ]
     */
 
-
+    /*
     // f64 binary integers.
     data := [
         [2, 3],
@@ -86,7 +89,14 @@ fn main() {
         [-3, -2],
         [-5, -3],
     ]
+    */
 
+    data := [
+        [4],
+        [16],
+        [9],
+        [81],
+    ]
 
     /*
     data := [
@@ -104,10 +114,13 @@ fn main() {
     fs_keys := keys(fs)
     n := len(fs_keys)
     sym_candidates := []
+    // "id" is a very frequent path, so we ignore it.
+    pre_fail := \(a, b) = (a == "id") || (b == "id")
     for i, j {
         a := fs_keys[i]
         b := fs_keys[j]
         if !all h {sym(fs[a], fs[b], data[h])} {continue}
+        if \pre_fail(a, b) {continue}
         push(mut sym_candidates, [a, b])
     }
     println(len(sym_candidates))
@@ -162,8 +175,6 @@ fn main() {
         ["sub", "neg", "exc"],
     ]
     new_sym_paths := sift i {
-        // if sym_paths[i][1] == "min" {continue}
-        // if sym_paths[i][1] == "max" {continue}
         if any j {filter[j] == sym_paths[i]} {continue}
         if all j {sym_paths[i][j] == sym_paths[i][0]} {continue}
         sym_paths[i]
