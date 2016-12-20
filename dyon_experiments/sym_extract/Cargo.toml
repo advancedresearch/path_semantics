@@ -3,7 +3,7 @@ name = "sym_extract"
 version = "0.1.0"
 
 [dependencies]
-dyon = "0.13.0"
+dyon = "0.13.1"
 
 [[bin]]
 name = "sym_extract"

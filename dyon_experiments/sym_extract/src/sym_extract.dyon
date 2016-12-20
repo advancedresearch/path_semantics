@@ -20,10 +20,10 @@ find_sym_candidates__functions_data(fs, data) = {
 }
 
 // "id" is a very frequent path, so we ignore it.
-filter_id(sym_candidates) = sift i {
+filter_id(sym_candidates: 'return) = sift i {
     if (sym_candidates[i][0] == "id") ||
        (sym_candidates[i][1] == "id") {continue}
-    clone(sym_candidates[i])
+    sym_candidates[i]
 }
 
 /// Finds symmetric paths.
@@ -56,7 +56,7 @@ find_sym_paths__functions_candidates_data(fs, sym_candidates, data) = {
 }
 
 /// Filter away bad symmetric paths.
-filter_bad__sympaths(sym_paths) = {
+filter_bad__sympaths(sym_paths: 'return) = {
     filter := [
         ["add", "not", "and"],
         ["add", "not", "mul"],
@@ -84,6 +84,6 @@ filter_bad__sympaths(sym_paths) = {
     sift i {
         if any j {filter[j] == sym_paths[i]} {continue}
         if all j {sym_paths[i][j] == sym_paths[i][0]} {continue}
-        clone(sym_paths[i])
+        sym_paths[i]
     }
 }

@@ -1,0 +1,62 @@
+data_db() = {
+    bool_binary: bool_binary(),
+    binary_integers: binary_integers(),
+    square_positive_integers: square_positive_integers(),
+    list_binary: list_binary(),
+    list: list(),
+}
+
+bool_binary() = [
+    [false, false],
+    [false, true],
+    [true, false],
+    [true, true],
+]
+
+binary_integers() = [
+    [4, 4],
+    [2, 3],
+    [2, 2],
+    [2, 4],
+    [3, 2],
+    [4, 2],
+    [3, 3],
+    [6, 3],
+    [7, 2],
+    [8, 3],
+    [3, 8],
+    [2, 7],
+    [-2, 3],
+    [-2, 2],
+    [-3, 2],
+    [-5, 3],
+    [2, -3],
+    [2, -2],
+    [3, -2],
+    [5, -3],
+    [-2, -3],
+    [-2, -2],
+    [-3, -2],
+    [-5, -3],
+]
+
+square_positive_integers() = [
+    [4],
+    [16],
+    [9],
+    [81],
+]
+
+list_binary() = [
+    [[], []],
+    [[1], []],
+    [[], [1]],
+    [[1], [1]],
+    [[1, 2], []],
+    [[1, 2], [1, 2]],
+    [[1, 2, 3], [1, 3]]
+]
+
+list() = [
+    [[1, 2, 3]],
+]
