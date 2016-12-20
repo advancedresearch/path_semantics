@@ -1,0 +1,89 @@
+
+/// Infers whether a path can be used for a function
+/// in a symmetric way for both arguments and result.
+sym(f: \([]) -> any, p: \([]) -> any, args: []) =
+    all i {is_ok(try \p([args[i]]))} &&
+    is_ok(try \p([\f(args)]))
+
+// Find symmetric path candidates.
+find_sym_candidates__functions_data(fs, data) = {
+    fs_keys := keys(fs)
+    n := len(fs_keys)
+    sym_candidates := []
+    for i, j {
+        a := fs_keys[i]
+        b := fs_keys[j]
+        if !all h {sym(fs[a], fs[b], data[h])} {continue}
+        push(mut sym_candidates, [a, b])
+    }
+    clone(sym_candidates)
+}
+
+// "id" is a very frequent path, so we ignore it.
+filter_id(sym_candidates) = sift i {
+    if (sym_candidates[i][0] == "id") ||
+       (sym_candidates[i][1] == "id") {continue}
+    clone(sym_candidates[i])
+}
+
+/// Finds symmetric paths.
+find_sym_paths__functions_candidates_data(fs, sym_candidates, data) = {
+    fs_keys := keys(fs)
+    sym_paths := []
+    for i {
+        a := sym_candidates[i][0]
+        b := sym_candidates[i][1]
+        fa := fs[a]
+        fb := fs[b]
+        for j {
+            c := fs_keys[j]
+            fc := fs[c]
+            if all h {
+                ls := try \fb([\fa(data[h])])
+                rs := try \fc(sift k {\fb([data[h][k]])})
+                if is_err(ls) || is_err(rs) {false}
+                else {
+                    cmp := try unwrap(ls) == unwrap(rs)
+                    if is_err(cmp) {false}
+                    else {unwrap(cmp)}
+                }
+            } {
+                push(mut sym_paths, [a, b, c])
+            }
+        }
+    }
+    clone(sym_paths)
+}
+
+/// Filter away bad symmetric paths.
+filter_bad__sympaths(sym_paths) = {
+    filter := [
+        ["add", "not", "and"],
+        ["add", "not", "mul"],
+        ["and", "not", "add"],
+        ["and", "not", "mul"],
+        ["exc", "even", "eq"],
+        ["exc", "odd", "exc"],
+        ["exc", "odd", "sub"],
+        ["exc", "abs_odd", "neq"],
+        ["exc", "neg", "sub"],
+        ["exc", "neg", "exc"],
+        ["max", "even", "mul"],
+        ["mul", "not", "add"],
+        ["mul", "abs_odd", "mul"],
+        ["mul", "not", "or"],
+        ["mul", "odd", "mul"],
+        ["mul", "even", "add"],
+        ["or", "not", "mul"],
+        ["rexc", "even", "eq"],
+        ["rexc", "odd", "rexc"],
+        ["rexc", "neg", "rexc"],
+        ["sub", "odd", "sub"],
+        ["sub", "neg", "exc"],
+    ]
+    sift i {
+        if any j {filter[j] == sym_paths[i]} {continue}
+        if all j {sym_paths[i][j] == sym_paths[i][0]} {continue}
+        clone(sym_paths[i])
+    }
+}

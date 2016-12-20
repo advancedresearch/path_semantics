@@ -1,0 +1,59 @@
+knowledge_functions() = {
+    // Arithmetic.
+    add: \(args) = args[0] + args[1],
+    sub: \(args) = args[0] - args[1],
+    mul: \(args) = args[0] * args[1],
+    div: \(args) = args[0] / args[1],
+    neg: \(args) = -args[0],
+    inv: \(args) = 1/args[0],
+    abs: \(args) = abs(args[0]),
+    sign: \(args) = if args[0] == 0 {0} else if args[0] > 1 {1} else {-1},
+
+    // Odd and even.
+    even: \(args) = (args[0]%2)==0,
+    odd: \(args) = (args[0]%2)==1,
+    abs_odd: \(args) = abs(args[0]%2)==1,
+    neg_odd: \(args) = (args[0]%2)==-1,
+
+    // Boolean algebra.
+    not: \(args) = !args[0],
+    and: \(args) = args[0] && args[1],
+    or: \(args) = args[0] || args[1],
+    xor: \(args) = args[0] ^ args[1],
+    exc: \(args) = args[0] - args[1],
+    rexc: \(args) = args[1] - args[0],
+    nand: \(args) = !(args[0] && args[1]),
+    nor: \(args) = !(args[0] || args[1]),
+    nxor: \(args) = !(args[0] ^ args[1]),
+
+    // Comparison.
+    eq: \(args) = args[0] == args[1],
+    neq: \(args) = args[0] != args[1],
+    lt: \(args) = args[0] < args[1],
+    le: \(args) = args[0] <= args[1],
+    gt: \(args) = args[0] > args[1],
+    ge: \(args) = args[0] >= args[1],
+
+    // Trigonometry.
+    cos: \(args) = cos(args[0]),
+    sin: \(args) = sin(args[0]),
+    tan: \(args) = tan(args[0]),
+    atan: \(args) = atan(args[0]),
+    atan2: \(args) = atan2(args[0], args[1]),
+    sqrt: \(args) = sqrt(args[0]),
+
+    // List operations.
+    concat: \(args) = {
+        r := clone(args[0])
+        for i {push(mut r, args[1][i])}
+        clone(r)
+    },
+    len: \(args) = len(args[0]),
+
+    max: \(args) = max(args[0]),
+    min: \(args) = min(args[0]),
+    sum: \(args) = sum i {args[0][i]},
+    avg: \(args) = sum i {args[0][i]} / len(args[0]),
+
+    id: \(args) = clone(args[0]),
+}

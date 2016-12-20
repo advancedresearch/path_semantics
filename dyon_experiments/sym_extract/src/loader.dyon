@@ -1,0 +1,9 @@
+fn main() {
+    knowledge := unwrap(load("src/knowledge.dyon"))
+    sym_extract := unwrap(load("src/sym_extract.dyon"))
+    main := unwrap(load(
+        source: "src/main.dyon",
+        imports: [sym_extract, knowledge]
+    ))
+    call(main, "main", [])
+}
