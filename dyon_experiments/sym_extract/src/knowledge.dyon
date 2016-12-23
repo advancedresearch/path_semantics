@@ -25,6 +25,8 @@ knowledge_functions() = {
     nand: \(args) = !(args[0] && args[1]),
     nor: \(args) = !(args[0] || args[1]),
     nxor: \(args) = !(args[0] ^ args[1]),
+    nexc: \(args) = !(args[0] - args[1]),
+    nrexc: \(args) = !(args[1] - args[0]),
 
     // Comparison.
     eq: \(args) = args[0] == args[1],

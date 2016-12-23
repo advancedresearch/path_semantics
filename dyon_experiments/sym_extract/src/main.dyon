@@ -3,23 +3,23 @@ fn main() {
 
     data_db := data_db()
 
-    data := data_db.bool_binary
-
-    sym_candidates := find_sym_candidates(functions: fs, data: data)
-    sym_candidates := filter_id(sym_candidates)
-
-    println(len(sym_candidates))
-
-    sym_paths := find_sym_paths(
-        functions: fs,
-        candidates: sym_candidates,
-        data: data
-    )
-
-    new_sym_paths := filter_bad(sympaths: sym_paths)
-
-    println(new_sym_paths)
-    n := len(new_sym_paths)
-    println(n)
-    if n > 0 {println(new_sym_paths[n*random()])}
+    ignore := [
+        "list",
+        "list_binop",
+        // "bool_binop",
+        "binop_integers",
+    ]
+    data_keys := keys(data_db)
+    for i {
+        if any j {data_keys[i] == ignore[j]} {continue}
+        data := data_db[data_keys[i]]
+        println(data_keys[i])
+        new_sym_paths := extract_sym(functions: fs, data: data)
+        new_sym_paths := filter_good(sympaths: new_sym_paths)
+        // println(new_sym_paths)
+        n := len(new_sym_paths)
+        println(n)
+        if n > 0 {println(new_sym_paths[n*random()])}
+        println("")
+    }
 }

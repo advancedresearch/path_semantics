@@ -1,19 +1,27 @@
 data_db() = {
-    bool_binary: bool_binary(),
-    binary_integers: binary_integers(),
+    bool: bool(),
+    bool_binop: bool_binop(),
+    binop_integers: binop_integers(),
+    positive_integers: positive_integers(),
+    binop_numbers: binop_numbers(),
     square_positive_integers: square_positive_integers(),
-    list_binary: list_binary(),
+    list_binop: list_binop(),
     list: list(),
 }
 
-bool_binary() = [
+bool() = [
+    [false],
+    [true],
+]
+
+bool_binop() = [
     [false, false],
     [false, true],
     [true, false],
     [true, true],
 ]
 
-binary_integers() = [
+binop_integers() = [
     [4, 4],
     [2, 3],
     [2, 2],
@@ -40,6 +48,25 @@ binary_integers() = [
     [-5, -3],
 ]
 
+binop_numbers() = [
+    [0.06630234978917371, 0.7851306348257794],
+    [0.9506711221154567, 0.27925038672820124],
+    [0.043047745290223816, 0.6307560848322642],
+    [-6.461403135131087, -2.5807815261380895],
+    [-4.166348652234932, 3.573196427509222],
+    [-4.925544625914375, -4.4904253041291184],
+    [1.2771206115259703, 0.13851283745872678],
+    [0.44096575347773115, -4.726577807019563],
+]
+
+positive_integers() = [
+    [1],
+    [2],
+    [3],
+    [7],
+    [8],
+]
+
 square_positive_integers() = [
     [4],
     [16],
@@ -47,7 +74,7 @@ square_positive_integers() = [
     [81],
 ]
 
-list_binary() = [
+list_binop() = [
     [[], []],
     [[1], []],
     [[], [1]],
