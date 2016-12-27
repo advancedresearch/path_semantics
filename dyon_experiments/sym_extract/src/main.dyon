@@ -1,25 +1,178 @@
 fn main() {
-    fs := knowledge_functions()
+    ~ fs := knowledge_functions()
+    ~ filter_bad := filter_bad()
+    ~ filter_good := filter_good()
 
     data_db := data_db()
 
+    /*
     ignore := [
         "list",
         "list_binop",
-        // "bool_binop",
+        "bool_binop",
         "binop_integers",
     ]
     data_keys := keys(data_db)
     for i {
         if any j {data_keys[i] == ignore[j]} {continue}
-        data := data_db[data_keys[i]]
         println(data_keys[i])
-        new_sym_paths := extract_sym(functions: fs, data: data)
-        new_sym_paths := filter_good(sympaths: new_sym_paths)
-        // println(new_sym_paths)
-        n := len(new_sym_paths)
-        println(n)
-        if n > 0 {println(new_sym_paths[n*random()])}
-        println("")
+        analyse(data_db[data_keys[i]])
     }
+    */
+
+    analyse(data_db.binop_numbers)
 }
+
+fn analyse(data) ~ fs: {}, filter_bad: [[str]], filter_good: [[str]] {
+    new_sym_paths := extract_sym(functions: fs, data: data)
+    new_sym_paths := filter_bad(sympaths: new_sym_paths, filter: filter_bad)
+    new_sym_paths := filter_good(sympaths: new_sym_paths, filter: filter_good)
+    // println(new_sym_paths)
+    n := len(new_sym_paths)
+    println(n)
+    if n > 0 {println(new_sym_paths[n*random()])}
+    println("")
+}
+
+filter_bad() = [
+    ["add", "not", "and"],
+    ["add", "not", "mul"],
+    ["and", "not", "add"],
+    ["and", "not", "mul"],
+    ["exc", "even", "eq"],
+    ["exc", "odd", "exc"],
+    ["exc", "odd", "sub"],
+    ["exc", "abs_odd", "neq"],
+    ["exc", "neg", "sub"],
+    ["exc", "neg", "exc"],
+    ["max", "even", "mul"],
+    ["mul", "not", "add"],
+    ["mul", "abs_odd", "mul"],
+    ["mul", "not", "or"],
+    ["mul", "odd", "mul"],
+    ["mul", "even", "add"],
+    ["or", "not", "mul"],
+    ["rexc", "even", "eq"],
+    ["rexc", "odd", "rexc"],
+    ["rexc", "neg", "rexc"],
+    ["sub", "odd", "sub"],
+    ["sub", "neg", "exc"],
+    ["sign", "sqrt", "sign"],
+
+    ["neg", "atan", "neg"],
+    ["cos", "neg_odd", "and"],
+    ["neg", "tan", "neg"],
+    ["sqrt", "sign", "id"],
+    ["exc", "abs_odd", "xor"],
+    ["cos", "sign", "neg"],
+    ["sqrt", "neg_odd", "and"],
+    ["sin", "sign", "sign"],
+    ["abs", "tan", "id"],
+    ["atan", "sign", "id"],
+    ["inv", "sign", "sign"],
+    ["sqrt", "sign", "inv"],
+    ["exc", "even", "nxor"],
+    ["rexc", "even", "nxor"],
+    ["neg", "sign", "sign"],
+    ["sqrt", "abs_odd", "or"],
+    ["mul", "odd", "xor"],
+    ["exc", "neg_odd", "xor"],
+    ["sqrt", "neg_odd", "exc"],
+    ["abs", "atan", "id"],
+    ["abs", "neg", "id"],
+    ["sin", "neg_odd", "and"],
+    ["sqrt", "sign", "xor"],
+    ["rexc", "abs_odd", "neq"],
+    ["mul", "sign", "div"],
+    ["neg", "neg", "abs"],
+    ["rexc", "abs_odd", "xor"],
+    ["sin", "neg_odd", "id"],
+    ["sqrt", "sign", "abs"],
+    ["atan", "neg_odd", "id"],
+    ["sign", "abs", "sign"],
+    ["abs", "even", "id"],
+    ["neg", "abs", "abs"],
+    ["abs", "sin", "abs"],
+    ["atan", "sign", "xor"],
+    ["add", "even", "mul"],
+    ["abs", "sign", "abs"],
+    ["rexc", "odd", "id"],
+    ["abs", "atan", "abs"],
+    ["neg", "abs_odd", "id"],
+    ["atan", "abs", "atan"],
+    ["abs", "abs_odd", "id"],
+    ["sqrt", "abs", "sqrt"],
+    ["atan", "neg_odd", "and"],
+    ["sqrt", "neg_odd", "id"],
+
+    ["sub", "not", "nrexc"],
+    ["nrexc", "not", "sub"],
+]
+
+filter_good() = [
+    // Booleans.
+    ["and", "not", "or"],
+    ["or", "not", "and"],
+    ["xor", "not", "nxor"],
+    ["xor", "not", "eq"],
+    ["eq", "not", "neq"],
+    ["eq", "not", "xor"],
+    ["exc", "not", "nrexc"],
+    ["rexc", "not", "nexc"],
+
+    ["nand", "not", "nor"],
+    ["nor", "not", "nand"],
+    ["nxor", "not", "neq"],
+    ["nxor", "not", "xor"],
+    ["neq", "not", "eq"],
+    ["neq", "not", "nxor"],
+    ["not", "not", "not"],
+    ["nexc", "not", "rexc"],
+    ["nrexc", "not", "exc"],
+
+    // List.
+    ["concat", "len", "add"],
+    ["concat", "sum", "add"],
+
+    // Numbers.
+    ["mul", "inv", "mul"],
+    ["mul", "abs", "mul"],
+    ["mul", "sign", "mul"],
+    ["div", "abs", "div"],
+    ["tan", "neg", "tan"],
+    ["abs", "inv", "abs"],
+    ["neg", "sign", "neg"],
+    ["neg", "inv", "neg"],
+    ["neg", "abs", "id"],
+    ["neg", "sin", "neg"],
+    ["neg", "cos", "id"],
+    ["abs", "abs", "id"],
+    ["abs", "cos", "id"],
+    ["inv", "neg", "inv"],
+    ["inv", "abs", "inv"],
+    ["sin", "neg", "sin"],
+    ["sign", "neg", "sign"],
+    ["cos", "sign", "sign"],
+    ["sub", "neg", "sub"],
+    ["atan", "neg", "atan"],
+    ["atan", "sign", "inv"],
+    ["add", "neg", "add"],
+
+    // Integers.
+    ["neg", "even", "id"],
+    ["mul", "even", "or"],
+    ["mul", "abs_odd", "and"],
+    ["sub", "even", "nxor"],
+    ["sub", "abs_odd", "xor"],
+    ["sub", "even", "eq"],
+    ["sub", "abs_odd", "neq"],
+    ["add", "even", "nxor"],
+    ["add", "even", "eq"],
+    ["add", "abs_odd", "xor"],
+    ["add", "abs_odd", "neq"],
+
+    // Square positive integers.
+    ["sqrt", "even", "id"],
+    ["sqrt", "abs_odd", "id"],
+    ["sqrt", "odd", "id"],
+]
