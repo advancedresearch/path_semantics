@@ -20,6 +20,7 @@ fn main() {
     c := infer([a.equivs, b.equivs, c.equivs, d.equivs])
     */
 
+    /*
     // Non-empty lists.
     a := unwrap(test([1], [2, 3]))
     b := unwrap(test([2, 4], [8, 1, 3]))
@@ -27,6 +28,7 @@ fn main() {
     d := unwrap(test([8, 1, 3], [2, 4, 5]))
     print_data(a)
     c := infer([a.equivs, b.equivs, c.equivs, d.equivs])
+    */
 
     /*
     v := [0, 1]
@@ -39,6 +41,14 @@ fn main() {
     c := infer(r)
     */
 
+    // `sin(x)` is approximately equal to `x` when near 0.
+    input := [-0.2, -0.1, 0, 0.1, 0.2]
+    a := {}
+    eps := 0.002
+    c := infer(sift i {
+        a = unwrap(test(input[i], eps))
+        a.equivs
+    })
 
     if len(c) > 0 {
         println("========== Found equivalences!!! ==========\n")
@@ -49,6 +59,49 @@ fn main() {
     }
 }
 
+fn test(x, eps) -> res[{}] {
+    data := {
+        x: x,
+        sin: \(a) = sin(a),
+        cos: \(a) = cos(a),
+        approx_eq: \(eps) = \(a) = \(b) = abs((grab a) - b) < (grab '2 eps),
+        t: true,
+        eps: eps,
+        one: 1,
+        zero: 0,
+        pi: 3.14159265358979323846264338327950288,
+        tau: 3.14159265358979323846264338327950288 * 2,
+        neg: \(a) = -a,
+        pi_half: 3.14159265358979323846264338327950288 / 2,
+    }
+    filter := [
+        ["sin"],
+        ["approx_eq"],
+        ["approx_eq(eps)"],
+        ["approx_eq(eps)(sin(x))"],
+        ["cos"],
+        ["neg"],
+    ]
+    explore := [
+        ["sin", "x"],
+        ["approx_eq", "eps"],
+        ["approx_eq(eps)", "sin(x)"],
+        ["approx_eq(eps)(sin(x))", "x"],
+        /*
+        ["cos", "zero"],
+        ["sin", "zero"],
+        ["cos", "pi"],
+        ["neg", "one"],
+        ["sin", "pi_half"],
+        ["sin", "tau"],
+        ["cos", "tau"],
+        */
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+
+/*
 fn test(x, y) -> res[{}] {
     data := {
         x: x,
@@ -105,6 +158,7 @@ fn test(x, y) -> res[{}] {
 
     return wrap_fill(data: mut data, explore: explore, filter: filter)
 }
+*/
 
 /*
 fn test(x, y, z) -> res[{}] {
