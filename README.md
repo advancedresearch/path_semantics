@@ -1,6 +1,8 @@
 # path_semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+[Tutorial](https://github.com/bvssvni/path_semantics/wiki/Tutorial-1:-Types)
+
 ### What is path semantics?
 
 Functional programming has been an active research area for [dependently types](https://en.wikipedia.org/wiki/Dependent_type).
