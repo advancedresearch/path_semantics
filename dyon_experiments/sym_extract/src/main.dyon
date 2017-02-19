@@ -1,9 +1,15 @@
 fn main() {
     ~ fs := knowledge_functions()
-    ~ filter_bad := filter_bad()
-    ~ filter_good := filter_good()
+    ~ filter_bad := filter_bad_binary_numbers()
+    ~ filter_good := filter_good_binary_numbers()
 
     data_db := data_db()
+    remove_keys(mut fs, [
+        "neg_odd",
+        "odd",
+        "even",
+        "abs_odd",
+    ])
 
     /*
     ignore := [
@@ -23,6 +29,16 @@ fn main() {
     analyse(data_db.binop_numbers)
 }
 
+fn remove_keys(mut a: {}, keys: [str]) {
+    b := {}
+    a_keys := keys(a)
+    for i {
+        if any j {a_keys[i] == keys[j]} {continue}
+        b[a_keys[i]] := a[a_keys[i]]
+    }
+    a = clone(b)
+}
+
 fn analyse(data) ~ fs: {}, filter_bad: [[str]], filter_good: [[str]] {
     new_sym_paths := extract_sym(functions: fs, data: data)
     new_sym_paths := filter_bad(sympaths: new_sym_paths, filter: filter_bad)
@@ -33,6 +49,140 @@ fn analyse(data) ~ fs: {}, filter_bad: [[str]], filter_good: [[str]] {
     if n > 0 {println(new_sym_paths[n*random()])}
     println("")
 }
+
+filter_bad_binary_numbers() = [
+    // Single argument functions.
+    ["neg", "atan", "neg"],
+    ["neg", "sin", "neg"],
+    ["sin", "sign", "sign"],
+    ["sqrt", "sign", "id"],
+    ["abs", "cos", "id"],
+    ["neg", "tan", "neg"],
+    ["atan", "sign", "sign"],
+    ["neg", "inv", "neg"],
+    ["atan", "neg", "atan"],
+    ["atan", "abs", "atan"],
+    ["sqrt", "sign", "xor"],
+    ["abs", "inv", "abs"],
+    ["abs", "abs", "id"],
+    ["inv", "abs", "inv"],
+    ["cos", "sign", "sign"],
+    ["abs", "atan", "abs"],
+    ["sin", "neg", "sin"],
+    ["neg", "cos", "id"],
+    ["tan", "neg", "tan"],
+    ["inv", "neg", "inv"],
+    ["sqrt", "sign", "inv"],
+    ["neg", "abs", "id"],
+    ["neg", "abs", "abs"],
+    ["sin", "is_zero", "id"],
+    ["tan", "is_zero", "id"],
+    ["sqrt", "is_zero", "id"],
+    ["abs", "is_zero", "id"],
+    ["inv", "is_one", "id"],
+    ["sign", "is_zero", "id"],
+    ["neg", "is_zero", "id"],
+    ["sqrt", "is_one", "id"],
+    ["atan", "is_zero", "id"],
+
+    // When right argument is non-zero.
+    ["neg", "is_zero", "exc"],
+    ["cos", "is_zero", "and"],
+    ["cos", "is_zero", "mul"],
+    ["sin", "is_zero", "sub"],
+    ["sin", "is_zero", "exc"],
+    ["sign", "is_zero", "sub"],
+    ["inv", "is_zero", "and"],
+    ["abs", "is_zero", "sub"],
+    ["tan", "is_zero", "sub"],
+    ["neg", "is_zero", "sub"],
+    ["abs", "is_zero", "exc"],
+    ["atan", "is_zero", "sub"],
+    ["sign", "is_zero", "exc"],
+    ["sqrt", "is_zero", "sub"],
+    ["inv", "is_zero", "mul"],
+    ["sqrt", "is_zero", "exc"],
+    ["atan", "is_zero", "exc"],
+    ["tan", "is_zero", "exc"],
+    ["abs", "is_zero", "or"],
+    ["abs", "is_zero", "neq"],
+    ["sqrt", "is_zero", "or"],
+    ["sqrt", "is_zero", "add"],
+    ["atan", "is_zero", "or"],
+    ["sin", "is_zero", "add"],
+    ["atan", "is_zero", "xor"],
+    ["sqrt", "is_zero", "xor"],
+    ["tan", "is_zero", "neq"],
+    ["sin", "is_zero", "neq"],
+    ["tan", "is_zero", "xor"],
+    ["neg", "is_zero", "xor"],
+    ["sqrt", "is_zero", "neq"],
+    ["atan", "is_zero", "add"],
+    ["sin", "is_zero", "xor"],
+    ["atan", "is_zero", "neq"],
+    ["sign", "is_zero", "or"],
+    ["neg", "is_zero", "or"],
+    ["abs", "is_zero", "add"],
+    ["tan", "is_zero", "add"],
+    ["sin", "is_zero", "or"],
+    ["neg", "is_zero", "neq"],
+    ["cos", "is_zero", "rexc"],
+    ["sign", "is_zero", "xor"],
+    ["neg", "is_zero", "add"],
+    ["sign", "is_zero", "add"],
+    ["inv", "is_zero", "rexc"],
+    ["abs", "is_zero", "xor"],
+    ["tan", "is_zero", "or"],
+    ["sign", "is_zero", "neq"],
+    // More...
+    ["mul", "is_zero", "neq"],
+    ["mul", "is_zero", "xor"],
+    ["div", "is_zero", "id"],
+    ["mul", "is_zero", "sub"],
+    ["xor", "is_one", "id"],
+    ["div", "is_zero", "or"],
+    ["mul", "is_zero", "exc"],
+    ["mul", "is_zero", "id"],
+    ["div", "is_zero", "xor"],
+    ["div", "is_zero", "neq"],
+    ["div", "is_zero", "add"],
+
+    // `exc` overlaps with `sub`.
+    ["sub", "neg", "exc"],
+    ["rexc", "neg", "rexc"],
+    ["exc", "neg", "sub"],
+    ["exc", "neg", "exc"],
+    // `or` overlaps with `add`.
+    ["mul", "is_zero", "add"],
+    ["div", "is_zero", "sub"],
+]
+filter_good_binary_numbers() = [
+    ["add", "neg", "add"],
+    ["sub", "neg", "sub"],
+    ["mul", "abs", "mul"],
+    ["div", "abs", "div"],
+    ["mul", "is_zero", "or"],
+    ["div", "is_zero", "exc"],
+]
+
+/*
+    false, false   4/2=2       false
+    false, true    4/0=nan     false
+    true, false    0/4=0       true
+    true, true     0/0=nan     false
+*/
+
+/*
+    -1, -1  1
+    -1, 0   0
+    -1, 1   -1
+    0, -1   0
+    0, 0    0
+    0, 1    0
+    1, -1   -1
+    1, 0    0
+    1, 1    1
+*/
 
 filter_bad() = [
     ["add", "not", "and"],

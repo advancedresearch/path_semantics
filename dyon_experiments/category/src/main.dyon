@@ -1,0 +1,248 @@
+fn main() {
+
+    a := unwrap(test(2, 3))
+    b := unwrap(test(3, 3))
+    c := unwrap(test(2, 2))
+    d := unwrap(test(3, 2))
+    e := unwrap(test(0, 1))
+    f := unwrap(test(1, 0))
+    print_data(a)
+    c := infer([a.equivs, b.equivs, c.equivs, d.equivs, e.equivs, f.equivs])
+
+
+    /*
+    v := [0, 1]
+    r := []
+    for i, j, k {
+        a := unwrap(test(v[i], v[j], v[k]))
+        // print_data(a)
+        push(mut r, a.equivs)
+    }
+    c := infer(r)
+    */
+
+
+    if len(c) > 0 {
+        println("========== Found equivalences!!! ==========\n")
+        for i {println(link {str(c[i][0])" == "str(c[i][1])})}
+        println("\n===========================================")
+    } else {
+        println("(No equivalences found)")
+    }
+}
+
+/// Gets the shared equivalences.
+fn infer(as: [[[str]]]) -> [[str]] {
+    a := as[0]
+    return sift k {
+        eq := a[k]
+        if !all i [1, len(as)) {
+            b := as[i]
+            any k {(eq == b[k]) || (eq[0] == b[k][1]) && (eq[1] == b[k][0])}
+        } {continue}
+        clone(eq)
+    }
+}
+
+fn print_data(a: {}) {
+    println("===== Finished! =====")
+    keys := keys(a.data)
+    for i {println(link {keys[i]": "str(a.data[keys[i]])})}
+    println("")
+    println("Equivalents:")
+    for i {println(link {a.equivs[i][0]" == "a.equivs[i][1]})}
+}
+
+/*
+fn test(x, y, z) -> res[{}] {
+    data := {
+        le: \(a) = \(b) = (grab a) <= b,
+        and: \(a) = \(b) = (grab a) && b,
+        imp: \(a) = \(b) = if grab a {clone(b)} else {true},
+        x: x,
+        y: y,
+        z: z,
+        t: true,
+    }
+    filter := [
+        ["imp"],
+        ["and"],
+        ["le"],
+        ["le(x)"],
+        ["le(y)"],
+        ["and(le(x)(y))"],
+        ["imp(and(le(x)(y))(le(y)(z)))"],
+        ["le(y)(y)"],
+        ["le(x)(x)"],
+        ["and(le(x)(y))(t)"],
+    ]
+    explore := [
+        ["le", "x"],
+        ["le(x)", "y"],
+        ["le(x)", "z"],
+        ["le", "y"],
+        ["le(y)", "z"],
+        ["and", "le(x)(y)"],
+        ["and(le(x)(y))", "le(y)(z)"],
+        ["imp", "and(le(x)(y))(le(y)(z))"],
+        ["imp(and(le(x)(y))(le(y)(z)))", "le(x)(z)"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+*/
+
+/*
+fn test(x, y) -> res[{}] {
+    data := {
+        gt: \(a) = \(b) = (grab a) > b,
+        le: \(a) = \(b) = (grab a) <= b,
+        not: \(a) = !a,
+        x: x,
+        y: y,
+    }
+    filter := [
+        ["not"],
+        ["gt"],
+        ["le"],
+        ["le(x)"],
+        ["gt(x)"],
+    ]
+    explore := [
+        ["le", "x"],
+        ["le(x)", "y"],
+        ["not", "le(x)(y)"],
+        ["gt", "x"],
+        ["gt(x)", "y"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+*/
+
+fn test(x, y) -> res[{}] {
+    data := {
+        add: \(a) = \(b) = (grab a) + b,
+        mul: \(a) = \(b) = (grab a) * b,
+        even: \(a) = (a % 2) == 0,
+        and: \(a) = \(b) = (grab a) && b,
+        or: \(a) = \(b) = (grab a) || b,
+        is_zero: \(a) = a == 0,
+        eq: \(a) = \(b) = (grab a) == b,
+        xy: [x, y],
+        fst: \(xy) = clone(xy[0]),
+        snd: \(xy) = clone(xy[1]),
+    }
+    filter := [
+        ["mul"],
+        ["or"],
+        ["add"],
+        ["and"],
+        ["eq"],
+        ["eq(even(fst(xy)))"],
+        ["add(fst(xy))"],
+        ["mul(fst(xy))"],
+        ["or(even(fst(xy)))"],
+        ["and(is_zero(fst(xy)))"],
+        ["or(is_zero(fst(xy)))"],
+    ]
+    explore := [
+        ["fst", "xy"],
+        ["snd", "xy"],
+        ["even", "fst(xy)"],
+        ["even", "snd(xy)"],
+        ["is_zero", "fst(xy)"],
+        ["is_zero", "snd(xy)"],
+        ["eq", "even(fst(xy))"],
+        ["eq(even(fst(xy)))", "even(snd(xy))"],
+        ["add", "fst(xy)"],
+        ["add(fst(xy))", "snd(xy)"],
+        ["even", "add(fst(xy))(snd(xy))"],
+        ["is_zero", "add(fst(xy))(snd(xy))"],
+        ["mul", "fst(xy)"],
+        ["mul(fst(xy))", "snd(xy)"],
+        ["is_zero", "mul(fst(xy))(snd(xy))"],
+        ["even", "mul(fst(xy))(snd(xy))"],
+        ["or", "even(fst(xy))"],
+        ["or(even(fst(xy)))", "even(snd(xy))"],
+        ["and", "is_zero(fst(xy))"],
+        ["and(is_zero(fst(xy)))", "is_zero(snd(xy))"],
+        ["or", "is_zero(fst(xy))"],
+        ["or(is_zero(fst(xy)))", "is_zero(snd(xy))"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+
+fn wrap_fill__data_explore_filter(mut data: {}, explore: [[str]], filter: [[str]]) -> res[{}] {
+    equivs := []
+    gen := fill(data: mut data, explore: explore, filter: filter, equivs: mut equivs)
+    if len(gen) != 0 {
+        return err(link i {
+            println(link {
+                str(gen[i])": "
+                str(\data[gen[i][0]](data[gen[i][1]]))
+            })
+        })
+    }
+    return ok({
+        data: data,
+        equivs: equivs
+    })
+}
+
+fill__data_explore_filter_equivs(mut data: {}, explore: [[str]], filter: [[str]], mut equivs: [[str]]) = {
+    explore(mut data, explore, mut equivs)
+    gen(data, filter, mut equivs)
+}
+
+filter(gen: [[str]], filter: [[str]]) = sift i {
+    if any j {gen[i] == filter[j]} {continue}
+    clone(gen[i])
+}
+
+key(f, x) = str(link {f"("x")"})
+
+fn explore(mut data: {}, explore: [[str]], mut equivs: [[str]]) {
+    keys := keys(data)
+    for i {
+        key := key(explore[i][0], explore[i][1])
+        if has(data, key) {continue}
+        if !has(data, explore[i][0]) {continue}
+        if !has(data, explore[i][1]) {continue}
+        data[key] := \data[explore[i][0]](data[explore[i][1]])
+    }
+}
+
+fn gen(data: {}, filter: [[str]], mut equivs: [[str]]) -> [[str]] {
+    ret := []
+    keys := keys(data)
+    for i {
+        for j {
+            if any k {(len(filter[k]) == 2) && (filter[k] == [keys[i], keys[j]])} {continue}
+
+            if i != j {
+                same := try data[keys[i]] == data[keys[j]]
+                if is_ok(same) {
+                    if unwrap(same) {
+                        if any k {
+                            (equivs[k] == [keys[i], keys[j]]) || (equivs[k] == [keys[j], keys[i]])
+                        } {continue}
+                        push(mut equivs, [keys[i], keys[j]])
+                    }
+                }
+            }
+
+            r := try \data[keys[i]](data[keys[j]])
+            if is_ok(r) {
+                key := key(keys[i], keys[j])
+
+                if any k {(len(filter[k]) == 1) && (filter[k][0] == keys[i])} {continue}
+
+                if has(data, key) {continue}
+                push(mut ret, [keys[i], keys[j]])
+            }
+        }
+    }
+    return clone(ret)
+}

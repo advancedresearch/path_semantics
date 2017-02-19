@@ -1,10 +1,10 @@
 [package]
-name = "path_semantics-sym_extract"
+name = "path_semantics-category"
 version = "0.1.0"
 
 [dependencies]
 dyon = "0.21.0"
 
 [[bin]]
-name = "sym_extract"
+name = "category"
 path = "src/main.rs"
