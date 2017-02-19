@@ -45,11 +45,6 @@ fill__data_explore_filter_equivs(mut data: {}, explore: [[str]], filter: [[str]]
     gen(data, filter, mut equivs)
 }
 
-filter(gen: [[str]], filter: [[str]]) = sift i {
-    if any j {gen[i] == filter[j]} {continue}
-    clone(gen[i])
-}
-
 key(f, x) = str(link {f"("x")"})
 
 /// Adds objects to category to explore.
