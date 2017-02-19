@@ -1,0 +1,8 @@
+fn main() {
+    category := unwrap(load("src/category.dyon"))
+    main := unwrap(load(
+        source: "src/main.dyon",
+        imports: [category]
+    ))
+    call(main, "main", [])
+}
