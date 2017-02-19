@@ -1,5 +1,5 @@
 fn main() {
-
+    /*
     a := unwrap(test(2, 3))
     b := unwrap(test(3, 3))
     c := unwrap(test(2, 2))
@@ -8,7 +8,25 @@ fn main() {
     f := unwrap(test(1, 0))
     print_data(a)
     c := infer([a.equivs, b.equivs, c.equivs, d.equivs, e.equivs, f.equivs])
+    */
 
+    /*
+    // Lists, including empty.
+    a := unwrap(test([], [1]))
+    b := unwrap(test([1], [2, 3]))
+    c := unwrap(test([2, 4], [8, 1]))
+    d := unwrap(test([8, 1], [2, 4]))
+    print_data(a)
+    c := infer([a.equivs, b.equivs, c.equivs, d.equivs])
+    */
+
+    // Non-empty lists.
+    a := unwrap(test([1], [2, 3]))
+    b := unwrap(test([2, 4], [8, 1, 3]))
+    c := unwrap(test([2, 4, 5], [8, 1, 3]))
+    d := unwrap(test([8, 1, 3], [2, 4, 5]))
+    print_data(a)
+    c := infer([a.equivs, b.equivs, c.equivs, d.equivs])
 
     /*
     v := [0, 1]
@@ -51,6 +69,63 @@ fn print_data(a: {}) {
     println("")
     println("Equivalents:")
     for i {println(link {a.equivs[i][0]" == "a.equivs[i][1]})}
+}
+
+fn test(x, y) -> res[{}] {
+    data := {
+        x: x,
+        y: y,
+        len: \(a) = len(a),
+        add: \(a) = \(b) = (grab a) + b,
+        concat: \(a) = \(b) = {
+            return = grab a
+            for i {push(mut return, b[i])}
+        },
+        sum: \(a) = sum i {a[i]},
+        sum2: \(a) = \(b) = (grab a) + b,
+        min: \(a) = min i {a[i]},
+        min2: \(a) = \(b) = min([grab a, b]),
+        max: \(a) = max i {a[i]},
+        max2: \(a) = \(b) = max([grab a, b]),
+    }
+    filter := [
+        ["add"],
+        ["add(len(x))"],
+        ["concat"],
+        ["concat(x)"],
+        ["min2"],
+        ["min2(min(x))"],
+        ["max2"],
+        ["max2(max(x))"],
+        ["sum2"],
+        ["sum2(sum(x))"],
+    ]
+    explore := [
+        ["len", "x"],
+        ["len", "y"],
+        ["add", "len(x)"],
+        ["add(len(x))", "len(y)"],
+        ["concat", "x"],
+        ["concat(x)", "y"],
+        ["len", "concat(x)(y)"],
+        ["sum", "x"],
+        ["sum", "y"],
+        ["sum", "concat(x)(y)"],
+        ["min", "x"],
+        ["min", "y"],
+        ["min", "concat(x)(y)"],
+        ["min2", "min(x)"],
+        ["min2(min(x))", "min(y)"],
+        ["max", "x"],
+        ["max", "y"],
+        ["max", "concat(x)(y)"],
+        ["max2", "max(x)"],
+        ["max2(max(x))", "max(y)"],
+        ["sum2", "sum(x)"],
+        ["sum2(sum(x))", "sum(y)"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
 }
 
 /*
@@ -120,6 +195,7 @@ fn test(x, y) -> res[{}] {
 }
 */
 
+/*
 fn test(x, y) -> res[{}] {
     data := {
         add: \(a) = \(b) = (grab a) + b,
@@ -173,6 +249,7 @@ fn test(x, y) -> res[{}] {
 
     return wrap_fill(data: mut data, explore: explore, filter: filter)
 }
+*/
 
 fn wrap_fill__data_explore_filter(mut data: {}, explore: [[str]], filter: [[str]]) -> res[{}] {
     equivs := []
