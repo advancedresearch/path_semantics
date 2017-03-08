@@ -3,7 +3,7 @@ name = "path_semantics-category"
 version = "0.1.0"
 
 [dependencies]
-dyon = "0.21.0"
+dyon = "0.24.0"
 
 [[bin]]
 name = "category"

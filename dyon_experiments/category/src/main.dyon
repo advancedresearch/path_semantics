@@ -1,4 +1,9 @@
 fn main() {
+    xs := [0, 1, 2]
+    fs := sift i {unwrap(test(xs[i]))}
+    // print_data(fs[0])
+    c := infer(sift i {fs[i].equivs})
+
     /*
     a := unwrap(test(2, 3))
     b := unwrap(test(3, 3))
@@ -41,6 +46,7 @@ fn main() {
     c := infer(r)
     */
 
+    /*
     // `sin(x)` is approximately equal to `x` when near 0.
     input := [-0.2, -0.1, 0, 0.1, 0.2]
     a := {}
@@ -49,6 +55,7 @@ fn main() {
         a = unwrap(test(input[i], eps))
         a.equivs
     })
+    */
 
     if len(c) > 0 {
         println("========== Found equivalences!!! ==========\n")
@@ -59,6 +66,58 @@ fn main() {
     }
 }
 
+fn test(x) -> res[{}] {
+    data := {
+        x: x,
+        cos: \(x) = cos(x),
+        sin: \(x) = sin(x),
+        two: 2,
+        mul: \(a) = \(b) = (grab a) * b,
+        sub: \(a) = \(b) = (grab a) - b,
+        approx_eq: \(eps) = \(a) = \(b) = abs((grab a) - b) < (grab '2 eps),
+        eps: 0.00001,
+        t: true,
+    }
+    filter := [
+        ["cos"],
+        ["sin"],
+        ["mul"],
+        ["mul(two)"],
+        ["mul(cos(x))"],
+        ["mul(sin(x))"],
+        ["sub"],
+        ["approx_eq"],
+        ["approx_eq(eps)"],
+        ["approx_eq(eps)(sin(mul(two)(x)))"],
+        ["approx_eq(eps)(cos(mul(two)(x)))"],
+        ["sub(mul(cos(x))(cos(x)))"],
+    ]
+    explore := [
+        ["cos", "x"],
+        ["sin", "x"],
+        ["mul", "two"],
+        ["mul", "cos(x)"],
+        ["mul(two)", "x"],
+        ["cos", "mul(two)(x)"],
+        ["sin", "mul(two)(x)"],
+        ["mul(cos(x))", "sin(x)"],
+        ["mul(two)", "mul(cos(x))(sin(x))"],
+        ["approx_eq", "eps"],
+        ["approx_eq(eps)", "sin(mul(two)(x))"],
+        ["approx_eq(eps)(sin(mul(two)(x)))", "mul(two)(mul(cos(x))(sin(x)))"],
+        ["mul(cos(x))", "cos(x)"],
+        ["mul", "sin(x)"],
+        ["mul(sin(x))", "sin(x)"],
+        ["sub", "mul(cos(x))(cos(x))"],
+        ["sub(mul(cos(x))(cos(x)))", "mul(sin(x))(sin(x))"],
+        ["approx_eq(eps)", "cos(mul(two)(x))"],
+        ["approx_eq(eps)(cos(mul(two)(x)))", "sub(mul(cos(x))(cos(x)))(mul(sin(x))(sin(x)))"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+
+/*
 fn test(x, eps) -> res[{}] {
     data := {
         x: x,
@@ -100,6 +159,7 @@ fn test(x, eps) -> res[{}] {
 
     return wrap_fill(data: mut data, explore: explore, filter: filter)
 }
+*/
 
 /*
 fn test(x, y) -> res[{}] {
