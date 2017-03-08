@@ -1,8 +1,15 @@
 fn main() {
+    xs := [[0, 1], [1, 0], [0, 2], [1, 2], [2, 1], [2, 3]]
+    fs := sift i {unwrap(test(xs[i][0], xs[i][1]))}
+    // print_data(fs[4])
+    c := infer(sift i {fs[i].equivs})
+
+    /*
     xs := [0, 1, 2]
     fs := sift i {unwrap(test(xs[i]))}
     // print_data(fs[0])
     c := infer(sift i {fs[i].equivs})
+    */
 
     /*
     a := unwrap(test(2, 3))
@@ -66,6 +73,69 @@ fn main() {
     }
 }
 
+// prime under multiplication.
+fn test(x, y) -> res[{}] {
+    data := {
+        mul: \(a) = \(b) = (grab a) * b,
+        is_prime: \(a) = if a < 2 {false} else {true && all i [2, a) {(a % i) != 0}},
+        is_one: \(a) = a == 1,
+        or: \(a) = \(b) = (grab a) || b,
+        and: \(a) = \(b) = (grab a) && b,
+        imp: \(a) = \(b) = if grab a {clone(b)} else {true},
+        eq: \(a) = \(b) = (grab a) == b,
+        not: \(a) = !a,
+        t: true,
+        x: x,
+        y: y,
+    }
+    filter := [
+        ["mul"],
+        ["mul(x)"],
+        ["or"],
+        ["or(is_one(x))"],
+        ["or(is_prime(x))"],
+        ["and"],
+        ["and(is_one(x))"],
+        ["and(is_prime(x))"],
+        ["imp"],
+        ["eq"],
+        ["eq(is_prime(y))"],
+        ["imp(is_one(x))"],
+        ["not"],
+        ["imp(not(is_one(y)))"],
+    ]
+    explore := [
+        ["is_prime", "x"],
+        ["is_prime", "y"],
+        ["mul", "x"],
+        ["mul(x)", "y"],
+        ["is_prime", "mul(x)(y)"],
+        ["is_one", "x"],
+        ["is_one", "y"],
+        ["is_one", "mul(x)(y)"],
+        ["or", "is_one(x)"],
+        ["or(is_one(x))", "is_one(y)"],
+        ["or", "is_prime(x)"],
+        ["or(is_prime(x))", "is_one(y)"],
+        ["and", "is_one(x)"],
+        ["and", "is_prime(x)"],
+        ["and(is_one(x))", "is_prime(y)"],
+        ["and(is_one(x))", "is_one(y)"],
+        ["and(is_prime(x))", "is_one(y)"],
+        ["and(is_prime(x))", "is_prime(y)"],
+        ["imp", "is_one(x)"],
+        ["eq", "is_prime(y)"],
+        ["eq(is_prime(y))", "is_prime(mul(x)(y))"],
+        ["imp(is_one(x))", "eq(is_prime(y))(is_prime(mul(x)(y)))"],
+        ["not", "is_one(y)"],
+        ["imp", "not(is_one(y))"],
+        ["imp(not(is_one(y)))", "eq(is_prime(y))(is_prime(mul(x)(y)))"],
+    ]
+
+    return wrap_fill(data: mut data, explore: explore, filter: filter)
+}
+
+/*
 fn test(x) -> res[{}] {
     data := {
         x: x,
@@ -116,6 +186,7 @@ fn test(x) -> res[{}] {
 
     return wrap_fill(data: mut data, explore: explore, filter: filter)
 }
+*/
 
 /*
 fn test(x, eps) -> res[{}] {
