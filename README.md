@@ -1,7 +1,8 @@
 # path_semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
-[Tutorial](https://github.com/bvssvni/path_semantics/wiki/Tutorial-1:-Types)
+[Tutorial](https://github.com/bvssvni/path_semantics/wiki/Tutorial-1:-Types)  
+[A brief history of path semantics illustrated with stick figures](https://github.com/bvssvni/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 
 ### What is path semantics?
 
@@ -17,11 +18,13 @@ A new *kind* of programming language.
 The project is about defining a new category of programming languages that satisfy a different method of expression compared to traditional languages.
 The ideas are original, but inspired by recent advancement in type theory.
 
-A short term goal is refining the semantics to satisfy the axioms.
-Because it is based on a new method for type membership, it is easy to introduce inconsistency by applying existing techniques without testing.
+Goals:
 
-A long term goal is to develop an interpreter and type system.
-This is a very challenging problem, partly because the technique used can require execution to resolve function lookup.
+- Create efficient algorithms that find paths
+- Find deductive rules
+- Find rules for well formed expressions
+- Find applicable areas (machine learning etc.)
+- Find generalizations (probability theory etc.)
 
 ### Previous work
 
