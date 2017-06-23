@@ -1,0 +1,298 @@
+/*
+A Dyon script to help proving stuff with Boolean algebra.
+*/
+
+fn main() {
+
+    // if a {if b {even(x)} else {¬even(x)}}
+	// else {if b {¬even(x)} else {even(x) && x ¬= 0)}}
+    expr := if_expr("a", if_expr("b", "even(x)", not_expr("even(x)")),
+                         if_expr("b", not_expr("even(x)"),
+                                      and_expr("even(x)", not_expr("x == 0"))))
+
+    expr.tr = unwrap(eq_if(expr.tr))
+    print_expr(expr)
+
+    // if x == 0 { a && b } else { (a == b) == even(x) }
+    expr2 := if_expr("x == 0", and_expr("a", "b"),
+                     eq_expr(eq_expr("a", "b"), "even(x)"))
+
+    /*
+    expr := and_expr("a", "b")
+    expr = unwrap(invert_and(expr))
+    expr = unwrap(reverse_or(expr))
+    print_expr(expr)
+    */
+
+    args := {a: false, b: false, "even(x)": true, "x == 0": true}
+    // 0 0 0 0 = 0 0
+    // 0 0 0 1 = 0 0 ~
+    // 0 0 1 0 = 1 1
+    // 0 0 1 1 = 0 0
+    // 0 1 0 0 = 1 1
+    // 0 1 0 1 = 1 0 ~
+    // 0 1 1 0 = 0 0
+    // 0 1 1 1 = 0 0
+    // 1 0 0 0 = 1 1
+    // 1 0 0 1 = 1 0 ~
+    // 1 0 1 0 = 0 0
+    // 1 0 1 1 = 0 0
+    // 1 1 0 0 = 0 0
+    // 1 1 0 1 = 0 1 ~
+    // 1 1 1 0 = 1 1
+    // 1 1 1 1 = 1 1
+    println(eval(expr, args))
+    println(eval(expr2, args))
+
+    /*
+    a := true
+    b := true
+    c := true
+    println((a == b) == c)
+    println(a == (b == c))
+    */
+}
+
+fn eval(expr, args: {}) -> bool {
+    return if typeof(expr) == "string" {
+        clone(args[expr])
+    } else if expr.ty == "and" {
+        eval(expr.left, args) && eval(expr.right, args)
+    } else if expr.ty == "or" {
+        eval(expr.left, args) || eval(expr.right, args)
+    } else if expr.ty == "not" {
+        !eval(expr.arg, args)
+    } else if expr.ty == "if" {
+        if eval(expr.cond, args) {eval(expr.tr, args)} else {eval(expr.fa, args)}
+    } else if expr.ty == "eq" {
+        eval(expr.left, args) == eval(expr.right, args)
+    } else if expr.ty == "xor" {
+        eval(expr.left, args) ^ eval(expr.right, args)
+    }
+}
+
+and_expr(a, b) = {ty: "and", left: clone(a), right: clone(b)}
+or_expr(a, b) = {ty: "or", left: clone(a), right: clone(b)}
+not_expr(a) = {ty: "not", arg: clone(a)}
+if_expr(a, b, c) = {ty: "if", cond: clone(a), tr: clone(b), fa: clone(c)}
+eq_expr(a, b) = {ty: "eq", left: clone(a), right: clone(b)}
+xor_expr(a, b) = {ty: "xor", left: clone(a), right: clone(b)}
+
+/// Reduces `if a {b} else {!b}` to `a == b`
+fn eq_if(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "if") &&
+              (typeof(expr.fa) != "string") &&
+              (expr.fa.ty == "not") &&
+              (typeof(expr.tr) == typeof(expr.fa.arg)) {
+        some(eq_expr(expr.cond, expr.tr))
+    } else {
+        none()
+    }
+}
+
+fn reverse_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "not") &&
+              (typeof(expr.arg) != "string") &&
+              (expr.arg.ty == "or") &&
+              (typeof(expr.arg.left) != "string") &&
+              (expr.arg.left.ty == "not") &&
+              (typeof(expr.arg.right) != "string") &&
+              (expr.arg.right.ty == "not") {
+        some(and_expr(expr.arg.left.arg, expr.arg.right.arg))
+    } else {
+        none()
+    }
+}
+
+fn simplify_not(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "not") &&
+              (typeof(expr.arg) != "string") &&
+              (expr.arg.ty == "not") {
+        some(expr.arg.arg)
+    } else {
+        none()
+    }
+}
+
+fn simplify_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") &&
+              (expr.left == expr.right) {
+        some(expr.left)
+    } else {
+        none()
+    }
+}
+
+fn invert_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") {
+        some(not_expr(or_expr(not_expr(expr.left), not_expr(expr.right))))
+    } else {
+        none()
+    }
+}
+
+fn swap_and_left_right(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") &&
+              (typeof(expr.left) != "string") &&
+              (expr.left.ty == "and") {
+        some(and_expr(and_expr(expr.left.left, expr.right), expr.left.right))
+    } else {
+        none()
+    }
+}
+
+fn invert_not_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "not") &&
+              (typeof(expr.arg) != "string") &&
+              (expr.arg.ty == "and") {
+        some(or_expr(not_expr(expr.arg.left), not_expr(expr.arg.right)))
+    } else {
+        none()
+    }
+}
+
+// Simplifies `a & !a & c` to `a & !a`
+fn tautology_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") &&
+              (typeof(expr.left) != "string") &&
+              (expr.left.ty == "and") &&
+              (typeof(expr.left.right) != "string") &&
+              (expr.left.right.ty == "not") &&
+              (typeof(expr.left.left) == typeof(expr.left.right.arg)) &&
+              (expr.left.left == expr.left.right.arg) {
+        some(expr.left)
+    } else {
+        none()
+    }
+}
+
+fn simplify_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "or") &&
+              (expr.left == expr.right) {
+        some(clone(expr.left))
+    } else {
+        none()
+    }
+}
+
+// Simplifies `a & !a | b` to `b`.
+fn tautology_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "or") &&
+              (typeof(expr.left) != "string") &&
+              (expr.left.ty == "and") &&
+              (typeof(expr.left.right) != "string") &&
+              (expr.left.right.ty == "not") &&
+              (typeof(expr.left.left) == typeof(expr.left.right.arg)) &&
+              (expr.left.left == expr.left.right.arg) {
+        some(expr.right)
+    } else {
+        none()
+    }
+}
+
+fn invert_not_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "not") &&
+              (typeof(expr.arg) != "string") &&
+              (expr.arg.ty == "or") {
+        some(and_expr(not_expr(expr.arg.left), not_expr(expr.arg.right)))
+    } else {
+        none()
+    }
+}
+
+fn invert_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "or") {
+        some(not_expr(and_expr(not_expr(expr.left), not_expr(expr.right))))
+    } else {
+        none()
+    }
+}
+
+fn expand_if(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "if") {
+        some(and_expr(or_expr(not_expr(expr.cond), expr.tr),
+                      or_expr(expr.cond, expr.fa)))
+    } else {
+        none()
+    }
+}
+
+fn expand_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") &&
+              (typeof(expr.left) != "string") &&
+              (expr.left.ty == "or") {
+        some(or_expr(and_expr(expr.left.left, expr.right),
+                     and_expr(expr.left.right, expr.right)))
+    } else {
+        none()
+    }
+}
+
+fn split_or(expr) -> opt[[]] {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "or") {
+        some([clone(expr.left), clone(expr.right)])
+    } else {
+        none()
+    }
+}
+
+fn swap_and(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "and") {
+        some(and_expr(expr.right, expr.left))
+    } else {
+        none()
+    }
+}
+
+fn swap_or(expr) -> opt {
+    return if (typeof(expr) != "string") &&
+              (expr.ty == "or") {
+        some(or_expr(expr.right, expr.left))
+    } else {
+        none()
+    }
+}
+
+fn link_expr(expr, old_tabs: f64) -> link {
+    t := link i old_tabs {" "}
+    tm := link i old_tabs-2 {" "}
+    tabs := old_tabs + 2
+    return if typeof(expr) == "string" {
+        link {expr}
+    } else if typeof(expr) == "array" {
+        link {"[]\n"t link_expr(expr[0], tabs)"\n"t link_expr(expr[1], tabs)}
+    } else if expr.ty == "if" {
+        link {"if "link_expr(expr.cond, tabs)" {\n"
+                t link_expr(expr.tr, tabs)"\n"tm"} else {\n"t link_expr(expr.fa, tabs)"\n"tm"}"}
+    } else if expr.ty == "and" {
+        link {"&&\n"t link_expr(expr.left, tabs)"\n"t link_expr(expr.right, tabs)}
+    } else if expr.ty == "or" {
+        link {"||\n"t link_expr(expr.left, tabs)"\n"t link_expr(expr.right, tabs)}
+    } else if expr.ty == "xor" {
+        link {"xor\n"t link_expr(expr.left, tabs)"\n"t link_expr(expr.right, tabs)}
+    } else if expr.ty == "eq" {
+        link {"==\n"t link_expr(expr.left, tabs)"\n"t link_expr(expr.right, tabs)}
+    } else if expr.ty == "not" {
+        link {"!\n"t link_expr(expr.arg, tabs)}
+    }
+}
+
+fn print_expr(expr) {
+    println(link_expr(expr, 2))
+}
