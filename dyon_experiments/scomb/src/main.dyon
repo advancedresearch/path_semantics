@@ -1,0 +1,58 @@
+fn main() {
+    /*
+    // λf.((λx.x x)(λx.f (x x)))
+    y := \(f) = {
+        x := \(x) = \x(x)
+        \(x) = {
+            f := grab f
+            \f(\x(x))
+        }
+    }
+    a := \y(\(f) = \(ind) = {
+        println(ind)
+        if ind > 0 {
+            f := grab f
+            y := grab '2 y
+            println(f)
+            println(\f(y))
+        }
+        3
+    })
+    b := \a(y)
+    // println(b)
+    println(\b(1))
+    */
+
+    h := \(x, ind) = {
+        // println(ind)
+        if ind == 1 {
+            1
+        } else {
+            collatz := if (ind % 2) == 0 {ind / 2} else {3 * ind + 1}
+            ind + \x(collatz)
+        }
+    }
+
+    h := \(self, n) = {
+        if n == 0 {0} else if n == 1 {1} else {\self(n-1) + \self(n-2)}
+    }
+
+    sc := \(sc, f) = \(n) = {
+            sc := grab sc
+            f := grab f
+            \f(\sc(sc, f), n)
+        }
+
+    // First you create the combinator.
+    // println(a)
+
+    // Then you pass the combinator to itself.
+    b := \sc(sc, h)
+    // println(b)
+
+    // Then you pass the value you want to compute.
+    for i [1, 10) {
+        println(\b(i))
+    }
+    println(\b(20))
+}
