@@ -1,0 +1,10 @@
+[package]
+name = "scomb"
+version = "0.1.0"
+authors = ["Sven Nilsen <bvssvni@gmail.com>"]
+
+[[bin]]
+name = "scomb"
+
+[dependencies]
+dyon = "0.24.5"
