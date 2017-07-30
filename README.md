@@ -9,7 +9,16 @@ A research project in path semantics, a re-interpretation of functions for expre
 Functional programming has been an active research area for [dependently types](https://en.wikipedia.org/wiki/Dependent_type).
 In this notation, a new semantics that re-interprets functions takes a step beyond dependently types.
 
-See the [wiki](https://github.com/bvssvni/path_semantics/wiki) for more information.
+Very briefly, path semantics is about things like:
+
+- How functions are constructed and connected
+- How to express relationships between functions in a more strict way than equations
+- What can be predicted about output of functions from something about the input
+- What it means to refer to a function (function identity)
+- What you can do with functions, given some class of knowledge about them is available
+- What kind of structures are related to some class of functions
+
+See the [wiki](https://github.com/advancedresearch/path_semantics/wiki) for more information.
 
 ### Is this a new programming language?
 
