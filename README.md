@@ -6,6 +6,8 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 ### What is path semantics?
 
+Here is a cheat sheet to show how it looks like: [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
+
 Functional programming has been an active research area for [dependently types](https://en.wikipedia.org/wiki/Dependent_type).
 In this notation, a new semantics that re-interprets functions takes a step beyond dependently types.
 
