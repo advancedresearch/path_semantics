@@ -8,7 +8,13 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 By purchasing this T-shirt, you support the research on path semantics:
 
+#### Man Basic T-Shirt
+
  <div style="text-align:center;line-height:150%"> <a href="https://www.zazzle.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-235515100047304821?rf=238435142389717543" rel="nofollow" > <img src="https://rlv.zcache.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-r372977b0e3b944e5965727f02d403d40_k2gmx_325.jpg?bg=0xffffff" alt="Perfectly Intelligent Given Perfect Knowledge T-Shirt" style="border:0;" /> </a> <br /> <a href="https://www.zazzle.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-235515100047304821?rf=238435142389717543" rel="nofollow" >Perfectly Intelligent Given Perfect Knowledge T-Shirt</a> <br />by <a href="https://www.zazzle.com/bvssvni?rf=238435142389717543" rel="nofollow">bvssvni</a> </div>
+
+#### Woman Basic T-Shirt
+
+ <div style="text-align:center;line-height:150%"> <a href="https://www.zazzle.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-235236917750244863?rf=238435142389717543" rel="nofollow" > <img src="https://rlv.zcache.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-r387d2ec7847b4f648f6b4540eefa7851_k2gmm_325.jpg?bg=0xffffff" alt="Perfectly Intelligent Given Perfect Knowledge T-Shirt" style="border:0;" /> </a> <br /> <a href="https://www.zazzle.com/perfectly_intelligent_given_perfect_knowledge_t_shirt-235236917750244863?rf=238435142389717543" rel="nofollow" >Perfectly Intelligent Given Perfect Knowledge T-Shirt</a> <br />by <a href="https://www.zazzle.com/bvssvni?rf=238435142389717543" rel="nofollow">bvssvni</a> </div>
 
 ### What is path semantics?
 
