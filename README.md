@@ -6,6 +6,9 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 ### Get Your "Perfectly Intelligent Given Perfect Knowledge" T-Shirt Today!
 
+A T-shirt design with printed symbols `∃f{}` (read out loud as "universal existential path").
+It is a higher order concept, a kind of mathematical superpower, which hypothetically might be used to solve problems with optimal efficiency. With other words, it makes you perfect intelligent given perfect knowledge about a problem.
+
 By purchasing this T-shirt, you support the research on path semantics:
 
 #### Man Basic T-Shirt
