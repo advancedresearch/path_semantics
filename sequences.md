@@ -8,7 +8,10 @@ This is a collection of papers organized in a way to build up gradually understa
 - [History of Path Semantics (Illustrated With Stick Figures)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 - [Goals of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/goals-of-path-semantics.pdf)
-- [Path Semantics (Introduction to Fundamentals)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)
+
+### Foundation
+
+- [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)
 
 ### Discrete Path Semantics
 
