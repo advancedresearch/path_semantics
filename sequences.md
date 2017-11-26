@@ -42,6 +42,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Alphabetic List of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-functions.pdf)
 - [Alphabetic List of Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-paths.pdf)
 - [Alphabetic List of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-existential-paths.pdf)
+- [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
 
 ### Concepts in Path Semantics
 
@@ -54,6 +55,8 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Inverse Zero Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inverse-zero-order-existential-paths.pdf)
 - [Structure Preserving Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/structure-preserving-functions.pdf)
 - [Variables as Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/variables-as-path.pdf)
+- [Conditions (Universal Existential Path is the Opposite Concept of Function Composition That Construct Ordinary Conditions)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-path-is-the-opposite-concept-of-function-composition-that-constructs-ordinary-conditions.pdf)
+- [Intervals on Projective Reals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/intervals-on-projective-reals.pdf)
 
 ### Probabilistic Path Semantics
 
@@ -85,6 +88,8 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Quality of Search Data for Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quality-of-search-data-for-paths.pdf)
 - [Solvable Equations = Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solvable-equations-are-functions.pdf)
 - [Machine Learning of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/machine-learning-of-existential-paths.pdf)
+- [Law of Sub-Type Extension](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-sub-type-extension.pdf)
+- [Law of Sub-Type Reduction by Transitivity Variable Elimination](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-sub-type-reduction-by-transitivity-variable-elimination.pdf)
 
 ### Slot Lambda Calculus
 
@@ -97,6 +102,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Perfect Prime Predictors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/perfect-prime-predictors.pdf)
 - [Perfect Physical Predictors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/perfect-physical-predictors.pdf)
 - [Theorem Prover Combinators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/theorem-prover-combinators.pdf)
+- [Efficient Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-sets.pdf)
 
 ### Artificial Intelligence
 
@@ -118,3 +124,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Differential Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/differential-existential-paths.pdf)
 - [Homotopy Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-sub-types.pdf)
 - [Properties of Consciousness, Qualia and Self-Reflection by Intentional Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/properties-of-consciousness-qualia-and-self-reflection-by-intentional-paths.pdf)
+
+### Non-Deterministic Path Semantics
+
+- [Current Object Constrain Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/current-object-constraint-notation.pdf)
