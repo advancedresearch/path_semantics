@@ -130,3 +130,4 @@ This is a collection of papers organized in a way to build up gradually understa
 ### Non-Deterministic Path Semantics
 
 - [Current Object Constrain Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/current-object-constraint-notation.pdf)
+- [Existential Paths of Function Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-function-sets.pdf)
