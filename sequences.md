@@ -117,6 +117,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Three Expectations of Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/three-expectations-of-intelligence.pdf)
 - [Constructive Utility Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-utility-functions.pdf)
 - [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
+- [Rational Natural Morality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-natural-morality.pdf)
 
 ### Esoteric Path Semantics
 
