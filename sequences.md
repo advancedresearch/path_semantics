@@ -91,6 +91,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Machine Learning of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/machine-learning-of-existential-paths.pdf)
 - [Law of Sub-Type Extension](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-sub-type-extension.pdf)
 - [Law of Sub-Type Reduction by Transitivity Variable Elimination](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-sub-type-reduction-by-transitivity-variable-elimination.pdf)
+- [Proof of Exclusiveness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-exclusiveness.pdf)
 
 ### Slot Lambda Calculus
 
