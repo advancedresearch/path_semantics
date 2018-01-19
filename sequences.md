@@ -122,6 +122,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
 - [Rational Natural Morality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-natural-morality.pdf)
 - [Self Rationality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/self-rationality.pdf)
+- [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
 
 ### Esoteric Path Semantics
 
