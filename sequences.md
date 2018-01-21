@@ -123,6 +123,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Rational Natural Morality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-natural-morality.pdf)
 - [Self Rationality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/self-rationality.pdf)
 - [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
+- [Proof of Minimal Interference by Super-Intelligent Zen Rational Agents](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-minimal-interference-by-super-intelligent-zen-rational-agents.pdf)
 
 ### Esoteric Path Semantics
 
