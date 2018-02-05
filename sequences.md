@@ -59,6 +59,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Conditions (Universal Existential Path is the Opposite Concept of Function Composition That Construct Ordinary Conditions)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-path-is-the-opposite-concept-of-function-composition-that-constructs-ordinary-conditions.pdf)
 - [Intervals on Projective Reals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/intervals-on-projective-reals.pdf)
 - [Entangled Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions.pdf)
+- [Entangled Functions in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions-in-boolean-algebra.pdf)
 
 ### Probabilistic Path Semantics
 
