@@ -96,6 +96,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Proof of Exclusiveness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-exclusiveness.pdf)
 - [Havox diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/havox-diagrams.pdf)
 - [Surprising Strong Assumptions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/surprising-strong-assumptions.pdf)
+- [Context Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/context-theorem-proving.pdf)
 
 ### Slot Lambda Calculus
 
