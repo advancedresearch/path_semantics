@@ -60,6 +60,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Intervals on Projective Reals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/intervals-on-projective-reals.pdf)
 - [Entangled Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions.pdf)
 - [Entangled Functions in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions-in-boolean-algebra.pdf)
+- [Law of Excluded Middle in Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-excluded-middle-in-havox-diagrams.pdf)
 
 ### Probabilistic Path Semantics
 
