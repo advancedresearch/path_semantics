@@ -141,6 +141,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Homotopy Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-sub-types.pdf)
 - [Properties of Consciousness, Qualia and Self-Reflection by Intentional Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/properties-of-consciousness-qualia-and-self-reflection-by-intentional-paths.pdf)
 - [Abstract Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-sub-types.pdf)
+- [Abstract Assertions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-assertions.pdf)
 
 ### Non-Deterministic Path Semantics
 
