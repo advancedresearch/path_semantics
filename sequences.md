@@ -98,6 +98,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Havox diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/havox-diagrams.pdf)
 - [Surprising Strong Assumptions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/surprising-strong-assumptions.pdf)
 - [Context Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/context-theorem-proving.pdf)
+- [Detecting Relevant Arguments in Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/detecting-relevant-arguments-in-boolean-functions.pdf)
 
 ### Slot Lambda Calculus
 
