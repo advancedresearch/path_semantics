@@ -123,6 +123,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Unbiased Prior Belief of Normalized Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unbiased-prior-belief-of-normalized-utility.pdf)
 - [Functional Decision Theory in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/functional-decision-theory-in-path-semantics.pdf)
 - [`P = NP` Relative to Universal Existential Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/p-vs-np-relative-to-universal-existential-path.pdf)
+- [Least Surprised Algorithm](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/least-surprised-algorithm.pdf)
 - [Three Expectations of Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/three-expectations-of-intelligence.pdf)
 - [Constructive Utility Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-utility-functions.pdf)
 - [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
