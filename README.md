@@ -4,6 +4,7 @@ A research project in path semantics, a re-interpretation of functions for expre
 - [Tutorial](https://github.com/bvssvni/path_semantics/wiki/Tutorial-1:-Types)  
 - [A brief history of path semantics illustrated with stick figures](https://github.com/bvssvni/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [Reading sequences for learning path semantics](./sequences.md)
+- [Mathematical Workflow Visualized](./workflow.md)
 
 Blog posts:
 
