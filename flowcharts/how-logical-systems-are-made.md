@@ -1,6 +1,6 @@
-# How logical systems are created
+# How logical systems are made
 
-![How logical systems are created](./how-logical-systems-are-created.svg)
+![How logical systems are made](./how-logical-systems-are-made.svg)
 
 This diagram was generated using [svgbobrus](https://github.com/ivanceras/svgbobrus) using the following source:
 
