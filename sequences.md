@@ -132,6 +132,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
 - [Proof of Minimal Interference by Super-Intelligent Zen Rational Agents](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-minimal-interference-by-super-intelligent-zen-rational-agents.pdf)
 - [Zen Rationality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality.pdf)
+- [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
 
 ### Esoteric Path Semantics
 
