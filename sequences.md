@@ -113,6 +113,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Perfect Physical Predictors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/perfect-physical-predictors.pdf)
 - [Theorem Prover Combinators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/theorem-prover-combinators.pdf)
 - [Efficient Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-sets.pdf)
+- [Universally Optimal Compression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universally-optimal-compression.pdf)
 
 ### Artificial Intelligence
 
