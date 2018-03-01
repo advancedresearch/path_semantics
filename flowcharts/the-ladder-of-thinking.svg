@@ -1,0 +1,127 @@
+<svg class="bob" font-family="arial" font-size="14" height="512" width="456" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="triangle" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="15" refY="10" viewBox="0 0 50 20">
+<path d="M 0 0 L 30 10 L 0 20 z"/>
+</marker>
+</defs>
+<style>
+
+    line, path {
+      stroke: black;
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+    circle {
+      stroke: black;
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+    circle.solid {
+      fill:black;
+    }
+    circle.open {
+      fill:transparent;
+    }
+    tspan.head{
+        fill: none;
+        stroke: none;
+    }
+    
+</style>
+<path d=" M 16 64 A 16 16 0 0 0 16 80 M 16 64 A 16 16 0 0 0 16 80 M 144 80 A 16 16 0 0 0 144 64 M 144 80 A 16 16 0 0 0 144 64 M 20 88 L 16 80 M 20 88 L 16 96 M 32 88 L 20 88 M 32 88 L 40 88 M 32 88 L 40 88 L 48 88 M 40 88 L 48 88 L 56 88 M 48 88 L 56 88 L 64 88 M 56 88 L 64 88 L 72 88 M 64 88 L 72 88 L 80 88 M 72 88 L 80 88 L 88 88 M 80 88 L 88 88 L 96 88 M 88 88 L 96 88 L 104 88 M 96 88 L 104 88 L 112 88 M 104 88 L 112 88 L 120 88 M 112 88 L 120 88 L 140 88 M 120 88 L 140 88 M 128 88 L 140 88 L 144 80 M 140 88 L 144 96 M 16 96 A 16 16 0 0 0 16 112 M 16 96 A 16 16 0 0 0 16 112 M 144 112 A 16 16 0 0 0 144 96 M 144 112 A 16 16 0 0 0 144 96 M 20 120 L 16 112 M 20 120 L 16 128 M 32 120 L 20 120 M 32 120 L 40 120 M 32 120 L 40 120 L 48 120 M 40 120 L 48 120 L 56 120 M 48 120 L 56 120 L 64 120 M 56 120 L 64 120 L 72 120 M 64 120 L 72 120 L 80 120 M 72 120 L 80 120 L 88 120 M 80 120 L 88 120 L 96 120 M 88 120 L 96 120 L 104 120 M 96 120 L 104 120 L 112 120 M 104 120 L 112 120 L 120 120 M 112 120 L 120 120 L 140 120 M 120 120 L 140 120 M 128 120 L 140 120 L 144 112 M 140 120 L 144 128 M 16 128 A 16 16 0 0 0 16 144 M 16 128 A 16 16 0 0 0 16 144 M 144 144 A 16 16 0 0 0 144 128 M 144 144 A 16 16 0 0 0 144 128 M 20 152 L 16 144 M 20 152 L 16 160 M 32 152 L 20 152 M 32 152 L 40 152 M 32 152 L 40 152 L 48 152 M 40 152 L 48 152 L 56 152 M 48 152 L 56 152 L 64 152 M 56 152 L 64 152 L 72 152 M 64 152 L 72 152 L 80 152 M 72 152 L 80 152 L 88 152 M 80 152 L 88 152 L 96 152 M 88 152 L 96 152 L 104 152 M 96 152 L 104 152 L 112 152 M 104 152 L 112 152 L 120 152 M 112 152 L 120 152 L 140 152 M 120 152 L 140 152 M 128 152 L 140 152 L 144 144 M 140 152 L 144 160 M 16 160 A 16 16 0 0 0 24 184 M 16 160 A 16 16 0 0 0 24 184 M 136 184 A 16 16 0 0 0 144 160 M 136 184 A 16 16 0 0 0 144 160 M 340 160 L 340 176 M 340 160 L 340 176 M 24 184 L 32 184 M 24 184 L 32 184 L 40 184 M 32 184 L 40 184 L 48 184 M 40 184 L 48 184 L 56 184 M 48 184 L 56 184 L 64 184 M 56 184 L 64 184 L 72 184 M 64 184 L 72 184 L 80 184 M 72 184 L 80 184 L 88 184 M 80 184 L 88 184 L 96 184 M 88 184 L 96 184 L 104 184 M 96 184 L 104 184 L 112 184 M 104 184 L 112 184 L 120 184 M 112 184 L 120 184 L 128 184 M 120 184 L 128 184 L 136 184 M 128 184 L 136 184" fill="none"/>
+<path d="" fill="none" stroke-dasharray="3 3"/>
+<line marker-end="url(#triangle)" x1="284" x2="284" y1="96" y2="124"/>
+<line marker-end="url(#triangle)" x1="284" x2="284" y1="96" y2="124"/>
+<line marker-end="url(#triangle)" x1="284" x2="284" y1="112" y2="124"/>
+<line marker-end="url(#triangle)" x1="340" x2="340" y1="160" y2="148"/>
+<text x="33" y="76">
+...
+</text>
+<text x="33" y="108">
+semantics
+</text>
+<text x="177" y="108">
+language
+</text>
+<text x="321" y="124">
+ideas
+</text>
+<text x="177" y="140">
+theories
+</text>
+<text x="257" y="156">
+problems
+</text>
+<text x="177" y="172">
+programs
+</text>
+<text x="9" y="28">
+THE LADDER OF THINKING
+</text>
+<text x="9" y="44">
+by Sven Nilsen, 2018
+</text>
+<text x="177" y="76">
+abstract thinking
+</text>
+<text x="33" y="140">
+proof
+</text>
+<text x="33" y="172">
+computation
+</text>
+<text x="9" y="220">
+A program reads instructions and
+</text>
+<text x="9" y="236">
+makes changes in memory. It must be told
+</text>
+<text x="9" y="252">
+exactly what to do and in which order.
+</text>
+<text x="9" y="284">
+A theory modeled as assumptions in logic
+</text>
+<text x="9" y="300">
+makes it possible to answer questions we
+</text>
+<text x="9" y="316">
+not yet have imagined. It is more powerful
+</text>
+<text x="9" y="332">
+than computation, but also much slower.
+</text>
+<text x="9" y="364">
+A language consists of more than grammar.
+</text>
+<text x="9" y="380">
+What it means is even more important.
+</text>
+<text x="9" y="396">
+It is used to point to something yet to be known,
+</text>
+<text x="9" y="412">
+or coordinate actions when interacting with the world.
+</text>
+<text x="9" y="444">
+The higher we climb, the harder it gets to
+</text>
+<text x="9" y="460">
+understand what we are doing. This is because
+</text>
+<text x="9" y="476">
+each added layer is used to understand the one
+</text>
+<text x="9" y="492">
+below it. Sometimes, creating a model of what
+</text>
+<text x="9" y="508">
+we are thinking about helps to see the problems.
+</text>
+</svg>
