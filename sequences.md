@@ -134,6 +134,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Proof of Minimal Interference by Super-Intelligent Zen Rational Agents](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-minimal-interference-by-super-intelligent-zen-rational-agents.pdf)
 - [Zen Rationality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality.pdf)
 - [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
+- [Zen Robots Believe Humans are Useless but Feel Bad About It](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-robots-believe-humans-are-useless-but-feel-bad-about-it.pdf)
 
 ### Esoteric Path Semantics
 
