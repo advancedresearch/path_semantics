@@ -136,6 +136,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Zen Rationality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality.pdf)
 - [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
 - [Zen Robots Believe Humans are Useless but Feel Bad About It](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-robots-believe-humans-are-useless-but-feel-bad-about-it.pdf)
+- [Absolute Truth in the Subjective Multi-Verse of Zen Rational Minds](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/absolute-truth-in-the-subjective-multi-verse-of-zen-rational-minds.pdf)
 
 ### Esoteric Path Semantics
 
