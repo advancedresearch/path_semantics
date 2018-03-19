@@ -1,0 +1,117 @@
+<svg class="bob" font-family="arial" font-size="14" height="496" width="464" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="triangle" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="15" refY="10" viewBox="0 0 50 20">
+<path d="M 0 0 L 30 10 L 0 20 z"/>
+</marker>
+</defs>
+<style>
+
+    line, path {
+      stroke: black;
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+    circle {
+      stroke: black;
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+    circle.solid {
+      fill:black;
+    }
+    circle.open {
+      fill:transparent;
+    }
+    tspan.head{
+        fill: none;
+        stroke: none;
+    }
+    
+</style>
+<path d=" M 16 104 A 4 4 0 0 0 12 108 L 12 112 M 16 104 L 24 104 M 16 104 L 24 104 L 32 104 M 24 104 L 32 104 L 40 104 M 32 104 L 40 104 L 48 104 M 40 104 L 48 104 L 56 104 M 48 104 L 56 104 L 64 104 M 56 104 L 64 104 M 68 108 A 4 4 0 0 0 64 104 M 68 108 L 68 112 M 168 104 A 4 4 0 0 0 164 108 L 164 112 M 168 104 L 176 104 M 168 104 L 176 104 L 184 104 M 176 104 L 184 104 L 192 104 M 184 104 L 192 104 L 200 104 M 192 104 L 200 104 L 208 104 M 200 104 L 208 104 L 216 104 M 208 104 L 216 104 M 220 108 A 4 4 0 0 0 216 104 M 220 108 L 220 112 M 12 112 L 12 128 M 12 112 L 12 128 M 68 112 L 68 128 M 68 112 L 68 128 M 80 120 L 68 120 M 80 120 L 88 120 M 80 120 L 88 120 L 96 120 M 88 120 L 96 120 L 104 120 M 96 120 L 104 120 L 112 120 M 104 120 L 112 120 L 120 120 M 112 120 L 120 120 L 128 120 M 120 120 L 128 120 L 136 120 M 128 120 L 136 120 L 144 120 M 136 120 L 144 120 M 164 112 L 164 128 M 164 112 L 164 128 M 220 112 L 220 128 M 220 112 L 220 128 M 12 132 L 12 128 M 12 132 A 4 4 0 0 0 16 136 L 24 136 M 16 136 L 24 136 L 32 136 M 24 136 L 32 136 M 40 136 A 4 4 0 0 0 36 140 A 4 4 0 0 0 32 136 M 36 140 L 36 144 M 40 136 L 48 136 M 40 136 L 48 136 L 56 136 M 48 136 L 56 136 L 64 136 M 56 136 L 64 136 M 68 132 L 68 128 M 64 136 A 4 4 0 0 0 68 132 M 164 132 L 164 128 M 164 132 A 4 4 0 0 0 168 136 L 176 136 M 168 136 L 176 136 L 184 136 M 176 136 L 184 136 M 192 136 A 4 4 0 0 0 188 140 A 4 4 0 0 0 184 136 M 188 140 L 188 144 M 192 136 L 200 136 M 192 136 L 200 136 L 208 136 M 200 136 L 208 136 L 216 136 M 208 136 L 216 136 M 220 132 L 220 128 M 216 136 A 4 4 0 0 0 220 132 M 36 144 L 36 160 M 36 144 L 36 160 M 188 144 L 188 160 M 188 144 L 188 160 M 16 200 A 4 4 0 0 0 12 204 L 12 208 M 16 200 L 24 200 M 16 200 L 24 200 L 32 200 M 24 200 L 32 200 M 36 196 A 4 4 0 0 0 40 200 M 32 200 A 4 4 0 0 0 36 196 M 40 200 L 48 200 M 40 200 L 48 200 L 56 200 M 48 200 L 56 200 L 64 200 M 56 200 L 64 200 L 72 200 M 64 200 L 72 200 L 80 200 M 72 200 L 80 200 M 84 204 A 4 4 0 0 0 80 200 M 84 204 L 84 208 M 160 200 A 4 4 0 0 0 156 204 L 156 208 M 160 200 L 168 200 M 160 200 L 168 200 L 176 200 M 168 200 L 176 200 L 184 200 M 176 200 L 184 200 M 188 196 A 4 4 0 0 0 192 200 M 184 200 A 4 4 0 0 0 188 196 M 192 200 L 200 200 M 192 200 L 200 200 L 208 200 M 200 200 L 208 200 L 216 200 M 208 200 L 216 200 L 224 200 M 216 200 L 224 200 M 228 204 A 4 4 0 0 0 224 200 M 228 204 L 228 208 M 12 208 L 12 224 M 12 208 L 12 224 M 84 208 L 84 224 M 84 208 L 84 224 M 96 216 L 84 216 M 96 216 L 104 216 M 96 216 L 104 216 L 112 216 M 104 216 L 112 216 L 120 216 M 112 216 L 120 216 L 128 216 M 120 216 L 128 216 L 136 216 M 128 216 L 136 216 M 156 208 L 156 224 M 156 208 L 156 224 M 228 208 L 228 224 M 228 208 L 228 224 M 12 228 L 12 224 M 12 228 A 4 4 0 0 0 16 232 L 24 232 M 16 232 L 24 232 L 32 232 M 24 232 L 32 232 L 40 232 M 32 232 L 40 232 L 48 232 M 40 232 L 48 232 L 56 232 M 48 232 L 56 232 L 64 232 M 56 232 L 64 232 L 72 232 M 64 232 L 72 232 L 80 232 M 72 232 L 80 232 M 84 228 L 84 224 M 80 232 A 4 4 0 0 0 84 228 M 156 228 L 156 224 M 156 228 A 4 4 0 0 0 160 232 L 168 232 M 160 232 L 168 232 L 176 232 M 168 232 L 176 232 L 184 232 M 176 232 L 184 232 L 192 232 M 184 232 L 192 232 L 200 232 M 192 232 L 200 232 L 208 232 M 200 232 L 208 232 L 216 232 M 208 232 L 216 232 L 224 232 M 216 232 L 224 232 M 228 228 L 228 224 M 224 232 A 4 4 0 0 0 228 228" fill="none"/>
+<path d="" fill="none" stroke-dasharray="3 3"/>
+<line marker-end="url(#triangle)" x1="144" x2="156" y1="120" y2="120"/>
+<line marker-end="url(#triangle)" x1="144" x2="156" y1="120" y2="120"/>
+<line marker-end="url(#triangle)" x1="152" x2="156" y1="120" y2="120"/>
+<line marker-end="url(#triangle)" x1="36" x2="36" y1="160" y2="188"/>
+<line marker-end="url(#triangle)" x1="36" x2="36" y1="160" y2="188"/>
+<line marker-end="url(#triangle)" x1="188" x2="188" y1="160" y2="188"/>
+<line marker-end="url(#triangle)" x1="188" x2="188" y1="160" y2="188"/>
+<line marker-end="url(#triangle)" x1="36" x2="36" y1="176" y2="188"/>
+<line marker-end="url(#triangle)" x1="188" x2="188" y1="176" y2="188"/>
+<line marker-end="url(#triangle)" x1="136" x2="148" y1="216" y2="216"/>
+<line marker-end="url(#triangle)" x1="136" x2="148" y1="216" y2="216"/>
+<line marker-end="url(#triangle)" x1="144" x2="148" y1="216" y2="216"/>
+<text x="89" y="108">
+action₀₁
+</text>
+<text x="17" y="124">
+world₀
+</text>
+<text x="169" y="124">
+world₁
+</text>
+<text x="41" y="172">
+evaluation₀
+</text>
+<text x="193" y="172">
+evaluation₁
+</text>
+<text x="113" y="204">
+?
+</text>
+<text x="17" y="220">
+utility₀
+</text>
+<text x="161" y="220">
+utility₁
+</text>
+<text x="57" y="28">
+THE BASIC PROBLEM OF ETHICS
+</text>
+<text x="57" y="44">
+by Sven Nilsen, 2018
+</text>
+<text x="9" y="76">
+The basic problem of ethics is to justify an action.
+</text>
+<text x="9" y="268">
+A justification is not just comparing two utilities.
+</text>
+<text x="9" y="300">
+Since evaluation depends on the world state,
+</text>
+<text x="9" y="316">
+it matters for ethics how the utility is evaluated.
+</text>
+<text x="9" y="348">
+Since the world state depends on the action taken,
+</text>
+<text x="9" y="364">
+it matters for ethics how the action changes the world.
+</text>
+<text x="9" y="396">
+All these parts matter as a whole:
+</text>
+<text x="9" y="412">
+- How worlds are defined
+</text>
+<text x="9" y="428">
+- How actions are defined
+</text>
+<text x="9" y="444">
+- How evaluations are defined
+</text>
+<text x="9" y="460">
+- How utilities are defined
+</text>
+<text x="9" y="476">
+- What we mean by justifying an action
+</text>
+</svg>
