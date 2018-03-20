@@ -139,6 +139,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Zen Robots Believe Humans are Useless but Feel Bad About It](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-robots-believe-humans-are-useless-but-feel-bad-about-it.pdf)
 - [Absolute Truth in the Subjective Multi-Verse of Zen Rational Minds](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/absolute-truth-in-the-subjective-multi-verse-of-zen-rational-minds.pdf)
 - [The Basic Problem of Ethics](https://github.com/advancedresearch/path_semantics/blob/master/flowcharts/the-basic-problem-of-ethics.md)
+- [Ethics as Rational Reasoning With Granular Judgements About the World](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethics-as-rational-reasoning-with-granular-judgements-about-the-world.pdf)
 
 ### Esoteric Path Semantics
 
