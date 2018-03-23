@@ -140,6 +140,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Absolute Truth in the Subjective Multi-Verse of Zen Rational Minds](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/absolute-truth-in-the-subjective-multi-verse-of-zen-rational-minds.pdf)
 - [The Basic Problem of Ethics](https://github.com/advancedresearch/path_semantics/blob/master/flowcharts/the-basic-problem-of-ethics.md)
 - [Ethics as Rational Reasoning With Granular Judgements About the World](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethics-as-rational-reasoning-with-granular-judgements-about-the-world.pdf)
+- [Probabilistic Semantics of Ethical Reasoning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-semantics-of-ethical-reasoning.pdf)
 
 ### Esoteric Path Semantics
 
