@@ -142,6 +142,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Ethics as Rational Reasoning With Granular Judgements About the World](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethics-as-rational-reasoning-with-granular-judgements-about-the-world.pdf)
 - [Probabilistic Semantics of Ethical Reasoning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-semantics-of-ethical-reasoning.pdf)
 - [Ethical Reasoning Tends to Associate Nearby Judgment With Usual Implied Meaning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-tends-to-associate-nearby-judgements-with-usual-implied-meaning.pdf)
+- [Solving the Trolley Problem in Advance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solving-the-trolley-problem-in-advance.pdf)
 
 ### Esoteric Path Semantics
 
