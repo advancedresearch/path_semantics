@@ -16,6 +16,7 @@ This is a collection of papers organized in a way to build up gradually understa
 ### Introduction
 
 - [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
+- [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
 
 ### Discrete Path Semantics
 
