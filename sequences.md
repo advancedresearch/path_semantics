@@ -13,6 +13,10 @@ This is a collection of papers organized in a way to build up gradually understa
 
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)
 
+### Introduction
+
+- [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
+
 ### Discrete Path Semantics
 
 - [Algebraic Notation for Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-notation-for-asymmetric-paths.pdf)
