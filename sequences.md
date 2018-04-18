@@ -151,6 +151,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Solving the Trolley Problem in Advance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solving-the-trolley-problem-in-advance.pdf)
 - [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
 - [Semantic Differences Between Utility Functions and Granular Judgements](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-differences-between-utility-functions-and-granular-judgements.pdf)
+- [Uncertain Identity Modality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncertain-identity-modality.pdf)
 
 ### Esoteric Path Semantics
 
