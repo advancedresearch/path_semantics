@@ -153,6 +153,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Semantic Differences Between Utility Functions and Granular Judgements](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-differences-between-utility-functions-and-granular-judgements.pdf)
 - [Uncertain Identity Modality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncertain-identity-modality.pdf)
 - [Consistent Self Extension with Uncertain Modalities](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/consistent-self-extension-with-uncertain-modalities.pdf)
+- [Modeling Uncertain Modalities](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modeling-uncertain-modalities.pdf)
 
 ### Esoteric Path Semantics
 
