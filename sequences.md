@@ -157,6 +157,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Zen Robot Oracle Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-zen-robot-oracle-problem.pdf)
 - [The Polite Zen Robot](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-polite-zen-robot.pdf)
 - [Predicting Newtonian Interactions with Normalized Virtual Particles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-newtonian-interactions-with-normalized-virtual-particles.pdf)
+- [The Law of Impulse Displacement](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-law-of-impulse-displacement.pdf)
 
 ### Esoteric Path Semantics
 
