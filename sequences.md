@@ -159,6 +159,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Predicting Newtonian Interactions with Normalized Virtual Particles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-newtonian-interactions-with-normalized-virtual-particles.pdf)
 - [The Law of Impulse Displacement](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-law-of-impulse-displacement.pdf)
 - [Naive Zen Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-zen-logic.pdf)
+- [Infinitesimal Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinitesimal-utility.pdf)
 
 ### Esoteric Path Semantics
 
