@@ -160,6 +160,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Law of Impulse Displacement](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-law-of-impulse-displacement.pdf)
 - [Naive Zen Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-zen-logic.pdf)
 - [Infinitesimal Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinitesimal-utility.pdf)
+- [Boolean Point Features](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-point-features.pdf)
 
 ### Esoteric Path Semantics
 
