@@ -163,6 +163,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Boolean Point Features](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-point-features.pdf)
 - [Lead by Example Utility Cooperation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lead-by-example-utility-cooperation.pdf)
 - [Natural Goal Uncertainty](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-goal-uncertainty.pdf)
+- [The Room Hypothesis of Common Sense](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-room-hypothesis-of-common-sense.pdf)
 
 ### Esoteric Path Semantics
 
