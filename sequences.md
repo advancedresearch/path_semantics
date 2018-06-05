@@ -165,6 +165,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Natural Goal Uncertainty](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-goal-uncertainty.pdf)
 - [The Room Hypothesis of Common Sense](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-room-hypothesis-of-common-sense.pdf)
 - [Simulated Existence in Naive Zen Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simulated-existence-in-naive-zen-logic.pdf)
+- [Polite Zen Robots as Subjunctive Dependent Viruses Spreading Through Super-Intelligent Hosts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/polite-zen-robots-as-subjunctive-dependent-viruses-spreading-through-super-intelligent-hosts.pdf)
 
 ### Esoteric Path Semantics
 
