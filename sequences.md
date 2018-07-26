@@ -171,6 +171,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Gap Between Sentences and Computation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-gap-between-sentences-and-computation.pdf)
 - [Formalizing Utility Semantics With Infinite Group Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-utility-semantics-with-infinite-group-generators.pdf)
 - [The Cooperative Resource Misalignment Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cooperative-resource-misalignment-problem.pdf)
+- [The Problem of Describing What is Happening](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-problem-of-describing-what-is-happening.pdf)
 
 ### Esoteric Path Semantics
 
