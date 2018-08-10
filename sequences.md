@@ -172,6 +172,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Formalizing Utility Semantics With Infinite Group Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-utility-semantics-with-infinite-group-generators.pdf)
 - [The Cooperative Resource Misalignment Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cooperative-resource-misalignment-problem.pdf)
 - [The Problem of Describing What is Happening](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-problem-of-describing-what-is-happening.pdf)
+- [Zen Rational Paradox Game](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rational-paradox-game.pdf)
 
 ### Esoteric Path Semantics
 
