@@ -38,6 +38,18 @@ Very briefly, path semantics is about things like:
 
 See the [wiki](https://github.com/advancedresearch/path_semantics/wiki) for more information.
 
+### Why use path semantics?
+
+Some problems require more powerful mathematical tools than others, e.g. AI safety research.  
+Path semantics grounds meaning in "intrinsic complexity" of functions, similar to computational type theory,  
+but builds up higher order concepts that stretches into the domain of philosophy.  
+Therefore, path semantics offers an integrated understanding of semantics spanning a wide area of applications.
+
+An advantage of path semantics is that one can translate to and from other languages.  
+There are many such "bridges", from Logic to Lojban.  
+Among the most important connection is between probability theory and computation,  
+which is formalized in path semantics.
+
 ### Is this a new programming language?
 
 A new *kind* of programming language.
