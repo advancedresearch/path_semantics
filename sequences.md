@@ -174,6 +174,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Problem of Describing What is Happening](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-problem-of-describing-what-is-happening.pdf)
 - [Zen Rational Paradox Game](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rational-paradox-game.pdf)
 - [When Two Zen Rational Agents "Fall in Love"](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/when-two-zen-rational-agents-fall-in-love.pdf)
+- [Partial Reversible Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-reversible-game-theory.pdf)
 
 ### Esoteric Path Semantics
 
