@@ -177,6 +177,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [When Two Zen Rational Agents "Fall in Love"](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/when-two-zen-rational-agents-fall-in-love.pdf)
 - [Partial Reversible Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-reversible-game-theory.pdf)
 - [The Invisible Third Player in Partial Reversible Games](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-invisible-third-player-in-partial-reversible-games.pdf)
+- [Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-collective-intelligence.pdf)
 
 ### Esoteric Path Semantics
 
