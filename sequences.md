@@ -69,6 +69,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Law of Excluded Middle in Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-excluded-middle-in-havox-diagrams.pdf)
 - [Formalizing the Meaning of Solving an Equation for One Variable](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-the-meaning-of-solving-an-equation-for-one-variable.pdf)
 - [Closed Sub-Types of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-sub-types-of-sets.pdf)
+- [Uniform Properties of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniform-properties-of-sets.pdf)
 
 ### Probabilistic Path Semantics
 
