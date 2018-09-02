@@ -179,6 +179,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Invisible Third Player in Partial Reversible Games](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-invisible-third-player-in-partial-reversible-games.pdf)
 - [Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-collective-intelligence.pdf)
 - [Circling Mind Space by Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/circling-mind-space-by-optimal-collective-intelligence.pdf)
+- [The Empty Space of Mind](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-empty-space-of-mind.pdf)
 
 ### Esoteric Path Semantics
 
