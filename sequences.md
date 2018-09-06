@@ -125,6 +125,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Theorem Prover Combinators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/theorem-prover-combinators.pdf)
 - [Efficient Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-sets.pdf)
 - [Universally Optimal Compression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universally-optimal-compression.pdf)
+- [Local Optimal Safety Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/local-optimal-safety-theory.pdf)
 
 ### Artificial Intelligence
 
@@ -180,6 +181,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-collective-intelligence.pdf)
 - [Circling Mind Space by Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/circling-mind-space-by-optimal-collective-intelligence.pdf)
 - [The Empty Space of Mind](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-empty-space-of-mind.pdf)
+- [Local Optimal Safety Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/local-optimal-safety-theory.pdf)
 
 ### Esoteric Path Semantics
 
