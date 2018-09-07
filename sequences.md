@@ -182,6 +182,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Circling Mind Space by Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/circling-mind-space-by-optimal-collective-intelligence.pdf)
 - [The Empty Space of Mind](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-empty-space-of-mind.pdf)
 - [Local Optimal Safety Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/local-optimal-safety-theory.pdf)
+- [The Healthy Eating Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-healthy-eating-problem.pdf)
 
 ### Esoteric Path Semantics
 
