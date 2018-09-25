@@ -185,6 +185,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Healthy Eating Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-healthy-eating-problem.pdf)
 - [Negative Utilitarian Optimal Safety](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-utilitarian-optimal-safety.pdf)
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
+- [Playing With Fire: A Zen Rational Ethical Dilemma](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/playing-with-fire-a-zen-rational-ethical-dilemma.pdf)
 
 ### Esoteric Path Semantics
 
