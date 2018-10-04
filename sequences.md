@@ -186,6 +186,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Negative Utilitarian Optimal Safety](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-utilitarian-optimal-safety.pdf)
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Playing With Fire: A Zen Rational Ethical Dilemma](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/playing-with-fire-a-zen-rational-ethical-dilemma.pdf)
+- [Comments on Leibniz's law](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/comments-on-leibnizs-law.pdf)
 
 ### Esoteric Path Semantics
 
