@@ -187,6 +187,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Playing With Fire: A Zen Rational Ethical Dilemma](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/playing-with-fire-a-zen-rational-ethical-dilemma.pdf)
 - [Comments on Leibniz's law](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/comments-on-leibnizs-law.pdf)
+- [Tautological Self-Referential Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/tautological-self-referential-identity.pdf)
 
 ### Esoteric Path Semantics
 
