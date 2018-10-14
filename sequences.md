@@ -86,6 +86,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 - [Probabilistic Path of If-Expressions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-path-of-if-expressions.pdf)
 - [Practice Problem 1 for Probabilistic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/practice-problem-1-for-probabilistic-paths.pdf)
+- [Probabilistic Liar's Paradox](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-liars-paradox.pdf)
 
 ### Proof Techniques
 
