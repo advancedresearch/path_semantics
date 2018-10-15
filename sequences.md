@@ -71,6 +71,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Closed Sub-Types of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-sub-types-of-sets.pdf)
 - [Uniform Properties of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniform-properties-of-sets.pdf)
 - [Liar's Paradox and Complete Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/liars-paradox-and-complete-functions.pdf)
+- [Dependent L-System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-lsystem.pdf)
 
 ### Probabilistic Path Semantics
 
