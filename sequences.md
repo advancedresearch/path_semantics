@@ -193,6 +193,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Comments on Leibniz's law](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/comments-on-leibnizs-law.pdf)
 - [Tautological Self-Referential Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/tautological-self-referential-identity.pdf)
 - [Some Important Properties of Natural Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/some-important-properties-of-natural-language.pdf)
+- [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
 
 ### Esoteric Path Semantics
 
