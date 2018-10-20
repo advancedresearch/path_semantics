@@ -209,6 +209,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Abstract Assertions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-assertions.pdf)
 - [Adjective Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjective-sub-types.pdf)
 - [Symbolent Calculus of Symbolic Type Inference](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symbolent-calculus-of-symbolic-type-inference.pdf)
+- [Serebin Path Tree](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/serebin-path-tree.pdf)
 
 ### Non-Deterministic Path Semantics
 
