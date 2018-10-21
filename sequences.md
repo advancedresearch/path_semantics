@@ -118,6 +118,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Missing Assumption Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/missing-assumption-search.pdf)
 - [Alpha Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alpha-theorem-proving.pdf)
 - [Proof Systems as Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-systems-as-grammars.pdf)
+- [Contracting Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contracting-havox-diagrams.pdf)
 
 ### Slot Lambda Calculus
 
