@@ -74,6 +74,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Liar's Paradox and Complete Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/liars-paradox-and-complete-functions.pdf)
 - [Dependent L-System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-lsystem.pdf)
 - [Information Optimal Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/information-optimal-functions.pdf)
+- [The Meaning of Consistency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-meaning-of-consistency.pdf)
 
 ### Probabilistic Path Semantics
 
