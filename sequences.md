@@ -117,6 +117,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Detecting Relevant Arguments in Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/detecting-relevant-arguments-in-boolean-functions.pdf)
 - [Missing Assumption Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/missing-assumption-search.pdf)
 - [Alpha Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alpha-theorem-proving.pdf)
+- [Proof Systems as Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-systems-as-grammars.pdf)
 
 ### Slot Lambda Calculus
 
