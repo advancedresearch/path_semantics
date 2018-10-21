@@ -43,6 +43,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Existential Path of `add` with Domain Constraint `even`](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-add-with-domain-constraint-even.pdf)
 - [Formalization of Tic-Tac-Toe in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalization-of-tic-tac-toe-in-path-semantics.pdf)
 - [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
+- [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
 
 ### Reference material
 
@@ -70,6 +71,10 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Formalizing the Meaning of Solving an Equation for One Variable](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-the-meaning-of-solving-an-equation-for-one-variable.pdf)
 - [Closed Sub-Types of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-sub-types-of-sets.pdf)
 - [Uniform Properties of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniform-properties-of-sets.pdf)
+- [Liar's Paradox and Complete Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/liars-paradox-and-complete-functions.pdf)
+- [Dependent L-System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-lsystem.pdf)
+- [Information Optimal Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/information-optimal-functions.pdf)
+- [The Meaning of Consistency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-meaning-of-consistency.pdf)
 
 ### Probabilistic Path Semantics
 
@@ -85,6 +90,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 - [Probabilistic Path of If-Expressions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-path-of-if-expressions.pdf)
 - [Practice Problem 1 for Probabilistic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/practice-problem-1-for-probabilistic-paths.pdf)
+- [Probabilistic Liar's Paradox](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-liars-paradox.pdf)
 
 ### Proof Techniques
 
@@ -111,6 +117,8 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Detecting Relevant Arguments in Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/detecting-relevant-arguments-in-boolean-functions.pdf)
 - [Missing Assumption Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/missing-assumption-search.pdf)
 - [Alpha Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alpha-theorem-proving.pdf)
+- [Proof Systems as Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-systems-as-grammars.pdf)
+- [Contracting Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contracting-havox-diagrams.pdf)
 
 ### Slot Lambda Calculus
 
@@ -186,6 +194,10 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Negative Utilitarian Optimal Safety](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-utilitarian-optimal-safety.pdf)
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Playing With Fire: A Zen Rational Ethical Dilemma](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/playing-with-fire-a-zen-rational-ethical-dilemma.pdf)
+- [Comments on Leibniz's law](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/comments-on-leibnizs-law.pdf)
+- [Tautological Self-Referential Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/tautological-self-referential-identity.pdf)
+- [Some Important Properties of Natural Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/some-important-properties-of-natural-language.pdf)
+- [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
 
 ### Esoteric Path Semantics
 
@@ -200,9 +212,12 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Abstract Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-sub-types.pdf)
 - [Abstract Assertions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-assertions.pdf)
 - [Adjective Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjective-sub-types.pdf)
+- [Symbolent Calculus of Symbolic Type Inference](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symbolent-calculus-of-symbolic-type-inference.pdf)
+- [Serebin Path Tree](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/serebin-path-tree.pdf)
 
 ### Non-Deterministic Path Semantics
 
 - [Current Object Constrain Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/current-object-constraint-notation.pdf)
 - [Existential Paths of Function Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-function-sets.pdf)
 - [Universal Non-Deterministic Sampler](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-non-deterministic-sampler.pdf)
+- [Liar's Paradox and Complete Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/liars-paradox-and-complete-functions.pdf)

@@ -1,5 +1,12 @@
-# path_semantics
+# Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
+
+"From Logic to Lojban" - Sven Nilsen, 2018 (slogan)
+
+Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
+The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
+Learning path semantics will give you deep insights and a vehicle for thinking,  
+which will open up *The Gate of Figuring Out Stuff*.
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
 - [A brief history of path semantics illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
@@ -47,7 +54,7 @@ Therefore, path semantics offers an integrated understanding of semantics spanni
 
 An advantage of path semantics is that one can translate to and from other languages.  
 There are many such "bridges", from Logic to Lojban.  
-Among the most important connection is between probability theory and computation,  
+Among the most important connections is one between probability theory and computation,  
 which is formalized in path semantics.
 
 ### Is this a new programming language?
