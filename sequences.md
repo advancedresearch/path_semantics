@@ -120,6 +120,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Proof Systems as Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-systems-as-grammars.pdf)
 - [Contracting Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contracting-havox-diagrams.pdf)
 - [Path Types in Tree Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-types-in-tree-proofs.pdf)
+- [Natural Numbers Constructed by Contracted Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-constructed-by-contracted-havox-diagrams.pdf)
 
 ### Slot Lambda Calculus
 
