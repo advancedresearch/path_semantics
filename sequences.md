@@ -121,6 +121,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Contracting Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contracting-havox-diagrams.pdf)
 - [Path Types in Tree Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-types-in-tree-proofs.pdf)
 - [Natural Numbers Constructed by Contracted Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-constructed-by-contracted-havox-diagrams.pdf)
+- [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 
 ### Slot Lambda Calculus
 
@@ -200,6 +201,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Tautological Self-Referential Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/tautological-self-referential-identity.pdf)
 - [Some Important Properties of Natural Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/some-important-properties-of-natural-language.pdf)
 - [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
+- [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 
 ### Esoteric Path Semantics
 
