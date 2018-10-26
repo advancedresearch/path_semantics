@@ -204,6 +204,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
+- [Agent Discrete Decision Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/agent-discrete-decision-space.pdf)
 
 ### Esoteric Path Semantics
 
