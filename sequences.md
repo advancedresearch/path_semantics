@@ -137,6 +137,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Efficient Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-sets.pdf)
 - [Universally Optimal Compression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universally-optimal-compression.pdf)
 - [Local Optimal Safety Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/local-optimal-safety-theory.pdf)
+- [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
 
 ### Artificial Intelligence
 
@@ -202,6 +203,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Some Important Properties of Natural Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/some-important-properties-of-natural-language.pdf)
 - [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
+- [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
 
 ### Esoteric Path Semantics
 
