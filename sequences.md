@@ -37,6 +37,11 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
 - [Atomic Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-universal-existential-paths.pdf)
 
+### Boolean Path Semantics
+
+- [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
+- [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
+
 ### Examples of Discrete Path Semantics
 
 - [Symmetric Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-in-boolean-algebra.pdf)
@@ -51,6 +56,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Alphabetic List of Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-paths.pdf)
 - [Alphabetic List of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-existential-paths.pdf)
 - [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
+- [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 
 ### Concepts in Path Semantics
 
@@ -122,6 +128,8 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Path Types in Tree Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-types-in-tree-proofs.pdf)
 - [Natural Numbers Constructed by Contracted Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-constructed-by-contracted-havox-diagrams.pdf)
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
+- [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
+- [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
 
 ### Slot Lambda Calculus
 
@@ -138,6 +146,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Universally Optimal Compression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universally-optimal-compression.pdf)
 - [Local Optimal Safety Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/local-optimal-safety-theory.pdf)
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
+- [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 
 ### Artificial Intelligence
 
@@ -205,6 +214,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
 - [Agent Discrete Decision Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/agent-discrete-decision-space.pdf)
+- [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 
 ### Esoteric Path Semantics
 
@@ -229,3 +239,4 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Existential Paths of Function Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-function-sets.pdf)
 - [Universal Non-Deterministic Sampler](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-non-deterministic-sampler.pdf)
 - [Liar's Paradox and Complete Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/liars-paradox-and-complete-functions.pdf)
+- [Natural Number Fuzzing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-number-fuzzing.pdf)
