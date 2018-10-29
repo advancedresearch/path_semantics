@@ -36,6 +36,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
 - [Atomic Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-universal-existential-paths.pdf)
+- [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
 
 ### Boolean Path Semantics
 
@@ -130,6 +131,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 - [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
+- [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
 
 ### Slot Lambda Calculus
 
