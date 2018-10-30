@@ -237,6 +237,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 ### Non-Deterministic Path Semantics
 
+- [Non-Deterministic Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-deterministic-existential-paths.pdf)
 - [Current Object Constrain Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/current-object-constraint-notation.pdf)
 - [Existential Paths of Function Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-function-sets.pdf)
 - [Universal Non-Deterministic Sampler](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-non-deterministic-sampler.pdf)
