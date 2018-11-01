@@ -217,6 +217,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
 - [Agent Discrete Decision Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/agent-discrete-decision-space.pdf)
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
+- [Zen Rationality and False Beliefs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality-and-false-beliefs.pdf)
 
 ### Esoteric Path Semantics
 
