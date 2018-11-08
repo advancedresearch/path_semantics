@@ -236,6 +236,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Serebin Path Tree](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/serebin-path-tree.pdf)
 - [Equivalence Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalence-paths.pdf)
 - [General Existential Path of Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/general-existential-path-of-language.pdf)
+- [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 
 ### Non-Deterministic Path Semantics
 
