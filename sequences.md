@@ -237,6 +237,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Equivalence Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalence-paths.pdf)
 - [General Existential Path of Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/general-existential-path-of-language.pdf)
 - [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
+- [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
 
 ### Non-Deterministic Path Semantics
 
