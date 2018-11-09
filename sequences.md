@@ -218,6 +218,8 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Agent Discrete Decision Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/agent-discrete-decision-space.pdf)
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 - [Zen Rationality and False Beliefs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality-and-false-beliefs.pdf)
+- [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
+- [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
 
 ### Esoteric Path Semantics
 
