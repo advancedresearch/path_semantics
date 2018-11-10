@@ -132,6 +132,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 - [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
+- [Proof of Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-equivalence.pdf)
 
 ### Slot Lambda Calculus
 
