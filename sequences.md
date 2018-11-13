@@ -47,6 +47,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 - [Permutative Binary Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-binary-numbers.pdf)
 - [Generalized Swap Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/generalized-swap-grammar.pdf)
+- [Sub-Permutation Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-permutation-grammar.pdf)
 
 ### Examples of Discrete Path Semantics
 
