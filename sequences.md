@@ -247,6 +247,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [General Existential Path of Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/general-existential-path-of-language.pdf)
 - [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 - [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
+- [Anthropic Quantum Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/anthropic-quantum-theorems.pdf)
 
 ### Non-Deterministic Path Semantics
 
