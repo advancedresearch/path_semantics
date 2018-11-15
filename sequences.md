@@ -140,6 +140,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
 - [Proof of Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-equivalence.pdf)
+- [Skolem and Herbrand Normal Form](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/skolem-and-herbrand-normal-form.pdf)
 
 ### Slot Lambda Calculus
 
