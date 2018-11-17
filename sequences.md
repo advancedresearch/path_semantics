@@ -252,6 +252,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
 - [Anthropic Quantum Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/anthropic-quantum-theorems.pdf)
 - [Adversarial Path of List](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-path-of-list.pdf)
+- [Adversarial Path of Cartesian Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 
 ### Non-Deterministic Path Semantics
 
