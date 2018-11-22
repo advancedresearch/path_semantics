@@ -49,6 +49,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Generalized Swap Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/generalized-swap-grammar.pdf)
 - [Sub-Permutation Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-permutation-grammar.pdf)
 - [Branch Permutation Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/branch-permutation-grammar.pdf)
+- [Permutative Abacaba Vector](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-abacaba-vector.pdf)
 
 ### Examples of Discrete Path Semantics
 
