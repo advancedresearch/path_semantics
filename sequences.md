@@ -257,6 +257,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Adversarial Path of Cartesian Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-path-of-cartesian-product.pdf)
 - [Adversarial Path of Fuel Distance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-path-of-fuel-distance.pdf)
 - [Cartesian Outer Product of Adversarial Path of List](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-outer-product-of-adversarial-path-of-list.pdf)
+- [Geometric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/geometric-paths.pdf)
 
 ### Non-Deterministic Path Semantics
 
