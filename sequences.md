@@ -32,6 +32,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Existential Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-function-composition.pdf)
 - [Existential Path of `if` expression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-if-expression.pdf)
 - [Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-paths.pdf)
+- [Functional Currying Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/functional-currying-notation.pdf)
 - [Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-function-sub-types.pdf)
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
