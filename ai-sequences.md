@@ -20,7 +20,7 @@ Papers that do not fall into a specific category:
 
 ### The Big Picture
 
-Formal conceptualizing of super-intelligence, not necessary safe or desirable:
+Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 
 - [First Order Perfect Testable Friendly Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/first-order-perfect-testable-friendly-ai.pdf)
 - [Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-collective-intelligence.pdf)
