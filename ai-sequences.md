@@ -1,7 +1,6 @@
 
 ### Artificial Intelligence
 
-- [Assigning Boolean Functions to Long Term Strategies](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/assigning-boolean-functions-to-long-term-group-strategies.pdf)
 - [Context Transformation & Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/context-transformation-and-learning.pdf)
 - [Formally Representing Uncertain Knowledge About Objects](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formally-representing-uncertain-knowledge-about-objects.pdf)
 - [First Order Perfect Testable Friendly Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/first-order-perfect-testable-friendly-ai.pdf)
@@ -13,13 +12,6 @@
 - [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
 - [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
 - [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
-- [The Basic Problem of Ethics](https://github.com/advancedresearch/path_semantics/blob/master/flowcharts/the-basic-problem-of-ethics.md)
-- [Ethics as Rational Reasoning With Granular Judgements About the World](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethics-as-rational-reasoning-with-granular-judgements-about-the-world.pdf)
-- [Probabilistic Semantics of Ethical Reasoning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-semantics-of-ethical-reasoning.pdf)
-- [Ethical Reasoning Tends to Associate Nearby Judgment With Usual Implied Meaning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-tends-to-associate-nearby-judgements-with-usual-implied-meaning.pdf)
-- [Solving the Trolley Problem in Advance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solving-the-trolley-problem-in-advance.pdf)
-- [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
-- [Semantic Differences Between Utility Functions and Granular Judgements](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-differences-between-utility-functions-and-granular-judgements.pdf)
 - [Uncertain Identity Modality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncertain-identity-modality.pdf)
 - [Consistent Self Extension with Uncertain Modalities](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/consistent-self-extension-with-uncertain-modalities.pdf)
 - [Modeling Uncertain Modalities](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modeling-uncertain-modalities.pdf)
@@ -31,10 +23,7 @@
 - [The Room Hypothesis of Common Sense](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-room-hypothesis-of-common-sense.pdf)
 - [The Gap Between Sentences and Computation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-gap-between-sentences-and-computation.pdf)
 - [Formalizing Utility Semantics With Infinite Group Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-utility-semantics-with-infinite-group-generators.pdf)
-- [The Cooperative Resource Misalignment Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cooperative-resource-misalignment-problem.pdf)
 - [The Problem of Describing What is Happening](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-problem-of-describing-what-is-happening.pdf)
-- [Partial Reversible Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-reversible-game-theory.pdf)
-- [The Invisible Third Player in Partial Reversible Games](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-invisible-third-player-in-partial-reversible-games.pdf)
 - [Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-collective-intelligence.pdf)
 - [Circling Mind Space by Optimal Collective Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/circling-mind-space-by-optimal-collective-intelligence.pdf)
 - [The Empty Space of Mind](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-empty-space-of-mind.pdf)
@@ -48,6 +37,24 @@
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 - [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 - [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
+
+### Game Theory
+
+- [Assigning Boolean Functions to Long Term Strategies](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/assigning-boolean-functions-to-long-term-group-strategies.pdf)
+- [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
+- [The Cooperative Resource Misalignment Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cooperative-resource-misalignment-problem.pdf)
+- [Partial Reversible Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-reversible-game-theory.pdf)
+- [The Invisible Third Player in Partial Reversible Games](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-invisible-third-player-in-partial-reversible-games.pdf)
+
+### Ethics
+
+- [The Basic Problem of Ethics](https://github.com/advancedresearch/path_semantics/blob/master/flowcharts/the-basic-problem-of-ethics.md)
+- [Ethics as Rational Reasoning With Granular Judgements About the World](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethics-as-rational-reasoning-with-granular-judgements-about-the-world.pdf)
+- [Probabilistic Semantics of Ethical Reasoning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-semantics-of-ethical-reasoning.pdf)
+- [Ethical Reasoning Tends to Associate Nearby Judgment With Usual Implied Meaning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-tends-to-associate-nearby-judgements-with-usual-implied-meaning.pdf)
+- [Solving the Trolley Problem in Advance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solving-the-trolley-problem-in-advance.pdf)
+- [Semantic Differences Between Utility Functions and Granular Judgements](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-differences-between-utility-functions-and-granular-judgements.pdf)
+- [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
 
 ### Zen Rationality
 
