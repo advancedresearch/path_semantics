@@ -2,22 +2,6 @@
 
 # Artificial Intelligence and Safety Research
 
-Papers that do not fall into a specific category:
-
-- [Context Transformation & Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/context-transformation-and-learning.pdf)
-- [Functional Decision Theory in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/functional-decision-theory-in-path-semantics.pdf)
-- [`P = NP` Relative to Universal Existential Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/p-vs-np-relative-to-universal-existential-path.pdf)
-- [Least Surprised Algorithm](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/least-surprised-algorithm.pdf)
-- [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
-- [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
-- [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
-- [Predicting Newtonian Interactions with Normalized Virtual Particles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-newtonian-interactions-with-normalized-virtual-particles.pdf)
-- [The Law of Impulse Displacement](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-law-of-impulse-displacement.pdf)
-- [Boolean Point Features](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-point-features.pdf)
-- [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
-- [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
-- [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
-
 ### The Big Picture
 
 Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
@@ -128,3 +112,20 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Zen Rationality and False Beliefs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality-and-false-beliefs.pdf)
 
+### Misc
+
+Papers that do not fall into a specific category:
+
+- [Context Transformation & Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/context-transformation-and-learning.pdf)
+- [Functional Decision Theory in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/functional-decision-theory-in-path-semantics.pdf)
+- [`P = NP` Relative to Universal Existential Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/p-vs-np-relative-to-universal-existential-path.pdf)
+- [Least Surprised Algorithm](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/least-surprised-algorithm.pdf)
+- [Elliptic Paraboloid Machine Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/elliptic-paraboloid-machine-learning.pdf)
+- [Data Structure for Motivated Actions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/data-structure-for-motivated-actions.pdf)
+- [Error Predictive Learning](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/error-predictive-learning.pdf)
+- [Predicting Newtonian Interactions with Normalized Virtual Particles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-newtonian-interactions-with-normalized-virtual-particles.pdf)
+- [The Law of Impulse Displacement](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-law-of-impulse-displacement.pdf)
+- [Boolean Point Features](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-point-features.pdf)
+- [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
+- [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
+- [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
