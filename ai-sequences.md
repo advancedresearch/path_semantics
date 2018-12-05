@@ -1,5 +1,6 @@
+*If you find yourself confused about mathematics and theorem proving, [learn path semantics](https://github.com/advancedresearch/path_semantics/blob/master/sequences.md) to get a solid understand of mathematical foundations that you can use to learn faster more complex math needed to reason about AI safety.*
 
-### Artificial Intelligence
+# Artificial Intelligence and Safety Research
 
 Papers that do not fall into a specific category:
 
