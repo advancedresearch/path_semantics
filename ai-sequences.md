@@ -86,7 +86,7 @@ Zen Rationality is an extension of Instrumental Rationality with higher order re
 This means:
 
 - The agent might have no specific goal, it might have many, or it might have conflicting goals
-- The agent might not trust its own decisions in the future (e.g. believing it might suddenly turn off of fail)
+- The agent might not trust its own decisions in the future (e.g. believing it might suddenly turn off or fail)
 
 Before you try to understand Zen Rationality, it is useful to first learn about the kind of "rationality" that is closer to human thinking than Instrumental Rationality, called "Self Rationality":
 
