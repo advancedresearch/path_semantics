@@ -129,3 +129,4 @@ Papers that do not fall into a specific category:
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 - [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 - [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
+- [Unit Interval Focus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unit-interval-focus.pdf)
