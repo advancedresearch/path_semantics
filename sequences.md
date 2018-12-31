@@ -148,6 +148,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
 - [Proof of Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-of-equivalence.pdf)
 - [Skolem and Herbrand Normal Form](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/skolem-and-herbrand-normal-form.pdf)
+- [Parameter Elimination in Higher Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parameter-elimination-in-higher-order-existential-paths.pdf)
 
 ### Slot Lambda Calculus
 
