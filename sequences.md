@@ -40,6 +40,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
 - [Atomic Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-universal-existential-paths.pdf)
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
+- [Higher Order Operator Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading.pdf)
 
 ### Boolean Path Semantics
 
