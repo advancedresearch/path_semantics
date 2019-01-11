@@ -20,27 +20,33 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
 - [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
 
-### Discrete Path Semantics
+### Notation
 
 - [Algebraic Notation for Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-notation-for-asymmetric-paths.pdf)
 - [Cross Argument Asymmetric Path Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cross-argument-asymmetric-path-notation.pdf)
 - [Nilsen-Cartesian Product Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/nilsen-cartesian-product-notation.pdf)
 - [Merging of Path Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/merging-of-path-generators.pdf)
-- [Destructing Nilsen-Cartesian Products](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/destructing-of-nilsen-cartesian-products.pdf)
-- [Path Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-sets.pdf)
 - [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf)
 - [Domain Constraint Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/domain-constraint-notation.pdf)
-- [Existential Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-function-composition.pdf)
-- [Existential Path of `if` expression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-if-expression.pdf)
 - [Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-paths.pdf)
 - [Lambda Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lambda-notation.pdf)
 - [Functional Currying Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/functional-currying-notation.pdf)
 - [Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-function-sub-types.pdf)
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
+- [Higher Order Operator Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading.pdf)
+
+### Discrete Path Semantics
+
+- [Destructing Nilsen-Cartesian Products](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/destructing-of-nilsen-cartesian-products.pdf)
+- [Path Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-sets.pdf)
+- [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf)
+- [Existential Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-function-composition.pdf)
+- [Existential Path of `if` expression](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-if-expression.pdf)
+- [Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-paths.pdf)
+- [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Atomic Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-universal-existential-paths.pdf)
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
-- [Higher Order Operator Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading.pdf)
 
 ### Boolean Path Semantics
 
