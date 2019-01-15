@@ -68,6 +68,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Formalization of Tic-Tac-Toe in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalization-of-tic-tac-toe-in-path-semantics.pdf)
 - [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
 - [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
+- [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
 
 ### Reference material
 
