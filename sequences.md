@@ -102,6 +102,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Information Optimal Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/information-optimal-functions.pdf)
 - [The Meaning of Consistency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-meaning-of-consistency.pdf)
 - [Natural Numbers by Coinductive Construction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-by-coinductive-construction.pdf)
+- [Spatial Sum Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/spatial-sum-functions.pdf)
 
 ### Probabilistic Path Semantics
 
