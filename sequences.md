@@ -35,6 +35,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
 - [Higher Order Operator Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading.pdf)
+- [Higher Order Operator Overloading With Function Currying](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-with-function-currying.pdf)
 
 ### Discrete Path Semantics
 
