@@ -160,6 +160,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Skolem and Herbrand Normal Form](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/skolem-and-herbrand-normal-form.pdf)
 - [Parameter Elimination in Higher Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parameter-elimination-in-higher-order-existential-paths.pdf)
 - [Path Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-operators.pdf)
+- [Truth Values of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/truth-values-of-sub-types.pdf)
 
 ### Slot Lambda Calculus
 
