@@ -115,6 +115,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The `bits` Function Family](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-bits-function-family.pdf)
 - [Constrained Power-Set Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constraint-power-set-notation.pdf)
 - [Probabilistic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-paths.pdf)
+- [Probabilistic Paths as Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-paths-as-sub-types.pdf)
 - [Obscure Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/obscure-functions.pdf)
 
 ### Examples of Probabilistic Path Semantics
