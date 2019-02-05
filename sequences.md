@@ -110,6 +110,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Assigning Probabilities to Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/assigning-probabilities-to-boolean-functions.pdf)
 - [Assigning Probabilities to Logical Quantifiers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/assigning-probabilities-to-logical-quantifiers.pdf)
 - [Probabilistic Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-existential-paths.pdf)
+- [Probabilistic Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-sub-types.pdf)
 - [Confidence Factors of Probabilistic Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/confidence-factors-of-probabilistic-constraints.pdf)
 - [The `bits` Function Family](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-bits-function-family.pdf)
 - [Constrained Power-Set Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constraint-power-set-notation.pdf)
