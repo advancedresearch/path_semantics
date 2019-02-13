@@ -13,6 +13,7 @@ which will open up *The Gate of Figuring Out Stuff*.
 - [Reading sequences for learning path semantics](./sequences.md)
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
 - [Mathematical Workflow Visualized](./workflow.md)
+- [About Publishing Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/about-publishing-path-semantics.pdf)
 
 Blog posts:
 
