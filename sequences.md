@@ -1,4 +1,4 @@
-# Sequences
+# Sequences for learning Path Semantics
 Reading sequences for learning path semantics.
 
 This is a collection of papers organized in a way to build up gradually understanding of path semantics.
@@ -163,6 +163,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Parameter Elimination in Higher Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parameter-elimination-in-higher-order-existential-paths.pdf)
 - [Path Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-operators.pdf)
 - [Truth Values of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/truth-values-of-sub-types.pdf)
+- [Identity Proofs of Higher Homotopy - Explained for Programmers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-proofs-of-higher-homotopy-explained-for-programmers.pdf)
 
 ### Slot Lambda Calculus
 
