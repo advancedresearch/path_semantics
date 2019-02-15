@@ -164,6 +164,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Path Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-operators.pdf)
 - [Truth Values of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/truth-values-of-sub-types.pdf)
 - [Identity Proofs of Higher Homotopy - Explained for Programmers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-proofs-of-higher-homotopy-explained-for-programmers.pdf)
+- [Cartesian Products vs Arrows](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-products-vs-arrows.pdf)
 
 ### Slot Lambda Calculus
 
