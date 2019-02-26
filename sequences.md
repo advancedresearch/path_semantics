@@ -183,6 +183,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 - [Modal Logic of Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-observations.pdf)
+- [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 
 ### Artificial Intelligence
 
