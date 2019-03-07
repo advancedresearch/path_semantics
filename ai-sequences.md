@@ -15,6 +15,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Unbiased Prior Belief of Normalized Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unbiased-prior-belief-of-normalized-utility.pdf)
 - [Constructive Utility Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-utility-functions.pdf)
 - [Infinitesimal Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinitesimal-utility.pdf)
+- [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
 
 ### Game Theory
 
@@ -111,6 +112,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Playing With Fire: A Zen Rational Ethical Dilemma](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/playing-with-fire-a-zen-rational-ethical-dilemma.pdf)
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Zen Rationality and False Beliefs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality-and-false-beliefs.pdf)
+- [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
 
 ### Misc
 
