@@ -166,6 +166,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Identity Proofs of Higher Homotopy - Explained for Programmers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-proofs-of-higher-homotopy-explained-for-programmers.pdf)
 - [Cartesian Products vs Arrows](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-products-vs-arrows.pdf)
 - [Propositional Logic as Symbolic Free Form Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-as-symbolic-free-form-grammar.pdf)
+- [Efficient Type Checking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-type-checking.pdf)
 
 ### Slot Lambda Calculus
 
