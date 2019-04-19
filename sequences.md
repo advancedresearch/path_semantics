@@ -170,6 +170,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Cartesian Products vs Arrows](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-products-vs-arrows.pdf)
 - [Propositional Logic as Symbolic Free Form Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-as-symbolic-free-form-grammar.pdf)
 - [Efficient Type Checking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-type-checking.pdf)
+- [Equations as Algebraic Objects](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equations-as-algebraic-objects.pdf)
 
 ### Slot Lambda Calculus
 
