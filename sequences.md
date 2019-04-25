@@ -223,6 +223,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Natural Continuous Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-continuous-paths.pdf)
 - [The Inquiry for Semantics of Choices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-inquiry-for-semantics-of-choices.pdf)
 - [Identity of Words in Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-of-words-in-natural-languages.pdf)
+- [Bootstrapping Technique for Semantics of Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bootstrapping-technique-for-semantics-of-natural-languages.pdf)
 
 ### Non-Deterministic Path Semantics
 
