@@ -16,6 +16,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Constructive Utility Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-utility-functions.pdf)
 - [Infinitesimal Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinitesimal-utility.pdf)
 - [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
+- [Probabilistic Preferences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-preferences.pdf)
 
 ### Game Theory
 
