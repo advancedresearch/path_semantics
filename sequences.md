@@ -225,6 +225,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Identity of Words in Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-of-words-in-natural-languages.pdf)
 - [Bootstrapping Technique for Semantics of Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bootstrapping-technique-for-semantics-of-natural-languages.pdf)
 - [Natural Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-implication.pdf)
+- [Natural Likely](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-likely.pdf)
 
 ### Non-Deterministic Path Semantics
 
