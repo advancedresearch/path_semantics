@@ -40,6 +40,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Higher Order Operator Overloading for Mathematical Loops](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-for-mathematical-loops.pdf)
 - [Higher Order Operator Overloading Lifting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-lifting.pdf)
 - [Higher Order Operator Overloading and Self Reference](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-self-reference.pdf)
+- [Higher Order Operator Overloading and Partial Evaluation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-partial-evaluation.pdf)
 
 ### Discrete Path Semantics
 
