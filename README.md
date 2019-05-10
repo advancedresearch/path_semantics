@@ -1,6 +1,9 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+WARNING: This work has not yet been peer-reviewed,  
+except informally and partially checked by automated theorem provers.
+
 **The first person who finds unsoundness at the core of Path Semantics (axiom),  
 will receive 200 USD in reward.**
 
