@@ -1,6 +1,9 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+**The first person who finds unsoundness at the core of Path Semantics (axiom),  
+will receive 200 USD in reward.**
+
 "From Logic to Lojban" - Sven Nilsen, 2018 (slogan)
 
 Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
