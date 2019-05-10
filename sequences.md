@@ -173,6 +173,9 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Propositional Logic as Symbolic Free Form Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-as-symbolic-free-form-grammar.pdf)
 - [Efficient Type Checking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/efficient-type-checking.pdf)
 - [Equations as Algebraic Objects](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equations-as-algebraic-objects.pdf)
+- [Natural Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-implication.pdf)
+- [Natural Likely](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-likely.pdf)
+- [Natural Sum Sub-Type Factorization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-sum-sub-type-factorization.pdf)
 
 ### Slot Lambda Calculus
 
@@ -226,8 +229,6 @@ This is a collection of papers organized in a way to build up gradually understa
 - [The Inquiry for Semantics of Choices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-inquiry-for-semantics-of-choices.pdf)
 - [Identity of Words in Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-of-words-in-natural-languages.pdf)
 - [Bootstrapping Technique for Semantics of Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bootstrapping-technique-for-semantics-of-natural-languages.pdf)
-- [Natural Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-implication.pdf)
-- [Natural Likely](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-likely.pdf)
 
 ### Non-Deterministic Path Semantics
 
