@@ -9,9 +9,9 @@ Learning path semantics will give you deep insights and a vehicle for thinking,
 which will open up *The Gate of Figuring Out Stuff*.
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
-- [A brief history of path semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
+- [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [How to think Abstractly with Path Semantics - illustrated](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
-- [Reading sequences for learning path semantics](./sequences.md)
+- [Reading sequences for learning Path Semantics](./sequences.md)
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
 - [Mathematical Workflow Visualized](./workflow.md)
 - [About Publishing Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/about-publishing-path-semantics.pdf)
