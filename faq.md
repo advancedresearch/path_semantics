@@ -39,14 +39,14 @@ If you can prove that the axiom works, then Path Semantics is not consistent, wh
 
 This is because Path Semantics contains arithmetic.
 
-You can read more about this [here (Gödel's incompleteness theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems).
+You can read more about this [here (Gödel's incompleteness theorems)](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems).
 
 Proving soundness of a formal system is often done in formal languages for each term having a well-defined type.
 
 Path Semantics is not a Type Theory. It is more fundamental.
 Type Theory is added to Path Semantics through "bootstrapping".
 
-You might be able to disprove the axiom, by e.g. show that Type Theory as bootstrapped into give a
+You might be able to disprove the axiom, by e.g. show that Type Theory as bootstrapped into gives a
 different semantics than the one we use in formal systems.
 
 ### What is the difference between formal theorem proving and informal theorem proving?
