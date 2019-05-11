@@ -51,7 +51,7 @@ different semantics than the one we use in formal systems.
 
 ### What is the difference between formal theorem proving and informal theorem proving?
 
-Informal theorem permits usage of all formal languages for theorem proving.
+Informal theorem proving permits usage of all formal languages for theorem proving.
 No formal language can use all formal languages, therefore informal theorem proving is strictly more powerful than formal theorem proving.
 
 It does not mean that you are allowed to say anything you want in informal theorem proving.
