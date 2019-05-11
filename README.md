@@ -1,6 +1,8 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+[Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md) <-- read this, it is not long.
+
 WARNING: This work has not yet been peer-reviewed,  
 except informally and partially checked by automated theorem provers.
 
