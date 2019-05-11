@@ -63,7 +63,7 @@ Mathematical approaches to the control problem of super-intelligent AI safety, t
 - [Safe Interruption Oracle for Artificial Intelligence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/safety-interruption-oracle-for-artificial-intelligence.pdf)
 - [Decidability in Constrained Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-in-dependently-constrained-universal-existential-paths.pdf)
 - [Agent Discrete Decision Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/agent-discrete-decision-space.pdf)
-- [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
+- [Operator Triggered Intermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 
 Aiming for approximate, long term solutions:
 
