@@ -5,6 +5,7 @@ WARNING: This work has not yet been peer-reviewed,
 except informally and partially checked by automated theorem provers.
 
 **The first person who finds unsoundness at the core of Path Semantics (axiom),  
+or show that it is convincingly "not even wrong",  
 will receive 200 USD in reward.** [Link to foundation](https://github.com/advancedresearch/path_semantics/blob/master/sequences.md#foundation)
 
 "From Logic to Lojban" - Sven Nilsen, 2018 (slogan)
