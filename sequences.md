@@ -177,6 +177,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Natural Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-implication.pdf)
 - [Natural Likely](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-likely.pdf)
 - [Natural Sum Sub-Type Factorization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-sum-sub-type-factorization.pdf)
+- [Informal Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/informal-theorem-proving.pdf)
 
 ### Slot Lambda Calculus
 
