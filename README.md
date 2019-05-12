@@ -44,8 +44,8 @@ Blog posts:
 
 Here is a cheat sheet to show how it looks like: [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 
-Functional programming has been an active research area for [dependently types](https://en.wikipedia.org/wiki/Dependent_type).
-In this notation, a new semantics that re-interprets functions takes a step beyond dependently types.
+Functional programming has been an active research area for [dependent types](https://en.wikipedia.org/wiki/Dependent_type).
+In this notation, a new semantics that re-interprets functions takes a step beyond dependent types.
 
 Very briefly, path semantics is about things like:
 
@@ -91,7 +91,7 @@ Some ideas are taking from unpublished work. I have been asked to publish it but
 
 Earlier, I explored ways to encode information into a generalized version of Adinkra diagrams to model states of discrete systems. The idea is since Adinkra diagrams are constructed by labeling the edges after specific rules, one could extract rules from edges of similar diagrams representing systems.
 
-These diagrams have a reflective property that allows related concepts to be expressed with variations in a systematic way, intuitively described as "context modelling". This background knowledge, together with dependently type experiments, served as rationale for developing the notation.
+These diagrams have a reflective property that allows related concepts to be expressed with variations in a systematic way, intuitively described as "context modelling". This background knowledge, together with dependent type experiments, served as rationale for developing the notation.
 
 While suitable to model context in various applications,
 a problem is super exponential growth in memory usage.
