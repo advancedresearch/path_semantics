@@ -15,6 +15,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)
 - [Lifted Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lifted-associations.pdf)
 - [Asserting Formal Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asserting-formal-associations.pdf)
+- [Computational Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/computational-equivalence.pdf)
 - [Incompleteness of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incompleteness-of-path-semantics.pdf)
 
 ### Introduction
