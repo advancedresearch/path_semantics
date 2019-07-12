@@ -35,6 +35,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Solving the Trolley Problem in Advance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/solving-the-trolley-problem-in-advance.pdf)
 - [Semantic Differences Between Utility Functions and Granular Judgements](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-differences-between-utility-functions-and-granular-judgements.pdf)
 - [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
+- [Friend vs Enemy Asymmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/friend-vs-enemy-asymmetry.pdf)
 
 ### Language Semantics of Uncertainty and Identity
 
