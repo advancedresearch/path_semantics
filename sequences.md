@@ -54,6 +54,7 @@ into expressions for higher order reasoning.
 - [Higher Order Operator Overloading and Partial Evaluation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-partial-evaluation.pdf)
 - [Higher Order Operator Overloading and Natural Lambda Properties](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-natural-lambda-properties.pdf)
 - [Higher Order Operator Overloading and Notation for Parameters](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-notation-for-parameters.pdf)
+- [Higher Order Operator Overloading and Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-existential-path-equations.pdf)
 
 ### Discrete Path Semantics
 
