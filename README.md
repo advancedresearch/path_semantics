@@ -15,8 +15,7 @@ which will open up *The Gate of Figuring Out Stuff*.
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
 - [Mathematical Workflow Visualized](./workflow.md)
 - [About Publishing Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/about-publishing-path-semantics.pdf)
-
-[Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md) <-- read this, it is not long.
+- [Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md)
 
 Notice: This work has not yet been peer-reviewed,  
 except informally and partially checked by automated theorem provers.
