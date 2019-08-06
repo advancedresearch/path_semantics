@@ -194,6 +194,7 @@ into expressions for higher order reasoning.
 - [Natural Sum Sub-Type Factorization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-sum-sub-type-factorization.pdf)
 - [Informal Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/informal-theorem-proving.pdf)
 - [Proof Optimization by Uniqueness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-optimization-by-uniqueness.pdf)
+- [Logical Properties of Propositional Logic Systems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-properties-of-propositional-logic-systems.pdf)
 
 ### Slot Lambda Calculus
 
