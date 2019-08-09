@@ -196,6 +196,7 @@ into expressions for higher order reasoning.
 - [Proof Optimization by Uniqueness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-optimization-by-uniqueness.pdf)
 - [Logical Properties of Propositional Logic Systems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-properties-of-propositional-logic-systems.pdf)
 - [MX Grammar for Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mx-grammar-for-dependent-types.pdf)
+- [Variables in MX Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/variables-in-mx-dependent-types.pdf)
 
 ### Slot Lambda Calculus
 
