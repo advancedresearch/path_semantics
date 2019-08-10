@@ -201,6 +201,7 @@ into expressions for higher order reasoning.
 - [MX Grammar for Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mx-grammar-for-dependent-types.pdf)
 - [Variables in MX Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/variables-in-mx-dependent-types.pdf)
 - [Evaluation of Variable in MX Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/evaluation-of-variable-in-mx-dependent-types.pdf)
+- [Evaluation of Membership in MX Dependent Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/evaluation-of-membership-in-mx-dependent-types.pdf)
 
 ### Slot Lambda Calculus
 
