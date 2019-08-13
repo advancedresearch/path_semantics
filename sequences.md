@@ -138,6 +138,7 @@ into expressions for higher order reasoning.
 - [Probabilistic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-paths.pdf)
 - [Probabilistic Paths as Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-paths-as-sub-types.pdf)
 - [Obscure Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/obscure-functions.pdf)
+- [Partial Diversity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-diversity.pdf)
 
 ### Examples of Probabilistic Path Semantics
 
