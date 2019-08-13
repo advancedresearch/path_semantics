@@ -146,6 +146,7 @@ into expressions for higher order reasoning.
 - [Practice Problem 1 for Probabilistic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/practice-problem-1-for-probabilistic-paths.pdf)
 - [Probabilistic Liar's Paradox](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-liars-paradox.pdf)
 - [Predicting Primality of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-primality-of-addition.pdf)
+- [Ambiguous Probability of Random String Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ambiguous-probability-of-random-string-optimization.pdf)
 
 ### Proof Techniques
 
