@@ -40,6 +40,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-function-sub-types.pdf)
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
+- [The Id Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
 
 ### Higher Order Operator Overloading
 
