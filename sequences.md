@@ -41,6 +41,7 @@ This is a collection of papers organized in a way to build up gradually understa
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf)
 - [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
 - [The Id Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
+- [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
 
 ### Higher Order Operator Overloading
 
