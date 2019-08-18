@@ -127,6 +127,7 @@ into expressions for higher order reasoning.
 - [The Meaning of Consistency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-meaning-of-consistency.pdf)
 - [Natural Numbers by Coinductive Construction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-by-coinductive-construction.pdf)
 - [Spatial Sum Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/spatial-sum-functions.pdf)
+- [Argument Relevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-relevant-functions.pdf)
 
 ### Probabilistic Path Semantics
 
