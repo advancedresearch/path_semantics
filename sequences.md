@@ -201,6 +201,7 @@ into expressions for higher order reasoning.
 - [Informal Theorem Proving](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/informal-theorem-proving.pdf)
 - [Proof Optimization by Uniqueness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proof-optimization-by-uniqueness.pdf)
 - [Logical Properties of Propositional Logic Systems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-properties-of-propositional-logic-systems.pdf)
+- [Type Inhabitation as Existence of Normal Identity Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-inhabitation-as-existence-of-normal-identity-paths.pdf)
 
 ### MX Grammar for Dependent Types
 
