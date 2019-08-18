@@ -128,6 +128,7 @@ into expressions for higher order reasoning.
 - [Natural Numbers by Coinductive Construction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-numbers-by-coinductive-construction.pdf)
 - [Spatial Sum Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/spatial-sum-functions.pdf)
 - [Argument Relevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-relevant-functions.pdf)
+- [Argument Irrelevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-irrelevant-functions.pdf)
 
 ### Probabilistic Path Semantics
 
