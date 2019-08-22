@@ -119,7 +119,7 @@ To check this, one must write the following check:
 
     b : [∃g] true
     
-The definition of `∃g` follows from the definition of `g`, using the definition of an existential path.
+The definition of `∃g` follows from the definition of `g`, using the definition of an existential path ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf)).
 
 If you have a function which identity is used to talk about other functions,
 then it is sufficient that the function is implemented.
