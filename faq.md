@@ -60,4 +60,24 @@ What you are allowed to say in Path Semantics is determined by the core axiom ([
 
 ### Why do you quote yourself?
 
-Some people look for any excuse to call me a "crank", so I give them that excuse early on, so they don't have to read to find one.
+Some people look for any excuse to call me a "crank", so I give them that excuse early on, so they don't have to read a lot to find one.
+
+### Why do you not refer to papers e.g. listed in MathSciNet?
+
+I have never used it. I do not follow mathematical journals.
+
+My workflow is different from those of most mathematicians. See the section "Workflow" [here](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/about-publishing-path-semantics.pdf).
+
+### Why do you not use terminology that other mathematicians are familiar with?
+
+The central topic of path semantics is about functions.
+To do this well, the terminology needs to be precise.
+
+Path semantics is more strict than standard terminology, e.g.:
+
+- Trivial path (a function describing the domain of a function, [link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf))
+- Existential path (a function describing the codomain of a function, [link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf))
+
+The way domain and codomain is used in standard terminology is as a set.
+It is not clear that one is talking about functions of arbitrary sub-types.
+The expression "domain constraint" might be used instead of "trivial path".
