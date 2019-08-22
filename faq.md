@@ -52,8 +52,12 @@ different semantics than the one we use in formal systems.
 ### What is the difference between formal theorem proving and informal theorem proving?
 
 Informal theorem proving permits usage of all formal languages for theorem proving.
-No formal language can use all formal languages, therefore informal theorem proving is strictly more powerful than formal theorem proving.
+No formal language can use all formal languages, therefore informal theorem proving is strictly more powerful than formal theorem proving ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/informal-theorem-proving.pdf)).
 
 It does not mean that you are allowed to say anything you want in informal theorem proving.
 
-What you are allowed to say in Path Semantics is determined by the core axiom.
+What you are allowed to say in Path Semantics is determined by the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)).
+
+### Why do you quote yourself?
+
+Some people look for any excuse to call me a "crank", so I give them that excuse early on, so they don't have to read to find one.
