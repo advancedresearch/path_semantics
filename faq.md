@@ -152,6 +152,6 @@ There are ways one can partially define formally the semantics of functions.
 However, you can not expect this to be fully formalized, because it is impossible.
 Therefore, Path Semantics is not fully formalizable.
 
-### Why do not use formal definitions?
+### Why do you not use formal definitions?
 
 I do. Everywhere. They are formally defined using functions.
