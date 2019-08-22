@@ -81,3 +81,5 @@ Path semantics is more strict than standard terminology, e.g.:
 The way domain and codomain is used in standard terminology is as a set.
 It is not clear that one is talking about functions of arbitrary sub-types.
 The expression "domain constraint" might be used instead of "trivial path".
+
+In other languages, such as [Dependent L-System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-lsystem.pdf), the existential path defined is an analogue of the existential path of functions.
