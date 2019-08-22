@@ -4,7 +4,9 @@ Here is list of questions and answers that you might have about Path Semantics.
 
 ### Is Path Semantics meant to be a new foundation of all mathematics?
 
-No. While it is true that the axiom might describe how symbols are used for theorem proving in mathematics in general,
+No. It is meant to be a practical tool for reasoning about programs, but open-ended for reasoning with mathematics.
+
+While it is true that the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)) might describe how symbols are used for theorem proving in mathematics in general,
 it provides no complete semantics of mathematics.
 
 For every theory, the semantics of it must be formalized and defined before you can talk about what it is.
@@ -20,11 +22,11 @@ In a similar way, mathematics is a body of knowledge that is iterated over and i
 There is no complete definition of mathematics, but there are some axioms that defines rules of
 how to think about mathematics itself, abstractly.
 
-For example, the univalence axiom of Homotopy Type Theory can be written as a rule in
+For example, the univalence axiom of Homotopy Type Theory ([link](https://homotopytypetheory.org/)) can be written as a rule in
 a theorem prover assistant. In that system, the proofs can be checked by a computer.
 However, outside the system, the univalence axiom must be interpreted in some way to make sense.
 
-So, when Path Semantics defines an axiom, you must first find an environment to interpret what it means.
+So, when Path Semantics defines a core axiom, you must first find an environment to interpret what it means.
 The environment will always contain a lot of complexity that is not built into the axiom.
 This constraint prevents Path Semantics from being a foundation of all mathematics,
 but for some environments, with an interpretation that does not violate the axiom,
@@ -33,7 +35,7 @@ it is indistinguishable from e.g. a whole theory of a field.
 Path Semantics is used to reason about some parts of mathematics, not all of it.
 It is much better to use existing theories and frameworks for various domains, than reconstructing it in Path Semantics.
 
-### Why do you not prove that the axiom works, why only a reward for disproving it?
+### Why do you not prove that the core axiom works, why only a reward for disproving it?
 
 If you can prove that the axiom works, then Path Semantics is not consistent, which is the same as disproving it.
 
@@ -46,7 +48,7 @@ Proving soundness of a formal system is often done in formal languages for each 
 Path Semantics is not a Type Theory. It is more fundamental.
 Type Theory is added to Path Semantics through "bootstrapping".
 
-You might be able to disprove the axiom, by e.g. show that Type Theory as bootstrapped into gives a
+You might be able to disprove the core axiom, by e.g. show that Type Theory as bootstrapped into gives a
 different semantics than the one we use in formal systems.
 
 ### What is the difference between formal theorem proving and informal theorem proving?
@@ -60,7 +62,11 @@ What you are allowed to say in Path Semantics is determined by the core axiom ([
 
 ### Why do you quote yourself?
 
-Some people look for any excuse to call me a "crank", so I give them that excuse early on, so they don't have to read a lot to find one.
+It is a joke that refers to the stereotypical view of an amateur mathematician which makes other mathematicians call them a "crank".
+
+If you call me a "crank" because I am quoting myself, your behavior is a proof that joke.
+
+Do you get the joke now? I am pretty sure you can work it out if you take the time. :)
 
 ### Why do you not refer to papers e.g. listed in MathSciNet?
 
