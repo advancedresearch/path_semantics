@@ -83,3 +83,69 @@ It is not clear that one is talking about functions of arbitrary sub-types.
 The expression "domain constraint" might be used instead of "trivial path".
 
 In other languages, such as [Dependent L-System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-lsystem.pdf), the existential path defined is an analogue of the existential path of functions.
+
+### Why do you build upon functions as the basic idea and not e.g. Set Theory or Category Theory?
+
+Functions are easier to understand for programmers.
+Designing a language to talk about functions is also more useful for programmers.
+
+The semantics of functions in mainstream programming is different from e.g. Set Theory,
+because of side effects and indeterminism.
+With other words, Set Theory is insufficient to deal with problems that programmers want to solve.
+
+Category Theory is viewing mathematics from a bird-view perspective, which is useful sometimes,
+but understanding functions in more detail can be useful in ways Category Theory does not fit.
+
+### How do you test that the ideas work?
+
+By testing them in practice. After all, path semantics builds on the semantics of functions, which is available in all mainstream programming languages.
+
+### How can you know that the ideas are correct?
+
+Path semantics explains how to check that some ideas are correct, by writing programs.
+This method assumes that you can implement those programs.
+
+For example:
+
+    a : [g] b
+    
+To check this, one must write the following check:
+
+    b : [∃g] true
+    
+The definition of `∃g` follows from the definition of `g`, using the definition of an existential path.
+
+If you have a function which identity is used to talk about other functions,
+then it is sufficient that the function is implemented.
+This works because path semantics reduces `f[g] <=> h`.
+
+### This is just another way of doing mathematics that is already done in practice! What is new?
+
+The purpose of Path Semantics is to develop another way of doing mathematics that is already done in practice,
+using a notation that feels more familiar and understandable for programmers.
+
+Why? Because programmers like myself try to solve problems, and do not have time to follow mathematical journals.
+
+There is no need to make new contributions to the existing mountain of knowledge in order to demonstrate that
+a new way of expressing mathematical ideas using functions is more practical and easier to understand.
+
+Techniques for helping to understand what mathematics is about, makes it easier for people to
+utilize the existing mountain of knowledge. To do this, one must focus on some central ideas of importance.
+
+### I do not trust Path Semantics without having a full formal definition. Why not make one?
+
+Path Semantics build the core ideas on the semantics of functions, in order to avoid the need for a full formal definition.
+If do not trust functions, then you have problem.
+
+Nobody have a full formal definition of functions as they are used in programming.
+There are good reasons why: For example, arbitrary sub-types makes type checking undecidable.
+
+Yet, functions are necessary because *they are used in programming*.
+
+There are ways one can partially define formally the semantics of functions.
+However, you can not expect this to be fully formalized, because it is impossible.
+Therefore, Path Semantics is not fully formalizable.
+
+### Why do not use formal definitions?
+
+I do. Everywhere. They are formally defined using functions.
