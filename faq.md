@@ -141,7 +141,7 @@ utilize the existing mountain of knowledge. To do this, one must focus on some c
 ### I do not trust Path Semantics without having a full formal definition. Why not make one?
 
 Path Semantics build the core ideas on the semantics of functions, in order to avoid the need for a full formal definition.
-If do not trust functions, then you have problem.
+If you do not trust functions, then you have problem.
 
 Nobody have a full formal definition of functions as they are used in programming.
 There are good reasons why: For example, arbitrary sub-types makes type checking undecidable.
