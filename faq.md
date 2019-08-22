@@ -64,7 +64,7 @@ What you are allowed to say in Path Semantics is determined by the core axiom ([
 
 It is a joke that refers to the stereotypical view of an amateur mathematician which makes other mathematicians call them a "crank".
 
-If you call me a "crank" because I am quoting myself, your behavior is a proof that joke.
+If you call me a "crank" because I am quoting myself, your behavior is a proof of that joke.
 
 Do you get the joke now? I am pretty sure you can work it out if you take the time. :)
 
