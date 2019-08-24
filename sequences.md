@@ -75,6 +75,7 @@ into expressions for higher order reasoning.
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 - [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
 - [Logical Interpretations of Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-interpretations-of-boolean-path-semantics.pdf)
+- [Set Theory vs Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/set-theory-vs-boolean-functions.pdf)
 
 ### Permutative Path Semantics
 
