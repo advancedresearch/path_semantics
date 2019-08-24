@@ -1,7 +1,15 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
-"From Logic to Lojban" - Sven Nilsen, 2018 (slogan)
+- The semantics of functions is fundament which programming is built upon.
+- In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
+- Dependent Type languages uses pure functions to prove some properties of programs.
+
+The requirement that functions to be pure, makes it hard to prove some useful things.
+Path Semantics goes beyond Dependent Types to arbitrary sub-types, embraces undecidability and non-determinism.
+It brings you closer to the full meaning of mathematics, view through a perspective designed for programmers.
+
+"Beyond pure functions" - (2019 slogan)
 
 Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
