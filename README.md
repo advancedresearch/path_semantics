@@ -1,13 +1,13 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
-- The semantics of functions is fundament which programming is built upon.
+- The semantics of functions is the fundament which programming is built upon.
 - In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
 - Dependent Type languages uses pure functions to prove some properties of programs.
 
 The requirement that functions to be pure, makes it hard to prove some useful things.
 Path Semantics goes beyond Dependent Types to arbitrary sub-types, embraces undecidability and non-determinism.
-It brings you closer to the full meaning of mathematics, view through a perspective designed for programmers.
+It brings you closer to the full meaning of mathematics, viewed through a perspective designed for programmers.
 
 "Beyond pure functions" - (2019 slogan)
 
