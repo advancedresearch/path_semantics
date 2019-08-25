@@ -1,7 +1,19 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+Official logo (2019):
+
 ![fractal](./images/fractal.png)
+
+[85, 164, 56, 161, 184, 74, 170, 85, 170, 170, 163, 43], or (4ab8a138a455 2ba3aaaa55aa)
+
+The image above, with help from the code, describes a secret and beautiful mathematical language.
+If you break the code, you receive the language in reward.
+What kind of language is it? What can you prove with it?
+
+Path Semantics is for people who want to develop deep intuition about mathematics.
+This means you understand mathematics well enough to build your own languages for theorem proving, e.g. from scratch.
+The intuition of how to do this, comes from studying semantics of functions and programming by using functions.
 
 - The semantics of functions is the fundament which programming is built upon.
 - In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
