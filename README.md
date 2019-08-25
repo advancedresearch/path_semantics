@@ -1,6 +1,8 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+![fractal](./images/fractal.png)
+
 - The semantics of functions is the fundament which programming is built upon.
 - In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
 - Dependent Type languages uses pure functions to prove some properties of programs.
