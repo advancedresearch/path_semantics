@@ -12,6 +12,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 ### Foundation
 
+- [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf)
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)
 - [Lifted Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lifted-associations.pdf)
 - [Asserting Formal Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asserting-formal-associations.pdf)
