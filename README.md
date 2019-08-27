@@ -5,7 +5,7 @@ Official logo (2019):
 
 ![fractal](./images/fractal.png)
 
-[85, 164, 56, 161, 184, 74, 170, 85, 170, 170, 163, 43], or (4ab8a138a455 2ba3aaaa55aa)
+[85, 164, 56, 161, 184, 74, 170, 85, 170, 170, 163, 43], or (4ab8a138a455 2ba3aaaa55aa in little-endian order)
 
 The image above, with help from the code, describes a secret and beautiful mathematical language.
 If you break the code, you receive the language in reward.
