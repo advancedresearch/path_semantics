@@ -78,6 +78,7 @@ into expressions for higher order reasoning.
 - [Logical Interpretations of Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-interpretations-of-boolean-path-semantics.pdf)
 - [Set Theory vs Boolean Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/set-theory-vs-boolean-functions.pdf)
 - [Higher Order De Morgan's Laws for Unary Binary Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-de-morgans-laws-for-unary-binary-functions.pdf)
+- [Union of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/union-of-existential-paths.pdf)
 
 ### Permutative Path Semantics
 
