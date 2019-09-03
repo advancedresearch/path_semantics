@@ -135,6 +135,7 @@ into expressions for higher order reasoning.
 - [Argument Relevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-relevant-functions.pdf)
 - [Argument Irrelevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-irrelevant-functions.pdf)
 - [Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/binary-trees.pdf)
+- [Rooted Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rooted-binary-trees.pdf)
 
 ### Probabilistic Path Semantics
 
