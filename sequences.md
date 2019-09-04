@@ -135,7 +135,7 @@ into expressions for higher order reasoning.
 - [Spatial Sum Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/spatial-sum-functions.pdf)
 - [Argument Relevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-relevant-functions.pdf)
 - [Argument Irrelevant Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/argument-irrelevant-functions.pdf)
-- [Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/binary-trees.pdf)
+- [Full Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/full-binary-trees.pdf)
 - [Rooted Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rooted-binary-trees.pdf)
 - [Infinite Complete Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinite-complete-binary-trees.pdf)
 
