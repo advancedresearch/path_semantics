@@ -138,6 +138,7 @@ into expressions for higher order reasoning.
 - [Full Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/full-binary-trees.pdf)
 - [Rooted Full Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rooted-full-binary-trees.pdf)
 - [Infinite Complete Binary Trees](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinite-complete-binary-trees.pdf)
+- [Infibin](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infibin.pdf)
 
 ### Probabilistic Path Semantics
 
