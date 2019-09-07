@@ -31,7 +31,7 @@ This is a collection of papers organized in a way to build up gradually understa
 
 - [Algebraic Notation for Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-notation-for-asymmetric-paths.pdf)
 - [Cross Argument Asymmetric Path Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cross-argument-asymmetric-path-notation.pdf)
-- [Nilsen-Cartesian Product Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/nilsen-cartesian-product-notation.pdf)
+- [Path Function Product Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-function-product-notation.pdf)
 - [Merging of Path Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/merging-of-path-generators.pdf)
 - [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf)
 - [Domain Constraint Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/domain-constraint-notation.pdf)
