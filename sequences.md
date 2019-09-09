@@ -1,7 +1,8 @@
 # Sequences for learning Path Semantics
 Reading sequences for learning path semantics.
 
-This is a collection of papers organized in a way to build up gradually understanding of path semantics.
+This is a collection of papers organized in a way to build up gradually understanding of path semantics.  
+Some papers are marked with stars (e.g. ★★★★★) to signify their significance.
 
 ### Background
 
@@ -22,7 +23,7 @@ This is a collection of papers organized in a way to build up gradually understa
 ### Introduction
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
-- [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf)
+- [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf) ★★★★★
 - [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
 - [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
 - [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
