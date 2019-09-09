@@ -165,7 +165,7 @@ into expressions for higher order reasoning.
 ### Proof Techniques
 
 - [Type Checking Variable With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-checking-variable-with-multiple-constraints.pdf)
-- [Reduction of Proofs With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/reduction-of-proofs-with-multiple-constraints.pdf)
+- [Reduction of Proofs With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/reduction-of-proofs-with-multiple-constraints.pdf) ★★★★★
 - [Strategies for Analyzing Data About Symmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/strategies-for-analysing-data-about-symmetric-paths.pdf)
 - [Equation Inference](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equation-inference.pdf)
 - [Proving Equality in Two Different Ways](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proving-equality-in-two-different-ways.pdf)
