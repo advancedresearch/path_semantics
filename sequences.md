@@ -41,7 +41,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Function Currying Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/function-currying-notation.pdf) ★★★★★
 - [Normal Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths-as-function-sub-types.pdf)
 - [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf) ★★★★★
-- [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf)
+- [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf) ★★★★★
 - [The Id Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
 - [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
 
