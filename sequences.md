@@ -19,6 +19,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Asserting Formal Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asserting-formal-associations.pdf)
 - [Computational Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/computational-equivalence.pdf)
 - [Incompleteness of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incompleteness-of-path-semantics.pdf)
+- [Undefined Symbols](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-symbols.pdf)
 
 ### Introduction
 
