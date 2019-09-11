@@ -101,6 +101,7 @@ into expressions for higher order reasoning.
 - [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
 - [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
 - [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
+- [Associativity as Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-as-asymmetric-paths.pdf)
 
 ### Reference material
 
