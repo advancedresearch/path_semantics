@@ -101,7 +101,6 @@ into expressions for higher order reasoning.
 - [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
 - [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
 - [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
-- [Associativity as Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-as-asymmetric-paths.pdf)
 
 ### Reference material
 
@@ -118,6 +117,7 @@ into expressions for higher order reasoning.
 - [Natural Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-equality.pdf)
 - [Asymmetric Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-inverse.pdf)
 - [Commutativity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/commutativity.pdf)
+- [Associativity as Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-as-asymmetric-paths.pdf)
 - [Composite & Prime Numbers in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/composite-and-prime-numbers-in-path-semantics.pdf)
 - [Inverse Zero Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inverse-zero-order-existential-paths.pdf)
 - [Structure Preserving Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/structure-preserving-functions.pdf)
