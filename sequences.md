@@ -74,6 +74,7 @@ into expressions for higher order reasoning.
 - [Atomic Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-universal-existential-paths.pdf)
 - [Constrained Existential Path Implies Normal Path](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-existential-path-implies-normal-path.pdf)
 - [Invertible Domain Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-domain-constraints.pdf)
+- [Discrete Real Addition Isomorphisms](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-real-addition-isomorphisms.pdf)
 
 ### Boolean Path Semantics
 
