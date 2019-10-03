@@ -122,4 +122,4 @@ The diagrams have some important properties:
 - The class with lowest complexity, `[2, 2, ...]`, are edges of hypercubes, as in Adinkra diagrams
 - All diagrams are subset of itself in a single dimension `[N]`, which has the highest complexity
 
-For algorithms to compute with these diagrams, see `Context` in the [discrete](https://github.com/bvssvni/discrete) library.
+For algorithms to compute with these diagrams, see `Context` in the [discrete](https://github.com/advancedresearch/discrete) library.
