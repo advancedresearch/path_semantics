@@ -221,6 +221,7 @@ into expressions for higher order reasoning.
 - [Type Inhabitation as Existence of Normal Identity Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-inhabitation-as-existence-of-normal-identity-paths.pdf)
 - [Representation of Trivial Path in AST](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/representation-of-trivial-path-in-ast.pdf)
 - [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
+- [Time-Travel Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/time-travel-logic.pdf)
 
 ### MX Grammar for Dependent Types
 
