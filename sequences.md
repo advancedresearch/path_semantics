@@ -222,6 +222,7 @@ into expressions for higher order reasoning.
 - [Representation of Trivial Path in AST](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/representation-of-trivial-path-in-ast.pdf)
 - [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
 - [Time-Travel Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/time-travel-logic.pdf)
+- [The Scientific Method and Language Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-scientific-method-and-language-semantics.pdf)
 
 ### MX Grammar for Dependent Types
 
