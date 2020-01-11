@@ -225,6 +225,7 @@ into expressions for higher order reasoning.
 - [Time-Travel Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/time-travel-logic.pdf)
 - [The Scientific Method and Language Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-scientific-method-and-language-semantics.pdf)
 - [Decidability by Frequency Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-by-frequency-propositions.pdf)
+- [Undecidable Infinitesimals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undecidable-infinitesimals.pdf)
 
 ### MX Grammar for Dependent Types
 
