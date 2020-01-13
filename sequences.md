@@ -226,6 +226,7 @@ into expressions for higher order reasoning.
 - [The Scientific Method and Language Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-scientific-method-and-language-semantics.pdf)
 - [Decidability by Frequency Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-by-frequency-propositions.pdf)
 - [Undecidable Infinitesimals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undecidable-infinitesimals.pdf)
+- [Wildcard Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/wildcard-sets.pdf)
 
 ### MX Grammar for Dependent Types
 
