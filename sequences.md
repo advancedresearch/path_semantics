@@ -147,6 +147,7 @@ into expressions for higher order reasoning.
 - [Infibin](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infibin.pdf)
 - [Semantics of Points](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantics-of-points.pdf)
 - [Exponential Duplication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exponential-duplication.pdf)
+- [Questioning the Notion of a Set](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/questioning-the-notion-of-a-set.pdf)
 
 ### Probabilistic Path Semantics
 
