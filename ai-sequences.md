@@ -37,6 +37,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Ethical Reasoning About Altruistic Competitions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ethical-reasoning-about-altruistic-competitions.pdf)
 - [Friend vs Enemy Asymmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/friend-vs-enemy-asymmetry.pdf)
 - [Equivalent Utility Transport](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalent-utility-transport.pdf)
+- [Moral Agency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/moral-agency.pdf)
 
 ### Language Semantics of Uncertainty and Identity
 
