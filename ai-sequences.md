@@ -38,6 +38,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Friend vs Enemy Asymmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/friend-vs-enemy-asymmetry.pdf)
 - [Equivalent Utility Transport](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalent-utility-transport.pdf)
 - [Moral Agency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/moral-agency.pdf)
+- [The Cursed Diamond Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cursed-diamond-problem.pdf)
 
 ### Language Semantics of Uncertainty and Identity
 
@@ -117,6 +118,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Operator Triggered Itermediate Decison Theories](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/operator-triggered-intermediate-decision-theories.pdf)
 - [Zen Rationality and False Beliefs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/zen-rationality-and-false-beliefs.pdf)
 - [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
+- [The Cursed Diamond Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cursed-diamond-problem.pdf)
 
 ### Misc
 
