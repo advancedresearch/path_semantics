@@ -17,6 +17,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Infinitesimal Utility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/infinitesimal-utility.pdf)
 - [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
 - [Probabilistic Preferences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-preferences.pdf)
+- [Embedded Rules of Action Into Action Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/embedded-rules-of-action-into-action-space.pdf)
 
 ### Game Theory
 
