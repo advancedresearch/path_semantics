@@ -7,6 +7,8 @@ Official logo (2019):
 
 [85, 164, 56, 161, 184, 74, 170, 85, 170, 170, 163, 43], or ([0x55aa4ab8a138a455, 0x2ba3aaaa] in little-endian order)
 
+[Solution to the puzzle explained](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-01-18-the-secret-behind-the-2019-logo.md)
+
 The image above, with help from the code, describes a secret and beautiful mathematical language.
 If you break the code, you receive the language in reward.
 What kind of language is it? What can you prove with it?
@@ -44,6 +46,7 @@ except informally and partially checked by automated theorem provers.
 
 Blog posts:
 
+- [2020-01-18 The Secret Behind 2019 Logo](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-01-18-the-secret-behind-the-2019-logo.md)
 - [2018-12-09 Five Things You Should Know About Path Semantics](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2018-12-09-five-things-you-should-know-about-path-semantics.md)
 - [2017-08-25 Homotopy and Geometry](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2017-08-25-homotopy-and-geometry.md)
 - [2017-07-20 Generalizing Path Semantics to Probability Theory](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2017-07-20-generalizing-path-semantics-to-probability-theory.md)
