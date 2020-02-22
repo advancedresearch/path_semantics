@@ -255,6 +255,7 @@ into expressions for higher order reasoning.
 - [Real Fractal Meta Probability Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/real-fractal-meta-probability-theory.pdf)
 - [Modal Logic of Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-observations.pdf)
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
+- [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 
 ### Artificial Intelligence
 
