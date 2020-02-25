@@ -229,6 +229,7 @@ into expressions for higher order reasoning.
 - [Decidability by Frequency Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/decidability-by-frequency-propositions.pdf)
 - [Undecidable Infinitesimals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undecidable-infinitesimals.pdf)
 - [Wildcard Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/wildcard-sets.pdf)
+- [Single Variable First-Order Proof Transform Into Propositional Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-variable-first-order-proof-transform-into-propositional-logic.pdf)
 
 ### MX Grammar for Dependent Types
 
