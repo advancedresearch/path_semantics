@@ -257,6 +257,7 @@ into expressions for higher order reasoning.
 - [Modal Logic of Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-observations.pdf)
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
+- [Sized Type Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sized-type-theory.pdf)
 
 ### Artificial Intelligence
 
