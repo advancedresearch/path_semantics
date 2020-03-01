@@ -230,6 +230,7 @@ into expressions for higher order reasoning.
 - [Undecidable Infinitesimals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undecidable-infinitesimals.pdf)
 - [Wildcard Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/wildcard-sets.pdf)
 - [Single Variable First-Order Proof Transform Into Propositional Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-variable-first-order-proof-transform-into-propositional-logic.pdf)
+- [Algebraic Sized Type Constructors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-sized-type-constructors.pdf)
 
 ### MX Grammar for Dependent Types
 
