@@ -105,7 +105,6 @@ into expressions for higher order reasoning.
 - [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
 - [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
 - [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
-- [Examples of Sized Type Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/examples-of-sized-type-equivalence.pdf)
 
 ### Reference material
 
@@ -232,8 +231,14 @@ into expressions for higher order reasoning.
 - [Undecidable Infinitesimals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undecidable-infinitesimals.pdf)
 - [Wildcard Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/wildcard-sets.pdf)
 - [Single Variable First-Order Proof Transform Into Propositional Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-variable-first-order-proof-transform-into-propositional-logic.pdf)
-- [Algebraic Sized Type Constructors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-sized-type-constructors.pdf)
 - [Constrained Normal Path Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-normal-path-proofs.pdf)
+
+### Sized Type Theory
+
+- [Sized Type Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sized-type-theory.pdf)
+- [Algebraic Sized Type Constructors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-sized-type-constructors.pdf)
+- [Examples of Sized Type Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/examples-of-sized-type-equivalence.pdf)
+- [Counter-Factual Equality of Primes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/counter-factual-equality-of-primes.pdf)
 
 ### MX Grammar for Dependent Types
 
@@ -261,7 +266,6 @@ into expressions for higher order reasoning.
 - [Modal Logic of Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-observations.pdf)
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
-- [Sized Type Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sized-type-theory.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
 
 ### Artificial Intelligence
