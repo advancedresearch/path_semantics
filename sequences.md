@@ -20,6 +20,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Computational Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/computational-equivalence.pdf)
 - [Incompleteness of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incompleteness-of-path-semantics.pdf)
 - [Undefined Symbols](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-symbols.pdf)
+- [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 
 ### Introduction
 
