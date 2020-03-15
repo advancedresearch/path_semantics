@@ -269,6 +269,7 @@ into expressions for higher order reasoning.
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
+- [Dual Number Monotonic Density](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dual-number-monotonic-density.pdf)
 
 ### Artificial Intelligence
 
