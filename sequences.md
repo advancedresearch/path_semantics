@@ -234,6 +234,7 @@ into expressions for higher order reasoning.
 - [Wildcard Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/wildcard-sets.pdf)
 - [Single Variable First-Order Proof Transform Into Propositional Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-variable-first-order-proof-transform-into-propositional-logic.pdf)
 - [Constrained Normal Path Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-normal-path-proofs.pdf)
+- [Monotonic Non-Linear Solutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-non-linear-solutions.pdf)
 
 ### Sized Type Theory
 
