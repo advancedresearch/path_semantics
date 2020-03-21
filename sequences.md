@@ -247,6 +247,8 @@ into expressions for higher order reasoning.
 - [Algebraic Sized Type Constructors](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-sized-type-constructors.pdf)
 - [Examples of Sized Type Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/examples-of-sized-type-equivalence.pdf)
 - [Counter-Factual Equality of Primes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/counter-factual-equality-of-primes.pdf)
+- [Encoding Equivalences as Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/encoding-equivalences-as-swaps.pdf)
+- [Equivalences Between Equivalences as Swaps of Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalences-between-equivalences-as-swaps-of-swaps.pdf)
 - [Modal Logic of Equivalences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-equivalences.pdf)
 
 ### MX Grammar for Dependent Types
