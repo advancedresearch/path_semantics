@@ -98,6 +98,7 @@ into expressions for higher order reasoning.
 - [Branch Permutation Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/branch-permutation-grammar.pdf)
 - [Permutative Abacaba Vector](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-abacaba-vector.pdf)
 - [Ordered Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ordered-swaps.pdf)
+- [Permutation Group of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-group-of-functions.pdf)
 
 ### Examples of Discrete Path Semantics
 
