@@ -100,6 +100,7 @@ into expressions for higher order reasoning.
 - [Ordered Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ordered-swaps.pdf)
 - [Permutation Group of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-group-of-functions.pdf)
 - [Encoding Equivalences as Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/encoding-equivalences-as-swaps.pdf)
+- [Equivalences Between Equivalences as Swaps of Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalences-between-equivalences-as-swaps-of-swaps.pdf)
 
 ### Examples of Discrete Path Semantics
 
