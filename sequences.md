@@ -102,6 +102,7 @@ into expressions for higher order reasoning.
 - [Encoding Equivalences as Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/encoding-equivalences-as-swaps.pdf)
 - [Equivalences Between Equivalences as Swaps of Swaps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/equivalences-between-equivalences-as-swaps-of-swaps.pdf)
 - [Swaps of Swaps Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/swaps-of-swaps-grammar.pdf)
+- [Uncovered Permutation Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncovered-permutation-grammars.pdf)
 
 ### Examples of Discrete Path Semantics
 
