@@ -41,6 +41,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Moral Agency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/moral-agency.pdf)
 - [The Cursed Diamond Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cursed-diamond-problem.pdf)
 - [Gray Zone Modal Utility Transport](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/gray-zone-modal-utility-transport.pdf)
+- [The Meditating Monk at The Top of The Mountain](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-meditating-monk-at-the-top-of-the-mountain.pdf)
 
 ### Language Semantics of Uncertainty and Identity
 
