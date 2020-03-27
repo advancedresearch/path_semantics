@@ -271,6 +271,12 @@ into expressions for higher order reasoning.
 - [Dual Number Monotonic Density](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dual-number-monotonic-density.pdf)
 - [Discrete Monotonic Limits](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-monotonic-limits.pdf)
 
+### Cocyclic Graphs
+
+- [Cocyclic Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-graphs.pdf)
+- [Cocyclic Squares](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-squares.pdf)
+- [Cocyclic Cubes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-cubes.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -286,8 +292,6 @@ into expressions for higher order reasoning.
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
-- [Cocyclic Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-graphs.pdf)
-- [Cocyclic Squares](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-squares.pdf)
 
 ### Artificial Intelligence
 
