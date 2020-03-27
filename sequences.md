@@ -287,6 +287,7 @@ into expressions for higher order reasoning.
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
 - [Cocyclic Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-graphs.pdf)
+- [Cocyclic Squares](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-squares.pdf)
 
 ### Artificial Intelligence
 
