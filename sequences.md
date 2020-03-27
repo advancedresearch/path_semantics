@@ -277,6 +277,7 @@ into expressions for higher order reasoning.
 - [Cocyclic Squares](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-squares.pdf)
 - [Cocyclic Cubes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-cubes.pdf)
 - [Cocyclic Pentagons](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-pentagons.pdf)
+- [Cocyclic Hexagons](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-hexagons.pdf)
 
 ### Theories
 
