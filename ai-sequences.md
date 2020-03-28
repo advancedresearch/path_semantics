@@ -61,6 +61,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [The Problem of Describing What is Happening](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-problem-of-describing-what-is-happening.pdf)
 - [Some Important Properties of Natural Language](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/some-important-properties-of-natural-language.pdf)
 - [Subset Sentences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/subset-sentences.pdf)
+- [Common Sense of Gratefulness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/common-sense-of-gratefulness.pdf)
 
 ### The Hard Safety Control Problem
 
