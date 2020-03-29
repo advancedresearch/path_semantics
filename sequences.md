@@ -280,6 +280,12 @@ into expressions for higher order reasoning.
 - [Cocyclic Hexagons](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-hexagons.pdf)
 - [Cocyclic N-gon Necklaces](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocyclic-n-gon-necklaces.pdf)
 
+### Directional Set Algebra
+
+- [Directional Set Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/directional-set-algebra.pdf)
+- [Directional Set Products](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/directional-set-products.pdf)
+- [Binary Square Matrix Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/binary-square-matrix-combinatorics.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -295,8 +301,6 @@ into expressions for higher order reasoning.
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
-- [Directional Set Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/directional-set-algebra.pdf)
-- [Binary Square Matrix Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/binary-square-matrix-combinatorics.pdf)
 
 ### Artificial Intelligence
 
