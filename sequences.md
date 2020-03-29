@@ -296,6 +296,7 @@ into expressions for higher order reasoning.
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
 - [Directional Set Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/directional-set-algebra.pdf)
+- [Binary Square Matrix Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/binary-square-matrix-combinatorics.pdf)
 
 ### Artificial Intelligence
 
