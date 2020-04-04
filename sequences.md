@@ -346,3 +346,4 @@ into expressions for higher order reasoning.
 - [Natural Number Fuzzing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-number-fuzzing.pdf)
 - [Randomary Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/randomary-numbers.pdf)
 - [Randomary Nth Contractibility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/randomary-nth-contractibility.pdf)
+- [Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-observations.pdf)
