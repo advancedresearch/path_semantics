@@ -347,3 +347,4 @@ into expressions for higher order reasoning.
 - [Randomary Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/randomary-numbers.pdf)
 - [Randomary Nth Contractibility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/randomary-nth-contractibility.pdf)
 - [Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-observations.pdf)
+- [Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-non-determinism.pdf)
