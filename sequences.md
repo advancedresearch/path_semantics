@@ -243,6 +243,7 @@ into expressions for higher order reasoning.
 - [Constrained Normal Path Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-normal-path-proofs.pdf)
 - [Monotonic Non-Linear Solutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-non-linear-solutions.pdf)
 - [Stair Pairs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/stair-pairs.pdf)
+- [Cartesian Stair Pair Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-stair-pair-combinatorics.pdf)
 
 ### Sized Type Theory
 
