@@ -351,3 +351,4 @@ into expressions for higher order reasoning.
 - [Randomary Nth Contractibility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/randomary-nth-contractibility.pdf)
 - [Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-observations.pdf)
 - [Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-non-determinism.pdf)
+- [Non-Constructibility of Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-constructibility-of-quantum-non-determinism.pdf)
