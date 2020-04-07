@@ -352,3 +352,4 @@ into expressions for higher order reasoning.
 - [Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/partial-observations.pdf)
 - [Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-non-determinism.pdf)
 - [Non-Constructibility of Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-constructibility-of-quantum-non-determinism.pdf)
+- [All Single Qubits are Constructible](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/all-single-qubits-are-constructible.pdf)
