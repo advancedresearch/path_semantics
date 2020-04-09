@@ -247,6 +247,7 @@ into expressions for higher order reasoning.
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf)
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
 - [Abstract Idempotent Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-idempotent-functions.pdf)
+- [Emph Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/emph-notation.pdf)
 
 ### Sized Type Theory
 
