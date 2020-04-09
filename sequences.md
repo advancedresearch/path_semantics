@@ -246,6 +246,7 @@ into expressions for higher order reasoning.
 - [Cartesian Stair Pair Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-stair-pair-combinatorics.pdf)
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf)
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
+- [Abstract Idempotent Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-idempotent-functions.pdf)
 
 ### Sized Type Theory
 
