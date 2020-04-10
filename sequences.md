@@ -358,3 +358,4 @@ into expressions for higher order reasoning.
 - [All Single Qubits are Constructible](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/all-single-qubits-are-constructible.pdf)
 - [Order-Free Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/order-free-non-determinism.pdf)
 - [Order-Free Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/order-free-quantum-non-determinism.pdf)
+- [Quantum Knight Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-knight-functions.pdf)
