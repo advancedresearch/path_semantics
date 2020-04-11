@@ -253,6 +253,7 @@ into expressions for higher order reasoning.
 - [Abstract Idempotent Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-idempotent-functions.pdf)
 - [Emph Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/emph-notation.pdf)
 - [Semantic Complexity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-complexity-of-binary-relations.pdf)
+- [Role Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/role-lists.pdf)
 
 ### Sized Type Theory
 
