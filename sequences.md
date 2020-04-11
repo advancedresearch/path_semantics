@@ -254,6 +254,7 @@ into expressions for higher order reasoning.
 - [Emph Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/emph-notation.pdf)
 - [Semantic Complexity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-complexity-of-binary-relations.pdf)
 - [Role Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/role-lists.pdf)
+- [Incomplete Proof Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incomplete-proof-search.pdf)
 
 ### Sized Type Theory
 
