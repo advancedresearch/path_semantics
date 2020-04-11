@@ -252,6 +252,7 @@ into expressions for higher order reasoning.
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
 - [Abstract Idempotent Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-idempotent-functions.pdf)
 - [Emph Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/emph-notation.pdf)
+- [Semantic Complexity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-complexity-of-binary-relations.pdf)
 
 ### Sized Type Theory
 
