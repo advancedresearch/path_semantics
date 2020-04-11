@@ -4,11 +4,15 @@ Reading sequences for learning path semantics.
 This is a collection of papers organized in a way to build up gradually understanding of path semantics.  
 Some papers are marked with stars (e.g. ★★★★★) to signify their significance.
 
+### Cheat Sheets
+
+- [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
+- [Boolean Algebra Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-algebra-cheat-sheet.pdf)
+
 ### Background
 
 - [History of Path Semantics (Illustrated With Stick Figures)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [How to Think Abstractly With Path Semantics (Illustrated)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
-- [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 - [Goals of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/goals-of-path-semantics.pdf)
 
 ### Foundation
