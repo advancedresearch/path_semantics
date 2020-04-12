@@ -93,6 +93,7 @@ into expressions for higher order reasoning.
 - [Union of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/union-of-existential-paths.pdf)
 - [Material Implications from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/material-implications-from-existential-paths.pdf)
 - [Countable Infinity from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/countable-infinity-from-existential-paths.pdf)
+- [And-Not-Or Set Matrix](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/and-not-or-set-matrix.pdf)
 
 ### Permutative Path Semantics
 
