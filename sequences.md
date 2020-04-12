@@ -51,6 +51,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [The Id Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
 - [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
 - [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
+- [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 
 ### Higher Order Operator Overloading
 
