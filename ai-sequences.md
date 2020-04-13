@@ -124,6 +124,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Undefined Utility in Terminal State](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-utility-in-terminal-state.pdf)
 - [The Cursed Diamond Problem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-cursed-diamond-problem.pdf)
 - [Groupoid Assumption of Multi-Goal Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/groupoid-assumption-of-multi-goal-optimization.pdf)
+- [Rational Curiosity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-curiosity.pdf)
 
 ### Misc
 
