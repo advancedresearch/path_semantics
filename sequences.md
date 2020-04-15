@@ -258,6 +258,7 @@ into expressions for higher order reasoning.
 - [Semantic Complexity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semantic-complexity-of-binary-relations.pdf)
 - [Role Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/role-lists.pdf)
 - [Incomplete Proof Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incomplete-proof-search.pdf)
+- [String Rewriting Rules for Cartesian Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/string-rewriting-rules-for-cartesian-combinatorics.pdf)
 
 ### Sized Type Theory
 
