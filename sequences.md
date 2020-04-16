@@ -166,6 +166,7 @@ into expressions for higher order reasoning.
 - [Exponential Duplication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exponential-duplication.pdf)
 - [Questioning the Notion of a Set](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/questioning-the-notion-of-a-set.pdf)
 - [Unitary Symmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unitary-symmetric-paths.pdf)
+- [Symmetric Paths of Matrices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-of-matrices.pdf)
 
 ### Probabilistic Path Semantics
 
