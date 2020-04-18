@@ -311,6 +311,11 @@ into expressions for higher order reasoning.
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
 - [Closed Natural Numbers and The Fundamental Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers-and-the-fundamental-identity.pdf)
 
+### Asymmetric Velocity Logic
+
+- [Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-velocity-logic.pdf)
+- [Billiard Balls in Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/billiard-balls-in-asymmetric-velocity-logic.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -326,7 +331,6 @@ into expressions for higher order reasoning.
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
 - [Avatar Time Lines](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-time-lines.pdf)
-- [Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-velocity-logic.pdf)
 
 ### Artificial Intelligence
 
