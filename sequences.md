@@ -315,6 +315,7 @@ into expressions for higher order reasoning.
 
 - [Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-velocity-logic.pdf)
 - [Billiard Balls in Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/billiard-balls-in-asymmetric-velocity-logic.pdf)
+- [Simple Model of Asymmetric Velocity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-model-of-asymmetric-velocity.pdf)
 
 ### Theories
 
