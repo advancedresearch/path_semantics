@@ -168,6 +168,7 @@ into expressions for higher order reasoning.
 - [Unitary Symmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unitary-symmetric-paths.pdf)
 - [Symmetric Paths of Matrices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-of-matrices.pdf)
 - [Symmetric Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-path-of-function-composition.pdf)
+- [Derivative](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/derivative.pdf)
 
 ### Probabilistic Path Semantics
 
