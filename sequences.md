@@ -263,6 +263,7 @@ into expressions for higher order reasoning.
 - [Incomplete Proof Search](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/incomplete-proof-search.pdf)
 - [String Rewriting Rules for Cartesian Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/string-rewriting-rules-for-cartesian-combinatorics.pdf)
 - [Matrix Tangent Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/matrix-tangent-space.pdf)
+- [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 
 ### Sized Type Theory
 
