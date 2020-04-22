@@ -9,6 +9,14 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 - [Boolean Algebra Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-algebra-cheat-sheet.pdf)
 
+### Reference material
+
+- [Alphabetic List of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-functions.pdf)
+- [Alphabetic List of Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-paths.pdf)
+- [Alphabetic List of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-existential-paths.pdf)
+- [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
+- [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
+
 ### Background
 
 - [History of Path Semantics (Illustrated With Stick Figures)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
@@ -120,14 +128,6 @@ into expressions for higher order reasoning.
 - [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
 - [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
 - [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
-
-### Reference material
-
-- [Alphabetic List of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-functions.pdf)
-- [Alphabetic List of Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-paths.pdf)
-- [Alphabetic List of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-existential-paths.pdf)
-- [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
-- [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 
 ### Concepts in Path Semantics
 
