@@ -78,10 +78,18 @@ which is formalized in path semantics.
 
 ### Is this a new programming language?
 
-A new *kind* of programming language.
+A new *kind* of programming language, but for mathematical thinking.
 
-The project is about defining a new category of programming languages that satisfy a different method of expression compared to traditional languages.
-The ideas are original, but inspired by recent advancement in type theory.
+Mathematical ideas are expressed in terms of functions, which are easier to program than e.g. sets.
+The purpose is to make mathematics more accessible and understandable in a way that relates to programming.
+
+```
+programming <------ path semantics ------> mathematics
+```
+
+Since programming and mathematis are very powerful tools on their own,
+it is often easier to use them to design domain specific languages for problem solving.
+However, doing so correctly, is easier by learning what mathematics can mean in terms of programming.
 
 Goals:
 
