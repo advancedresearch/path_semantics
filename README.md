@@ -1,20 +1,8 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
-Official logo (2019):
-
-![fractal](./images/fractal.png)
-
-[85, 164, 56, 161, 184, 74, 170, 85, 170, 170, 163, 43], or ([0x55aa4ab8a138a455, 0x2ba3aaaa] in little-endian order)
-
-[Solution to the puzzle explained](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-01-18-the-secret-behind-the-2019-logo.md)
-
-The image above, with help from the code, describes a secret and beautiful mathematical language.
-If you break the code, you receive the language in reward.
-What kind of language is it? What can you prove with it?
-
 Path Semantics is for people who want to develop deep intuition about mathematics.
-This means you understand mathematics well enough to build your own languages for theorem proving, e.g. from scratch.
+This means you learn to understand mathematics well enough to build your own languages for theorem proving, e.g. from scratch.
 The intuition of how to do this, comes from studying semantics of functions and programming by using functions.
 
 - The semantics of functions is the fundament which programming is built upon.
@@ -25,12 +13,10 @@ The requirement that functions to be pure, makes it hard to prove some useful th
 Path Semantics goes beyond Dependent Types to arbitrary sub-types, embraces undecidability and non-determinism.
 It brings you closer to the full meaning of mathematics, viewed through a perspective designed for programmers.
 
-"Beyond pure functions" - (2019 slogan)
+"Let's go quantum" - (2020 slogan)
 
 Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
-Learning path semantics will give you deep insights and a vehicle for thinking,  
-which will open up *The Gate of Figuring Out Stuff*.
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
 - [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
