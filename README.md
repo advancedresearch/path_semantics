@@ -19,6 +19,7 @@ Here you will find lots of papers on ideas related to mathematics, logic, langua
 The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
+- [Visualizing Path Semantics Using LEGO Bricks](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-path-semantics-using-lego-bricks.pdf)
 - [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [How to think Abstractly with Path Semantics - illustrated](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
 - [Reading sequences for learning Path Semantics](./sequences.md)
