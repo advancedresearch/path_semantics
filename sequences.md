@@ -19,6 +19,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Background
 
+- [Visualizing Path Semantics Using LEGO Bricks](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-path-semantics-using-lego-bricks.pdf)
 - [History of Path Semantics (Illustrated With Stick Figures)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [How to Think Abstractly With Path Semantics (Illustrated)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
 - [Goals of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/goals-of-path-semantics.pdf)
