@@ -121,6 +121,7 @@ into expressions for higher order reasoning.
 - [Permutations as Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-functions.pdf)
 - [Permutation Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-inverse.pdf)
 - [Permutation Intersections](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-intersections.pdf)
+- [Visual Formula for Determinants](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visual-formula-for-determinants.pdf)
 
 ### Examples of Discrete Path Semantics
 
