@@ -120,6 +120,7 @@ into expressions for higher order reasoning.
 - [Uncovered Permutation Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncovered-permutation-grammars.pdf)
 - [Permutations as Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-functions.pdf)
 - [Permutation Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-inverse.pdf)
+- [Permutation Intersections](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-intersections.pdf)
 
 ### Examples of Discrete Path Semantics
 
