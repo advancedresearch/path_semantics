@@ -270,6 +270,7 @@ into expressions for higher order reasoning.
 - [Matrix Tangent Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/matrix-tangent-space.pdf)
 - [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
+- [Integral of Polynomial Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-polynomial-product.pdf)
 
 ### Sized Type Theory
 
