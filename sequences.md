@@ -119,6 +119,7 @@ into expressions for higher order reasoning.
 - [Swaps of Swaps Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/swaps-of-swaps-grammar.pdf)
 - [Uncovered Permutation Grammars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uncovered-permutation-grammars.pdf)
 - [Permutations as Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-functions.pdf)
+- [Permutation Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-inverse.pdf)
 
 ### Examples of Discrete Path Semantics
 
