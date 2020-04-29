@@ -395,3 +395,4 @@ into expressions for higher order reasoning.
 - [Quantum Knight Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-knight-functions.pdf)
 - [Semi Quantum Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semi-quantum-non-determinism.pdf)
 - [Quantum Andor Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-andor-functions.pdf)
+- [Quantum Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-propagation.pdf)
