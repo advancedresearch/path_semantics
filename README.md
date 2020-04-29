@@ -1,3 +1,5 @@
+![and-andor](./images/and-andor.png)
+
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
