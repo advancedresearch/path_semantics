@@ -174,7 +174,12 @@ into expressions for higher order reasoning.
 - [Unitary Symmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unitary-symmetric-paths.pdf)
 - [Symmetric Paths of Matrices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-of-matrices.pdf)
 - [Symmetric Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-path-of-function-composition.pdf)
+
+### Calculus
+
 - [Derivative](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/derivative.pdf)
+- [Integral of Polynomial Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-polynomial-product.pdf)
+- [Integral of Dual Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-dual-functions.pdf)
 
 ### Probabilistic Path Semantics
 
@@ -271,7 +276,6 @@ into expressions for higher order reasoning.
 - [Matrix Tangent Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/matrix-tangent-space.pdf)
 - [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
-- [Integral of Polynomial Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-polynomial-product.pdf)
 
 ### Sized Type Theory
 
