@@ -123,7 +123,7 @@ into expressions for higher order reasoning.
 - [Permutation Intersections](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-intersections.pdf)
 - [Visual Formula for Determinants](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visual-formula-for-determinants.pdf)
 
-### Examples of Discrete Path Semantics
+### Examples of Path Semantics
 
 - [Symmetric Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-in-boolean-algebra.pdf)
 - [Existential Path of `add` with Domain Constraint `even`](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-add-with-domain-constraint-even.pdf)
@@ -133,6 +133,7 @@ into expressions for higher order reasoning.
 - [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
 - [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
 - [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
+- [Parity of General Complex Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parity-of-general-complex-numbers.pdf)
 
 ### Concepts in Path Semantics
 
