@@ -180,6 +180,7 @@ into expressions for higher order reasoning.
 - [Derivative](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/derivative.pdf)
 - [Integral of Polynomial Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-polynomial-product.pdf)
 - [Integral of Dual Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-dual-functions.pdf)
+- [Bounded Integral](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bounded-integral.pdf)
 
 ### Probabilistic Path Semantics
 
