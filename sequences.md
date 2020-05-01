@@ -405,3 +405,4 @@ into expressions for higher order reasoning.
 - [Higher Order Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-non-determinism.pdf)
 - [Higher Order Non-Deterministic Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-non-deterministic-diagrams.pdf)
 - [Instant Quantum Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/instant-quantum-partial-observations.pdf)
+- [Quantum Information Flux](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-information-flux.pdf)
