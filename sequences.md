@@ -403,3 +403,4 @@ into expressions for higher order reasoning.
 - [Quantum Andor Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-andor-functions.pdf)
 - [Quantum Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-propagation.pdf)
 - [Higher Order Non-Determinism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-non-determinism.pdf)
+- [Higher Order Non-Deterministic Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-non-deterministic-diagrams.pdf)
