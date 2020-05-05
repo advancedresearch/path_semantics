@@ -409,3 +409,4 @@ into expressions for higher order reasoning.
 - [Instant Quantum Partial Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/instant-quantum-partial-observations.pdf)
 - [Quantum Information Flux](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-information-flux.pdf)
 - [Quantum Information Flux of Rotating Complex Amplitudes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-information-flux-of-rotating-complex-amplitudes.pdf)
+- [Quantum Schrödinger Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-schrodinger-functions.pdf)
