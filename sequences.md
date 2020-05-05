@@ -279,6 +279,7 @@ into expressions for higher order reasoning.
 - [Matrix Tangent Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/matrix-tangent-space.pdf)
 - [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
+- [Invertible Adjoint Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-adjoint-normal-paths.pdf)
 
 ### Sized Type Theory
 
