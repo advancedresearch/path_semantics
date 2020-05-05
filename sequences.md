@@ -96,6 +96,8 @@ into expressions for higher order reasoning.
 
 ### Boolean Path Semantics
 
+- [Symmetric Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-in-boolean-algebra.pdf)
+- [Adjoint Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths-in-boolean-algebra.pdf)
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 - [Existential Path in Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-in-boolean-path-semantics.pdf)
 - [Logical Interpretations of Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/logical-interpretations-of-boolean-path-semantics.pdf)
@@ -105,7 +107,6 @@ into expressions for higher order reasoning.
 - [Material Implications from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/material-implications-from-existential-paths.pdf)
 - [Countable Infinity from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/countable-infinity-from-existential-paths.pdf)
 - [And-Not-Or Set Matrix](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/and-not-or-set-matrix.pdf)
-- [Adjoint Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths-in-boolean-algebra.pdf)
 
 ### Permutative Path Semantics
 
@@ -127,7 +128,6 @@ into expressions for higher order reasoning.
 
 ### Examples of Path Semantics
 
-- [Symmetric Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-in-boolean-algebra.pdf)
 - [Existential Path of `add` with Domain Constraint `even`](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-add-with-domain-constraint-even.pdf)
 - [Formalization of Tic-Tac-Toe in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalization-of-tic-tac-toe-in-path-semantics.pdf)
 - [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
