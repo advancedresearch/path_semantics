@@ -105,6 +105,7 @@ into expressions for higher order reasoning.
 - [Material Implications from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/material-implications-from-existential-paths.pdf)
 - [Countable Infinity from Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/countable-infinity-from-existential-paths.pdf)
 - [And-Not-Or Set Matrix](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/and-not-or-set-matrix.pdf)
+- [Adjoint Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths-in-boolean-algebra.pdf)
 
 ### Permutative Path Semantics
 
