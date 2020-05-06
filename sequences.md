@@ -412,3 +412,4 @@ into expressions for higher order reasoning.
 - [Quantum Information Flux](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-information-flux.pdf)
 - [Quantum Information Flux of Rotating Complex Amplitudes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-information-flux-of-rotating-complex-amplitudes.pdf)
 - [Quantum Schrödinger Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-schrodinger-functions.pdf)
+- [Quantum Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-lift.pdf)
