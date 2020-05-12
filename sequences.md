@@ -183,6 +183,7 @@ into expressions for higher order reasoning.
 - [Integral of Polynomial Product](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-polynomial-product.pdf)
 - [Integral of Dual Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/integral-of-dual-functions.pdf)
 - [Bounded Integral](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bounded-integral.pdf)
+- [Monotonic Integral Transform](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-integral-transform.pdf)
 
 ### Probabilistic Path Semantics
 
