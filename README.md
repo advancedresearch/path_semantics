@@ -1,5 +1,7 @@
 ![and-andor](./images/and-andor.png)
 
+###### This logo contains a puzzle, which unlocks a secret, beautiful mathematical language (There is a hint, somewhere).
+
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
