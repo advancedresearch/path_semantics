@@ -2,6 +2,78 @@
 
 Here is list of questions and answers that you might have about Path Semantics.
 
+### What is a "path"?
+
+Assume you have two continuous functions `f` and `g`.
+Formally, a homotopy path `H` is a continuous function of type `X x [0, 1] -> Y` where `H(x, 0) = f(x)` and `H(x, 1) = g(x)`.
+You can read more about this [here](https://en.wikipedia.org/wiki/Homotopy).
+
+Somewhat counter-intuitively, a function of type `bool^n -> bool` can also be continuous.
+
+If you think about how a real number is approximated in a floating precision format,
+then you can imagine that every number is represented as a sequence of bits, or booleans.
+So, to any degree one can talk precisely about continuous functions, this analogy holds.
+
+When a number consists of `n` bits, one can think about it as a function of type `bool^(n-1) -> bool`.
+All the first `n-1` bits are used as inputs to determine the "final bit".
+When the "final bit" is determined, the full meaning of the number is expressed.
+
+This is how a logical relation can express a complex mathematical idea, even if it only returns `true` or `false`.
+
+A homotopy path is a language building block to give people intuition about proofs, as developed in [Homotopy Type Theory](https://homotopytypetheory.org/).
+
+However, at the logical level, there is no distinction between ordinary functions and continuous functions.
+The distinction comes from how people model "smoothness" of functions.
+
+It might seem confusing, but people are talking about functions in *different mathematical languages*.
+One mathematical language can use a different definition of functions than another.
+An idealized continuous function is not the same as an approximation of that function in a computer.
+
+In Homotopy Theory, a line can be contracted to a single point.
+Formally, this means the following relation:
+
+```
+H(x, 0) = H(x, 1)
+```
+
+All values can be thought of as "points" in a space of their type.
+When a path connects two values, one can think about it as a proof computing one value from the other.
+Computing the same value for different inputs is equivalent to "contracting".
+
+Just like you can take any two points and create a line between them,
+you can create symbols and define logical relations between them.
+
+A homotopy path encodes the relation using the unit interval `[0, 1]`.
+In a sense, it formalizes the "meta-language" of proofs.
+
+However, since all functions when used are existing in a real world,
+the meta-language of proofs can be eliminated by refering to the "associated meaning" of symbols.
+
+For example, when you perform a computation, the physical computation itself provides the "proof", or the "path".
+When two functions are related to each other through a logical definition, one can use the relation
+to refer to the abstract "proof" or "path".
+
+Path Semantics takes the intuition of homotopy paths and eliminates the meta-language.
+This means that homotopy paths are projected into ordinary types of functions.
+Instead of `X x [0, 1] -> Y`, you get `X -> Y`, which is an ordinary function type.
+
+For example, when one expresses `and[not] <=> or` in Path Semantics,
+one refers to a way to prove that this is true.
+Since `not` is bijective, one can say that `and` is "equivalent" to `or`, by the symmetric path `not`.
+
+However, since homotopy paths can also contract lines into points,
+it means that e.g. `concat[len] <=> add` describes a homotopy equivalence between `concat` and `add`.
+The different is that `add`, interpreted this way, is a contracted version of `concat`.
+
+When working in Homotopy Type Theory, one is describing Path Semantics at the meta-level.
+It is like looking at Path Semantics from the "outside".
+In Path Semantics, one is "inside" the theory.
+
+This is because mathematics is used "inside" the world, which makes it possible.
+So, a "path" in Path Semantics is how one refers to the meaning, or semantics, of a logical relation between functions.
+
+Hence, the name "Path Semantics".
+
 ### Are you a pseudomathematician?
 
 Pseudomathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
