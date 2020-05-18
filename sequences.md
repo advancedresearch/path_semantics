@@ -26,6 +26,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Foundation
 
+- [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf)
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
 - [Lifted Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lifted-associations.pdf)
