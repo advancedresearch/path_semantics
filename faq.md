@@ -74,21 +74,6 @@ So, a "path" in Path Semantics is how one refers to the meaning, or semantics, o
 
 Hence, the name "Path Semantics".
 
-### Are you a pseudomathematician?
-
-Pseudomathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
-
-Some people who criticize me for this, usually in less nice words, often have the following lists of "merits":
-
-- None or little Github activity
-- Never gained an even basic understanding of automated theorem provers of propositional logic
-- Lack basic knowledge about computational complexity theory
-
-Somehow, those people manage to sound like a mathematical authority on the topic.
-Over and over, the same people stalk every comment thread about Path Semantics.
-
-To those people I say: Get a life.
-
 ### Is Path Semantics meant to be a new foundation of all mathematics?
 
 No. It is meant to be a practical tool for reasoning about programs, but open-ended for reasoning with mathematics.
@@ -242,3 +227,18 @@ Therefore, Path Semantics is not fully formalizable.
 ### Why do you not use formal definitions?
 
 I do. Everywhere. They are formally defined using functions.
+
+### Are you a pseudomathematician?
+
+Pseudomathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
+
+Some people who criticize me for this, usually in less nice words, often have the following lists of "merits":
+
+- None or little Github activity
+- Never gained an even basic understanding of automated theorem provers of propositional logic
+- Lack basic knowledge about computational complexity theory
+
+Somehow, those people manage to sound like a mathematical authority on the topic.
+Over and over, the same people stalk every comment thread about Path Semantics.
+
+To those people I say: Get a life.
