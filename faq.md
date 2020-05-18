@@ -4,6 +4,8 @@ Here is list of questions and answers that you might have about Path Semantics.
 
 ### What is a "path"?
 
+You can read the formal definition of normal paths [here](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf).
+
 Assume you have two continuous functions `f` and `g`.
 Formally, a homotopy path `H` is a continuous function of type `X x [0, 1] -> Y` where `H(x, 0) = f(x)` and `H(x, 1) = g(x)`.
 You can read more about this [here](https://en.wikipedia.org/wiki/Homotopy).
