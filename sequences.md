@@ -32,6 +32,10 @@ Normal paths are formalized in 3 different ways:
 - Homotopy path interpretation (from the definition of homotopy paths)
 - Basic logical primitives (core axiom of Path Semantics)
 
+Each of these pictures can be used to reason about normal paths.
+However, there exists no exhausting set of axioms (this is currently believed to be an undecidable problem).
+For some theories, like Boolean functions, normal paths are proven to be sound by exhaustive proof search.
+
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
