@@ -26,6 +26,12 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Foundation
 
+Normal paths are formalized in 3 different ways:
+
+- Equation (logical relation between functions)
+- Homotopy path interpretation (from the definition of homotopy paths)
+- Basic logical primitives (core axiom of Path Semantics)
+
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
