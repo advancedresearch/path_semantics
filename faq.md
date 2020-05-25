@@ -218,10 +218,6 @@ There are ways one can partially define formally the semantics of functions.
 However, you can not expect this to be fully formalized, because it is impossible.
 Therefore, Path Semantics is not fully formalizable.
 
-### Why do you not use formal definitions?
-
-I do. Everywhere. They are formally defined using functions.
-
 ### Are you a pseudomathematician?
 
 Pseudomathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
