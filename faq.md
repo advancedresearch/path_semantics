@@ -111,6 +111,8 @@ It is much better to use existing theories and frameworks for various domains, t
 
 ### Why do you not prove that the core axiom works, why only a reward for disproving it?
 
+Link to issue thread: https://github.com/advancedresearch/path_semantics/issues/531
+
 If you can prove that the axiom works, then Path Semantics is not consistent, which is the same as disproving it.
 
 This is because Path Semantics contains arithmetic.
