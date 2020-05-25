@@ -134,14 +134,6 @@ It does not mean that you are allowed to say anything you want in informal theor
 
 What you are allowed to say in Path Semantics is determined by the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)).
 
-### Why do you quote yourself?
-
-It is a joke that refers to the stereotypical view of an amateur mathematician which makes other mathematicians call them a "crank".
-
-If you call me a "crank" because I am quoting myself, your behavior is a proof of that joke.
-
-Do you get the joke now? I am pretty sure you can work it out if you take the time. :)
-
 ### Why do you not refer to papers e.g. listed in MathSciNet?
 
 I have never used it. I do not follow mathematical journals.
