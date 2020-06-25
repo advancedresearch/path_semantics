@@ -162,8 +162,8 @@ into expressions for higher order reasoning.
 - [Variables as Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/variables-as-path.pdf)
 - [Conditions (Universal Existential Path is the Opposite Concept of Function Composition That Construct Ordinary Conditions)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-path-is-the-opposite-concept-of-function-composition-that-constructs-ordinary-conditions.pdf)
 - [Intervals on Projective Reals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/intervals-on-projective-reals.pdf)
-- [Entangled Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions.pdf)
-- [Entangled Functions in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions-in-boolean-algebra.pdf)
+- [Entangled Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions.pdf) ★★★★★
+- [Entangled Functions in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-functions-in-boolean-algebra.pdf) ★★★★★
 - [Law of Excluded Middle in Havox Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/law-of-excluded-middle-in-havox-diagrams.pdf)
 - [Formalizing the Meaning of Solving an Equation for One Variable](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-the-meaning-of-solving-an-equation-for-one-variable.pdf)
 - [Closed Sub-Types of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-sub-types-of-sets.pdf)
