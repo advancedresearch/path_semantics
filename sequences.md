@@ -92,7 +92,7 @@ into expressions for higher order reasoning.
 
 ### Discrete Path Semantics
 
-- [Destructing Nilsen-Cartesian Products](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/destructing-of-nilsen-cartesian-products.pdf)
+- [Destructing Path Function Products](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/destructing-path-function-products.pdf)
 - [Path Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-sets.pdf)
 - [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf)
 - [Existential Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-function-composition.pdf)
