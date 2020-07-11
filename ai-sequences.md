@@ -144,6 +144,7 @@ Papers that do not fall into a specific category:
 - [Adversarial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-paths.pdf)
 - [Adversarial Discrete Topology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adversarial-discrete-topology.pdf)
 - [Unit Interval Focus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unit-interval-focus.pdf)
+- [Absoid Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/absoid-functions.pdf)
 - [The Movie Hypothesis of Non-Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-movie-hypothesis-of-non-consciousness.pdf)
 - [Ambiguous Probability of Random String Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ambiguous-probability-of-random-string-optimization.pdf)
 - [Semi Tally Numerical System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semi-tally-numerical-system.pdf)
