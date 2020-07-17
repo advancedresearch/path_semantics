@@ -348,6 +348,12 @@ into expressions for higher order reasoning.
 - [Billiard Balls in Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/billiard-balls-in-asymmetric-velocity-logic.pdf)
 - [Simple Model of Asymmetric Velocity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-model-of-asymmetric-velocity.pdf)
 
+### Answered Modal Logic
+
+- [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
+- [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
+- [Answered Modal Logic in Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-in-cubical-binary-codes.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -366,7 +372,6 @@ into expressions for higher order reasoning.
 - [One-Dimensional Real Wave](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/one-dimensional-real-wave.pdf)
 - [Constant Speed Transform](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constant-speed-transform.pdf)
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
-- [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
 
 ### Artificial Intelligence
 
