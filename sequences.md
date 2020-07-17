@@ -366,6 +366,7 @@ into expressions for higher order reasoning.
 - [One-Dimensional Real Wave](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/one-dimensional-real-wave.pdf)
 - [Constant Speed Transform](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constant-speed-transform.pdf)
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
+- [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
 
 ### Artificial Intelligence
 
