@@ -104,6 +104,7 @@ into expressions for higher order reasoning.
 - [Invertible Domain Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-domain-constraints.pdf)
 - [Discrete Real Addition Isomorphisms](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-real-addition-isomorphisms.pdf)
 - [Normal Re-paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-re-paths.pdf)
+- [Complexity of Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/complexity-of-symmetric-avatar-paths.pdf)
 
 ### Boolean Path Semantics
 
