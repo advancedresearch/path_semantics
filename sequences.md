@@ -353,6 +353,7 @@ into expressions for higher order reasoning.
 - [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
 - [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
 - [Answered Modal Logic in Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-in-cubical-binary-codes.pdf)
+- [Canonical Form of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/canonical-form-of-answered-modal-logic.pdf)
 
 ### Theories
 
