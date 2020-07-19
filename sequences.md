@@ -358,6 +358,7 @@ into expressions for higher order reasoning.
 - [Implication House](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implication-house.pdf)
 - [Propositional Logic Interpretation of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-interpretation-of-answered-modal-logic.pdf)
 - [Visualizing Inversion vs NOT in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-inversion-vs-not-in-answered-modal-logic.pdf)
+- [AND with Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/and-with-cubical-binary-codes.pdf)
 
 ### Theories
 
