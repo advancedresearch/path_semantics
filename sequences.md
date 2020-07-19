@@ -354,8 +354,9 @@ into expressions for higher order reasoning.
 - [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
 - [Answered Modal Logic in Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-in-cubical-binary-codes.pdf)
 - [Canonical Form of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/canonical-form-of-answered-modal-logic.pdf)
-- [Propositional Logic Interpretation of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-interpretation-of-answered-modal-logic.pdf)
+- [Extracting Bits in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/extracting-bits-in-answered-modal-logic.pdf)
 - [Implication House](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implication-house.pdf)
+- [Propositional Logic Interpretation of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-interpretation-of-answered-modal-logic.pdf)
 
 ### Theories
 
