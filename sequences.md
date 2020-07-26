@@ -281,7 +281,7 @@ into expressions for higher order reasoning.
 - [Monotonic Non-Linear Solutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-non-linear-solutions.pdf)
 - [Stair Pairs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/stair-pairs.pdf)
 - [Cartesian Stair Pair Combinatorics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cartesian-stair-pair-combinatorics.pdf)
-- [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf)
+- [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
 - [Abstract Idempotent Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-idempotent-functions.pdf)
 - [Emph Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/emph-notation.pdf)
@@ -350,7 +350,7 @@ into expressions for higher order reasoning.
 
 ### Answered Modal Logic
 
-- [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf)
+- [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
 - [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 - [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
 - [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
