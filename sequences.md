@@ -137,6 +137,7 @@ into expressions for higher order reasoning.
 - [Permutation Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-inverse.pdf)
 - [Permutation Intersections](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutation-intersections.pdf)
 - [Visual Formula for Determinants](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visual-formula-for-determinants.pdf)
+- [Swap-Contract Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/swap-contract-graphs.pdf)
 
 ### Examples of Path Semantics
 
