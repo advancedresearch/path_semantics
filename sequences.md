@@ -73,6 +73,7 @@ For some theories, like Boolean functions, normal paths are proven to be sound b
 - [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
 - [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 - [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
+- [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
 
 ### Higher Order Operator Overloading
 
