@@ -297,6 +297,7 @@ into expressions for higher order reasoning.
 - [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
 - [Invertible Adjoint Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-adjoint-normal-paths.pdf)
+- [Idempotency from Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/idempotency-from-commutative-symmetry.pdf)
 
 ### Sized Type Theory
 
