@@ -197,6 +197,7 @@ into expressions for higher order reasoning.
 - [Non-Trivial Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-trivial-commutative-symmetry.pdf)
 - [Idempotency from Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/idempotency-from-commutative-symmetry.pdf)
 - [Trivial Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/trivial-commutative-symmetry.pdf)
+- [Adjoint Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-commutative-symmetry.pdf)
 - [Commutativity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/commutativity.pdf)
 
 ### Calculus
