@@ -159,7 +159,6 @@ into expressions for higher order reasoning.
 - [The Terminal Function & Propositions of Irrelevance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-terminal-function-and-propositions-of-irrelevance.pdf)
 - [Natural Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-equality.pdf)
 - [Asymmetric Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-inverse.pdf)
-- [Commutativity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/commutativity.pdf)
 - [Associativity as Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-as-asymmetric-paths.pdf)
 - [Composite & Prime Numbers in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/composite-and-prime-numbers-in-path-semantics.pdf)
 - [Inverse Zero Order Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inverse-zero-order-existential-paths.pdf)
@@ -192,6 +191,12 @@ into expressions for higher order reasoning.
 - [Unitary Symmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unitary-symmetric-paths.pdf)
 - [Symmetric Paths of Matrices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-of-matrices.pdf)
 - [Symmetric Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-path-of-function-composition.pdf)
+
+### Commutativity
+
+- [Idempotency from Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/idempotency-from-commutative-symmetry.pdf)
+- [Trivial Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/trivial-commutative-symmetry.pdf)
+- [Commutativity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/commutativity.pdf)
 
 ### Calculus
 
@@ -297,7 +302,6 @@ into expressions for higher order reasoning.
 - [Continuous Monotonicity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-monotonicity.pdf)
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
 - [Invertible Adjoint Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-adjoint-normal-paths.pdf)
-- [Idempotency from Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/idempotency-from-commutative-symmetry.pdf)
 
 ### Sized Type Theory
 
