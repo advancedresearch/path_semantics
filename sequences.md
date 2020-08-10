@@ -194,6 +194,7 @@ into expressions for higher order reasoning.
 
 ### Commutativity
 
+- [Non-Trivial Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-trivial-commutative-symmetry.pdf)
 - [Idempotency from Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/idempotency-from-commutative-symmetry.pdf)
 - [Trivial Commutative Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/trivial-commutative-symmetry.pdf)
 - [Commutativity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/commutativity.pdf)
