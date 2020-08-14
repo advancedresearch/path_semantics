@@ -39,6 +39,7 @@ For some theories, like Boolean functions, normal paths are proven to be sound b
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
+- [Philosophy of The Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/philosophy-of-the-core-axiom.pdf)
 - [Lifted Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lifted-associations.pdf)
 - [Asserting Formal Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asserting-formal-associations.pdf)
 - [Computational Equivalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/computational-equivalence.pdf)
