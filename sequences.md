@@ -125,6 +125,7 @@ into expressions for higher order reasoning.
 
 ### Permutative Path Semantics
 
+- [Permutative Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-functions.pdf)
 - [Permutative Binary Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-binary-numbers.pdf)
 - [Generalized Swap Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/generalized-swap-grammar.pdf)
 - [Sub-Permutation Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-permutation-grammar.pdf)
