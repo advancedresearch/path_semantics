@@ -47,6 +47,15 @@ For some theories, like Boolean functions, normal paths are proven to be sound b
 - [Undefined Symbols](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-symbols.pdf)
 - [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 
+### Path Semantical Logic
+
+Path Semantical Logic uses the core axiom to group propositions into levels.
+An equality at level N+1 propagates into equality at level N.
+For an experimental implementation, see the [Pocket-Prover](https://github.com/advancedresearch/pocket_prover) library.
+
+- [Witness in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-in-path-semantical-logic.pdf)
+- [Faster Brute Force Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/faster-brute-force-proofs.pdf)
+
 ### Introduction
 
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
@@ -307,7 +316,6 @@ into expressions for higher order reasoning.
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
 - [Invertible Adjoint Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-adjoint-normal-paths.pdf)
 - [Uniqueness in Single-Variable Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniqueness-in-single-variable-proofs.pdf)
-- [Faster Brute Force Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/faster-brute-force-proofs.pdf)
 
 ### Sized Type Theory
 
