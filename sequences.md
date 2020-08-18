@@ -56,6 +56,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Witness in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-in-path-semantical-logic.pdf)
 - [Faster Brute Force Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/faster-brute-force-proofs.pdf)
 - [Complexity of Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/complexity-of-path-semantical-logic.pdf)
+- [Index Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/index-theorem.pdf)
 
 ### Introduction
 
