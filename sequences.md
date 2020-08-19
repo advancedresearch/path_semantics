@@ -442,6 +442,7 @@ into expressions for higher order reasoning.
 - [Identity of Words in Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/identity-of-words-in-natural-languages.pdf)
 - [Bootstrapping Technique for Semantics of Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bootstrapping-technique-for-semantics-of-natural-languages.pdf)
 - [The Two-Language Hypothesis](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-two-language-hypothesis.pdf)
+- [Hamming N-Sphere](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hamming-n-sphere.pdf)
 
 ### Non-Deterministic Path Semantics
 
