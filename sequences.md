@@ -319,6 +319,7 @@ into expressions for higher order reasoning.
 - [Hyperreal Progression Circle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hyperreal-progression-circle.pdf)
 - [Invertible Adjoint Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/invertible-adjoint-normal-paths.pdf)
 - [Uniqueness in Single-Variable Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniqueness-in-single-variable-proofs.pdf)
+- [Discrete Lattice Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-lattice-functions.pdf)
 
 ### Sized Type Theory
 
