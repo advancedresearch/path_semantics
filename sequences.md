@@ -321,6 +321,7 @@ into expressions for higher order reasoning.
 - [Uniqueness in Single-Variable Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/uniqueness-in-single-variable-proofs.pdf)
 - [Discrete Lattice Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-lattice-functions.pdf)
 - [Continuous Lattice Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-lattice-functions.pdf)
+- [Propositional Argument Order](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-argument-order.pdf)
 
 ### Sized Type Theory
 
