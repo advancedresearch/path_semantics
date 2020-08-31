@@ -58,6 +58,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Complexity of Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/complexity-of-path-semantical-logic.pdf)
 - [Index Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/index-theorem.pdf)
 - [Proving Isomorphism Using Indexing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/proving-isomorphism-using-indexing.pdf)
+- [Implication Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implication-theorem.pdf)
 
 ### Introduction
 
