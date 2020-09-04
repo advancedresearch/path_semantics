@@ -63,6 +63,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Constrained Implication Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-implication-theorem.pdf)
 - [Negative Association Error](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-association-error.pdf)
 - [Visualizing Implication Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-implication-theorems.pdf)
+- [Space Jumping Example](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/space-jumping-example.pdf)
 
 ### Introduction
 
