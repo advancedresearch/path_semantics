@@ -64,6 +64,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Negative Association Error](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-association-error.pdf)
 - [Visualizing Implication Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-implication-theorems.pdf)
 - [Space Jumping Example](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/space-jumping-example.pdf)
+- [Twin Implication Core Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/twin-implication-core-theorem.pdf)
 
 ### Introduction
 
