@@ -36,6 +36,8 @@ Each of these pictures can be used to reason about normal paths.
 However, there exists no exhausting set of axioms (this is currently believed to be an undecidable problem).
 For some theories, like Boolean functions, normal paths are proven to be sound by exhaustive proof search.
 
+In the broader theory of logic, one can study [Path Semantical Logic](#path-semantical-logic).
+
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
@@ -48,6 +50,8 @@ For some theories, like Boolean functions, normal paths are proven to be sound b
 - [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 
 ### Path Semantical Logic
+
+*It is recommended to skip this section, unless you are interested in logic or the foundation of Path Semantics.*
 
 Path Semantical Logic uses the core axiom to group propositions into levels.
 An equality at level N+1 propagates into equality at level N.
