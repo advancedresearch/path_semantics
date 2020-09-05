@@ -71,6 +71,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Twin Implication Core Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/twin-implication-core-theorem.pdf)
 - [Concrete and Abstract Transport](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/concrete-and-abstract-transport.pdf)
 - [Abstract Transport XOR Trick](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-transport-xor-trick.pdf)
+- [Non-Composition of XOR Trick](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-composition-of-xor-trick.pdf)
 
 ### Introduction
 
