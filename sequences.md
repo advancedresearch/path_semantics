@@ -74,6 +74,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Non-Composition of XOR Trick](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-composition-of-xor-trick.pdf)
 - [Entangled XOR Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-xor-theorem.pdf)
 - [Exclusive Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exclusive-theorem.pdf)
+- [Negative Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-types.pdf)
 
 ### Introduction
 
