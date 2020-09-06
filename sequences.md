@@ -77,6 +77,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Negative Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/negative-types.pdf)
 - [Noncontractible Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/noncontractible-types.pdf)
 - [Contractible Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contractible-types.pdf)
+- [Contraction Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contraction-theorem.pdf)
 
 ### Introduction
 
