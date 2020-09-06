@@ -73,6 +73,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Abstract Transport XOR Trick](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/abstract-transport-xor-trick.pdf)
 - [Non-Composition of XOR Trick](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/non-composition-of-xor-trick.pdf)
 - [Entangled XOR Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/entangled-xor-theorem.pdf)
+- [Exclusive Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exclusive-theorem.pdf)
 
 ### Introduction
 
