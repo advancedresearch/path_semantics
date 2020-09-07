@@ -16,6 +16,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Alphabetic List of Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-existential-paths.pdf)
 - [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
+- [Terminology for Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/terminology-for-binary-relations.pdf)
 
 ### Background
 
@@ -143,6 +144,7 @@ into expressions for higher order reasoning.
 
 ### Boolean Path Semantics
 
+- [Terminology for Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/terminology-for-binary-relations.pdf)
 - [Symmetric Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-in-boolean-algebra.pdf)
 - [Adjoint Paths in Boolean Algebra](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths-in-boolean-algebra.pdf)
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
