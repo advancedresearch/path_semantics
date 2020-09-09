@@ -80,6 +80,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Contractible Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contractible-types.pdf)
 - [Contraction Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/contraction-theorem.pdf)
 - [Collapse Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/collapse-theorems.pdf)
+- [Inverse Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inverse-theorems.pdf)
 
 ### Introduction
 
