@@ -346,6 +346,7 @@ into expressions for higher order reasoning.
 - [Discrete Lattice Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/discrete-lattice-functions.pdf)
 - [Continuous Lattice Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/continuous-lattice-functions.pdf)
 - [Propositional Argument Order](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-argument-order.pdf)
+- [Normal Path Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagrams.pdf)
 
 ### Sized Type Theory
 
