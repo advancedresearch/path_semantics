@@ -189,6 +189,7 @@ into expressions for higher order reasoning.
 - [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
 - [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
 - [Parity of General Complex Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parity-of-general-complex-numbers.pdf)
+- [Normal Path Diagram of AND](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagram-of-and.pdf)
 
 ### Concepts in Path Semantics
 
