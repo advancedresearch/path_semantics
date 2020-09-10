@@ -82,6 +82,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Collapse Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/collapse-theorems.pdf)
 - [Inverse Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inverse-theorems.pdf)
 - [Inner and Outer Transport Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inner-and-outer-transport-theorems.pdf)
+- [Implicit Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implicit-theorems.pdf)
 
 ### Introduction
 
