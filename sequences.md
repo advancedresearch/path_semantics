@@ -87,6 +87,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 
 ### Introduction
 
+- [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
 - [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf) ★★★★★
 - [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
