@@ -22,6 +22,7 @@ It brings you closer to the full meaning of mathematics, viewed through a perspe
 Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
 
+- [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
 - [Visualizing Path Semantics Using LEGO Bricks](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-path-semantics-using-lego-bricks.pdf)
 - [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
