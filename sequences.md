@@ -84,6 +84,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Inner and Outer Transport Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/inner-and-outer-transport-theorems.pdf)
 - [Implicit Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implicit-theorems.pdf)
 - [Modeling Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modeling-functions.pdf) ★★★★★
+- [Cubical Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-types.pdf)
 
 ### Introduction
 
