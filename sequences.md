@@ -85,6 +85,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Implicit Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implicit-theorems.pdf)
 - [Modeling Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modeling-functions.pdf) ★★★★★
 - [Cubical Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-types.pdf)
+- [Duality in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/duality-in-path-semantical-logic.pdf)
 
 ### Introduction
 
