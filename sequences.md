@@ -27,11 +27,12 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Foundation
 
-Normal paths are formalized in 3 different ways:
+Normal paths are formalized in 4 different ways:
 
 - Equation (logical relation between functions)
 - Homotopy path interpretation (from the definition of homotopy paths)
 - Basic logical primitives (core axiom of Path Semantics)
+- [Indirect Proof of Normal Path Composition in Cubical Type Theory](https://github.com/advancedresearch/proof_of_normal_path_composition)
 
 Each of these pictures can be used to reason about normal paths.
 However, there exists no exhausting set of axioms (this is currently believed to be an undecidable problem).
