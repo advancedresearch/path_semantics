@@ -186,6 +186,7 @@ into expressions for higher order reasoning.
 - [Visual Formula for Determinants](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visual-formula-for-determinants.pdf)
 - [Swap-Contract Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/swap-contract-graphs.pdf)
 - [Permutative Symmetry Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-symmetry-paths.pdf)
+- [Permutations as Cubical Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-cubical-paths.pdf)
 
 ### Examples of Path Semantics
 
