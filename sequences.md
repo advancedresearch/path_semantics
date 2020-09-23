@@ -187,6 +187,7 @@ into expressions for higher order reasoning.
 - [Swap-Contract Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/swap-contract-graphs.pdf)
 - [Permutative Symmetry Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-symmetry-paths.pdf)
 - [Permutations as Cubical Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-cubical-paths.pdf)
+- [Glubical Permutations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/glubical-permutations.pdf)
 
 ### Examples of Path Semantics
 
