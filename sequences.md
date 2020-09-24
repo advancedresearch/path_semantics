@@ -203,7 +203,7 @@ into expressions for higher order reasoning.
 
 ### Concepts in Path Semantics
 
-- [Function Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/function-identity.pdf)
+- [Function Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/function-identity.pdf) ★★★★★
 - [The Terminal Function & Propositions of Irrelevance](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-terminal-function-and-propositions-of-irrelevance.pdf)
 - [Natural Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-equality.pdf)
 - [Asymmetric Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-inverse.pdf)
@@ -240,6 +240,7 @@ into expressions for higher order reasoning.
 - [Symmetric Paths of Matrices](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-paths-of-matrices.pdf)
 - [Symmetric Path of Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-path-of-function-composition.pdf)
 - [Predicate Interpretation of Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicate-interpretation-of-adjoint-paths.pdf)
+- [Imaginary Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/imaginary-inverse.pdf) ★★★★★
 
 ### Commutativity
 
