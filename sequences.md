@@ -282,6 +282,14 @@ into expressions for higher order reasoning.
 - [Predicting Primality of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicting-primality-of-addition.pdf)
 - [Ambiguous Probability of Random String Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ambiguous-probability-of-random-string-optimization.pdf)
 
+### Avatar Extensions
+
+Avatar Extensions is a technique of abstract generalization by exploiting symmetries inside "smaller" theories.
+
+- [Introduction to Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-avatar-graphs.pdf)
+- [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
+- [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
+
 ### Proof Techniques
 
 - [Type Checking Variable With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-checking-variable-with-multiple-constraints.pdf)
