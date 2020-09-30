@@ -116,7 +116,6 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [The Id-Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
 - [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
 - [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
-- [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 - [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
 - [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
 
@@ -289,6 +288,8 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 - [Introduction to Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-avatar-graphs.pdf)
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf)
+- [Avatar Time Lines](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-time-lines.pdf)
+- [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 
 ### Proof Techniques
 
@@ -454,7 +455,6 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 - [Modal Logic of Observations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modal-logic-of-observations.pdf)
 - [Category Theory of Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-theory-of-logic.pdf)
 - [Simple Structure Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/simple-structure-logic.pdf)
-- [Avatar Time Lines](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-time-lines.pdf)
 - [One-Dimensional Real Wave](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/one-dimensional-real-wave.pdf)
 - [Constant Speed Transform](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constant-speed-transform.pdf)
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
