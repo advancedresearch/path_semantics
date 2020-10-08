@@ -291,6 +291,7 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 - [Avatar Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-binary-relations.pdf) ★★★★★
 - [Avatar Time Lines](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-time-lines.pdf)
 - [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
+- [Symmetry Forcing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetry-forcing.pdf)
 
 ### Proof Techniques
 
