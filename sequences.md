@@ -295,6 +295,7 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 - [Avatar Covers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-covers.pdf)
 - [Imaginary Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/imaginary-adjoint-operators.pdf)
 - [Split Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/split-adjoint-operators.pdf)
+- [Dual Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dual-adjoint-operators.pdf)
 
 ### Proof Techniques
 
