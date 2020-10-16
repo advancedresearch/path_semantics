@@ -284,6 +284,7 @@ into expressions for higher order reasoning.
 ### Avatar Extensions
 
 Avatar Extensions is a technique of abstract generalization by exploiting symmetries inside "smaller" theories.
+For an experimental implementation of Avatar Logic, see [Avalog](https://github.com/advancedresearch/avalog).
 
 - [Introduction to Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-avatar-graphs.pdf)
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
@@ -296,6 +297,7 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 - [Imaginary Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/imaginary-adjoint-operators.pdf)
 - [Split Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/split-adjoint-operators.pdf)
 - [Dual Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dual-adjoint-operators.pdf)
+- [Natural One-Avatar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-one-avatar.pdf)
 
 ### Proof Techniques
 
