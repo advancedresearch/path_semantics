@@ -288,6 +288,7 @@ For an experimental implementation of Avatar Logic, see [Avalog](https://github.
 
 - [Introduction to Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-avatar-graphs.pdf)
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
+- [Graph Interpretation of Avatar Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/graph-interpretation-of-avatar-logic.pdf) ★★★★★
 - [Unique Universal Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/unique-universal-binary-relations.pdf) ★★★★★
 - [Avatar Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-binary-relations.pdf) ★★★★★
 - [Avatar Time Lines](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-time-lines.pdf)
