@@ -304,6 +304,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Natural One-Avatar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-one-avatar.pdf)
 - [Associativity Avatar Graph](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-avatar-graph.pdf)
 - [Avatar Algebra Superposition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-algebra-superposition.pdf)
+- [Avatar Algebra Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-algebra-symmetry.pdf)
 
 ### Proof Techniques
 
