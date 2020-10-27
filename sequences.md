@@ -303,6 +303,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Dual Adjoint Operators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dual-adjoint-operators.pdf)
 - [Natural One-Avatar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/natural-one-avatar.pdf)
 - [Associativity Avatar Graph](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/associativity-avatar-graph.pdf)
+- [Avatar Algebra Superposition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-algebra-superposition.pdf)
 
 ### Proof Techniques
 
