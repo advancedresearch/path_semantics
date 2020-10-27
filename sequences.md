@@ -283,6 +283,8 @@ into expressions for higher order reasoning.
 
 ### Avatar Extensions
 
+[Summary of Avatar Extensions](https://advancedresearch.github.io/avatar-extensions/summary.html)
+
 Avatar Extensions is a technique of abstract generalization by exploiting symmetries inside "smaller" theories.
 For an experimental implementation of Avatar Logic, see [Avalog](https://github.com/advancedresearch/avalog).
 For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advancedresearch/avatar_graph).
