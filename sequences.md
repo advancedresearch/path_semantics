@@ -306,6 +306,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Avatar Algebra Superposition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-algebra-superposition.pdf)
 - [Avatar Algebra Symmetry](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-algebra-symmetry.pdf)
 - [Witness Duality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-duality.pdf)
+- [More About Witness Duality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/more-about-witness-duality.pdf)
 
 ### Proof Techniques
 
