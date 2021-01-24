@@ -309,6 +309,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [More About Witness Duality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/more-about-witness-duality.pdf)
 - [Interior vs Exterior](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/interior-vs-exterior.pdf)
 - [Exterior Non-Uniform Subjectivity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exterior-non-uniform-subjectivity.pdf)
+- [Naive Isomorphism Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-isomorphism-propagation.pdf)
 
 ### Proof Techniques
 
