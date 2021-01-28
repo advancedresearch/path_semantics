@@ -310,6 +310,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Interior vs Exterior](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/interior-vs-exterior.pdf)
 - [Exterior Non-Uniform Subjectivity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exterior-non-uniform-subjectivity.pdf)
 - [Naive Isomorphism Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-isomorphism-propagation.pdf)
+- [Avatar Schema Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-schema-theory.pdf)
 
 ### Proof Techniques
 
