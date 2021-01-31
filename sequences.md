@@ -311,6 +311,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Exterior Non-Uniform Subjectivity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/exterior-non-uniform-subjectivity.pdf)
 - [Naive Isomorphism Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-isomorphism-propagation.pdf)
 - [Avatar Schema Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-schema-theory.pdf)
+- [Maximum Mathematical Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/maximum-mathematical-languages.pdf)
 
 ### Proof Techniques
 
