@@ -55,6 +55,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Undefined Symbols](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-symbols.pdf)
 - [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 - [Category Realizable Groupoids](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-realizable-groupoids.pdf)
+- [Semiconjuctions as Satisfied Models of Total Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjuctions-as-satisfied-models-of-total-normal-paths.pdf) ★★★★★
 
 ### Path Semantical Logic
 
