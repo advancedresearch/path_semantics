@@ -33,9 +33,9 @@ Normal paths are formalized in 5 different ways:
 - Homotopy path interpretation (from the definition of homotopy paths)
 - Basic logical primitives (core axiom of Path Semantics)
 - [Indirect Proof of Normal Path Composition in Cubical Type Theory](https://github.com/advancedresearch/proof_of_normal_path_composition)
-- [Direct Proof of Total Normal Path Composition in Lean 3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjuctions-as-satisfied-models-of-total-normal-paths.pdf)
+- [Direct Proof of Total Normal Path Composition in Lean 3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjugates-as-satisfied-models-of-total-normal-paths.pdf)
 
-The proof in Lean 3 assumes satisfied models of total normal paths using semiconjuctions.
+The proof in Lean 3 assumes satisfied models of total normal paths using semiconjugates.
 This is currently the best available model of normal paths in dependent types.
 
 Each of these pictures can be used to reason about normal paths.
@@ -55,7 +55,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Undefined Symbols](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/undefined-symbols.pdf)
 - [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 - [Category Realizable Groupoids](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-realizable-groupoids.pdf)
-- [Semiconjuctions as Satisfied Models of Total Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjuctions-as-satisfied-models-of-total-normal-paths.pdf) ★★★★★
+- [Semiconjugates as Satisfied Models of Total Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjuctions-as-satisfied-models-of-total-normal-paths.pdf) ★★★★★
 
 ### Path Semantical Logic
 
