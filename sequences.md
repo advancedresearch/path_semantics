@@ -27,12 +27,16 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Foundation
 
-Normal paths are formalized in 4 different ways:
+Normal paths are formalized in 5 different ways:
 
 - Equation (logical relation between functions)
 - Homotopy path interpretation (from the definition of homotopy paths)
 - Basic logical primitives (core axiom of Path Semantics)
 - [Indirect Proof of Normal Path Composition in Cubical Type Theory](https://github.com/advancedresearch/proof_of_normal_path_composition)
+- [Direct Proof of Total Normal Path Composition in Lean 3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjuctions-as-satisfied-models-of-total-normal-paths.pdf)
+
+The proof in Lean 3 assumes satisfied models of total normal paths using semiconjuctions.
+This is currently the best available model of normal paths in dependent types.
 
 Each of these pictures can be used to reason about normal paths.
 However, there exists no exhausting set of axioms (this is currently believed to be an undecidable problem).
