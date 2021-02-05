@@ -485,6 +485,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [One-Dimensional Real Wave](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/one-dimensional-real-wave.pdf)
 - [Constant Speed Transform](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constant-speed-transform.pdf)
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
+- [Constructive Symmetry Breaking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-symmetry-breaking.pdf)
 
 ### Artificial Intelligence
 
