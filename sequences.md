@@ -56,6 +56,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Homotopy Level Zero of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-level-zero-of-sub-types.pdf)
 - [Category Realizable Groupoids](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-realizable-groupoids.pdf)
 - [Semiconjugates as Satisfied Models of Total Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjugates-as-satisfied-models-of-total-normal-paths.pdf) ★★★★★
+- [Rewriting and the Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rewriting-and-the-core-axiom.pdf)
 
 ### Path Semantical Logic
 
