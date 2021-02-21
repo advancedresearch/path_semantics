@@ -318,6 +318,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Naive Isomorphism Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-isomorphism-propagation.pdf)
 - [Avatar Schema Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-schema-theory.pdf)
 - [Maximum Mathematical Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/maximum-mathematical-languages.pdf)
+- [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
 
 ### Proof Techniques
 
