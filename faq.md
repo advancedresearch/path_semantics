@@ -10,18 +10,6 @@ Assume you have two continuous functions `f` and `g`.
 Formally, a homotopy path `H` is a continuous function of type `X x [0, 1] -> Y` where `H(x, 0) = f(x)` and `H(x, 1) = g(x)`.
 You can read more about this [here](https://en.wikipedia.org/wiki/Homotopy).
 
-Somewhat counter-intuitively, a function of type `bool^n -> bool` can also be continuous.
-
-If you think about how a real number is approximated in a floating precision format,
-then you can imagine that every number is represented as a sequence of bits, or booleans.
-So, to any degree one can talk precisely about continuous functions, this analogy holds.
-
-When a number consists of `n` bits, one can think about it as a function of type `bool^(n-1) -> bool`.
-All the first `n-1` bits are used as inputs to determine the "final bit".
-When the "final bit" is determined, the full meaning of the number is expressed.
-
-This is how a logical relation can express a complex mathematical idea, even if it only returns `true` or `false`.
-
 A homotopy path is a language building block to give people intuition about proofs, as developed in [Homotopy Type Theory](https://homotopytypetheory.org/).
 
 However, at the logical level, there is no distinction between ordinary functions and continuous functions.
