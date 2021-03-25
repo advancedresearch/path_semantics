@@ -490,6 +490,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
 - [Constructive Symmetry Breaking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-symmetry-breaking.pdf)
 - [Segmented Time](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/segmented-time.pdf)
+- [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
 
 ### Artificial Intelligence
 
