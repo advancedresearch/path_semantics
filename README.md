@@ -15,9 +15,9 @@ The intuition of how to do this, comes from studying semantics of functions and 
 - In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
 - Dependent Type languages uses pure functions to prove some properties of programs.
 
-The requirement that functions to be pure, makes it hard to prove some useful things.
 Path Semantics goes beyond Dependent Types to arbitrary sub-types, embraces undecidability and non-determinism.
-It brings you closer to the full meaning of mathematics, viewed through a perspective designed for programmers.
+The notation is designed to be used with point-free theorem proving (see [Poi](https://crates.io/crates/poi)) and can be used for analysis
+when a type system is not sufficient to capture all the properties of mathematical objects.
 
 "Let's go quantum" - (2020 slogan)
 
