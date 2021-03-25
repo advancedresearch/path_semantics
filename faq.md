@@ -12,13 +12,6 @@ You can read more about this [here](https://en.wikipedia.org/wiki/Homotopy).
 
 A homotopy path is a language building block to give people intuition about proofs, as developed in [Homotopy Type Theory](https://homotopytypetheory.org/).
 
-However, at the logical level, there is no distinction between ordinary functions and continuous functions.
-The distinction comes from how people model "smoothness" of functions.
-
-It might seem confusing, but people are talking about functions in *different mathematical languages*.
-One mathematical language can use a different definition of functions than another.
-An idealized continuous function is not the same as an approximation of that function in a computer.
-
 In Homotopy Theory, a line can be contracted to a single point.
 Formally, this means the following relation:
 
