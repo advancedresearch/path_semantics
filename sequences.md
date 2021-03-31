@@ -461,15 +461,16 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
 - [Symmetric Avatar Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/symmetric-avatar-paths.pdf)
 - [Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cubical-binary-codes.pdf)
-- [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf)
+- [Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic.pdf) ★★★★★
 - [Answered Modal Logic in Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-in-cubical-binary-codes.pdf)
 - [Canonical Form of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/canonical-form-of-answered-modal-logic.pdf)
 - [Extracting Bits in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/extracting-bits-in-answered-modal-logic.pdf)
 - [Implication House](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/implication-house.pdf)
 - [Propositional Logic Interpretation of Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-logic-interpretation-of-answered-modal-logic.pdf)
-- [Visualizing Inversion vs NOT in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-inversion-vs-not-in-answered-modal-logic.pdf)
+- [Visualizing Inversion vs NOT in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-inversion-vs-not-in-answered-modal-logic.pdf) ★★★★★
 - [AND with Cubical Binary Codes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/and-with-cubical-binary-codes.pdf)
-- [Truth Tables for Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/truth-tables-for-answered-modal-logic.pdf)
+- [Truth Tables for Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/truth-tables-for-answered-modal-logic.pdf) ★★★★★
+- [Answered Modal Logic Catuṣkoṭi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-catuskoti.pdf) ★★★★★
 
 ### Theories
 
