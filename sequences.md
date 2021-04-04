@@ -473,6 +473,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Answered Modal Logic Catuṣkoṭi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/answered-modal-logic-catuskoti.pdf) ★★★★★
 - [Recursive Booleans](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/recursive-booleans.pdf)
 - [Chirality in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/chirality-in-answered-modal-logic.pdf)
+- [Many-Value Logics and Involutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/many-value-logics-and-involutions.pdf)
 
 ### Theories
 
