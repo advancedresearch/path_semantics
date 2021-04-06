@@ -5,6 +5,8 @@
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
+[Join us on Discord!](https://discord.gg/JkrhJJRBR2)
+
 For an experimental implementation of a small subset of Path Semantics, see [Poi](https://crates.io/crates/poi).
 
 Path Semantics is for people who want to develop deep intuition about mathematics.
