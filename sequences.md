@@ -532,6 +532,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Bootstrapping Technique for Semantics of Natural Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/bootstrapping-technique-for-semantics-of-natural-languages.pdf)
 - [The Two-Language Hypothesis](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-two-language-hypothesis.pdf)
 - [Hamming N-Sphere](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hamming-n-sphere.pdf)
+- [Golden Measure](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/golden-measure.pdf)
 
 ### Non-Deterministic Path Semantics
 
