@@ -320,6 +320,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Maximum Mathematical Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/maximum-mathematical-languages.pdf)
 - [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
 - [Synchronizability and Cosynchronizability](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/synchronizability-and-cosynchronizability.pdf)
+- [Restricted Dual Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/restricted-dual-composition.pdf)
 
 ### Proof Techniques
 
