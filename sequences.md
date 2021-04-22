@@ -539,6 +539,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [The Two-Language Hypothesis](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-two-language-hypothesis.pdf)
 - [Hamming N-Sphere](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/hamming-n-sphere.pdf)
 - [Golden Measure](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/golden-measure.pdf)
+- [3-ary Collatz Grammar](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/3-ary-collatz-grammar.pdf)
 
 ### Non-Deterministic Path Semantics
 
