@@ -479,6 +479,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Chirality in Answered Modal Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/chirality-in-answered-modal-logic.pdf)
 - [Many-Value Logics and Involutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/many-value-logics-and-involutions.pdf)
 - [Catuṣkoṭi Communication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/catuskoti-communication.pdf)
+- [Catuṣkoṭi Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-path-equations.pdf)
 
 ### Theories
 
