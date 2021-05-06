@@ -43,6 +43,7 @@ except informally and partially checked by automated theorem provers.
 Blog posts:
 
 - [2021-04-04 Deriving Path Semantics from First Principles](https://advancedresearch.github.io/blog/2021-04-04-deriving-path-semantics-from-first-principles)
+- [2020-08-20 Improving Brute Force Theorem Proving](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-08-20-improving-brute-force-theorem-proving.md)
 - [2020-04-26 The Core Axiom](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-04-26-the-core-axiom.md)
 - [2020-01-18 The Secret Behind 2019 Logo](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-01-18-the-secret-behind-the-2019-logo.md)
 - [2018-12-09 Five Things You Should Know About Path Semantics](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2018-12-09-five-things-you-should-know-about-path-semantics.md)
