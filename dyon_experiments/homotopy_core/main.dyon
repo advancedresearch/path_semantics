@@ -1,0 +1,175 @@
+/*
+
+# Homotopy Core Axiom
+
+This demo shows interpretation of the Core Axiom of Path Semantics
+in Homotopy Theory.
+
+To run, type the following in the Terminal window:
+
+```
+> git clone https://github.com/advancedresearch/path_semantics
+> cd path_semantics/dyon_experiments/homotopy_core
+> cargo install piston-dyon_interactive --example dyongame
+> dyongame main.dyon
+```
+
+### How to use it
+
+- Any keyboard button: Shift function example
+- Drag control points with the mouse
+
+*/
+
+fn main() {
+    cursor := (0, 0)
+
+    points := [
+        (100, 100),
+        (200, 200),
+        (200, 300),
+        (400, 100),
+        (300, 300),
+    ]
+
+    ps := [
+        psem_lerp(),
+        psem_morph(),
+        psem_inv(psem_morph()),
+    ]
+
+    drag := none()
+    time := 0
+
+    f_example := 0
+
+    loop {
+        if !next_event() {break}
+        if render() {
+            f0 := lerp(points[0], points[2])
+
+            // Add more function examples here.
+            fs := [
+                qbez(
+                    points[0],
+                    points[1],
+                    points[2]
+                ),
+                lsin(points[0], points[2], 2, points[1]),
+                lsin(points[0], points[2], 2.5, points[1]),
+                lsin(points[0], points[2], 2.4, points[1]),
+                circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, tau()),
+                circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.9 * tau()),
+                circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.75 * tau()),
+                circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.5 * tau()),
+            ]
+
+            f := fs[f_example % len(fs)]
+
+            g := [points[3], points[4]]
+
+            g1 := lerp(\f(0), g[0])
+            g2 := lerp(\f(1), g[1])
+
+            ~ draw_list := []
+            clear(color: #ffffff)
+            n := 100
+            draw(path: f0, color: #ff000020, n: n)
+            draw(path: f, color: #ff0000, n: n)
+            draw(path: g1, color: #0000ff, n: n)
+            draw(path: g2, color: #0000ff, n: n)
+            for i {
+                p := \ps[i](f, g)
+                draw(path: p, color: #00ff0050, n: n)
+            }
+
+            for i {
+                p := \ps[i](f, g)
+                circle(
+                    color: #ffff00,
+                    center: \p(time % 1),
+                    radius: 5,
+                )
+            }
+
+            for i {
+                circle(
+                    color: #000000,
+                    center: points[i],
+                    radius: 5,
+                )
+            }
+
+            draw(draw_list)
+        }
+        if mouse_cursor() {
+            cursor = unwrap(mouse_cursor_pos())
+
+            if drag != none() {
+                points[unwrap(drag)] = cursor
+            }
+        }
+        if press() {
+            if press_keyboard_key() == some(32) {
+                f_example += 1
+            } else if press_mouse_button() != none() {
+                drag = some(where(min i {|points[i] - cursor|}))
+            }
+        }
+        if release() {
+            drag = none()
+        }
+        if update() {
+            time += unwrap(update_dt())
+        }
+    }
+}
+
+fn draw__path_color_n(f: \(f64) -> vec4, color: vec4, n: f64) {
+    for i n {
+        fx := i/n
+        fy := (i+1)/n
+        line(
+            color: color,
+            radius: 3,
+            from: \f(fx),
+            to: \f(fy)
+        )
+    }
+}
+
+lerp(a, b) = \(fx) = (grab a) + fx * (grab b - a)
+qbez(a, b, c) = \(fx) = {
+    f1 := grab lerp(a, b)
+    f2 := grab lerp(b, c)
+    f3 := lerp(\f1(fx), \f2(fx))
+    \f3(fx)
+}
+lsin(a, b, n, dir) = \(fx) = {
+    pos := (grab a) + fx * (grab b - a)
+    d := grab a + 0.5 * (b - a)
+    pos + ((grab dir) - d) * sin(fx * tau() * grab n)
+}
+circ(a, rad, ang) = \(fx) = {
+    (grab a) + (grab rad) * (cos(fx * grab ang), sin(fx * grab ang))
+}
+
+psem_lerp() = \(f: \(f64) -> vec4, g: [vec4]) = lerp(g[0], g[1])
+psem_morph() = \(f: \(f64) -> vec4, g: [vec4]) = \(fx) = {
+    f2 := grab f
+    v := (grab g[1] - g[0])
+    u := (\f2(fx) - grab \f(0))
+    w := grab \f(1) - \f(0)
+    ux := u *. w / |w|^2
+    uy := z(u x w) / |w|^2
+    n := |v| * dir(angle: atan2(y(v), x(v)) - tau() / 4)
+    (grab g[0]) + ux * v + uy * n
+}
+psem_inv(p) = \(f: \(f64) -> vec4, g: [vec4]) = {
+    p := grab p
+    f2 := \p(f, [g[1], g[0]])
+    \(fx) = {
+        f2 := grab f2
+        \f2(1 - fx)
+    }
+}
