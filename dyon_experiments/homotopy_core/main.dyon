@@ -62,6 +62,7 @@ fn main() {
                 circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.9 * tau()),
                 circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.75 * tau()),
                 circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.5 * tau()),
+                circ(0.5 * (points[0] + points[2]), |points[1] - 0.5 * (points[0] + points[2])|, 0.25 * tau()),
             ]
 
             f := fs[f_example % len(fs)]
