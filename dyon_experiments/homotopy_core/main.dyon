@@ -55,6 +55,7 @@ fn main() {
                     points[1],
                     points[2]
                 ),
+                lsin_off(points[0], points[2], 2.4, (time % 10)/10, points[1]),
                 lsin(points[0], points[2], 2, points[1]),
                 lsin(points[0], points[2], 2.5, points[1]),
                 lsin(points[0], points[2], 2.4, points[1]),
@@ -150,6 +151,11 @@ lsin(a, b, n, dir) = \(fx) = {
     pos := (grab a) + fx * (grab b - a)
     d := grab a + 0.5 * (b - a)
     pos + ((grab dir) - d) * sin(fx * tau() * grab n)
+}
+lsin_off(a, b, n, off, dir) = \(fx) = {
+    pos := (grab a) + fx * (grab b - a)
+    d := grab a + 0.5 * (b - a)
+    pos + ((grab dir) - d) * sin(fx * tau() * (grab n) + (grab off * tau()))
 }
 circ(a, rad, ang) = \(fx) = {
     (grab a) + (grab rad) * (cos(fx * grab ang), sin(fx * grab ang))
