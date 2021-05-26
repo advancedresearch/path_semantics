@@ -97,6 +97,7 @@ For an experimental implementation, see the [Pocket-Prover](https://github.com/a
 - [Path Function Existence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-function-existence.pdf)
 - [Time Interpretation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/time-interpretation.pdf) ★★★★★
 - [Grounding of Causality to The Present](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/grounding-of-causality-to-the-present.pdf)
+- [Natural Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-propositions.pdf)
 
 ### Introduction
 
