@@ -457,6 +457,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
 - [Closed Natural Numbers and The Fundamental Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers-and-the-fundamental-identity.pdf)
 - [Closed Natural Numbers Cosmology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/closed-natural-numbers-cosmology.pdf)
+- [Hilbert's Over-Filled Hotel](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hilberts-over-filled-hotel.pdf)
 
 ### Asymmetric Velocity Logic
 
