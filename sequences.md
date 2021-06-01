@@ -327,6 +327,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Synchronizability and Cosynchronizability](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/synchronizability-and-cosynchronizability.pdf)
 - [Restricted Dual Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/restricted-dual-composition.pdf)
 - [Dual Identity Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dual-identity-lift.pdf)
+- [Avatar Univalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-univalence.pdf) ★★★★★
 
 ### Proof Techniques
 
