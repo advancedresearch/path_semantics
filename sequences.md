@@ -66,6 +66,7 @@ Path Semantical Logic uses the core axiom to group propositions into levels.
 An equality at level N+1 propagates into equality at level N.
 For an experimental implementation, see the [Pocket-Prover](https://github.com/advancedresearch/pocket_prover) library.
 
+- [New Standard Order for Levels](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/new-standard-order-for-levels.pdf) ★★★★★
 - [Witness in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-in-path-semantical-logic.pdf)
 - [Faster Brute Force Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/faster-brute-force-proofs.pdf)
 - [Complexity of Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/complexity-of-path-semantical-logic.pdf)
