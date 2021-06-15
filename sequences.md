@@ -490,6 +490,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Catuṣkoṭi Communication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/catuskoti-communication.pdf)
 - [Catuṣkoṭi Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-path-equations.pdf)
 - [Catuṣkoṭi Existential Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-lift.pdf)
+- [The Joker](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker.pdf) ★★★★★
 
 ### Theories
 
