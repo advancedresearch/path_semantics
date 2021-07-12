@@ -333,6 +333,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Dual Identity Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dual-identity-lift.pdf)
 - [Avatar Univalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-univalence.pdf) ★★★★★
 - [Univalent Involutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/univalent-involutions.pdf)
+- [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
 
 ### Proof Techniques
 
@@ -493,6 +494,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Catuṣkoṭi Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-path-equations.pdf)
 - [Catuṣkoṭi Existential Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-lift.pdf)
 - [The Joker](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker.pdf) ★★★★★
+- [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
 
 ### Theories
 
