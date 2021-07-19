@@ -150,3 +150,4 @@ Papers that do not fall into a specific category:
 - [The Movie Hypothesis of Non-Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-movie-hypothesis-of-non-consciousness.pdf)
 - [Ambiguous Probability of Random String Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ambiguous-probability-of-random-string-optimization.pdf)
 - [Semi Tally Numerical System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semi-tally-numerical-system.pdf)
+- [Symbols of Power](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-power.pdf)
