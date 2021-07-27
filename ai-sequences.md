@@ -128,6 +128,12 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Rational Curiosity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-curiosity.pdf)
 - [Optimal Utility Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-utility-paths.pdf)
 
+### Symbols of Power
+
+- [Symbols of Power](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-power.pdf)
+- [The Island of Humanity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-island-of-humanity.pdf)
+- [Superphilosophers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/superphilosophers.pdf)
+
 ### Misc
 
 Papers that do not fall into a specific category:
@@ -150,5 +156,3 @@ Papers that do not fall into a specific category:
 - [The Movie Hypothesis of Non-Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-movie-hypothesis-of-non-consciousness.pdf)
 - [Ambiguous Probability of Random String Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/ambiguous-probability-of-random-string-optimization.pdf)
 - [Semi Tally Numerical System](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semi-tally-numerical-system.pdf)
-- [Symbols of Power](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-power.pdf)
-- [The Island of Humanity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-island-of-humanity.pdf)
