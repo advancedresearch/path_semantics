@@ -327,13 +327,19 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Naive Isomorphism Propagation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/naive-isomorphism-propagation.pdf)
 - [Avatar Schema Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-schema-theory.pdf)
 - [Maximum Mathematical Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/maximum-mathematical-languages.pdf)
-- [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
 - [Synchronizability and Cosynchronizability](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/synchronizability-and-cosynchronizability.pdf)
 - [Restricted Dual Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/restricted-dual-composition.pdf)
 - [Dual Identity Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dual-identity-lift.pdf)
 - [Avatar Univalence](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-univalence.pdf) ★★★★★
 - [Univalent Involutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/univalent-involutions.pdf)
 - [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
+
+### Homotopy Physics
+
+Homotopy Physics applies the theory of Avatar Extensions to Quantum Physics.
+
+- [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
+- [Homotopy Physics and Path Integral Formulation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-path-integral-formulation.pdf)
 
 ### Proof Techniques
 
