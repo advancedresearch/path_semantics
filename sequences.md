@@ -340,6 +340,7 @@ Homotopy Physics applies the theory of Avatar Extensions to Quantum Physics.
 
 - [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
 - [Homotopy Physics and Path Integral Formulation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-path-integral-formulation.pdf)
+- [Homotopy Physics and Derivation of Homotopy Maps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-derivation-of-homotopy-maps.pdf)
 
 ### Proof Techniques
 
