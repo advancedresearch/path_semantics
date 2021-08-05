@@ -146,6 +146,7 @@ into expressions for higher order reasoning.
 - [Higher Order Operator Overloading and Notation for Parameters](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-notation-for-parameters.pdf)
 - [Higher Order Operator Overloading and Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-existential-path-equations.pdf)
 - [Higher Order Operator Overloading and Extensional Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-extensional-equality.pdf)
+- [Higher Order Operator Overloading by Explicit Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/higher-order-operator-overloading-by-explicit-notation.pdf) ★★★★★
 
 ### Discrete Path Semantics
 
