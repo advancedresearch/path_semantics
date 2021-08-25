@@ -344,6 +344,10 @@ Homotopy Physics applies the theory of Avatar Extensions to Quantum Physics.
 - [Homotopy Physics and Derivation of Homotopy Maps](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-derivation-of-homotopy-maps.pdf)
 - [Homotopy Physics and Avatars](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-avatars.pdf)
 
+Papers for the theoretical background to understand Homotopy Physics applied to experiments:
+
+- [Linear Polarized Light](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/linear-polarized-light.pdf)
+
 ### Proof Techniques
 
 - [Type Checking Variable With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-checking-variable-with-multiple-constraints.pdf)
