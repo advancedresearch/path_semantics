@@ -1,0 +1,101 @@
+/*
+
+To install:
+- Download Rust (https://www.rust-lang.org/)
+- Type `cargo install piston-dyon_interactive --example dyongame` in the Terminal window
+- Download this file
+- Navigate to the folder of this file and type `dyongame main.dyon`
+
+*/
+
+fn main() {
+    println(link {
+        "=== Quantum Propagation ===\n"
+        "For paper, see https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/quantum-propagation.pdf\n"
+        "\n"
+        "Instructions:\n"
+        "- space: new random quantum function and observable `and`/`eq`\n"
+        "\n"
+        "Samples are shown in title.\n"
+        "Functions are printed to console.\n"
+        "\n"
+    })
+    f := [(0, 1), (1, 0), (-1, 0), (0, 1)]
+    // f := [(0, 1), (0, 0), (0, 0), (0, 1)]
+    r := \() = random() * 2 - 1
+    // f := [(\r(), \r()), (\r(), \r()), (\r(), \r()), (\r(), \r())]
+    g := \(a, b) = a && b
+    out := [(0, 0); 2]
+    println(f)
+    println(g)
+
+    set_window(size: (800, 800))
+    set_event_loop(ups: 60)
+
+    time := 0
+    first := true
+    samples := 0
+    loop {
+        if !next_event() {break}
+
+        if render() {
+            ~ draw_list := []
+            size := 400
+            if first {
+                first = false
+                clear(color: #000000)
+            } else {
+                rectangle(color: #ffffff00, corner: (0, 0), size: window_draw_size())
+                // line(color: #000000, radius: 1, from: (0, 0) * size/2 + size, to: (0.5, 0) * size/2 + size)
+            }
+            for k 1000 {
+
+                // Pick two indices, for two basis vectors.
+                i := floor(random() * len(f))
+                j := floor(random() * len(f))
+                la := left(i)
+                lb := left(j)
+                ra := right(i)
+                rb := right(j)
+                // Check that both indices has same path.
+                if \g(la, ra) == \g(lb, rb) {
+                    // Take the product.
+                    s := prod(f[i], f[j])
+                    k := if \g(la, ra) {1} else {0}
+                    out[k] += s
+                }
+
+                s := |out[0]| + |out[1]|
+                for i {
+                    p := (yx out[i],) * (1, -1) / s
+                    c := (if i == 0 {#ff000005} else {#0000ff05}) + 1 * #00ff0000 * (sin(1 * k/1000)+1)/2
+                    circle(color: c, center: p * size/2 + size, radius: 1)
+                }
+            }
+            draw(draw_list)
+        }
+
+        if press() {
+            if some(32) == press_keyboard_key() {
+                samples = 0
+                first = true    
+                f = [(\r(), \r()), (\r(), \r()), (\r(), \r()), (\r(), \r())]
+                g = if random() < 0.5 {\(a, b) = a && b} else {\(a, b) = a == b}
+                println(f)
+                println(g)
+            }
+        }
+
+        if update() {
+            out = [(0, 0); 2]
+            samples += 1
+            set_window(title: str(samples))
+        }
+    }
+}
+
+/// Computes the complex product.
+prod(a: vec4, b: vec4) = (x(a)*x(b)+y(a)*y(b), y(a)*x(b)-x(a)*y(b))
+
+left(i: f64) = floor(i / 2) == 1
+right(i: f64) = (i % 2) == 1
