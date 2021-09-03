@@ -1,6 +1,6 @@
 ![and-andor](./images/and-andor.png)
 
-###### This logo contains a puzzle, which unlocks a secret, beautiful mathematical language (There is a hint, somewhere).
+###### To generate images like this, see [Quantum Propagation Explorer](https://github.com/advancedresearch/path_semantics/blob/master/dyon_experiments/quantum_propagation/main.dyon).
 
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
