@@ -335,6 +335,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Univalent Involutions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/univalent-involutions.pdf)
 - [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
 - [Avatars in The Holy Trinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatars-in-the-holy-trinity.pdf)
+- [Avatar Tables](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-tables.pdf)
 
 ### Homotopy Physics
 
