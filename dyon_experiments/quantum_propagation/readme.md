@@ -28,3 +28,9 @@ The quantum function is `f` and the measurement is `g`.
 - 20 000 samples
 - `f := [(0, 1), (2, 0), (-2, 0), (0, 1)]`
 - `g := and`
+
+### Secret Library (Random)
+![003.png](gallery/003.png)
+- 20 000 samples
+- `f := [(0.53975284, 0.8347775), (-0.6443964, 0.28524667), (0.778826, 0.6626748), (0.84524584, 0.6032202)]`
+- `g := eq`
