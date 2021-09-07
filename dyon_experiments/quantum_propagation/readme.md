@@ -17,6 +17,8 @@ The quantum function is `f` and the measurement is `g`.
 - `g := and` is a shorthand for `g := \(a, b) = a && b`.
 - `g := eq` is a shorthand for `g := \(a, b) = a == b`.
 
+Each sample is a random path.
+
 ### Andor
 ![001.png](gallery/001.png)
 - 20 000 samples
@@ -39,4 +41,10 @@ The quantum function is `f` and the measurement is `g`.
 ![004.png](gallery/004.png)
 - 20 000 samples
 - `f := [(-0.69797146, -0.024551803), (-0.2906545, 0.67269856), (-0.99042594, -0.5189728), (-0.6754978, -0.5213077)]`
+- `g := eq`
+
+### Eruption (Random)
+![005.png](gallery/005.png)
+- 20 000 samples
+- `f := [(-0.5742652, -0.66125774), (0.5340726, -0.1768929), (-0.94883776, -0.21300188), (0.98182935, -0.90915376)]`
 - `g := eq`
