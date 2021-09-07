@@ -1,6 +1,6 @@
 ![and-andor](./images/and-andor.png)
 
-###### To generate images like this, see [Quantum Propagation Explorer](https://github.com/advancedresearch/path_semantics/blob/master/dyon_experiments/quantum_propagation/main.dyon).
+###### To generate images like this, see [Quantum Propagation Explorer](https://github.com/advancedresearch/path_semantics/blob/master/dyon_experiments/quantum_propagation/).
 
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
