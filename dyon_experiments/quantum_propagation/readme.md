@@ -14,6 +14,9 @@ Here I post screenshots with formulas of interesting quantum functions.
 
 The quantum function is `f` and the measurement is `g`.
 
+- `g := and` is a shorthand for `g := \(a, b) = a && b`.
+- `g := eq` is a shorthand for `g := \(a, b) = a == b`.
+
 ### Andor
 ![001.png](gallery/001.png)
 - 20 000 samples
