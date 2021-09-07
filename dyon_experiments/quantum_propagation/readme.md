@@ -41,7 +41,7 @@ Each sample is a random path.
 ![004.png](gallery/004.png)
 - 20 000 samples
 - `f := [(-0.69797146, -0.024551803), (-0.2906545, 0.67269856), (-0.99042594, -0.5189728), (-0.6754978, -0.5213077)]`
-- `g := eq`
+- `g := and`
 
 ### Eruption (Random)
 ![005.png](gallery/005.png)
