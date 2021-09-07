@@ -20,5 +20,11 @@ The quantum function is `f` and the measurement is `g`.
 ### Andor
 ![001.png](gallery/001.png)
 - 20 000 samples
-- f := [(0, 1), (1, 0), (-1, 0), (0, 1)]
-- g := and
+- `f := [(0, 1), (1, 0), (-1, 0), (0, 1)]`
+- `g := and`
+
+### Symmetric Andor
+![002.png](gallery/002.png)
+- 20 000 samples
+- `f := [(0, 1), (2, 0), (-2, 0), (0, 1)]`
+- `g := and`
