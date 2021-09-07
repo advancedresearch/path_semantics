@@ -11,3 +11,11 @@ For instructions, see comments in the source.
 ## Gallery
 
 Here I post screenshots with formulas of interesting quantum functions.
+
+The quantum function is `f` and the measurement is `g`.
+
+### Andor
+![001.png](gallery/001.png)
+- 20 000 samples
+- f := [(0, 1), (1, 0), (-1, 0), (0, 1)]
+- g := and
