@@ -56,7 +56,7 @@ Each sample is a random path.
 - `g := and`
 
 ### Geysir (Random)
-![007.png](gallery/006.png)
+![007.png](gallery/007.png)
 - 20 000 samples
 - `f := [(0.8935131, 0.9591373), (-0.05023841, 0.4859118), (-0.89832544, -0.49549758), (-0.5120574, -0.7996857)]`
 - `g := eq`
