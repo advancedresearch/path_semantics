@@ -336,6 +336,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
 - [Avatars in The Holy Trinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatars-in-the-holy-trinity.pdf)
 - [Avatar Tables](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-tables.pdf)
+- [Symbiosis and Ourobiosis](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbiosis-and-ourobiosis.pdf) ★★★★★
 
 ### Homotopy Physics
 
