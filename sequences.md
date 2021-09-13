@@ -339,6 +339,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Symbiosis and Ourobiosis](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbiosis-and-ourobiosis.pdf) ★★★★★
 - [Ourobra Tables](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/ourobra-tables.pdf)
 - [Symbolic Distinction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-distinction.pdf) ★★★★★
+- [Path Semantical Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality.pdf) ★★★★★
 
 ### Homotopy Physics
 
