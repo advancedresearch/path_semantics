@@ -46,6 +46,8 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
+- [Symbolic Distinction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-distinction.pdf) ★★★★★
+- [Path Semantical Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality.pdf) ★★★★★
 - [Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf) ★★★★★
 - [Philosophy of The Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/philosophy-of-the-core-axiom.pdf)
 - [Lifted Associations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lifted-associations.pdf)
@@ -63,8 +65,17 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 *It is recommended to skip this section, unless you are interested in logic or the foundation of Path Semantics.*
 
 Path Semantical Logic uses the core axiom to group propositions into levels.
-An equality at level N+1 propagates into equality at level N.
-For an experimental implementation, see the [Pocket-Prover](https://github.com/advancedresearch/pocket_prover) library.
+A quality at level N propagates into quality at level N+1 (2021 standard order).
+
+For an experimental implementations, see:
+
+- [Pocket-Prover](https://github.com/advancedresearch/pocket_prover) (Classical Propositional Logic - PL/PSL)
+- [Prop](https://github.com/advancedresearch/prop) (Intuitionistic Propositional Logic - IPL/PSI)
+- [Path Semantical Intuitionistic Propositional Logic in Avalog](https://github.com/advancedresearch/avalog/blob/master/source/psi.txt) (Avatar Logic - PSI)
+
+Notice that Avatar Logic is required to weaken IPL to PSI properly.
+
+Papers:
 
 - [New Standard Order for Levels](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/new-standard-order-for-levels.pdf) ★★★★★
 - [Witness in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-in-path-semantical-logic.pdf)
