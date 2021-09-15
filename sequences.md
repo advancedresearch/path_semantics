@@ -112,6 +112,7 @@ Papers:
 - [Natural Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-propositions.pdf)
 - [Transitive Mirror Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transitive-mirror-theorems.pdf)
 - [Implicit Activation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/implicit-activation.pdf)
+- [Creation Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/creation-theorem.pdf)
 
 ### Introduction
 
