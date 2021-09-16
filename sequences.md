@@ -75,6 +75,9 @@ For an experimental implementations, see:
 
 Notice that Avatar Logic is required to weaken IPL to PSI properly.
 
+Some theorems, such as the Implication Theorem or Creation Theorem, holds in PSL but are not provable in PSI without LEM (Law of Excluded Middle).
+This implies that PSI is the natural foundation of Path Semantics.
+
 Papers:
 
 - [New Standard Order for Levels](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/new-standard-order-for-levels.pdf) ★★★★★
