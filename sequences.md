@@ -355,6 +355,8 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Ourobra Tables](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/ourobra-tables.pdf)
 - [Symbolic Distinction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-distinction.pdf) ★★★★★
 - [Path Semantical Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality.pdf) ★★★★★
+- [Zen Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/zen-languages.pdf)
+- [Avatar Zen Ladders](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-zen-ladders.pdf)
 
 ### Homotopy Physics
 
@@ -551,7 +553,6 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Constructive Symmetry Breaking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-symmetry-breaking.pdf)
 - [Segmented Time](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/segmented-time.pdf)
 - [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
-- [Zen Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/zen-languages.pdf)
 
 ### Artificial Intelligence
 
