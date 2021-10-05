@@ -357,6 +357,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Path Semantical Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality.pdf) ★★★★★
 - [Zen Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/zen-languages.pdf)
 - [Avatar Zen Ladders](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-zen-ladders.pdf)
+- [Qual and Qualitative](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/qual-and-qualitative.pdf)
 
 ### Homotopy Physics
 
