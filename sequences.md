@@ -360,6 +360,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Qual and Qualitative](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/qual-and-qualitative.pdf)
 - [Seshatism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatism.pdf) ★★★★★
 - [Path Semantical Quality Truth Table](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality-truth-table.pdf)
+- [Last Order Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/last-order-logic.pdf) ★★★★★
 
 ### Homotopy Physics
 
