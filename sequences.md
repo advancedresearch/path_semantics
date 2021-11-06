@@ -362,7 +362,8 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Path Semantical Quality Truth Table](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality-truth-table.pdf)
 - [Last Order Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/last-order-logic.pdf)
 - [Seshatic-Platonic Cycles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-platonic-cycles.pdf)
-- [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf)
+- [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
+- [Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-calculus.pdf) ★★★★★
 
 ### Homotopy Physics
 
