@@ -364,6 +364,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Seshatic-Platonic Cycles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-platonic-cycles.pdf)
 - [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
 - [Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-calculus.pdf) ★★★★★
+- [Essay: What is Wrong with Platonism?](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/what-is-wrong-with-platonism.pdf) ★★★★★
 
 ### Homotopy Physics
 
