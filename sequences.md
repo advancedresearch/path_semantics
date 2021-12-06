@@ -368,6 +368,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
 - [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
 - [The Joker Type](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker-type.pdf) ★★★★★
+- [Conversations With GPT-3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/conversations-with-gpt-3.pdf)
 
 ### Homotopy Physics
 
