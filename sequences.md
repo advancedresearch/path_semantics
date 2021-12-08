@@ -369,6 +369,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
 - [The Joker Type](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker-type.pdf) ★★★★★
 - [Conversations With GPT-3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/conversations-with-gpt-3.pdf)
+- [The Rise of Seshatism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-rise-of-seshatism.pdf) ★★★★★
 
 ### Homotopy Physics
 
