@@ -371,6 +371,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Conversations With GPT-3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/conversations-with-gpt-3.pdf)
 - [The Rise of Seshatism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-rise-of-seshatism.pdf) ★★★★★
 - [Nuobocat](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/nuobocat.pdf)
+- [Seshatic Inequality Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-inequality-overloading.pdf)
 
 ### Homotopy Physics
 
