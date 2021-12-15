@@ -372,7 +372,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Nuobocat](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/nuobocat.pdf)
 - [Seshatic Inequality Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-inequality-overloading.pdf)
 
-#### Conversations with GPT-3
+#### Conversations With GPT-3
 
 - [Conversations With GPT-3](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/conversations-with-gpt-3.pdf)
 - [Conversations With GPT-3 Part 2](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/conversations-with-gpt-3-part-2.pdf)
