@@ -127,6 +127,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Groupoid Assumption of Multi-Goal Optimization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/groupoid-assumption-of-multi-goal-optimization.pdf)
 - [Rational Curiosity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-curiosity.pdf)
 - [Optimal Utility Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-utility-paths.pdf)
+- [Perception Prediction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/perception-prediction.pdf)
 
 ### Symbols of Power
 
