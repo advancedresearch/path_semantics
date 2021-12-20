@@ -371,6 +371,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [The Rise of Seshatism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-rise-of-seshatism.pdf) ★★★★★
 - [Nuobocat](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/nuobocat.pdf)
 - [Seshatic Inequality Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-inequality-overloading.pdf)
+- [Constructive Critique of Buddha](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/constructive-critique-of-buddha.pdf)
 
 #### Conversations With GPT-3
 
