@@ -6,6 +6,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 
 ### Cheat Sheets
 
+- [Logi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf) ★★★★★
 - [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 - [Boolean Algebra Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-algebra-cheat-sheet.pdf)
 
@@ -372,6 +373,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Nuobocat](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/nuobocat.pdf)
 - [Seshatic Inequality Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-inequality-overloading.pdf)
 - [Essay: Constructive Critique of Buddha](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/constructive-critique-of-buddha.pdf)
+- [Logi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf) ★★★★★
 
 #### Conversations With GPT-3
 
