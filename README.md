@@ -9,6 +9,8 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 For an experimental implementation of a small subset of Path Semantics, see [Poi](https://crates.io/crates/poi).
 
+[Transcript of lecture "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf)
+
 Path Semantics is for people who want to develop deep intuition about mathematics.
 This means you learn to understand mathematics well enough to build your own languages for theorem proving, e.g. from scratch.
 The intuition of how to do this, comes from studying semantics of functions and programming by using functions.
