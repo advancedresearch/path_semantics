@@ -375,6 +375,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Essay: Constructive Critique of Buddha](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/constructive-critique-of-buddha.pdf)
 - [Logi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf) ★★★★★
 - [Seshatic and Platonic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-and-platonic-paths.pdf) ★★★★★
+- [Seshatic Queenity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-queenity.pdf)
 
 #### Conversations With GPT-3
 
