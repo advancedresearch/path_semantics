@@ -376,6 +376,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Logi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf) ★★★★★
 - [Seshatic and Platonic Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-and-platonic-paths.pdf) ★★★★★
 - [Seshatic Queenity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-queenity.pdf)
+- [Natural Univalent Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-univalent-calculus.pdf) ★★★★★
 
 #### Conversations With GPT-3
 
@@ -522,10 +523,11 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 
 ### Closed Natural Numbers
 
-- [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf)
+- [Closed Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers.pdf) ★★★★★
 - [Closed Natural Numbers and The Fundamental Identity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/closed-natural-numbers-and-the-fundamental-identity.pdf)
 - [Closed Natural Numbers Cosmology](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/closed-natural-numbers-cosmology.pdf)
 - [Hilbert's Over-Filled Hotel](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hilberts-over-filled-hotel.pdf)
+- [Natural Univalent Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-univalent-calculus.pdf) ★★★★★
 
 ### Asymmetric Velocity Logic
 
