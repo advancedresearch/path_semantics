@@ -18,6 +18,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Existential Paths of Real Addition on Intervals](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-of-real-addition-on-intervals.pdf)
 - [Mini Toolkit in Dyon for Boolean Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/mini-toolkit-in-dyon-for-boolean-path-semantics.pdf)
 - [Terminology for Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/terminology-for-binary-relations.pdf)
+- [Terminology for Morphisms](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/terminology-for-morphisms.pdf)
 
 ### Background
 
