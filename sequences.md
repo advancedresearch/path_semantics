@@ -379,6 +379,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Seshatic Queenity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-queenity.pdf)
 - [Natural Univalent Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-univalent-calculus.pdf) ★★★★★
 - [Cube of Elementary Systems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/cube-of-elementary-systems.pdf)
+- [Existential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-propositions.pdf) ★★★★★
 
 #### Conversations With GPT-3
 
