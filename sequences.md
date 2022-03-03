@@ -382,6 +382,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Cube of Elementary Systems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/cube-of-elementary-systems.pdf)
 - [Existential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-propositions.pdf) ★★★★★
 - [Cogito Cross Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/cogito-cross-equality.pdf) ★★★★★
+- [Martin Heidegger vs Alan Watts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/martin-heidegger-vs-alan-watts.pdf)
 
 #### Conversations With GPT-3
 
