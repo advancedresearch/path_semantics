@@ -535,6 +535,11 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Hilbert's Over-Filled Hotel](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hilberts-over-filled-hotel.pdf)
 - [Natural Univalent Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-univalent-calculus.pdf) ★★★★★
 
+### Algexenotation
+
+- [Algexenotation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/algexenotation.pdf)
+- [Eleven Algexenic Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/eleven-algexenic-types.pdf)
+
 ### Asymmetric Velocity Logic
 
 - [Asymmetric Velocity Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/asymmetric-velocity-logic.pdf)
@@ -585,7 +590,6 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Constructive Symmetry Breaking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-symmetry-breaking.pdf)
 - [Segmented Time](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/segmented-time.pdf)
 - [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
-- [Algexenotation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/algexenotation.pdf)
 
 ### Artificial Intelligence
 
