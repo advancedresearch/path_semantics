@@ -483,6 +483,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Propositional Argument Order](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/propositional-argument-order.pdf)
 - [Normal Path Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagrams.pdf)
 - [Cocategory Enumeration](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocategory-enumeration.pdf)
+- [Left and Right Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/left-and-right-inverse.pdf)
 
 ### Sized Type Theory
 
