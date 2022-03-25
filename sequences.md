@@ -383,6 +383,8 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 
 #### Consciousness in Wolfram Models
 
+Related to [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/sequences.md#homotopy-physics)
+
 - [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
 - [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
 - [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
@@ -395,6 +397,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 ### Homotopy Physics
 
 Homotopy Physics applies the theory of Avatar Extensions to Quantum Physics.
+Related to [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/sequences.md#consciousness-in-wolfram-models).
 
 - [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/homotopy-physics.pdf)
 - [Homotopy Physics and Path Integral Formulation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-physics-and-path-integral-formulation.pdf)
