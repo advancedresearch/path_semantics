@@ -365,11 +365,8 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Path Semantical Quality Truth Table](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality-truth-table.pdf)
 - [Last Order Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/last-order-logic.pdf)
 - [Seshatic-Platonic Cycles](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/seshatic-platonic-cycles.pdf)
-- [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
 - [Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-calculus.pdf) ★★★★★
 - [Essay: What is Wrong with Platonism?](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/what-is-wrong-with-platonism.pdf) ★★★★★
-- [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
-- [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
 - [The Joker Type](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker-type.pdf) ★★★★★
 - [The Rise of Seshatism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-rise-of-seshatism.pdf) ★★★★★
 - [Nuobocat](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/nuobocat.pdf)
@@ -383,6 +380,12 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Existential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-propositions.pdf) ★★★★★
 - [Cogito Cross Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/cogito-cross-equality.pdf) ★★★★★
 - [Martin Heidegger vs Alan Watts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/martin-heidegger-vs-alan-watts.pdf)
+
+#### Consciousness in Wolfram Models
+
+- [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
+- [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
+- [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
 
 #### Conversations With GPT-3
 
