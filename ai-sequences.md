@@ -129,11 +129,12 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Optimal Utility Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-utility-paths.pdf)
 - [Perception Prediction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/perception-prediction.pdf)
 
-### Symbols of Power
+### Symbols of Power & Code
 
 - [Symbols of Power](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-power.pdf)
 - [The Island of Humanity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-island-of-humanity.pdf)
 - [Superphilosophers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/superphilosophers.pdf)
+- [Symbols of Code](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-code.pdf)
 
 ### Misc
 
