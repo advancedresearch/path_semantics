@@ -600,6 +600,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
 - [Natural Loneliness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-loneliness.pdf)
 - [Prime Model of Sensory Experience](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-model-of-sensory-experience.pdf)
+- [Hyperspherdisdodehedron](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hyperspherdisdodehedron.pdf)
 
 ### Artificial Intelligence
 
