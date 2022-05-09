@@ -381,6 +381,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Cogito Cross Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/cogito-cross-equality.pdf) ★★★★★
 - [Martin Heidegger vs Alan Watts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/martin-heidegger-vs-alan-watts.pdf)
 - [Symmetric Quality Grading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symmetric-quality-grading.pdf)
+- [Platonic and Seshatic Increments](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/platonic-and-seshatic-increments.pdf)
 
 #### Consciousness in Wolfram Models
 
