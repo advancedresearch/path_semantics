@@ -382,6 +382,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Martin Heidegger vs Alan Watts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/martin-heidegger-vs-alan-watts.pdf)
 - [Symmetric Quality Grading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symmetric-quality-grading.pdf)
 - [Platonic and Seshatic Increments](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/platonic-and-seshatic-increments.pdf)
+- [Tribe Epistemic Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tribe-epistemic-logic.pdf)
 
 #### Consciousness in Wolfram Models
 
