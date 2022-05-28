@@ -62,6 +62,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Category Realizable Groupoids](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/category-realizable-groupoids.pdf)
 - [Semiconjugates as Satisfied Models of Total Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/semiconjugates-as-satisfied-models-of-total-normal-paths.pdf) ★★★★★
 - [Rewriting and the Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rewriting-and-the-core-axiom.pdf)
+- [Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-qubit.pdf) ★★★★★
 
 ### Path Semantical Logic
 
