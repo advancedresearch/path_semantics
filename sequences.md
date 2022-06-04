@@ -607,6 +607,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Prime Model of Sensory Experience](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-model-of-sensory-experience.pdf)
 - [Hyperspherdisdodehedron](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hyperspherdisdodehedron.pdf)
 - [Non-standard Symmetric Binary](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/non-standard-symmetric-binary.pdf)
+- [Semi-Invertible Folded Fields](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semi-invertible-folded-fields.pdf)
 
 ### Artificial Intelligence
 
