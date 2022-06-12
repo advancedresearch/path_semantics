@@ -19,6 +19,7 @@ Formal conceptualizing of super-intelligence, not necessary safe nor desirable:
 - [Probabilistic Preferences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/probabilistic-preferences.pdf)
 - [Embedded Rules of Action Into Action Space](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/embedded-rules-of-action-into-action-space.pdf)
 - [Optimal Utility Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-utility-paths.pdf)
+- [Differential Utility Complexity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/differential-utility-complexity.pdf)
 
 ### Game Theory
 
@@ -128,6 +129,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Rational Curiosity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/rational-curiosity.pdf)
 - [Optimal Utility Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/optimal-utility-paths.pdf)
 - [Perception Prediction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/perception-prediction.pdf)
+- [Differential Utility Complexity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/differential-utility-complexity.pdf)
 
 ### Symbols of Power & Code
 
