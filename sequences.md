@@ -396,6 +396,8 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 
 Related to [Homotopy Physics](https://github.com/advancedresearch/path_semantics/blob/master/sequences.md#homotopy-physics)
 
+Implementation: [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/avatar_hypergraph_rewriting)
+
 - [Consciousness in Wolfram Models](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/consciousness-in-wolfram-models.pdf) ★★★★★
 - [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
 - [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
