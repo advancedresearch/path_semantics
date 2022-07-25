@@ -590,6 +590,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Catuṣkoṭi Existential Lift](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/catuskoti-existential-lift.pdf)
 - [The Joker](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-joker.pdf) ★★★★★
 - [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
+- [Uberwrong Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/uberwrong-logic.pdf) ★★★★★
 
 ### Theories
 
