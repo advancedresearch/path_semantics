@@ -66,6 +66,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Path Semantical Aquality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-aquality.pdf) ★★★★★
 - [Path Semantical Contravariant Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-contravariant-quality.pdf) ★★★★★
 - [Homotopy Level Two Computing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-level-two-computing.pdf) ★★★★★
+- [Complexity of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/complexity-of-path-semantics.pdf) ★★★★★
 
 ### Path Semantical Logic
 
