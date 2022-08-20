@@ -393,6 +393,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-qubit.pdf) ★★★★★
 - [Path Semantical Aquality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-aquality.pdf) ★★★★★
 - [Path Semantical Contravariant Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-contravariant-quality.pdf) ★★★★★
+- [Combinatorial Archenumbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/combinatorial-archenumbers.pdf)
 
 #### Consciousness in Wolfram Models
 
@@ -562,6 +563,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 
 - [Algexenotation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/algexenotation.pdf)
 - [Eleven Algexenic Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/eleven-algexenic-types.pdf)
+- [Combinatorial Archenumbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/combinatorial-archenumbers.pdf)
 
 ### Asymmetric Velocity Logic
 
