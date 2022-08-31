@@ -68,6 +68,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Homotopy Level Two Computing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-level-two-computing.pdf) ★★★★★
 - [Complexity of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/complexity-of-path-semantics.pdf) ★★★★★
 - [Hypertorus Homotopy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypertorus-homotopy.pdf) ★★★★★
+- [Motivation of Homotopy Levels From Multiple PSQs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/motivation-of-homotopy-levels-from-multiple-psqs.pdf) ★★★★★
 
 ### Path Semantical Logic
 
