@@ -507,6 +507,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Normal Path Diagrams](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagrams.pdf)
 - [Cocategory Enumeration](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cocategory-enumeration.pdf)
 - [Left and Right Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/left-and-right-inverse.pdf)
+- [Absurdity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/absurdity-of-binary-relations.pdf)
 
 ### Sized Type Theory
 
