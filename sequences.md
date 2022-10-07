@@ -4,6 +4,16 @@ Reading sequences for learning path semantics.
 This is a collection of papers organized in a way to build up gradually understanding of path semantics.  
 Some papers are marked with stars (e.g. ★★★★★) to signify their significance.
 
+### Introduction
+
+- [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
+- [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
+- [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf) ★★★★★
+- [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
+- [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
+- [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
+- [Introduction to Path Semantical Quantum Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-psq.pdf)
+
 ### Cheat Sheets
 
 - [Logi](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf) ★★★★★
@@ -125,15 +135,6 @@ Papers:
 - [Transitive Mirror Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transitive-mirror-theorems.pdf)
 - [Implicit Activation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/implicit-activation.pdf)
 - [Creation Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/creation-theorem.pdf)
-
-### Introduction
-
-- [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
-- [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
-- [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf) ★★★★★
-- [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
-- [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
-- [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
 
 ### Notation
 
