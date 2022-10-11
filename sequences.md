@@ -13,6 +13,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
 - [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
 - [Introduction to Path Semantical Quantum Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-psq.pdf)
+- [Introduction to the Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-the-core-axiom.pdf)
 
 ### Cheat Sheets
 
