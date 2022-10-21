@@ -599,6 +599,11 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [The Subjective Sense of IO](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-subjective-sense-of-io.pdf)
 - [Uberwrong Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/uberwrong-logic.pdf) ★★★★★
 
+### Semantics of Falsehood
+
+- [Semantics of Falsehood](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semantics-of-falsehood.pdf)
+- [Stealing the Voice](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/stealing-the-voice.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -626,7 +631,6 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Semi-Invertible Folded Fields](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semi-invertible-folded-fields.pdf)
 - [Orthogonal Lattice Exploration](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/orthogonal-lattice-exploration.pdf)
 - [Dit Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dit-calculus.pdf)
-- [Semantics of Falsehood](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semantics-of-falsehood.pdf)
 
 ### Artificial Intelligence
 
