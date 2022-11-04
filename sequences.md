@@ -21,6 +21,12 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Path Semantics Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics-cheat-sheet.pdf)
 - [Boolean Algebra Cheat Sheet](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/boolean-algebra-cheat-sheet.pdf)
 
+### Visualization
+
+- [Visualizing Path Semantics Using LEGO Bricks](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-path-semantics-using-lego-bricks.pdf)
+- [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
+- [How to think Abstractly with Path Semantics - illustrated](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
+
 ### Reference material
 
 - [Alphabetic List of Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/alphabetic-list-of-functions.pdf)
