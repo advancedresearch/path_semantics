@@ -28,16 +28,8 @@ when a type system is not sufficient to capture all the properties of mathematic
 Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
 
-- [Logi - A simplified overview of our research](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logi.pdf)
-- [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
-- [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
-- [Visualizing Path Semantics Using LEGO Bricks](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/visualizing-path-semantics-using-lego-bricks.pdf)
-- [A brief history of Path Semantics - illustrated with stick figures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
-- [How to think Abstractly with Path Semantics - illustrated](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
 - [Reading sequences for learning Path Semantics](./sequences.md)
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
-- [Mathematical Workflow Visualized](./workflow.md)
-- [About Publishing Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/about-publishing-path-semantics.pdf)
 - [Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md)
 
 Notice: This work has not yet been peer-reviewed,  
