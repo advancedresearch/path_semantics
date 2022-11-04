@@ -10,7 +10,8 @@ Assume you have two continuous functions `f` and `g`.
 Formally, a homotopy path `H` is a continuous function of type `X x [0, 1] -> Y` where `H(x, 0) = f(x)` and `H(x, 1) = g(x)`.
 You can read more about this [here](https://en.wikipedia.org/wiki/Homotopy).
 
-A homotopy path is a language building block to give people intuition about proofs, as developed in [Homotopy Type Theory](https://homotopytypetheory.org/).
+A homotopy path is used in a field of mathematics called "topology",
+but can also be used as a language building block to give people intuition about proofs, as developed in [Homotopy Type Theory](https://homotopytypetheory.org/).
 
 In Homotopy Theory, a line can be contracted to a single point.
 Formally, this means the following relation:
