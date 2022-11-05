@@ -62,7 +62,7 @@ Hence, the name "Path Semantics".
 
 No. It is meant to be a practical tool for reasoning about programs (e.g. deriving algorithms using math), but open-ended for reasoning with mathematics.
 
-While it is true that the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)) might describe how symbols are used for theorem proving in mathematics in general,
+While it is true that the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)) might model logically how symbols are used for theorem proving in mathematics in general,
 it provides no complete semantics of mathematics.
 
 For every theory, the semantics of it must be formalized and defined before you can talk about what it is.
@@ -75,7 +75,7 @@ However, it makes no sense to ask what I did at home if I was not home.
 Questions are meaningful only if they are asked in a context where answering it makes sense.
 
 In a similar way, mathematics is a body of knowledge that is iterated over and improved over time.
-There is no complete definition of mathematics, but there are some axioms that defines rules of
+There is no complete definition of mathematics, but there are some axioms that define rules of
 how to think about mathematics itself, abstractly.
 
 For example, the univalence axiom of Homotopy Type Theory ([link](https://homotopytypetheory.org/)) can be written as a rule in
