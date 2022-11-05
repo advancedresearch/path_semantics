@@ -11,7 +11,7 @@ For an experimental implementation of a small subset of Path Semantics, see [Poi
 
 [Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf) - This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
 
-Path Semantics started you reasoning about the syntax:
+Path Semantics started with reasoning about the syntax:
 
 ```text
 f[g] <=> h
