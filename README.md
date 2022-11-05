@@ -11,22 +11,26 @@ For an experimental implementation of a small subset of Path Semantics, see [Poi
 
 [Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf) - This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
 
-Path Semantics is for people who want to develop deep intuition about mathematics.
-This means you learn to understand mathematics well enough to build your own languages for theorem proving, e.g. from scratch.
-The intuition of how to do this, comes from studying semantics of functions and programming by using functions.
+Path Semantics started you reasoning about the syntax:
 
-- The semantics of functions is the fundament which programming is built upon.
-- In mathematics, the functions modeled by Set Theory are pure (without side-effects and deterministic).
-- Dependent Type languages uses pure functions to prove some properties of programs.
+```text
+f[g] <=> h
+```
 
-Path Semantics goes beyond Dependent Types to arbitrary sub-types, embraces undecidability and non-determinism.
-The notation is designed to be used with point-free theorem proving (see [Poi](https://crates.io/crates/poi)) and can be used for analysis
-when a type system is not sufficient to capture all the properties of mathematical objects.
+Where `f, g, h` are functions.
+
+For example:
+
+```text
+and[not] <=> or
+concat[len] <=> add
+```
+
+For an implementation, see [Poi](https://crates.io/crates/poi).
 
 "Let's go quantum" - (2020 slogan)
 
-Here you will find lots of papers on ideas related to mathematics, logic, language and artificial intelligence.  
-The common theme is to express mathematics in a way that is easier to read and understand for programmers.  
+This repository is a brain dump of a lot of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 
 - [Reading sequences for learning Path Semantics](./sequences.md)
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
