@@ -60,7 +60,7 @@ Hence, the name "Path Semantics".
 
 ### Is Path Semantics meant to be a new foundation of all mathematics?
 
-No. It is meant to be a practical tool for reasoning about programs, but open-ended for reasoning with mathematics.
+No. It is meant to be a practical tool for reasoning about programs (e.g. deriving algorithms using math), but open-ended for reasoning with mathematics.
 
 While it is true that the core axiom ([link](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-semantics.pdf)) might describe how symbols are used for theorem proving in mathematics in general,
 it provides no complete semantics of mathematics.
