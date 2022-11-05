@@ -2,6 +2,13 @@
 
 Here is list of questions and answers that you might have about Path Semantics.
 
+### What should I learn to understand Path Semantics?
+
+- Basic Category Theory (e.g. what is commutative squares)
+- Basic Homotopy Type Theory (e.g. what is a homotopy)
+
+For Avatar Extensions, it is useful to know something about Basic Group Theory.
+
 ### What is a "path"?
 
 You can read the formal definition of normal paths [here](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf).
