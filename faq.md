@@ -116,24 +116,6 @@ it is indistinguishable from e.g. a whole theory of a field.
 Path Semantics is used to reason about some parts of mathematics, not all of it.
 It is much better to use existing theories and frameworks for various domains, than reconstructing it in Path Semantics.
 
-### Why do you not prove that the core axiom works, why only a reward for disproving it?
-
-Link to issue thread: https://github.com/advancedresearch/path_semantics/issues/531
-
-If you can prove that the axiom works, then Path Semantics is not consistent, which is the same as disproving it.
-
-This is because Path Semantics contains arithmetic.
-
-You can read more about this [here (Gödel's incompleteness theorems)](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems).
-
-Proving soundness of a formal system is often done in formal languages for each term having a well-defined type.
-
-Path Semantics is not a Type Theory. It is more fundamental.
-Type Theory is added to Path Semantics through "bootstrapping".
-
-You might be able to disprove the core axiom, by e.g. show that Type Theory as bootstrapped into gives a
-different semantics than the one we use in formal systems.
-
 ### What is the difference between formal theorem proving and informal theorem proving?
 
 Informal theorem proving permits usage of all formal languages for theorem proving.
