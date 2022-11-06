@@ -7,6 +7,9 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 [Join us on Discord!](https://discord.gg/JkrhJJRBR2)
 
+*Notice! This project is advanced research and is about deriving mathematical theories for simplifying mathematics (such as programming languages and automated theorem provers).
+You should not expect to understand this research without at least a basic background knowledge in logic, philosophy, Category Theory and Homotopy Type Theory.*
+
 For an experimental implementation of a small subset of Path Semantics, see [Poi](https://crates.io/crates/poi).
 
 [Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf) - This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
