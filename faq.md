@@ -31,7 +31,7 @@ might have surprising relations to remotely associated fields such as Continenta
 
 For highly technical reasons, it is not sufficient to use syntax sugar for normal paths.
 Normal paths need to be considered mathematical objects on their own, kind of like complex numbers vs real numbers.
-The idea to improve the process theorem proving itself, but this does not change which theorems can be proved.
+The idea to improve the process of theorem proving itself, but this does not change which theorems can be proved.
 
 ### What is a "path"?
 
