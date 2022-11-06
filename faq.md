@@ -27,6 +27,12 @@ There is a lot of technical details involved in this work and most of it does no
 However, it turns out that the logical foundation that formalizes what should be provable about normal paths,
 might have surprising relations to remotely associated fields such as Continental Philosophy.
 
+### Why normal paths?
+
+For highly technical reasons, it is not sufficient to use syntax sugar for normal paths.
+Normal paths need to be considered mathematical objects on their own, kind of like complex numbers vs real numbers.
+The idea to improve the process theorem proving itself, but this does not change which theorems can be proved.
+
 ### What is a "path"?
 
 You can read the formal definition of normal paths [here](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf).
