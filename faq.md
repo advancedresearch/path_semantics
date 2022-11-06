@@ -25,7 +25,7 @@ Path Semantics try to address one of these problems of usability,
 which might be thought of as introducing a new first class citizen called a "normal path".
 There is a lot of technical details involved in this work and most of it does not matter for other fields of mathematics.
 However, it turns out that the logical foundation that formalizes what should be provable about normal paths,
-might have surprising relations to remotely associated fields such as Continental Philsophy.
+might have surprising relations to remotely associated fields such as Continental Philosophy.
 
 ### What is a "path"?
 
