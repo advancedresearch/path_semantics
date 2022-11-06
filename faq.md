@@ -9,6 +9,24 @@ Here is list of questions and answers that you might have about Path Semantics.
 
 For Avatar Extensions, it is useful to know something about Basic Group Theory.
 
+### What is the overall problem?
+
+Dependent types can encode extra information that is used to check behaviour of programs statically.
+For example, Coq, which uses Calculus of Constructions, is used to verify software and proofs in mathematics.
+However, dependent types is not a solution once-and-for-all and recent years there has been an explosion of research
+into Cubical Type Theory, to make theorem proving easier and more constructive.
+
+When talking about extending dependent types, it is important to distinguish between objects that are formulated
+within some language and objects that are first class citizens.
+It is easier to provide good support for objects as first class citizens.
+This is a matter of usability, not about provability.
+
+Path Semantics try to address one of these problems of usability,
+which might be thought of as introducing a new first class citizen called a "normal path".
+There is a lot of technical details involved in this work and most of it does not matter for other fields of mathematics.
+However, it turns out that the logical foundation that formalizes what should be provable about normal paths,
+might have surprising relations to remotely associated fields such as Continental Philsophy.
+
 ### What is a "path"?
 
 You can read the formal definition of normal paths [here](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf).
