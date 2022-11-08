@@ -163,7 +163,7 @@ because of side effects and non-determinism.
 With other words, Set Theory is insufficient to deal with many problems that programmers want to solve.
 
 Category Theory is viewing mathematics from a bird-view perspective, which is useful sometimes,
-but understanding functions in more detail can be useful in ways Category Theory does not fit.
+but understanding functions in more detail can be useful in ways where Category Theory does not fit solving the problem.
 
 ### How do you test that the ideas work?
 
