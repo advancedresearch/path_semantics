@@ -215,9 +215,9 @@ There are ways one can partially define formally the semantics of functions.
 However, you can not expect this to be fully formalized, because it is impossible.
 Therefore, Path Semantics is not fully formalizable.
 
-### Is AdvancedResearch an organization for pseudomathematicians?
+### Is AdvancedResearch an organization for pseudo-mathematicians?
 
-Pseudomathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
+Pseudo-mathematics, or mathematical crankery, is a form of mathematics-like activity that aims at advancing a set of questionable beliefs that do not adhere to the framework of rigor or formal mathematical practice. Link to [Wikipedia article](https://en.wikipedia.org/wiki/Pseudomathematics)
 
 Some people who criticize AdvancedResearch for this, usually in less nice words, often have the following lists of "merits":
 
@@ -236,5 +236,5 @@ Criticism against the core science of Path Semantics in particular, has no merit
 This does not mean that AdvancedResearch does not commit mistakes, which is normal.
 
 It is more likely, statistically, that some people on the Internet are just seeking to waste other people's time,
-than for some open organization that produces software to deliberately design it based on pseudomathematics.
+than for some open organization that produces software to deliberately design it based on pseudo-mathematics.
 The software produced by AdvancedResearch is regularly reviewed for errors and any errors found are reported.
