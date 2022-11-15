@@ -403,6 +403,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Path Semantical Aquality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-aquality.pdf) ★★★★★
 - [Path Semantical Contravariant Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-contravariant-quality.pdf) ★★★★★
 - [Combinatorial Archenumbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/combinatorial-archenumbers.pdf)
+- [Joker Duality in The Yuga Time Cycle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-duality-in-the-yuga-time-cycle.pdf)
 
 #### Consciousness in Wolfram Models
 
