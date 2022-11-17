@@ -86,6 +86,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Complexity of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/complexity-of-path-semantics.pdf) ★★★★★
 - [Hypertorus Homotopy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypertorus-homotopy.pdf) ★★★★★
 - [Path Semantical Outer Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-outer-quality.pdf) ★★★★★
+- [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
 
 ### Path Semantical Logic
 
@@ -180,6 +181,7 @@ into expressions for higher order reasoning.
 - [Higher Order Operator Overloading and Existential Path Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-existential-path-equations.pdf)
 - [Higher Order Operator Overloading and Extensional Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-extensional-equality.pdf)
 - [Higher Order Operator Overloading by Explicit Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/higher-order-operator-overloading-by-explicit-notation.pdf) ★★★★★
+- [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
 
 ### Discrete Path Semantics
 
