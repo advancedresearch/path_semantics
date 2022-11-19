@@ -2,7 +2,7 @@
 
 The roadmap uses NASA's standard "Engineer Design Process".
 
-### 1. Identity the problem
+### 1. Identify the problem
 
 Normal paths are useful in combination with standard mathematics, however:
 
