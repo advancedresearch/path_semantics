@@ -38,6 +38,7 @@ This repository is a brain dump of a lot of papers on ideas related to mathemati
 - [Reading sequences for learning Path Semantics](./sequences.md)
 - [Reading sequences for Artificial Intelligence and Safety Research](./ai-sequences.md)
 - [Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md)
+- [Roadmap](https://github.com/advancedresearch/path_semantics/blob/master/roadmap.md)
 
 Notice: This work has not yet been peer-reviewed,  
 except informally and partially checked by automated theorem provers.
