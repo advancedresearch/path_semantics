@@ -18,9 +18,9 @@ Normal paths are useful in combination with notation for standard mathematics, h
 
 ### 3. Research
 
-- HOOO Exponential Propositions
-- Core axiom of Path Semantics
-- Path semantical levels of propositions
+- HOOO Exponential Propositions (needed for proper substitution in `~`)
+- Core axiom of Path Semantics (entry-point of bootstrapping process)
+- Path semantical levels of propositions (symmetries of the core axiom)
 
 ### 4. Develop solutions
 
