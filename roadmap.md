@@ -4,7 +4,7 @@ The roadmap uses NASA's standard "Engineer Design Process".
 
 ### 1. Identify the problem
 
-Normal paths are useful in combination with standard mathematics, however:
+Normal paths are useful in combination with notation for standard mathematics, however:
 
 - Not covered by current type theoretic or set theoretic foundations
 - We understand the idea, but there are lots of edge cases (formal issues)
