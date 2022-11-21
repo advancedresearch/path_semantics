@@ -12,7 +12,8 @@ Normal paths are useful in combination with standard mathematics, however:
 
 ### 2. Identify resources and constraints
 
-- Do not need a full fledged language, bootstrapping is sufficient
+- We do not need a full fledged language, bootstrapping is sufficient
+- Operations needed are reducible to path semantical qubit operator `~`
 - Extend Propositional Logic with path semantical qubit operator `~`
 
 ### 3. Research
