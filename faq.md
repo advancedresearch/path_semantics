@@ -233,6 +233,10 @@ Any claims in the past about pseudomathematics in the Path Semantics project,
 have been checked and there is no evidence so far beyond normal research activity.
 Criticism against the core science of Path Semantics in particular, has no merit.
 
+According to John Baez' Crackpot Index, the Path Semantics project scores -5 to 5,
+depending on whether you consider offering prize money to find errors in the core axiom as valid,
+which was found later and hence arguably showed it was meant to motivate constructive criticism.
+
 This does not mean that AdvancedResearch does not commit mistakes, which is normal.
 
 It is more likely, statistically, that some people on the Internet are just seeking to waste other people's time,
