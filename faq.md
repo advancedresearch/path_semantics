@@ -222,7 +222,7 @@ Pseudo-mathematics, or mathematical crankery, is a form of mathematics-like acti
 Some people who criticize AdvancedResearch for this, usually in less nice words, often have the following lists of "merits":
 
 - None or little Github activity
-- Never gained an even basic understanding of automated theorem provers of propositional logic
+- Never gained an even basic understanding of automated theorem provers or propositional logic
 - Lack basic knowledge about computational complexity theory
 - Have never used software produced by AdvancedResearch
 - Have never opened issued, visited forums or engaged meaningfully with AdvancedResearch
