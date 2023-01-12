@@ -643,6 +643,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Semi-Invertible Folded Fields](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semi-invertible-folded-fields.pdf)
 - [Orthogonal Lattice Exploration](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/orthogonal-lattice-exploration.pdf)
 - [Dit Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dit-calculus.pdf)
+- [Satisfied Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/satisfied-natural-numbers.pdf)
 
 ### Artificial Intelligence
 
