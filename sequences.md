@@ -574,6 +574,11 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Hilbert's Over-Filled Hotel](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hilberts-over-filled-hotel.pdf)
 - [Natural Univalent Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-univalent-calculus.pdf) ★★★★★
 
+### Satisfied Natural Numbers
+
+- [Satisfied Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/satisfied-natural-numbers.pdf)
+- [Reals Defined Using Satisfied Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/reals-defined-using-satisfied-natural-numbers.pdf)
+
 ### Algexenotation
 
 - [Algexenotation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/algexenotation.pdf)
@@ -643,7 +648,6 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Semi-Invertible Folded Fields](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semi-invertible-folded-fields.pdf)
 - [Orthogonal Lattice Exploration](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/orthogonal-lattice-exploration.pdf)
 - [Dit Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dit-calculus.pdf)
-- [Satisfied Natural Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/satisfied-natural-numbers.pdf)
 
 ### Artificial Intelligence
 
