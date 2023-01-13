@@ -45,6 +45,26 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [How to Think Abstractly With Path Semantics (Illustrated)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
 - [Goals of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/goals-of-path-semantics.pdf)
 
+### Notation
+
+- [Algebraic Notation for Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-notation-for-asymmetric-paths.pdf) ★★★★★
+- [Cross Argument Asymmetric Path Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cross-argument-asymmetric-path-notation.pdf)
+- [Path Function Product Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-function-product-notation.pdf) ★★★★★
+- [Merging of Path Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/merging-of-path-generators.pdf) ★★★★★
+- [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf) ★★★★★
+- [Domain Constraint Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/domain-constraint-notation.pdf) ★★★★★
+- [Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-paths.pdf) ★★★★★
+- [Lambda Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lambda-notation.pdf) ★★★★★
+- [Function Currying Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/function-currying-notation.pdf) ★★★★★
+- [Normal Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths-as-function-sub-types.pdf)
+- [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf) ★★★★★
+- [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf) ★★★★★
+- [The Id-Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
+- [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
+- [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
+- [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
+- [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
+
 ### Foundation
 
 Normal paths are formalized in 5 different ways:
@@ -144,26 +164,6 @@ Papers:
 - [Transitive Mirror Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transitive-mirror-theorems.pdf)
 - [Implicit Activation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/implicit-activation.pdf)
 - [Creation Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/creation-theorem.pdf)
-
-### Notation
-
-- [Algebraic Notation for Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-notation-for-asymmetric-paths.pdf) ★★★★★
-- [Cross Argument Asymmetric Path Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/cross-argument-asymmetric-path-notation.pdf)
-- [Path Function Product Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/path-function-product-notation.pdf) ★★★★★
-- [Merging of Path Generators](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/merging-of-path-generators.pdf) ★★★★★
-- [Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths.pdf) ★★★★★
-- [Domain Constraint Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/domain-constraint-notation.pdf) ★★★★★
-- [Universal Existential Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/universal-existential-paths.pdf) ★★★★★
-- [Lambda Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/lambda-notation.pdf) ★★★★★
-- [Function Currying Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/function-currying-notation.pdf) ★★★★★
-- [Normal Paths as Function Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths-as-function-sub-types.pdf)
-- [Constrained Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constrained-functions.pdf) ★★★★★
-- [Sub-Type Aliasing](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-type-aliasing.pdf) ★★★★★
-- [The Id-Unit Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/the-id-unit-function.pdf)
-- [Existence of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existence-of-normal-paths.pdf)
-- [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
-- [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
-- [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
 
 ### Higher Order Operator Overloading
 
