@@ -65,6 +65,18 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
 - [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
 
+### Examples of Path Semantics
+
+- [Existential Path of `add` with Domain Constraint `even`](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-add-with-domain-constraint-even.pdf)
+- [Formalization of Tic-Tac-Toe in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalization-of-tic-tac-toe-in-path-semantics.pdf)
+- [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
+- [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
+- [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
+- [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
+- [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
+- [Parity of General Complex Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parity-of-general-complex-numbers.pdf)
+- [Normal Path Diagram of AND](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagram-of-and.pdf)
+
 ### Foundation
 
 Normal paths are formalized in 5 different ways:
@@ -238,18 +250,6 @@ into expressions for higher order reasoning.
 - [Permutative Symmetry Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutative-symmetry-paths.pdf)
 - [Permutations as Cubical Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/permutations-as-cubical-paths.pdf)
 - [Glubical Permutations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/glubical-permutations.pdf)
-
-### Examples of Path Semantics
-
-- [Existential Path of `add` with Domain Constraint `even`](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-add-with-domain-constraint-even.pdf)
-- [Formalization of Tic-Tac-Toe in Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalization-of-tic-tac-toe-in-path-semantics.pdf)
-- [Linear Natural Number Sequences](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/linear-natural-number-sequences.pdf)
-- [Algebraic Properties of Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/algebraic-properties-of-addition.pdf)
-- [Formalizing Climate Change Mitigation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formalizing-climate-change-mitigation.pdf)
-- [Existential Path of Left Recursive Addition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-path-of-left-recursive-addition.pdf)
-- [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
-- [Parity of General Complex Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parity-of-general-complex-numbers.pdf)
-- [Normal Path Diagram of AND](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagram-of-and.pdf)
 
 ### Concepts in Path Semantics
 
