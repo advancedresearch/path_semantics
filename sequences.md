@@ -407,6 +407,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Combinatorial Archenumbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/combinatorial-archenumbers.pdf)
 - [Joker Duality in The Yuga Time Cycle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-duality-in-the-yuga-time-cycle.pdf)
 - [Hypothetical Approaches to Existential Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypothetical-approaches-to-existential-philosophy.pdf)
+- [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
 
 #### Consciousness in Wolfram Models
 
