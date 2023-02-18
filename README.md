@@ -40,10 +40,21 @@ This repository is a brain dump of a lot of papers on ideas related to mathemati
 - [Frequently Asked Questions](https://github.com/advancedresearch/path_semantics/blob/master/faq.md)
 - [Roadmap](https://github.com/advancedresearch/path_semantics/blob/master/roadmap.md)
 
+### Citing Path Semantics
+
+```text
+@misc{Path-Semantics,
+  author = {Sven Nilsen},
+  title = {Re-interpretation of functions for expressing mathematics},
+  url = {https://github.com/advancedresearch/path_semantics/},
+  howpublished = {\url{https://advancedresearch.github.io/}}
+}
+```
+
 Notice: This work has not yet been peer-reviewed,  
 except informally and partially checked by automated theorem provers.
 
-Blog posts:
+### Blog posts
 
 - [2021-04-04 Deriving Path Semantics from First Principles](https://advancedresearch.github.io/blog/2021-04-04-deriving-path-semantics-from-first-principles)
 - [2020-08-20 Improving Brute Force Theorem Proving](https://github.com/advancedresearch/advancedresearch.github.io/blob/master/blog/2020-08-20-improving-brute-force-theorem-proving.md)
