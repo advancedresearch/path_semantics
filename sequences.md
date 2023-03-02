@@ -292,6 +292,7 @@ into expressions for higher order reasoning.
 - [Predicate Interpretation of Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/predicate-interpretation-of-adjoint-paths.pdf)
 - [Imaginary Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/imaginary-inverse.pdf) ★★★★★
 - [General Function Composition](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/general-function-composition.pdf) ★★★★★
+- [Non-Cover of Imaginary Inverse](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/non-cover-of-imaginary-inverse.pdf)
 
 ### Commutativity
 
