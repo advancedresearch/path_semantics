@@ -119,6 +119,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Hypertorus Homotopy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypertorus-homotopy.pdf) ★★★★★
 - [Path Semantical Outer Quality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-outer-quality.pdf) ★★★★★
 - [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
+- [Symbolic Indistinction as Propositional Infinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-indistinction-as-propositional-infinity.pdf) ★★★★★
 
 ### Path Semantical Logic
 
@@ -176,6 +177,7 @@ Papers:
 - [Transitive Mirror Theorems](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transitive-mirror-theorems.pdf)
 - [Implicit Activation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/implicit-activation.pdf)
 - [Creation Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/creation-theorem.pdf)
+- [Symbolic Indistinction as Propositional Infinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-indistinction-as-propositional-infinity.pdf) ★★★★★
 
 ### Higher Order Operator Overloading
 
