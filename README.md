@@ -10,7 +10,7 @@ A research project in path semantics, a re-interpretation of functions for expre
 *Notice! This project is advanced research and is about deriving mathematical theories for simplifying mathematics (such as programming languages and automated theorem provers).
 You should not expect to understand this research without at least a basic background knowledge in logic, philosophy, Category Theory and Homotopy Type Theory.*
 
-The Path Semantics project has many [undisputed contributions to mathematics](https://github.com/advancedresearch/path_semantics/wiki/List-of-Contributions-to-Mathematics). If you like to provide constructive criticism, then please open up issues! This can help us to bridge the gap to other mathematical theories.
+The Path Semantics project has many [not-yet-disputed contributions to mathematics](https://github.com/advancedresearch/path_semantics/wiki/List-of-Contributions-to-Mathematics). If you like to provide constructive criticism, then please open up issues! This can help us to bridge the gap to other mathematical theories.
 
 For an experimental implementation of a small subset of Path Semantics, see [Poi](https://crates.io/crates/poi).
 
