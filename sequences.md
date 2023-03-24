@@ -122,6 +122,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
 - [Symbolic Indistinction as Propositional Infinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-indistinction-as-propositional-infinity.pdf) ★★★★★
 - [The Classical Model of Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-classical-model-of-path-semantical-qubit.pdf) ★★★★★
+- [Counter-Example to Leibniz's First Principle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/counter-example-to-leibniz-first-principle.pdf) ★★★★★
 
 ### Path Semantical Logic
 
