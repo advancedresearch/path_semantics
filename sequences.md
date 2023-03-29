@@ -181,6 +181,7 @@ Papers:
 - [Implicit Activation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/implicit-activation.pdf)
 - [Creation Theorem](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/creation-theorem.pdf)
 - [Symbolic Indistinction as Propositional Infinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-indistinction-as-propositional-infinity.pdf) ★★★★★
+- [Bit Sequence Equality Using Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/bit-sequence-equality-using-path-semantical-qubit.pdf) ★★★★★
 
 ### Higher Order Operator Overloading
 
