@@ -630,6 +630,11 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Semantics of Falsehood](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semantics-of-falsehood.pdf)
 - [Stealing the Voice](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/stealing-the-voice.pdf)
 
+### Listing-Möbius Shifts
+
+- [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
+- [Listing-Möbius Shift Symmetry on Closed Time Loops](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/listing-mobius-shift-symmetry-on-closed-time-loops.pdf)
+
 ### Theories
 
 - [Modification Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/modification-theory.pdf)
@@ -649,7 +654,6 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Single-Bit Languages](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/single-bit-languages.pdf)
 - [Constructive Symmetry Breaking](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/constructive-symmetry-breaking.pdf)
 - [Segmented Time](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/segmented-time.pdf)
-- [Listing-Möbius Shifts](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/listing-mobius-shifts.pdf)
 - [Natural Loneliness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/natural-loneliness.pdf)
 - [Prime Model of Sensory Experience](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-model-of-sensory-experience.pdf)
 - [Hyperspherdisdodehedron](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hyperspherdisdodehedron.pdf)
