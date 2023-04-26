@@ -124,6 +124,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [The Classical Model of Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-classical-model-of-path-semantical-qubit.pdf) ★★★★★
 - [Counter-Example to Leibniz's First Principle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/counter-example-to-leibniz-first-principle.pdf) ★★★★★
 - [Path Semantical Quality as Path Connected Spaces](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/path-semantical-quality-as-path-connected-spaces.pdf) ★★★★★
+- [Theoretical vs Existential Possibility](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/theoretical-vs-existential-possibility.pdf)
 
 ### Path Semantical Logic
 
