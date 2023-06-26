@@ -137,6 +137,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [The Island of Humanity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-island-of-humanity.pdf)
 - [Superphilosophers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/superphilosophers.pdf)
 - [Symbols of Code](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-code.pdf)
+- [Build a Galactic Civilization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/build-a-galactic-civilization.pdf)
 
 ### Misc
 
