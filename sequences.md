@@ -420,6 +420,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Hypothetical Approaches to Existential Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypothetical-approaches-to-existential-philosophy.pdf)
 - [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
 - [Language Bias in Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-early-christianity.pdf)
+- [Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-tree-of-life.pdf)
 
 #### Consciousness in Wolfram Models
 
