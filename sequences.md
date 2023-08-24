@@ -419,9 +419,13 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Joker Duality in The Yuga Time Cycle](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-duality-in-the-yuga-time-cycle.pdf)
 - [Hypothetical Approaches to Existential Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypothetical-approaches-to-existential-philosophy.pdf)
 - [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
+
+#### Language Bias Hypotheses
+
 - [Language Bias in Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-early-christianity.pdf)
 - [Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-tree-of-life.pdf)
 - [Early and Late Eroticism of The Sky Goddess](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/early-and-late-eroticism-of-the-sky-goddess.pdf)
+- [Tree of Life Platonic Joker Platonism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tree-of-life-platonic-joker-platonism.pdf)
 
 #### Consciousness in Wolfram Models
 
