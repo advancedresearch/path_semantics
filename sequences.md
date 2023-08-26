@@ -426,6 +426,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-tree-of-life.pdf)
 - [Early and Late Eroticism of The Sky Goddess](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/early-and-late-eroticism-of-the-sky-goddess.pdf)
 - [Tree of Life Platonic Joker Platonism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tree-of-life-platonic-joker-platonism.pdf)
+- [Comparative Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/comparative-langauge-bias-in-tree-of-life.pdf)
 
 #### Consciousness in Wolfram Models
 
