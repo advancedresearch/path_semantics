@@ -77,6 +77,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Monotonic Properties of Lists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/monotonic-properties-of-lists.pdf)
 - [Parity of General Complex Numbers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/parity-of-general-complex-numbers.pdf)
 - [Normal Path Diagram of AND](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-path-diagram-of-and.pdf)
+- [Language Diversity in Ordered Pairs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-diversity-in-ordered-pairs.pdf)
 
 ### Foundation
 
