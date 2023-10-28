@@ -1,5 +1,7 @@
 ![and-andor](./images/and-andor.png)
 
+"Let's go quantum" - (2020 slogan)
+
 ###### To generate images like this, see [Quantum Propagation Explorer](https://github.com/advancedresearch/path_semantics/blob/master/dyon_experiments/quantum_propagation/).
 
 # Path Semantics
@@ -32,8 +34,6 @@ concat[len] <=> add
 ```
 
 For an implementation, see [Poi](https://crates.io/crates/poi).
-
-"Let's go quantum" - (2020 slogan)
 
 This repository is a brain dump of a lot of papers on ideas related to mathematics, logic, language and artificial intelligence.  
 
