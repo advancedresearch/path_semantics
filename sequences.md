@@ -138,6 +138,7 @@ A quality at level N propagates into quality at level N+1 (2021 standard order).
 
 For an experimental implementations, see:
 
+- [Hooo](https://github.com/advancedresearch/hooo) (Intuitionistic Propositional Logic with exponentials - IPL/HOOO EP)
 - [Pocket-Prover](https://github.com/advancedresearch/pocket_prover) (Classical Propositional Logic - PL/PSL)
 - [Prop](https://github.com/advancedresearch/prop) (Intuitionistic Propositional Logic - IPL/PSI)
 - [Path Semantical Intuitionistic Propositional Logic in Avalog](https://github.com/advancedresearch/avalog/blob/master/source/psi.txt) (Avatar Logic - PSI)
