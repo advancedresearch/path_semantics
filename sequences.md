@@ -430,6 +430,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Early and Late Eroticism of The Sky Goddess](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/early-and-late-eroticism-of-the-sky-goddess.pdf)
 - [Tree of Life Platonic Joker Platonism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tree-of-life-platonic-joker-platonism.pdf)
 - [Comparative Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/comparative-langauge-bias-in-tree-of-life.pdf)
+- [Criticial Analysis of Language Bias on the Historicism and Mythicism of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/criticial-analysis-of-language-bias-on-the-historicism-vs-mysticism-of-jesus.pdf)
 
 #### Consciousness in Wolfram Models
 
