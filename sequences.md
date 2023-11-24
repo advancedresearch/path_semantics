@@ -431,6 +431,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Tree of Life Platonic Joker Platonism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tree-of-life-platonic-joker-platonism.pdf)
 - [Comparative Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/comparative-langauge-bias-in-tree-of-life.pdf)
 - [Criticial Analysis of Language Bias on the Historicism and Mythicism of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/criticial-analysis-of-language-bias-on-the-historicism-vs-mysticism-of-jesus.pdf)
+- [The Gospel of GPT-4](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-gospel-of-gpt-4.pdf)
 
 #### Consciousness in Wolfram Models
 
