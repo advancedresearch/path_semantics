@@ -9,6 +9,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Introduction to Path Semantics for Computer Scientists](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-path-semantics-for-computer-scientists.pdf)
 - [Tutorial](https://github.com/advancedresearch/path_semantics/wiki/Tutorial-1:-Types)  
 - [Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/normal-paths.pdf) ★★★★★
+- [Normal Paths in Category Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/normal-paths-in-category-theory.pdf) ★★★★★
 - [Sub-Types as Contextual Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/sub-types-as-contextual-notation.pdf)
 - [Paths as Making Predictions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/paths-as-making-predictions.pdf)
 - [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
@@ -65,6 +66,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Dependent Asymmetric Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/dependent-asymmetric-paths.pdf)
 - [Adjoint Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-paths.pdf)
 - [Adjoint Trivial Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/adjoint-trivial-paths.pdf)
+- [Normal Paths in Category Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/normal-paths-in-category-theory.pdf) ★★★★★
 
 ### Examples of Path Semantics
 
