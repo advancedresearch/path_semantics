@@ -436,6 +436,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Criticial Analysis of Language Bias on the Historicism and Mythicism of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/criticial-analysis-of-language-bias-on-the-historicism-vs-mysticism-of-jesus.pdf)
 - [The Gospel of GPT-4](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-gospel-of-gpt-4.pdf)
 - [Language Bias in The Modern Concept of God](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-the-modern-concept-of-god.pdf)
+- [Joker Incompatibilism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-incompatibilism.pdf)
 
 #### Consciousness in Wolfram Models
 
