@@ -138,6 +138,7 @@ Before you try to understand Zen Rationality, it is useful to first learn about 
 - [Superphilosophers](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/superphilosophers.pdf)
 - [Symbols of Code](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbols-of-code.pdf)
 - [Build a Galactic Civilization](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/build-a-galactic-civilization.pdf)
+- [Hierarchy of Helpfulness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hierarchy-of-helpfulness.pdf)
 
 ### Misc
 
