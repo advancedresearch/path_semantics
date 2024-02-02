@@ -448,6 +448,7 @@ Implementation: [Avatar Hypergraph Rewriting](https://github.com/advancedresearc
 - [Avatar Hypergraph Rewriting](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-hypergraph-rewriting.pdf) ★★★★★
 - [The Symbolic Distinction Hypothesis of Consciousness](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-symbolic-distinction-hypothesis-of-consciousness.pdf) ★★★★★
 - [Distinctness Arrow of Time](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/distinctness-arrow-of-time.pdf) ★★★★★
+- [Relativistic Monism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/relativistic-monism.pdf) ★★★★★
 
 #### Conversations With GPT-3
 
