@@ -28,7 +28,7 @@ Path Semantics goes deeper than Wolfram models into nature of computation/logic,
 using Hegelean-ish philosophy from a Wittgenstein perspective of problematics between
 language and logic.
 Heidegger's philosophy is also useful in relation to language bias.
-So, if you are a philosopher trying to understand theoretical physics, Path Semantics might be something for you!
+So, if you are a philosopher trying to understand theoretical physics, then Path Semantics might be something for you!
 
 The Path Semantics project has many [not-yet-disputed contributions to mathematics](https://github.com/advancedresearch/path_semantics/wiki/List-of-Contributions-to-Mathematics). If you like to provide constructive criticism, then please open up issues! This can help us to bridge the gap to other mathematical theories.
 
