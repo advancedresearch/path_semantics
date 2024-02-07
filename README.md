@@ -9,8 +9,26 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 [Join us on Discord!](https://discord.gg/JkrhJJRBR2)
 
-*Notice! This project is advanced research and is about deriving mathematical theories for simplifying mathematics (such as programming languages and automated theorem provers).
-You should not expect to understand this research without at least a basic background knowledge in logic, philosophy, Category Theory and Homotopy Type Theory.*
+Path Semantics is in relation to functional programming the analogue of theoretical physics is in relation to experimental physics.
+Theoretical physics is concerned about physics as a language and reducing physical phenomena to fundamental constants and theories.
+Likewise, Path Semantics is concerned about computation as language and reducing computational phenomena to fundamental concepts and theories.
+Just like theoretical physics, Path Semantics contains multiple domains where definitions in one domain are generalized to other domains.
+Path Semantics is not a single language, but a framework for mathematical language design,
+similar to how theoretical physics is not a single language, but a framework for physical theory design.
+
+Here are some further analogues between theoretical physics and Path Semantics:
+
+- Speed of light: Normal paths (the universal invariant used for reference and motivation for computation)
+- Gravity: Existential paths (ranging from simple to advanced semantics of functions)
+- Planck constant: Intuitionistic Propositional Logic extendend with HOOO, congruence theory, PS core axiom and PS layers (logical foundation)
+
+In fundamental physics, the language of theoretical physics and Path Semantics converges into one,
+by the bridge between Wolfram models (hypergraph rewriting) and constructive logic.
+Path Semantics goes deeper than Wolfram models into nature of computation/logic, less concerned about geometry,
+using Hegelean-ish philosophy from a Wittgenstein perspective of problematics between
+language and logic.
+Heidegger's philosophy is also useful in relation to language bias.
+So, if you are a philosopher trying to understand theoretical physics, Path Semantics might be something for you!
 
 The Path Semantics project has many [not-yet-disputed contributions to mathematics](https://github.com/advancedresearch/path_semantics/wiki/List-of-Contributions-to-Mathematics). If you like to provide constructive criticism, then please open up issues! This can help us to bridge the gap to other mathematical theories.
 
