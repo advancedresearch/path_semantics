@@ -15,6 +15,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Existential Paths as Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/existential-paths-as-sets.pdf)
 - [Introduction to Path Semantical Quantum Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-psq.pdf)
 - [Introduction to the Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-the-core-axiom.pdf)
+- [Motivations of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/motivations-of-path-semantics.pdf) ★★★★★
 
 ### Cheat Sheets
 
@@ -46,6 +47,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [History of Path Semantics (Illustrated With Stick Figures)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/history-of-path-semantics-illustrated.pdf)
 - [How to Think Abstractly With Path Semantics (Illustrated)](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/how-to-think-abstractly-with-path-semantics.pdf)
 - [Goals of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/goals-of-path-semantics.pdf)
+- [Motivations of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/motivations-of-path-semantics.pdf) ★★★★★
 
 ### Notation
 
@@ -100,6 +102,7 @@ For some theories, like Boolean functions, normal paths are proven to be sound b
 
 In the broader theory of logic, one can study [Path Semantical Logic](#path-semantical-logic).
 
+- [Motivations of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/motivations-of-path-semantics.pdf) ★★★★★
 - [Formal Definition of Normal Paths](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/formal-definition-of-normal-paths.pdf) ★★★★★
 - [Atomic Functions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/atomic-functions.pdf) ★★★★★
 - [Symbolic Distinction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-distinction.pdf) ★★★★★
