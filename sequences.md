@@ -441,6 +441,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Language Bias in The Modern Concept of God](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-the-modern-concept-of-god.pdf)
 - [Joker Incompatibilism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-incompatibilism.pdf)
 - [Wellsprings of Redemption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/wellsprings-of-redemption.pdf)
+- [The Origin of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-origin-of-jesus.pdf)
 
 #### Consciousness in Wolfram Models
 
