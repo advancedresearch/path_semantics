@@ -443,6 +443,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Wellsprings of Redemption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/wellsprings-of-redemption.pdf)
 - [The Origin of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-origin-of-jesus.pdf)
 - [Understanding Language Bias in Ancient Religions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/understanding-language-bias-in-ancient-religions.pdf)
+- [The Problem with Paul](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-problem-with-paul.pdf)
 
 #### Consciousness in Wolfram Models
 
