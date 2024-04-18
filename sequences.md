@@ -694,6 +694,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Reproducible Type Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/reproducible-type-theory.pdf)
 - [Numerical Notation for Partial Differential Equations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/numerical-notation-for-partial-differential-equations.pdf)
 - [Primbix](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/primbix.pdf)
+- [Minimum Sequence of Reciprocal Prime Unitary Sums](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/minimum-sequence-of-reciprocal-prime-unitary-sums.pdf)
 
 ### Artificial Intelligence
 
