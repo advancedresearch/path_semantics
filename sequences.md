@@ -444,6 +444,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [The Origin of Jesus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-origin-of-jesus.pdf)
 - [Understanding Language Bias in Ancient Religions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/understanding-language-bias-in-ancient-religions.pdf)
 - [The Problem with Paul](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-problem-with-paul.pdf)
+- [Incomplete Suggestion for Proving Non-Existence of The Christian God](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/incomplete-suggestion-for-proving-non-existence-of-christian-god.pdf)
 
 #### Consciousness in Wolfram Models
 
