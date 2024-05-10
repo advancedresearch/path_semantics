@@ -563,6 +563,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Absurdity of Binary Relations](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/absurdity-of-binary-relations.pdf)
 - [Applied Category of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/applied-category-of-sets.pdf)
 - [Structural Analysis for Logicians](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/structural-analysis-for-logicians.pdf)
+- [Existential Logic and Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-logic-and-graphs.pdf)
 
 ### Sized Type Theory
 
