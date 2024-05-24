@@ -447,6 +447,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Incomplete Suggestion for Proving Non-Existence of The Christian God](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/incomplete-suggestion-for-proving-non-existence-of-christian-god.pdf)
 - [Mythological Meta-Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/mythological-meta-game-theory.pdf)
 - [In Saeculum Satyrarum – The Century of Satire](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-century-of-satire.pdf)
+- [How Roman Poets Shaped The Language of Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/how-roman-poets-shaped-the-language-of-early-christianity.pdf)
 
 #### Consciousness in Wolfram Models
 
