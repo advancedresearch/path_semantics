@@ -157,6 +157,7 @@ Since e.g. the Creation Theorem is absurd, this implies that PSI is the natural 
 
 Papers:
 
+- [Overview of Path Semantical Logics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/overview-of-path-semantical-logics.pdf)
 - [New Standard Order for Levels](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/new-standard-order-for-levels.pdf) ★★★★★
 - [Witness in Path Semantical Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/witness-in-path-semantical-logic.pdf)
 - [Faster Brute Force Proofs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/faster-brute-force-proofs.pdf)
