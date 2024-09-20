@@ -197,6 +197,7 @@ Papers:
 - [Symbolic Indistinction as Propositional Infinity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-indistinction-as-propositional-infinity.pdf) ★★★★★
 - [Bit Sequence Equality Using Path Semantical Qubit](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/bit-sequence-equality-using-path-semantical-qubit.pdf) ★★★★★
 - [Agnostic Language Bias](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/agnostic-language-bias.pdf) ★★★★★
+- [Un- and Re-Sesh](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/un-and-re-sesh.pdf)
 
 ### Higher Order Operator Overloading
 
