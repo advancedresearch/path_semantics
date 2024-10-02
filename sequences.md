@@ -432,6 +432,13 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Hypothetical Approaches to Existential Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypothetical-approaches-to-existential-philosophy.pdf)
 - [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
 
+#### Joker Calculus
+
+For an implementation in Rust, see the [Joker Calculus](https://github.com/advancedresearch/joker_calculus) project.
+
+- [Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-calculus.pdf) ★★★★★
+- [Joker Contraction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-contraction.pdf)
+
 #### Language Bias Hypotheses
 
 - [Language Bias in Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-early-christianity.pdf)
