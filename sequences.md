@@ -711,6 +711,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Primbix](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/primbix.pdf)
 - [Minimum Sequence of Reciprocal Prime Unitary Sums](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/minimum-sequence-of-reciprocal-prime-unitary-sums.pdf)
 - [Prime Bound](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-bound.pdf)
+- [General Motion](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/general-motion.pdf) ★★★★★
 
 ### Artificial Intelligence
 
