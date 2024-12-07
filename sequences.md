@@ -714,6 +714,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Prime Bound](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-bound.pdf)
 - [General Motion](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/general-motion.pdf) ★★★★★
 - [Monadic Subsets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/monadic-subsets.pdf)
+- [Binary Lebesgue Measures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/binary-lebesgue-measures.pdf)
 
 ### Artificial Intelligence
 
