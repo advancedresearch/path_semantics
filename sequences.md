@@ -432,6 +432,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Hypothetical Approaches to Existential Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hypothetical-approaches-to-existential-philosophy.pdf)
 - [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
 - [Critical vs Speculative Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/critical-vs-speculative-philosophy.pdf) ★★★★★
+- [Existential Contradiction Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-contradiction-logic.pdf) ★★★★★
 
 #### Joker Calculus
 
