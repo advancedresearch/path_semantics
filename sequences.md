@@ -433,6 +433,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Abstract Corruption](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/abstract-corruption.pdf)
 - [Critical vs Speculative Philosophy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/critical-vs-speculative-philosophy.pdf) ★★★★★
 - [Existential Contradiction Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-contradiction-logic.pdf) ★★★★★
+- [Laws of Form as Avatar Extension](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/laws-of-form-as-avatar-extension.pdf) ★★★★★
 
 #### Joker Calculus
 
