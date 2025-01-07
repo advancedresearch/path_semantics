@@ -718,6 +718,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Monadic Subsets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/monadic-subsets.pdf)
 - [Binary Lebesgue Measures](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/binary-lebesgue-measures.pdf)
 - [Radix-less Symbolic Efficiency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/radix-less-symbolic-efficiency.pdf)
+- [Rule-Free Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/rule-free-logic.pdf)
 
 ### Artificial Intelligence
 
