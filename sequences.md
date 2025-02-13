@@ -721,6 +721,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Radix-less Symbolic Efficiency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/radix-less-symbolic-efficiency.pdf)
 - [Rule-Free Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/rule-free-logic.pdf)
 - [Prime Symmetric Goldbach](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-symmetric-goldbach.pdf) ★★★★★
+- [Rational Symmetry Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/rational-symmetry-function.pdf)
 
 ### Artificial Intelligence
 
