@@ -580,6 +580,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Applied Category of Sets](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/applied-category-of-sets.pdf)
 - [Structural Analysis for Logicians](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/structural-analysis-for-logicians.pdf)
 - [Existential Logic and Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-logic-and-graphs.pdf)
+- [The Logic of Sub-Types](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-logic-of-sub-types.pdf)
 
 ### Sized Type Theory
 
