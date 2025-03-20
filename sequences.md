@@ -445,6 +445,8 @@ For an implementation in Rust, see the [Joker Calculus](https://github.com/advan
 
 #### Language Bias Hypotheses
 
+This sequence spinned off a project to understand Roman satire in 2nd century Early Christian writings ([link](https://github.com/advancedresearch/the_century_of_satire)).
+
 - [Language Bias in Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-early-christianity.pdf)
 - [Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-tree-of-life.pdf)
 - [Early and Late Eroticism of The Sky Goddess](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/early-and-late-eroticism-of-the-sky-goddess.pdf)
@@ -462,6 +464,7 @@ For an implementation in Rust, see the [Joker Calculus](https://github.com/advan
 - [Mythological Meta-Game Theory](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/mythological-meta-game-theory.pdf)
 - [In Saeculum Satyrarum – The Century of Satire](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-century-of-satire.pdf)
 - [How Roman Poets Shaped The Language of Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/how-roman-poets-shaped-the-language-of-early-christianity.pdf)
+- [Logos and Zoe](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logos-and-zoe.pdf)
 
 #### Consciousness in Wolfram Models
 
