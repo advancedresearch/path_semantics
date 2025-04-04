@@ -16,6 +16,7 @@ Some papers are marked with stars (e.g. ★★★★★) to signify their signif
 - [Introduction to Path Semantical Quantum Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-psq.pdf)
 - [Introduction to the Core Axiom](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-the-core-axiom.pdf)
 - [Motivations of Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/motivations-of-path-semantics.pdf) ★★★★★
+- [Introduction to Language Bias](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-language-bias.pdf) ★★★★★
 
 ### Cheat Sheets
 
@@ -364,6 +365,7 @@ Avatar Extensions is a technique of abstract generalization by exploiting symmet
 For an experimental implementation of Avatar Logic, see [Avalog](https://github.com/advancedresearch/avalog).
 For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advancedresearch/avatar_graph).
 
+- [Introduction to Language Bias](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-language-bias.pdf) ★★★★★
 - [Introduction to Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/introduction-to-avatar-graphs.pdf)
 - [Avatar Graphs](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/avatar-graphs.pdf) ★★★★★
 - [Graph Interpretation of Avatar Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/graph-interpretation-of-avatar-logic.pdf) ★★★★★
@@ -440,6 +442,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 
 For an implementation in Rust, see the [Joker Calculus](https://github.com/advancedresearch/joker_calculus) project.
 
+- [Introduction to Language Bias](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-language-bias.pdf) ★★★★★
 - [Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-calculus.pdf) ★★★★★
 - [Joker Contraction](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-contraction.pdf)
 
@@ -447,6 +450,7 @@ For an implementation in Rust, see the [Joker Calculus](https://github.com/advan
 
 This sequence spinned off a project to understand Roman satire in 2nd century Early Christian writings ([link](https://github.com/advancedresearch/the_century_of_satire)).
 
+- [Introduction to Language Bias](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/introduction-to-language-bias.pdf) ★★★★★
 - [Language Bias in Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-early-christianity.pdf)
 - [Language Bias in Tree of Life](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/language-bias-in-tree-of-life.pdf)
 - [Early and Late Eroticism of The Sky Goddess](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/early-and-late-eroticism-of-the-sky-goddess.pdf)
