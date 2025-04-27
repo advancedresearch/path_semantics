@@ -16,10 +16,11 @@ A research project in path semantics, a re-interpretation of functions for expre
 ![Logi Circle](https://github.com/user-attachments/assets/e25b7bac-d778-43bb-a517-8918f4934264)
 
 [Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf)  
-This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
+*This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).*
 
 [Summary of research on Path Semantical Quality](https://advancedresearch.github.io/quality/summary.html)  
-Path Semantical Quality is a tautological congruent partial equivalence relation that lifts biconditions with symbolic distinction.
+*Path Semantical Quality is a tautological congruent partial equivalence relation that lifts biconditions with symbolic distinction.  
+(It is a mouthful, but at least you can use it impress your friends and colleagues)*
 
 Path Semantics is in relation to functional programming the analogue of theoretical physics is in relation to experimental physics.
 Theoretical physics is concerned about physics as a language and reducing physical phenomena to fundamental constants and theories.
