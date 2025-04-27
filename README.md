@@ -1,3 +1,7 @@
+[Shortcut to Reading Sequences](./sequences.md)  
+*This is for people that use this repository frequently and don't want to scroll.  
+If you are new to Path Semantics, just skip this link and continue scrolling.*
+
 ![and-andor](./images/and-andor.png)
 
 "Let's go quantum" - (2020 slogan)
@@ -8,6 +12,14 @@
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
 [Join us on Discord!](https://discord.gg/JkrhJJRBR2)
+
+![Logi Circle](https://github.com/user-attachments/assets/e25b7bac-d778-43bb-a517-8918f4934264)
+
+[Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf)  
+This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
+
+[Summary of research on Path Semantical Quality](https://advancedresearch.github.io/quality/summary.html)  
+Path Semantical Quality is a tautological congruent partial equivalence relation that lifts biconditions with symbolic distinction.
 
 Path Semantics is in relation to functional programming the analogue of theoretical physics is in relation to experimental physics.
 Theoretical physics is concerned about physics as a language and reducing physical phenomena to fundamental constants and theories.
@@ -34,8 +46,6 @@ The Path Semantics project has many [not-yet-disputed contributions to mathemati
 
 - For an experimental implementation of a small subset of Path Semantics, see [Poi](https://crates.io/crates/poi)
 - For an experimental implementation of the logical foundation of Path Semantics, see [Hooo](https://crates.io/crates/hooo)
-
-[Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf) - This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).
 
 Path Semantics started with reasoning about the syntax:
 
