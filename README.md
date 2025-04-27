@@ -22,6 +22,12 @@ A research project in path semantics, a re-interpretation of functions for expre
 *Path Semantical Quality is a tautological congruent partial equivalence relation that lifts biconditions with symbolic distinction.  
 (It is a mouthful, but at least you can use it impress your friends and colleagues)*
 
+![Path Semantics Cheat Sheet](https://github.com/user-attachments/assets/4acf8f1a-a164-47e1-8c9c-293763712119)
+
+![Foundation of Path Semantics Cheat Sheet](https://github.com/user-attachments/assets/7daebd5d-f04b-4ccc-acb4-388516571b67)
+
+### Introduction
+
 Path Semantics is in relation to functional programming the analogue of theoretical physics is in relation to experimental physics.
 Theoretical physics is concerned about physics as a language and reducing physical phenomena to fundamental constants and theories.
 Likewise, Path Semantics is concerned about computation as language and reducing computational phenomena to fundamental concepts and theories.
