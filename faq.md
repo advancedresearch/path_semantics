@@ -78,7 +78,7 @@ Since `not` is bijective, one can say that `and` is "equivalent" to `or`, by the
 
 However, since homotopy paths can also contract lines into points,
 it means that e.g. `concat[len] <=> add` describes a homotopy equivalence between `concat` and `add`.
-The different is that `add`, interpreted this way, is a contracted version of `concat`.
+The difference is that `add`, interpreted this way, is a contracted version of `concat`.
 
 When working in Homotopy Type Theory, one is describing Path Semantics at the meta-level.
 It is like looking at Path Semantics from the "outside".
