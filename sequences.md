@@ -504,6 +504,10 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 
 - [Linear Polarized Light](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/linear-polarized-light.pdf)
 
+### Philosophy
+
+- [Hegel's Contradiction and Negation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hegels-contradiction-and-negation.pdf)
+
 ### Proof Techniques
 
 - [Type Checking Variable With Multiple Constraints](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/type-checking-variable-with-multiple-constraints.pdf)
