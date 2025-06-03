@@ -508,6 +508,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 
 - [Hegel's Contradiction and Negation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hegels-contradiction-and-negation.pdf)
 - [Dialectical Masks: Hegel's Philosophy Through the Lens of Joker Calculus](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/dialectical-masks.pdf) (AI generated)
+- [Logical Being](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logical-being.pdf)
 
 ### Proof Techniques
 
