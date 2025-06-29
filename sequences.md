@@ -740,6 +740,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Prime Symmetric Goldbach](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/prime-symmetric-goldbach.pdf) ★★★★★
 - [Rational Symmetry Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/rational-symmetry-function.pdf)
 - [Evaluation Oriented Classes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/evaluation-oriented-classes.pdf) ★★★★★
+- [Discrete Dipole Force](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/discrete-dipole-force.pdf)
 
 ### Artificial Intelligence
 
