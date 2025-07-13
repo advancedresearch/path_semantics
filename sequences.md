@@ -137,6 +137,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Tautological Equality in Classical Propositional Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/tautological-equality-in-classical-propositional-logic.pdf) ★★★★★
 - [A Critical Examination of Equality: Dissecting Definitional, Tautological and Normal Congruence - by GPT-4](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/a-criticial-examination-of-equality.pdf) ★★★★★
 - [Qualitative Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/qualitative-implication.pdf) ★★★★★
+- [Transcendental Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transcendental-propositions.pdf) ★★★★★
 
 ### Path Semantical Logic
 
