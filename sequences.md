@@ -219,6 +219,7 @@ into expressions for higher order reasoning.
 - [Higher Order Operator Overloading and Extensional Equality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-and-extensional-equality.pdf)
 - [Higher Order Operator Overloading by Explicit Notation](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/higher-order-operator-overloading-by-explicit-notation.pdf) ★★★★★
 - [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
+- [Existential Cover in Constructive Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-cover-in-constructive-logic.pdf) ★★★★★
 
 ### Discrete Path Semantics
 
