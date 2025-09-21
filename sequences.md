@@ -743,6 +743,7 @@ Papers for the theoretical background to understand Homotopy Physics applied to 
 - [Rational Symmetry Function](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/rational-symmetry-function.pdf)
 - [Evaluation Oriented Classes](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/evaluation-oriented-classes.pdf) ★★★★★
 - [Discrete Dipole Force](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/discrete-dipole-force.pdf)
+- [Homotopy Arithmecy](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/homotopy-arithmecy.pdf)
 
 ### Artificial Intelligence
 
