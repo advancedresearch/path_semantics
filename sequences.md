@@ -473,6 +473,7 @@ This sequence spinned off a project to understand Roman satire in 2nd century Ea
 - [How Roman Poets Shaped The Language of Early Christianity](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/how-roman-poets-shaped-the-language-of-early-christianity.pdf)
 - [Logos and Zoe](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logos-and-zoe.pdf)
 - [The Origin of Monism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-origin-of-monism.pdf)
+- [What is Philosophy?](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/what-is-philosophy.pdf)
 
 #### Consciousness in Wolfram Models
 
