@@ -474,6 +474,7 @@ This sequence spinned off a project to understand Roman satire in 2nd century Ea
 - [Logos and Zoe](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/logos-and-zoe.pdf)
 - [The Origin of Monism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-origin-of-monism.pdf)
 - [What is Philosophy?](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/what-is-philosophy.pdf)
+- [Deleuze's Image of Thought](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/deleuzes-image-of-thought.pdf)
 
 #### Consciousness in Wolfram Models
 
