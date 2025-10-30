@@ -441,6 +441,7 @@ For visualization of Avatar Graphs, see [Avatar-Graph](https://github.com/advanc
 - [Existential Contradiction Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-contradiction-logic.pdf) ★★★★★
 - [Laws of Form as Avatar Extension](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/laws-of-form-as-avatar-extension.pdf) ★★★★★
 - [Avatar Idempotency](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/avatar-idempotency.pdf) ★★★★★
+- [Anti-Nominalism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/anti-nominalism.pdf) ★★★★★
 
 #### Joker Calculus
 
