@@ -417,7 +417,7 @@ They can often distinguish different language tools by analyzing their language 
 which might be used to predict various weaknesses and strengths language tools will have.
 
 Path Semanticists often train themselves by designing lots of language tools over time.
-this means some Path Semanticists are experts in designing particular language tools.
+This means some Path Semanticists are experts in designing particular language tools.
 However, this does not imply that this domain specific knowledge of design transfers easily to new domains.
 
 Ludwig Wittgenstein (1889–1951) was one of the first philosophers that disregarded underlying models in the way people used language.
