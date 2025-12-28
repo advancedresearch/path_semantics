@@ -8,6 +8,8 @@ If you are new to Path Semantics, just skip this link and continue scrolling.*
 
 ###### To generate images like this, see [Quantum Propagation Explorer](https://github.com/advancedresearch/path_semantics/blob/master/dyon_experiments/quantum_propagation/).
 
+[Semiotic Introduction to Path Semantics](https://github.com/advancedresearch/path_semantics/blob/master/semiotic-introduction.md)
+
 # Path Semantics
 A research project in path semantics, a re-interpretation of functions for expressing mathematics
 
