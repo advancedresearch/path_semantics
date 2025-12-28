@@ -345,7 +345,7 @@ When meaning is arbitrarily constructed, there is no clear distinction between r
 
 Do you see how this works?
 
-Without Ontology, we lack the language tools in Path Semantics to talk about things that are usually of interested in Semiotics.
+Without Ontology, we lack the language tools in Path Semantics to talk about things that are usually of interest in Semiotics.
 
 We do not claim that we understand Semiotics, nor Ontology, nor regard them as "useless" in some sense.
 Not at all. We simply do not talk about these things.
