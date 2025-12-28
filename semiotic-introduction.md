@@ -532,7 +532,7 @@ To study Path Semantics, you have to be interested in how people use symbols.
 
 Not signs. Symbols.
 
-Path Semantics is a very constrained field in one sense, to focus the research on how people use symbols spesifically.
+Path Semantics is a very constrained field in one sense, to focus the research on how people use symbols specifically.
 It just happens that people use symbols in every field of human knowledge.
 The reason Path Semantics is so useful across fields, is mostly coincidental and not by design.
 
