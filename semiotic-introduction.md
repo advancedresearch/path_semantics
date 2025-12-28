@@ -276,7 +276,7 @@ but we can use Logic to study the specific mechanism.
 While Logic has a different language bias than various implementations of some language design,
 it can inform us and assist in making new insights.
 
-The logical consequences that follow from making design decisions, give rise of what we think of as mathematical objects.
+The logical consequences that follow from making design decisions, give rise to what we think of as mathematical objects.
 Instead of seeing this as a project that can be completed, people continue to make more and more design choices over time,
 some design choices that might conflict with each other.
 
