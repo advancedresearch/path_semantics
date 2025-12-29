@@ -160,7 +160,7 @@ As a result, on average, they are often more eccentric and less emotional mature
 So, when you give them a challenge of figuring out "how people use symbols",
 they will probably fail at it and make little progress.
 
-A good Path Semanticist is somebody who usually has 20 years of experience from another field, but want to move on.
+A good Path Semanticist is somebody who usually has 20 years of experience from another field, but wants to move on.
 These years of experience serve as a backbone for what they will be doing in the coming years.
 They understand this situation as another phase in life, where the stuff they will be doing are different from what they did before.
 So, they expect that they have to learn new things and in the process, get worse at some of the skills they have built up so far.
@@ -191,7 +191,7 @@ This secret knowledge is not for everybody.
 
 ### Why Semantics instead of Syntactics or Pragmatics, or Semiotics in general?
 
-Stupid people think that when you are making your the definition of your own field more universal,
+Stupid people think that when you are making the definition of your own field more universal,
 it becomes more powerful. So, they try to come up with as broad definition as possible,
 to maximize the freedom of what they will be working on.
 
@@ -465,7 +465,7 @@ What might seem like an error or imperfection from one point of view,
 might be the very desirable property itself in another perspective.
 
 It is kind of like some form of beautification, an idealization, beyond what is merely possible.
-The symbolic stage transcends what is possible, to include things are might be impossible.
+The symbolic stage transcends what is possible, to include things that might be impossible.
 Despite these things are given an impossible meaning, it might still have a huge impact on people, because it is arbitrary constructed.
 
 Because it is hard to quantify such language designs using objective criteria,
