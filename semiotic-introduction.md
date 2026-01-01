@@ -38,6 +38,12 @@ Hopefully, at the end, you will have developed a better intuition of what Path S
 - [Why Semantics instead of Syntactics or Pragmatics, or Semiotics in general?](#why-semantics-instead-of-syntactics-or-pragmatics-or-semiotics-in-general)
 - [Why is Semiotics in general not regarded as part of Path Semantics?](#why-is-semiotics-in-general-not-regarded-as-part-of-path-semantics)
 
+This introduction is not meant to discourage people from contributing to Path Semantics.
+It is about the overall direction of the Path Semantics project and what it takes to become a Path Semanticist.
+There are many challenges in Path Semantics that require top expertise from other disciplines.
+Most likely, experts in various fields are better equiped to solve specific problems than the average Path Semanticist.
+Still, even with top expertise in some field, it is not certain that it is easy to grasp a Path Semantical perspective.
+
 ### Why symbols instead of signs?
 
 A symbol is a sign that you can not understand simply by looking at it.
