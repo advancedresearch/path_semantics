@@ -20,6 +20,17 @@ For clarity, I will write this introduction to Semiotics in the following way:
 
 Path Semantics is a relatively recently established field that studies how people use symbols.
 
+There are people from all sorts of fields in science that work on problems in Path Semantics.
+
+- A logician might work on logical problems
+- A semiotician might work on semiotic problems
+- A language designer might work on language design problems
+
+A Path Semanticist is somebody who specifically trained themselves, to bring the various parts of Path Semantics into a single project.
+Path Semanticists need to build on a lot of knowledge to figure out whether something is particular for Path Semantics,
+or whether it belongs to some other field of science.
+There are cross-disciplines in Path Semantics, but Path Semantics itself is also a field on its own.
+
 Now, this can be confusing for multiple reasons, but I will go through it step by step.
 Hopefully, at the end, you will have developed a better intuition of what Path Semantics is.
 
