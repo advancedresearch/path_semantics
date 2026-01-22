@@ -537,7 +537,7 @@ You can not get a job working as a Path Semanticist today.
 The only people who will understand what you are doing, are other Path Semanticists.
 They too, will have moved on from their own fields, to enter a new phase in their own lives.
 
-If you have seconds thoughts about giving up some of your hard-gained skills to become a Path Semanticist,
+If you have second thoughts about giving up some of your hard-gained skills to become a Path Semanticist,
 then you are probably better off continuing in your own field.
 
 Path Semantics is not a field that top experts in every field converge toward over time.
