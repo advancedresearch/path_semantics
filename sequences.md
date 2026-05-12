@@ -140,6 +140,10 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 - [Qualitative Implication](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/qualitative-implication.pdf) ★★★★★
 - [Transcendental Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/transcendental-propositions.pdf) ★★★★★
 
+### Philosophy and Critiques of Path Semantics
+
+- [Semantic Hash Storage](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semantic-hash-storage.pdf) ★★★★★
+
 ### Path Semantical Logic
 
 *It is recommended to skip this section, unless you are interested in logic or the foundation of Path Semantics.*
