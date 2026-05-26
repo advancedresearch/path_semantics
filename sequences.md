@@ -143,6 +143,7 @@ In the broader theory of logic, one can study [Path Semantical Logic](#path-sema
 ### Philosophy and Critiques of Path Semantics
 
 - [Semantic Hash Storage](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/semantic-hash-storage.pdf) ★★★★★
+- [Hope is The Road to Home](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hope-is-the-road-to-home.pdf) ★★★★★
 
 ### Path Semantical Logic
 
