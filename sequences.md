@@ -213,6 +213,10 @@ Papers:
 Higher Order Operator Overloading (HOOO) is a way to extend the semantics of normal expressions
 into expressions for higher order reasoning.
 
+For Propositional Logic with Exponential Propositions,
+the [HOOO EP 2026 Standard](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-ep-2026-standard.pdf)
+defines theorem gradings for meta-strength and collapse-strength, used in the [Hooo](https://github.com/advancedresearch/hooo) proof checker.
+
 - [Higher Order Operator Overloading](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading.pdf) ★★★★★
 - [Higher Order Operator Overloading With Function Currying](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-with-function-currying.pdf)
 - [Higher Order Operator Overloading for Mathematical Loops](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip/higher-order-operator-overloading-for-mathematical-loops.pdf)
@@ -227,6 +231,7 @@ into expressions for higher order reasoning.
 - [HOOO Exponential Propositions](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-exponential-propositions.pdf) ★★★★★
 - [Existential Cover in Constructive Logic](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/existential-cover-in-constructive-logic.pdf) ★★★★★
 - [Unsafe Meta-Strength](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/unsafe-meta-strength.pdf) ★★★★★
+- [HOOO EP 2026 Standard](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/hooo-ep-2026-standard.pdf) ★★★★★
 
 ### Discrete Path Semantics
 
