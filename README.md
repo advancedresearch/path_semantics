@@ -17,6 +17,8 @@ A research project in path semantics, a re-interpretation of functions for expre
 
 ![Logi Circle](https://github.com/user-attachments/assets/e25b7bac-d778-43bb-a517-8918f4934264)
 
+*The Logi Circle is a mnemonic device to help memorize an simplified overview of Path Semantics.*
+
 [Transcript of Talk "Introduction to Path Semantics"](https://github.com/advancedresearch/path_semantics/blob/master/lectures/introduction-to-path-semantics/transcript-of-introduction-to-path-semantics.pdf)  
 *This lecture was given to the Category Theory Study Group on the [Applied Category Theory server (Discord)](https://discord.com/invite/hTEpgYv).*
 
