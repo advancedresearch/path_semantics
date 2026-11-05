@@ -491,6 +491,7 @@ This sequence spinned off a project to understand Roman satire in 2nd century Ea
 - [Joker Escapism](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/joker-escapism.pdf) ★★★★★
 - [The Logic of Spirituality](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/the-logic-of-spirituality.pdf)
 - [Symbolic Production](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/symbolic-production.pdf)
+- [Western Philosophical Thought](https://github.com/advancedresearch/path_semantics/blob/master/papers-wip2/western-philosophical-thought.pdf) ★★★★★
 
 #### Consciousness in Wolfram Models
 
